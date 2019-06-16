@@ -1,0 +1,33 @@
+/* Vertical Sliding - taken from https://codepen.io/amritleone/pen/qERPmW */
+.vertical-slide{
+	display: inline;
+	text-indent: 8px;
+}
+.vertical-slide span{
+	animation: topToBottom 12.5s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.vertical-slide span:nth-child(2){
+	animation-delay: 2.5s;
+}
+.vertical-slide span:nth-child(3){
+	animation-delay: 5s;
+}
+.vertical-slide span:nth-child(4){
+	animation-delay: 7.5s;
+}
+.vertical-slide span:nth-child(5){
+	animation-delay: 10s;
+}
+
+@keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; transform: translateY(-50px); }
+	10% { opacity: 1; transform: translateY(0px); }
+	25% { opacity: 1; transform: translateY(0px); }
+	30% { opacity: 0; transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}

@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+	min-height: 120px;
+    background-color: $teachla-green;
+    color: white;
+    font-family: $font-display;
+
+    .footer-title{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3em;
+    }
+
+    .footer-link{
+        color:white;
+        font-size: 1.5em;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
