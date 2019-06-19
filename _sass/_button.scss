@@ -1,4 +1,5 @@
 .button {
+    display: inline-block;
     background: white;
     border-radius: 4px;
     padding: 10px 20px;
@@ -13,6 +14,21 @@
     
     &:active {
         background-color: $acm-black;
+        border: 2px solid $acm-black;
+    }
+}
+
+.button-dark{
+    color: $acm-black;
+    border: 2px solid $acm-black;
+    &:hover {
+        color: $teachla-green;
+        background: $acm-black;
+        cursor: pointer;
+    }
+    
+    &:active {
+        background-color: white;
         border: 2px solid $acm-black;
     }
 }
