@@ -2,6 +2,10 @@
 
 (WIP) a quick frontend for ACM Teach LA!
 
+*Note:* we've elected to use Travis to auto-build and deploy to GitHub Pages rather than use the `github-pages` gem. This allows us a bit more fine-tuning in exactly what is deployed, and allows for more modularity in the future!
+
+## Development Setup (WIP)
+
 To take a peek, first do:
 
 ```bash

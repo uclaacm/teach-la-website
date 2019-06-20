@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.5.3
+script:
+  # - bundle exec rake test - we'll add this eventually once we add rake and some testing suite stuff
+  - bundle exec jekyll build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: _site
+  on:
+    branch: master
