@@ -49,8 +49,8 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .col{
     max-width: 100%;
@@ -62,7 +62,7 @@
         flex-direction: column;
         flex-basis: 100%;
         flex: 1;
-        padding: 0.5em;
+        padding-right: 1em;
     }
 }
 
