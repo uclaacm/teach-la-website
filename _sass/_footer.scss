@@ -13,10 +13,12 @@
 
     .footer-link{
         color:white;
-        font-size: 1.5em;
         text-decoration: none;
         &:hover {
             text-decoration: underline;
         }
+    }
+    .footer-contact-list{
+        font-size: 1.5em;
     }
 }

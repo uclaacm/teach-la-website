@@ -1,7 +1,12 @@
 <footer class="footer">
     <div class="container">
         <h1 class="footer-title">ACM Teach LA</h1>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled footer-contact-list">
+            <li>
+                <a class="footer-link" href="mailto:{{site.email}}">
+                    <span class="fa fa-fw fa-envelope"></span> {{site.email}}
+                </a>
+            </li>
             <li>
                 <a class="footer-link" href="https://www.facebook.com/{{site.facebook_username}}/">
                     <span class="fab fa-fw fa-facebook"></span> Teach LA UCLA
@@ -13,6 +18,10 @@
                 </a>
             </li>
         </ul>
-        &copy; UCLA ACM 2019
+        <p>
+            &copy; ACM @ UCLA 2019
+            <br/>
+            Made with <span class="fa fa-heart animated-heartbeat" style="color:tomato"></span> and <a class="footer-link" href="https://github.com/uclaacm/teach-la-website"><span class="fab fa-github"></span></a>
+        </p>
     </div>
 </footer>
