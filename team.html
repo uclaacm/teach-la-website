@@ -7,28 +7,25 @@ permalink: "/team"
 <p>
     Our team is comprised of UCLA students who are dedicated to empowering students through computer science. 
 </p>
-<div class="profile-row">
+<div class="row">
 {% for member in site.data.team %}
-    <div class="profile-col">
-        <div class="profile-container">
-            <div class="profile-block">
-                {% if member[1].img %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
-                {% else %}
-                    <img class="profile-img" src="https://api.adorable.io/avatars/256/{{member[1].name}}.png" alt="temporary picture"/>
-                {% endif %}
-            </div>
-            <div class="profile-block">
-                <h2 class="title">{{ member[1].name }}</h2>
-                <h4>{{member[1].title}}</h4>
-                <div class="profile-icon-group fa-2x">
-                    {% if member[1].github%}
-                        <a class="text-teachla" href="https://github.com/{{member[1].github}}"><span class="fab fa-github"></span></a>
+    <div class="col">
+        <div class="row">
+            <div class="hard-col">
+                <div>
+                    {% if member[1].img %}
+                        <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+                    {% else %}
+                        <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[1].name}}.png" alt="temporary picture"/>
                     {% endif %}
                 </div>
             </div>
+            <div class="col">
+                <h4 class="title no-margin">{{ member[1].name }}</h4>
+                <p class="no-margin">{{member[1].title}}</p>
+            </div>
         </div>
     </div>
-{% cycle 'group1': '', '', '</div><div class="profile-row">' %}
+{% cycle 'group1': '', '', '</div><div class="row">' %}
 {% endfor %}
 </div>

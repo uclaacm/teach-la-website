@@ -1,83 +1,10 @@
-.profile-container{
-    height: 100%;
-    width: 100%;
-    border: 1px solid $teachla-green;
-    padding: 1em;
-    @media (max-width: 700px) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-}
-
-.profile-block{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 0.5em;
-}
-
 .profile-img{
     display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 70%;
     height: auto;
+    margin-left: auto;
     border-radius: 4px;
-}
-
-@media (min-width: 700px) {
-    /*
-    .profile-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    .profile-col{
-        max-width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-        padding: 0.5em;
-    }
-    */
-    .profile-row {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .profile-row::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .profile-row [class^="profile-col"] {
-        float: left;
-        margin: 0.5rem 2%;
-        min-height: 0.125rem;
-    }
-
-    .profile-col{
-        width: 25%;
-        height: 100%;
-    }
-
-}
-@media (min-width: 700px) {
-    .profile-icon-group{
-       text-align: center; 
+    @media (max-width: 700px) {
+        margin-right: auto;
     }
 }

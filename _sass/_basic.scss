@@ -69,6 +69,17 @@
     }
 }
 
+.hard-col{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -79,4 +90,8 @@
 
 .img-push-down{
     margin-top: 2em;
+}
+
+.no-margin{
+    margin: 0;
 }
