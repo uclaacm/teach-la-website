@@ -147,6 +147,7 @@
 			list-style: none;
 			display: block;
 			margin: auto;
+			margin-top: 100px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -157,7 +158,7 @@
 
 		ul.nav-items li {
 			display: block;
-			margin: 40px auto;
+			margin: 30px auto;
 			padding: 0px;
 			text-transform: lowercase;
 			transform: translate3d(0, -50%, 0);

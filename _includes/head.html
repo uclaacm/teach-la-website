@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}" />
   <link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark:600|Poppins:400,600,700" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a549ff53c3.js" defer async></script>
-  {% seo %}
+  {% seo title=false %}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
