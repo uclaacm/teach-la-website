@@ -65,9 +65,10 @@ mwang:
 If you want to add yourself, all you need to do is add a top-level object with your information, and a photo! Drop your photo in `img/team/`.
 
 Things to keep in mind:
+
 * your top-level key must be unique! make sure that nobody else has it!
 * `name` and `title` are mandatory!
-* `img` is semi-optional: if you don't include it, we'll render a random image from [adorable avatars](http://avatars.adorable.io/). While it doesn't break the site, it's not ... super professional. A photo would be great!
+* `img` is semi-optional: if you don't include it, we'll render a random image from [adorable avatars](http://avatars.adorable.io/). While it doesn't break the site, it's not ... super professional. A photo would be great! We'd **greatly prefer** if your image is 512x512.
 * the `img` key's value should be the name of your image file; not the absolute path!
 
 Once you think you're ready, commit all of your changes and send a PR our way. We should get you up and running in no time!
