@@ -40,12 +40,12 @@ Configuration file: /Users/malsf21/code/teach-la-website/_config.yml
       Generating... 
                     done in 0.219 seconds.
  Auto-regeneration: enabled for '/Users/malsf21/code/teach-la-website'
-    Server address: http://127.0.0.1:4000/teach-la-website/
+    Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 
 ```
 
-Visit whatever follows the server address line in your browser, which is usually [http://127.0.0.1:4000/teach-la-website/](http://127.0.0.1:4000/teach-la-website/).
+Visit whatever follows the server address line in your browser, which is usually [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
 
 If you run into any issues, please let us know on our [issues tracker](https://github.com/uclaacm/teach-la-website)!
 
