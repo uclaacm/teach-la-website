@@ -2,10 +2,12 @@ cindudhara:
   name: "Christina Indudhara"
   title: "Teach LA President"
   github: christinaind
+  img: cindudhara.jpg
 asubramonian:
   name: "Arjun Subramonian"
   title: "Logistics Director"
   github: ArjunSubramonian
+  img: asubramonian.jpg
 mwang:
   name: "Matt Wang"
   title: "Dev Team Director"
@@ -15,6 +17,7 @@ blee:
   name: "Bonnie Lee"
   title: "Outreach Director"
   github: bonniebonnielee
+  img: blee.jpg
 scho:
   name: "Shane Cho"
   title: "Curriculum Director"
