@@ -1,10 +1,11 @@
 # Teach LA Website
 
 [![Build Status](https://travis-ci.com/uclaacm/teach-la-website.svg?branch=master)](https://travis-ci.com/uclaacm/teach-la-website)
+[![Site Up Status](https://img.shields.io/website?url=https%3A%2F%2Fteachla.uclaacm.com)](https://teachla.uclaacm.com)
 
-Heya there, this is a work-in-progress website for ACM Teach LA! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
+Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
 
-This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build this website with Travis CI (and plan to add some `rake` testing soon), and deploy it on GitHub Pages.
+This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with Travis CI, and deploy it on GitHub Pages.
 
 *Note:* we've elected to use Travis to auto-build and deploy to GitHub Pages rather than use the `github-pages` gem. This allows us a bit more fine-tuning in exactly what is deployed, and allows for more modularity in the future!
 
