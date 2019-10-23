@@ -1,19 +1,25 @@
 language: ruby
 cache: bundler
-rvm:
-  - 2.6.3
-jobs:
+matrix:
+  include: 
+    - name: "Building on stable RVM"
+      rvm: 2.6.3
+      script:
+        - bundle exec jekyll build
+      deploy: 
+        provider: pages
+        skip_cleanup: true
+        github_token: $github_token
+        local_dir: _site
+        on:
+          branch: master
   allow_failures:
     - name: "Rake/HTMLProofer Test"
+      rvm: 2.6.3
       script: 
       - bundle exec jekyll build
       - bundle exec rake test
-script:
-  - bundle exec jekyll build
-deploy: 
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: _site
-  on:
-    branch: master
+    - name: "Experimental Ruby Build"
+      rvm: latest
+      script:
+        - bundle exec jekyll build
