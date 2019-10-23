@@ -6,16 +6,16 @@ jobs:
   include:
     - name: "Successful Build"
       script: bundle exec jekyll build
-      deploy: 
-      - provider: pages
-      skip_cleanup: true
-      github_token: $github_token
-      local_dir: _site
-      on:
-        branch: master
-
   allow_failures:
     - name: "Rake/HTMLProofer Test"
       script: 
       - bundle exec jekyll build
       - bundle exec rake test
+
+deploy: 
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: _site
+  on:
+    branch: master
