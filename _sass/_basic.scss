@@ -99,3 +99,19 @@
 .no-margin{
     margin: 0;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border-bottom: 2px solid blue;
+    text-align: center;
+    padding: 15px;
+
+}
+
+tr:nth-child(even) {
+    background-color: $teachla-tint;
+}
