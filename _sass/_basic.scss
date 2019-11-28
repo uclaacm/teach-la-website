@@ -38,9 +38,22 @@
     margin-bottom: 0;
 }
 
+.tla-descrip {
+    font-size: 5.5vw;
+
+    @media (min-width: 700px) {
+        font-size: 1.5em;
+    }
+}
+
 .page-title{
-    font-size: 3em;
+    // font-size: 3em;
+    font-size: 12vw;
     margin-bottom: 0;
+
+    @media (min-width: 700px) {
+        font-size: 3em;
+    }
 }
 
 .divider{

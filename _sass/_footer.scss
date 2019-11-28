@@ -8,7 +8,11 @@
     .footer-title{
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 3em;
+        font-size: 12vw;
+
+        @media (min-width: 700px) {
+            font-size: 3em;
+        }
     }
 
     .footer-link{
@@ -19,6 +23,10 @@
         }
     }
     .footer-contact-list{
-        font-size: 1.5em;
+        font-size: 5.5vw;
+
+        @media (min-width: 700px) {
+            font-size: 1.5em;
+        }
     }
 }
