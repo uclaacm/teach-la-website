@@ -41,7 +41,7 @@
 .tla-descrip {
     font-size: 5.5vw;
 
-    @media (min-width: 700px) {
+    @media (min-width: $desktop-width) {
         font-size: 1.5em;
     }
 }
@@ -51,7 +51,7 @@
     font-size: 12vw;
     margin-bottom: 0;
 
-    @media (min-width: 700px) {
+    @media (min-width: $desktop-width) {
         font-size: 3em;
     }
 }
@@ -72,7 +72,7 @@
 .col{
     max-width: 100%;
     height: 100%;
-    @media (min-width: 700px) {
+    @media (min-width: $desktop-width) {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
@@ -90,7 +90,7 @@
         margin-top: .5em;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: $desktop-width) {
         flex-direction: row;
 
         a {
@@ -108,7 +108,7 @@
         margin-top: .5em;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: $desktop-width) {
         flex-direction: row;
         justify-content: center;
 
