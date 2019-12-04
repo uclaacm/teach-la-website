@@ -200,7 +200,7 @@
 		color: $teachla-green !important;
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: $desktop-width) {
 		#desktop-nav { display: none; }
 		#mobile-nav { display: inline-block; }
 	}
