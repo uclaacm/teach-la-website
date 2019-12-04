@@ -7,7 +7,7 @@ url: "uclaacm.github.io" # the base hostname & protocol for your site, e.g. http
 twitter_username: uclaacm
 github_username:  uclaacm
 facebook_username: teachlaucla
-editor_link: https://uclaacm.github.io/TeachLAFrontend/
+editor_link: https://editor.uclaacm.com
 
 # Build settings
 markdown: kramdown
