@@ -169,7 +169,7 @@ tr:nth-child(even) {
     display: grid;
     grid-template-columns: 33% 33% 33%;
 
-    @media (max-width: 700px) {
+    @media (max-width: $desktop-width) {
         height: 100%;
         max-width: 100%;
         display: grid;
