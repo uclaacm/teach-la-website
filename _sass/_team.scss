@@ -1,10 +1,10 @@
-.profile-img{
-    display: block;
-    max-width: 70%;
-    height: auto;
-    margin-left: auto;
-    border-radius: 4px;
-    @media (max-width: 700px) {
-        margin-right: auto;
-    }
+.profile-img {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 30%;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
 }
