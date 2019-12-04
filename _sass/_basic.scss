@@ -70,6 +70,47 @@
     }
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-top: .5em;
+    }
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+
+        a {
+            margin-top: 0;
+            margin-right: .5em;
+        }
+    }
+}
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-top: .5em;
+    }
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+            margin-top: 0;
+            margin-left: .5em;
+        }
+
+        a:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+}
+
 .img-responsive{
     display: block;
     max-width: 100%;
