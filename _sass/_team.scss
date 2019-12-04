@@ -4,7 +4,7 @@
     height: auto;
     margin-left: auto;
     border-radius: 4px;
-    @media (max-width: 700px) {
+    @media (max-width: $desktop-width) {
         margin-right: auto;
     }
 }

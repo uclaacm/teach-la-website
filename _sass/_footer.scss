@@ -10,7 +10,7 @@
         margin-bottom: 0;
         font-size: 12vw;
 
-        @media (min-width: 700px) {
+        @media (min-width: $desktop-width) {
             font-size: 3em;
         }
     }
@@ -25,7 +25,7 @@
     .footer-contact-list{
         font-size: 5.5vw;
 
-        @media (min-width: 700px) {
+        @media (min-width: $desktop-width) {
             font-size: 1.5em;
         }
     }
