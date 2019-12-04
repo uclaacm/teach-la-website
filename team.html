@@ -7,25 +7,19 @@ permalink: "/team"
 <p>
     Our team is comprised of UCLA students who are dedicated to empowering students through computer science. 
 </p>
-<div class="row">
-{% for member in site.data.team %}
-    <div class="col">
-        <div class="row">
-            <div class="hard-col">
-                <div>
-                    {% if member[1].img %}
-                        <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
-                    {% else %}
-                        <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="hard-col">
-                <h4 class="title no-margin">{{ member[1].name }}</h4>
-                <p class="no-margin">{{member[1].title}}</p>
-            </div>
+
+<div class="team-content">
+    {% for member in site.data.team %}
+    <div class="grid-row">
+        {% if member[1].img %}
+            <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+        {% else %}
+            <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
+        {% endif %}
+        <div class="grid-col">
+            <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
+            <p class="no-margin">{{member[1].title}}</p>
         </div>
     </div>
-{% cycle 'group1': '', '', '</div><div class="row">' %}
-{% endfor %}
+    {% endfor %}
 </div>

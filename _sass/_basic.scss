@@ -68,6 +68,7 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
 .col{
     max-width: 100%;
     height: 100%;
@@ -122,17 +123,6 @@
     }
 }
 
-.hard-col{
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -167,4 +157,35 @@ th, td {
 
 tr:nth-child(even) {
     background-color: $teachla-tint;
+}
+
+.member-name{
+    font-size: 1.4em;
+}
+
+.team-content {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    @media (max-width: 700px) {
+        height: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+.grid-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
