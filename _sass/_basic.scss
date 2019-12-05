@@ -143,20 +143,27 @@
     margin: 0;
 }
 
-table {
+.scheduleTable {
     border-collapse: collapse;
     width: 100%;
-}
 
-th, td {
-    border-bottom: 2px solid black;
-    text-align: center;
-    padding: 15px;
+    tr {
+        th, td {
+            border-bottom: 2px solid black;
+            text-align: center;
+            padding: 3vw;
+            padding-top: 15px;
+            padding-bottom: 15px;
 
-}
+            @media (min-width: $desktop-width) {
+                padding: 15px;   
+            }
+        }
 
-tr:nth-child(even) {
-    background-color: $teachla-tint;
+        &:nth-child(even) {
+            background-color: $teachla-tint;
+        }
+    }
 }
 
 .member-name{
