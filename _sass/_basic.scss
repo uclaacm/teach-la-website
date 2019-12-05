@@ -13,6 +13,12 @@
     color: $font-primary-color;
 }
 
+.word-splitter {
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+}
+
 .container {
     padding: 1em;
     margin: auto;
@@ -143,20 +149,27 @@
     margin: 0;
 }
 
-table {
+.schedule-table {
     border-collapse: collapse;
     width: 100%;
-}
 
-th, td {
-    border-bottom: 2px solid black;
-    text-align: center;
-    padding: 15px;
+    tr {
+        th, td {
+            border-bottom: 2px solid black;
+            text-align: center;
+            padding: 3vw;
+            padding-top: 15px;
+            padding-bottom: 15px;
 
-}
+            @media (min-width: $desktop-width) {
+                padding: 15px;   
+            }
+        }
 
-tr:nth-child(even) {
-    background-color: $teachla-tint;
+        &:nth-child(even) {
+            background-color: $teachla-tint;
+        }
+    }
 }
 
 .member-name{
