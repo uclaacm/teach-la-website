@@ -45,6 +45,11 @@ wobrien:
   name: "Will O'Brien"
   title: "Dev Team Member"
   github: willob99
+krash:
+  name: "Leo Krashanoff"
+  title: "Dev Team Member"
+  github: krashanoff
+  img: krash.jpg
 sjha:
   name: "Sharvani Jha"
   title: "AI/ML Teacher"
