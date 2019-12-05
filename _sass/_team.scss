@@ -6,6 +6,9 @@
     border-radius: 30%;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    padding-left: 1.2em;
     padding-right: 1.2em;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 1.2em;
+    }
 }
