@@ -13,6 +13,12 @@
     color: $font-primary-color;
 }
 
+.word-splitter {
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+}
+
 .container {
     padding: 1em;
     margin: auto;
