@@ -11,11 +11,13 @@ permalink: "/team"
 <div class="team-content">
     {% for member in site.data.team %}
     <div class="grid-row">
-        {% if member[1].img %}
-            <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
-        {% else %}
-            <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
-        {% endif %}
+        <div class="profile-img-container">
+            {% if member[1].img %}
+                <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+            {% else %}
+                <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
+            {% endif %}
+        </div>
         <div class="grid-col">
             <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
             <p class="no-margin">{{member[1].title}}</p>
