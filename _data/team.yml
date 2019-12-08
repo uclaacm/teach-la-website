@@ -1,6 +1,6 @@
 cindudhara:
   name: "Christina Indudhara"
-  title: "Teach LA President"
+  title: "President"
   github: christinaind
   img: cindudhara.jpg
 asubramonian:
@@ -26,6 +26,13 @@ mhmimy:
   name: "Malak Hmimy"
   title: "Activities Director"
   github: malakh21
+sjha:
+  name: "Sharvani Jha"
+  title: "AI/ML Lead"
+pragathi:
+  name: "Pragathi Venkatesh"
+  title: "Scratch Lead"
+  img: pragathi.jpg
 jliu:
   name: "Jamie Liu"
   title: "Dev Team Member"
@@ -55,15 +62,12 @@ mattf:
   title: "Dev Team Member"
   github: fan-matt
   img: mattf.png
-sjha:
-  name: "Sharvani Jha"
-  title: "AI/ML Teacher"
-cborden:
-  name: "Connor Borden"
-  title: "Original Developer"
-  github: connorbo97
 rl:
   name: "Rachel Li"
-  title: "Member"
+  title: "Dev Team Member"
   github: rachelli99
+cborden:
+  name: "Connor Borden"
+  title: "Previous Lead Developer"
+  github: connorbo97
 
