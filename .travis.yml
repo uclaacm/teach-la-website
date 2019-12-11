@@ -1,15 +1,13 @@
 language: ruby
 cache: bundler
-rvm: 2.6.3
+rvm: 
+  - 2.6.3
+  - latest
 
 matrix:
   fast_finish: true
   allow_failures:
     - rvm: latest
-    - rvm: 2.6.3
-      script: 
-      - bundle exec jekyll build
-      - bundle exec rake test
 
 script: bundle exec jekyll build
 deploy: 
@@ -19,3 +17,8 @@ deploy:
   local_dir: _site
   on:
     branch: master
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
