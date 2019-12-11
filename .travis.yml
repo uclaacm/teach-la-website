@@ -2,12 +2,12 @@ language: ruby
 cache: bundler
 rvm: 
   - 2.6.3
-  - latest
+  - ruby-head
 
 matrix:
   fast_finish: true
   allow_failures:
-    - rvm: latest
+    - rvm: ruby-head
 
 script: bundle exec jekyll build
 deploy: 
