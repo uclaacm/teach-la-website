@@ -4,14 +4,18 @@
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     padding-right: 1.2em;
-    @media (min-width: $desktop-width) {
+    @media (max-width: $desktop-width) {
         padding-left: 1.2em;
     }
 }
 
 .profile-img {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 6.1em;
+    height: 6.1em;
     border-radius: 4px;
+    @media (max-width: $desktop-width) {
+        width: 100%;
+        height: auto;
+    }
 }
