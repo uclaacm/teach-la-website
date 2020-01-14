@@ -27,13 +27,13 @@ current:
     name: "Malak Hmimy"
     title: "Activities Director"
     github: malakh21
+  pragathi:
+    name: "Pragathi Venkatesh"
+    title: "Brockton Team Lead"
+    img: pragathi.jpg
   sjha:
     name: "Sharvani Jha"
     title: "AI/ML Lead"
-  pragathi:
-    name: "Pragathi Venkatesh"
-    title: "Scratch Lead"
-    img: pragathi.jpg
   jliu:
     name: "Jamie Liu"
     title: "Dev Team Member"
