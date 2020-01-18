@@ -73,6 +73,11 @@ current:
   michellz:
     name: "Michelle Zhuang"
     title: "Dev Team Member"
+  anguyen:
+    name: "Alvin Nguyen"
+    title: "Dev Team Member"
+    github: AlvinoNguyen
+    img: anguyen.jpg
 
 previous:
   apanse: 
