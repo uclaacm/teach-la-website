@@ -78,6 +78,10 @@ current:
     title: "Dev Team Member"
     github: AlvinoNguyen
     img: anguyen.jpg
+  tomokif:
+    name: "Tomoki T. Fukazawa"
+    title: "Dev Team Member"
+    github: tfukaza
 
 previous:
   apanse: 
