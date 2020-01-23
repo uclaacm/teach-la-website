@@ -34,7 +34,7 @@
 .text-teachla{
     color: $teachla-green;
 }
-  
+
 .text-center{
     text-align: center;
 }
@@ -162,7 +162,7 @@
             padding-bottom: 15px;
 
             @media (min-width: $desktop-width) {
-                padding: 15px;   
+                padding: 15px;
             }
         }
 
@@ -201,4 +201,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.tla-link{
+    color: black;
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( white 50%, $teachla-tint 50%);
+    transition: background 500ms ease;
+    background-size: 2px;
+    background-size: auto 175%;
+}
+
+.tla-link:hover {
+    background-position-y: 100%;
 }
