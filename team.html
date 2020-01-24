@@ -9,7 +9,7 @@ permalink: "/team"
 </p>
 
 <div class="team-content">
-    {% for member in site.data.team %}
+    {% for member in site.data.team.current %}
     <div class="grid-row">
         <div class="profile-img-container">
             {% if member[1].img %}
@@ -25,3 +25,13 @@ permalink: "/team"
     </div>
     {% endfor %}
 </div>
+
+<h2 class="title">Previous Board Members</h2>
+<p>
+    Teach LA has been successful thanks to many dedicated instructors, curriculum developers, and project developers.
+</p>
+<ul>
+{% for member in site.data.team.previous %}
+    <li>{{member[1].name}} ({{member[1].title}})</li>
+{% endfor %}
+</ul>

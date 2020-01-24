@@ -1,73 +1,109 @@
-cindudhara:
-  name: "Christina Indudhara"
-  title: "President"
-  github: christinaind
-  img: cindudhara.jpg
-asubramonian:
-  name: "Arjun Subramonian"
-  title: "Logistics Director"
-  github: ArjunSubramonian
-  img: asubramonian.jpg
-mwang:
-  name: "Matt Wang"
-  title: "Dev Team Director"
-  github: malsf21 
-  img: mwang.jpg
-blee:
-  name: "Bonnie Lee"
-  title: "Outreach Director"
-  github: bonniebonnielee
-  img: blee.jpg
-scho:
-  name: "Shane Cho"
-  title: "Curriculum Director"
-  github: shanefcho
-mhmimy:
-  name: "Malak Hmimy"
-  title: "Activities Director"
-  github: malakh21
-sjha:
-  name: "Sharvani Jha"
-  title: "AI/ML Lead"
-pragathi:
-  name: "Pragathi Venkatesh"
-  title: "Scratch Lead"
-  img: pragathi.jpg
-jliu:
-  name: "Jamie Liu"
-  title: "Dev Team Member"
-  github: jamieliu386
-  img: jliu.jpg
-asane:
-  name: "Aseem Sane"
-  title: "Dev Team Member"
-  github: aseem191
-  img: asane.jpg
-awang:
-  name: "Alyssa Wang"
-  title: "Dev Team Member"
-  github: alyssamw
-  img: awang.jpg
-wobrien:
-  name: "Will O'Brien"
-  title: "Dev Team Member"
-  github: willob99
-krash:
-  name: "Leo Krashanoff"
-  title: "Dev Team Member"
-  github: krashanoff
-  img: krash.jpg
-mattf:
-  name: "Matt Fan"
-  title: "Dev Team Member"
-  github: fan-matt
-  img: mattf.png
-rl:
-  name: "Rachel Li"
-  title: "Dev Team Member"
-  github: rachelli99
-cborden:
-  name: "Connor Borden"
-  title: "Previous Lead Developer"
-  github: connorbo97
+current:
+  cindudhara:
+    name: "Christina Indudhara"
+    title: "President"
+    github: christinaind
+    img: cindudhara.jpg
+  asubramonian:
+    name: "Arjun Subramonian"
+    title: "Logistics Director"
+    github: ArjunSubramonian
+    img: asubramonian.jpg
+  mwang:
+    name: "Matt Wang"
+    title: "Dev Team Director"
+    github: malsf21 
+    img: mwang.jpg
+  blee:
+    name: "Bonnie Lee"
+    title: "Outreach Director"
+    github: bonniebonnielee
+    img: blee.jpg
+  scho:
+    name: "Shane Cho"
+    title: "Curriculum Director"
+    github: shanefcho
+  mhmimy:
+    name: "Malak Hmimy"
+    title: "Activities Director"
+    github: malakh21
+  pragathi:
+    name: "Pragathi Venkatesh"
+    title: "Brockton Team Lead"
+    img: pragathi.jpg
+  sjha:
+    name: "Sharvani Jha"
+    title: "AI/ML Lead"
+  jliu:
+    name: "Jamie Liu"
+    title: "Dev Team Member"
+    github: jamieliu386
+    img: jliu.jpg
+  asane:
+    name: "Aseem Sane"
+    title: "Dev Team Member"
+    github: aseem191
+    img: asane.jpg
+  awang:
+    name: "Alyssa Wang"
+    title: "Dev Team Member"
+    github: alyssamw
+    img: awang.jpg
+  wobrien:
+    name: "Will O'Brien"
+    title: "Dev Team Member"
+    github: willob99
+  krash:
+    name: "Leo Krashanoff"
+    title: "Dev Team Member"
+    github: krashanoff
+    img: krash.jpg
+  mattf:
+    name: "Matt Fan"
+    title: "Dev Team Member"
+    github: fan-matt
+    img: mattf.png
+  rl:
+    name: "Rachel Li"
+    title: "Dev Team Member"
+    github: rachelli99
+  mkang:
+    name: "Miles Kang"
+    title: "Dev Team Member"
+  michellz:
+    name: "Michelle Zhuang"
+    title: "Dev Team Member"
+  anguyen:
+    name: "Alvin Nguyen"
+    title: "Dev Team Member"
+    github: AlvinoNguyen
+    img: anguyen.jpg
+  tomokif:
+    name: "Tomoki T. Fukazawa"
+    title: "Dev Team Member"
+    github: tfukaza
+
+previous:
+  apanse: 
+    name: Apurva Panse 
+    title: President 
+  rwen:
+    name: Richard Wen 
+    title: President and Curriculum Director
+  mgrieve:
+    name: Michael Grieve
+    title: Curriculum Director and Lead Instructor
+  cborden:
+    name: "Connor Borden"
+    title: "Lead Developer"
+    github: connorbo97
+  jstucky:
+    name: John Stucky 
+    title: President 
+  kbabu:
+    name: Krishna Babu
+    title: Logistics Director
+  ft:
+    name: Furn Techalertumpai
+    title: Logistics Director
 
