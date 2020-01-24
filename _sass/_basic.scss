@@ -213,3 +213,11 @@
     flex-direction: column;
     justify-content: center;
 }
+
+
+h2:target {
+    padding-top: 70px;
+    margin-top: -70px;
+    display: block;
+    position: relative;
+}
