@@ -55,7 +55,7 @@
 .page-title{
     font-size: 12vw;
     margin-bottom: 0;
-
+   
     @media (min-width: $desktop-width) {
         font-size: 3em;
     }
@@ -86,6 +86,10 @@
         padding-left: 1em;
         padding-right: 1em;
     }
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
 }
 
 .button-container {
@@ -143,6 +147,13 @@
 
 .img-curved{
     border-radius: 4px;
+}
+
+.img-push-up {
+    margin-top: 16px;
+    @media (min-width: $desktop-width) {
+        margin-top: 32px;
+    }
 }
 
 .no-margin{
@@ -215,4 +226,11 @@
 
 .tla-link:hover {
     background-position-y: 100%;
+}
+
+h2:target {
+    padding-top: 70px;
+    margin-top: -70px;
+    display: block;
+    position: relative;
 }
