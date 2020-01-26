@@ -1,0 +1,17 @@
+demo1:
+  title: "Flappy Bird"
+  subtitle: "Joe Bruin"
+  description: "Be flappy, be happy! Come and explore our flappy bird."
+  img: demo1.jpg
+  link: "https://flappybird.io/"
+demo2:
+  title: "Slithered Snake"
+  subtitle: "Josie Bruin"
+  img: demo2.jpg
+  description: "This is the world renowned slithering snake."
+  link: "http://slither.io/"
+demo3:
+  title: "Type Racer"
+  subtitle: "Jacobi Bruin"
+  description: "Test your typing speed with this world-class typing game."
+  link: "https://play.typeracer.com/"

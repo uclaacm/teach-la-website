@@ -1,0 +1,51 @@
+.card-container {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    align-items: center;
+    row-gap: 4.5em;
+    @media (max-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+.grid-row-shadow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 260px;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img {
+    display: block;
+    width: 260px;
+    height: 240px;
+}
+
+.background-link{
+    background-color: lightgrey;
+}
+.background-link:hover{
+    background-color: $teachla-green;
+}
+
+.card-content {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.content-margin{
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+.card-link{
+    color: white;
+    font-size: 1.5em;;
+    padding-bottom: 0.5em;
+}
