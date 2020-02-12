@@ -55,7 +55,7 @@
 .page-title{
     font-size: 12vw;
     margin-bottom: 0;
-   
+
     @media (min-width: $desktop-width) {
         font-size: 3em;
     }
@@ -220,8 +220,11 @@
     background-position-y: -0%;
     background-image: linear-gradient( white 50%, $teachla-tint 50%);
     transition: background 500ms ease;
-    background-size: 2px;
+    background-size: 2.5px;
     background-size: auto 175%;
+
+    display:inline-block;
+    line-height: 16.5px;
 }
 
 .tla-link:hover {
