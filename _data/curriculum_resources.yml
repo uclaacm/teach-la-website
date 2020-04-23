@@ -3,6 +3,11 @@ further:
     title: "Artificial Intelligence and Machine Learning"
     description: "These are our favorite AI/ML resources! We've ordered them by how relevant and useful we think they are, but they're all awesome."
     items: 
+      - acmai:
+        title: "ACM AI Resources"
+        items: 
+          - name: "ACM AI Blog"
+            link: "http://uclaacmai.github.io/"
       - introdl:
         title: "Intro to Deep Learning"
         items:
@@ -23,7 +28,7 @@ further:
             link: "http://rail.eecs.berkeley.edu/deeprlcourse/resources/"
           - name: "Pytorch: Getting Started with Pytorch"
             link: "https://pytorch.org/tutorials/"
-      - tfpytorch:
+      - introml:
         title: "Intro to Machine Learning"
         items:
           - name: "Coursera: Introduction to Machine Learning"
