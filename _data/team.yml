@@ -82,6 +82,11 @@ current:
     name: "Tomoki T. Fukazawa"
     title: "Dev Team Member"
     github: tfukaza
+  nvan:
+    name: "Nhi Van"
+    title: "Dev Team Member"
+    github: vohndernet
+    img: nvan.jpg
 
 previous:
   apanse: 
