@@ -87,6 +87,26 @@ current:
     title: "Dev Team Member"
     github: vohndernet
     img: nvan.jpg
+  aghodsian:
+    name: "Ashley Ghodsian"
+    title: "Instructor"
+    img: aghodsian.jpg
+  knamuduri:
+    name: "Keertana Namuduri"
+    title: "Special Events Director & Co-Social Chair"
+    img: knamuduri.jpeg
+  nlu:
+    name: "Nina Lu"
+    title: "Special Events Director"
+    img: nlu.jpg
+  pflanders:
+    name: "Peter Flanders"
+    title: "Instructor"
+    img: pflanders.jpeg
+  sschoenmeyer:
+    name: "Sophie Schoenmeyer"
+    title: "Logistics Director"
+    img: sschoenmeyer.jpg
 
 previous:
   apanse: 
