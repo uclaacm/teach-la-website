@@ -25,8 +25,9 @@ current:
     github: shanefcho
   mhmimy:
     name: "Malak Hmimy"
-    title: "Activities Director"
+    title: "Sepulveda Team Lead"
     github: malakh21
+    img: mhmimy.jpg
   pragathi:
     name: "Pragathi Venkatesh"
     title: "Brockton Team Lead"
@@ -109,6 +110,10 @@ current:
     name: "Sophie Schoenmeyer"
     title: "Logistics Director"
     img: sschoenmeyer.jpg
+  nkumar:
+    name: "Nikhil Kumar"
+    title: "Curriculum Director"
+    img: nkumar.jpg
 
 previous:
   apanse: 
