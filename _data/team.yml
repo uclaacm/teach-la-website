@@ -121,6 +121,34 @@ current:
     title: "Special Events Director"
     github: reginawang99
     img: regina.jpg
+  ckapler:
+    name: "Chase Kapler"
+    title: "Instructor"
+    img: ckapler.jpg
+  cuy:
+    name: "Chloe Uy"
+    title: "Curriculum Director"
+    img: cuy.png
+  hco:
+    name: "Hanna Co"
+    title: "Dev Team Member"
+    github: hannaco
+    img: hco.jpg
+  jtsai:
+    name: "Janice Tsai"
+    title: "Dev Team Member"
+    github: janicetsai1
+    img: jtsai.jpg
+  tpoon:
+    name: "Timothy Poon"
+    title: "Dev Team Member"
+    github: lumisphere902
+    img: tpoon.jpg
+  ezhong:
+    name: "Evan Zhong"
+    title: "Dev Team Member"
+    github: evazhog
+    img: ezhong.jpg
 
 previous:
   apanse: 
