@@ -91,6 +91,11 @@ current:
     title: "Dev Team Member"
     github: vohndernet
     img: nvan.jpg
+  regina:
+    name: "Regina Wang"
+    title: "Special Events Director"
+    github: reginawang99
+    img: regina.jpg
 
 previous:
   apanse: 
