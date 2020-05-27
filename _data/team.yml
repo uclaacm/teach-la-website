@@ -34,7 +34,8 @@ current:
     img: pragathi.jpg
   sjha:
     name: "Sharvani Jha"
-    title: "AI/ML Lead"
+    title: "ACM Moonshots & AI Advisor"
+    img: sharvani.png
   jliu:
     name: "Jamie Liu"
     title: "Dev Team Member"
@@ -173,4 +174,3 @@ previous:
   ft:
     name: Furn Techalertumpai
     title: Logistics Director
-
