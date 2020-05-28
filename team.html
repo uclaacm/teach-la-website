@@ -3,14 +3,19 @@ layout: default
 title: "Team"
 permalink: "/team"
 ---
-<h1 class="title page-title">Team</h1>
+<h1 class="title page-title">Board</h1>
 <p>
-    Our team is comprised of UCLA students who are dedicated to empowering students through computer science. 
+    Our board consists of UCLA students who have dedicated themselves to empowering students through computer science.
 </p>
 
 <div class="team-content">
-    {% for member in site.data.team.current %}
+    {% for member in site.data.board %}
     <div class="grid-row">
+
+        {% if member[1].github %}
+        <a class="profile-link" href="https://github.com/{{ member[1].github }}">
+        {% endif %}
+
         <div class="profile-img-container">
             {% if member[1].img %}
                 <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
@@ -18,6 +23,44 @@ permalink: "/team"
                 <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
             {% endif %}
         </div>
+
+        {% if member[1].github %}
+        </a>
+        {% endif %}
+
+        <div class="grid-col">
+            <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
+            <p class="no-margin">{{member[1].title}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h1 class="title page-title">Team</h1>
+<p>
+    Our team of instructors and developers teach in person at schools all throughout the LAU school district while developing new, interactive ways of making an education in computer science possible for everyone.
+</p>
+
+<div class="team-content">
+    {% for member in site.data.team %}
+    <div class="grid-row">
+
+        {% if member[1].github %}
+        <a class="profile-link" href="https://github.com/{{ member[1].github }}">
+        {% endif %}
+
+        <div class="profile-img-container">
+            {% if member[1].img %}
+                <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+            {% else %}
+                <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
+            {% endif %}
+        </div>
+
+        {% if member[1].github %}
+        </a>
+        {% endif %}
+
         <div class="grid-col">
             <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
             <p class="no-margin">{{member[1].title}}</p>
@@ -31,7 +74,7 @@ permalink: "/team"
     Teach LA has been successful thanks to many dedicated instructors, curriculum developers, and project developers.
 </p>
 <ul>
-{% for member in site.data.team.previous %}
+{% for member in site.data.alums %}
     <li>{{member[1].name}} ({{member[1].title}})</li>
 {% endfor %}
 </ul>
