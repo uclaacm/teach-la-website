@@ -1,9 +1,9 @@
 title: ACM Teach LA
 email: acmteachla@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A subcommittee of UCLA ACM, ACM Teach LA pairs UCLA undergraduates with schools in Los Angeles to provide free coding classes for students. Our goal is to empower all students with the ability to code and make a difference.
+  ACM Teach LA is an non-profit outreach organization at UCLA dedicated to providing equal access to computer science education for all students in Los Angeles.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "uclaacm.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "teachla.uclaacm.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: uclaacm
 github_username:  uclaacm
 facebook_username: teachlaucla
