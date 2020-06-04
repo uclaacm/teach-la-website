@@ -1,0 +1,115 @@
+---
+layout: default
+title: "2019-2020 Accountability & Transparency Report"
+permalink: "/accountability/2019-2020"
+---
+
+<h1>2019-2020 Accountability & Transparency Report</h1>
+
+<p>
+    This report summarizes Teach LA's finances for the 2019-2020 academic year.
+</p>
+
+<h2>Overview & Key Points</h2>
+
+<p>
+    In the 2019-2020 year, Teach LA maintained a positive budget balance. Teach LA received funding from the UCLA CS Department (faciliated through ACM @ UCLA as a whole) and from the <a href="https://usac.ucla.edu/funding/docs/CS%20Mini%20Funding%20Cheat%20Sheet.pdf">USAC CS Mini Fund</a>, with a total inflow of <b>$TODO</b>. In total, Teach LA expensed <b>$TODO</b>, with <b>SOME%</b> being directly related to outreach. 
+</p>
+
+<h3>COVID-19</h3>
+<p>
+    Importantly, Teach LA did not have any costs for the spring quarter due to the COVID-19 outbreak and subsequent virtual instruction (for both UCLA students and our LAUSD partner schools). As Teach LA conducted all of our events over Zoom, Teach LA incurred no transportation expenses. 
+</p>
+<p> 
+    In addition, Teach LA had to cancel Day of Code, an in-person collaboration with ACM-W with non-negligble expenses. Teach LA and ACM-W subsequently returned all funds to their respective sources.
+</p>
+
+<p>
+    Due to the unprecedented nature of the COVID-19 outbreak, the UCLA Computer Science Department instituted a "roll-over" policy for outstanding organization balances. As such, the net difference in Teach LA's CS Department funding of <b>$429.48</b> is applied to Teach LA's 2020-2021 budget.
+</p>
+
+<h2>Funding Sources</h2>
+
+<p>
+    Teach LA relied on two primary funding sources:
+</p>
+
+<ol>
+    <li>The UCLA CS Department (faciliated through ACM @ UCLA)</li>
+    <li>The USAC Community Service Mini Fund</li>
+</ol>
+
+<p>more about each funding source, application timelines, etc.</p>
+
+<h2>High-Level Expense Breakdown</h2>
+
+<p>school-by-school breakdown, quarter-by-quarter, transportation vs. non transportation</p>
+
+<p>some graphs here</p>
+
+<h2>Tables</h2>
+
+<h3>Itemized Expenses</h3>
+
+<table class="budget-table">
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Event
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Qty.
+        </th>
+        <th>
+            Item
+        </th>
+        <th>
+            Unit Cost
+        </th>
+        <th>
+            Total Cost
+        </th>
+        <th>
+            Funding Source
+        </th>
+        <th>
+            Special Notes
+        </th>
+    </tr>
+    {% for row in site.data.budget-19-20 %}
+    <tr>
+        <td>
+            {{row.Date}}
+        </td>
+        <td>
+            {{row.Event}}
+        </td>
+        <td>
+            {{row.Type}}
+        </td>
+        <td>
+            {{row.Item}}
+        </td>
+        <td>
+            {{row.Qty}}
+        </td>
+        <td>
+            {{row.Unit}}
+        </td>
+        <td>
+            {{row.Total}}
+        </td>
+        <td>
+            {{row.Source}}
+        </td>
+        <td>
+            {{row.Notes}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,35 @@
+Date,Event,Type,Item,Qty,Unit,Total,Source,Notes
+10/3/19,North Hollywood High School,Transportation,Uber,2, $36.33 , $36.33 , CS Dept ,
+10/24/19,North Hollywood High School,Transportation,Uber,1, $22.31 , $22.31 , CS Dept ,
+10/10/19,Sepulveda Middle School,Transportation,Lyft,1, $36.76 , $36.76 , CS Dept ,
+10/24/19,Sepulveda Middle School,Transportation,Lyft,2, $71.07 , $71.07 , CS Dept ,
+11/28/19,Mark Twain Middle School,Transportation,Uber,2, $24.98 , $24.98 , CS Dept ,Missing justification
+11/28/19,North Holywood High School,Transportation,Uber,1, $19.99 , $19.99 , CS Dept ,Missing justification
+1/27/20,North Holywood High School,Transportation,Lyft,2, $40.38 , $40.38 , CS Dept ,
+1/27/20,Brockton Elementary School,Transportation,Lyft,2, $26.29 , $26.29 , CS Dept ,
+2/4/20,Brockton Elementary School,Transportation,Lyft,2, $15.32 , $15.32 , CS Dept ,
+2/4/20,Sepulveda Middle School,Transportation,Lyft,2, $45.80 , $45.80 , CS Dept ,
+2/4/20,Sepulveda Middle School,Transportation,Lyft,2, $45.80 , $45.80 , CS Dept ,"Duplicate entry filed, likely mistake"
+2/4/20,Emerson Middle School,Transportation,Uber,2, $14.77 , $14.77 , CS Dept ,
+2/11/20,Brockton Elementary School,Transportation,Lyft,2, $27.72 , $27.72 , CS Dept ,
+2/11/20,Emerson Middle School,Transportation,Uber,2, $10.92 , $10.92 , CS Dept ,
+2/12/20,Sepulveda Middle School,Transportation,Lyft,1, $25.25 , $25.25 , CS Dept ,
+2/12/20,Sepulveda Middle School,Transportation,Lyft,2, $46.22 , $46.22 , CS Dept ,
+2/18/20,Sepulveda Middle School,Transportation,Lyft,1, $21.84 , $21.84 , CS Dept ,
+2/18/20,Brockton Elementary School,Transportation,Lyft,2, $31.47 , $31.47 , CS Dept ,
+2/18/20,North Holywood High School,Transportation,Lyft,2, $41.88 , $41.88 , CS Dept ,
+2/27/20,Sepulveda Middle School,Transportation,Lyft,2, $58.01 , $58.01 , CS Dept ,
+2/27/20,Emerson Middle School,Transportation,Uber,2, $14.32 , $14.32 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Uber,1, $24.09 , $24.09 , CS Dept ,
+3/24/20,North Hollywood High School,Transportation,Lyft,2, $40.76 , $40.76 , CS Dept ,
+3/24/20,Emerson Middle School,Transportation,Uber,2, $19.67 , $19.67 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Lyft,2, $56.80 , $56.80 , CS Dept ,
+3/24/20,Emerson Middle School,Transportation,Uber,2, $15.60 , $15.60 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Candy,2, $18.04 , $18.04 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Candy,1, $14.65 , $14.65 , CS Dept ,
+3/24/20,Emerson Middle School,Transportation,Lyft,2, $11.54 , $11.54 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Lyft,1, $25.35 , $25.35 , CS Dept ,
+3/24/20,Teach LA Social,Social,Ice Blocks,3, $3.99 , $13.11 , CS Dept ,
+3/24/20,Teach LA Social,Social,Snacks,1, $53.48 , $53.48 , CS Dept ,
+3/24/20,Sepulveda Middle School,Transportation,Lyft,2, $47.18 , $47.18 , N/A ,"Not reimbursed, past-deadline"
+3/24/20,Sepulveda Middle School,Transportation,Lyft,1, $26.31 , $26.31 , N/A ,"Not reimbursed, past-deadline"

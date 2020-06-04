@@ -1,0 +1,24 @@
+.budget-table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+        th, td {
+            border-bottom: 2px solid black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            @media (min-width: $desktop-width) {
+                padding: 15px;
+            }
+        }
+
+        th{
+            font-weight: bold;
+        }
+
+        &:nth-child(even) {
+            background-color: $teachla-tint;
+        }
+    }
+}
