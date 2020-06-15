@@ -77,7 +77,7 @@ permalink: "/team"
 <h3 class="title">{{ year[0] }} Board</h3>
 <ul>
 {% for member in year[1] %}
-    <li>{{member[1].name}} ({{member[1].title}}, {{member[1].year}})</li>
+    <li><b>{{member[1].name}}</b> ({{member[1].year}}): {{member[1].title}}</li>
 {% endfor %}
 </ul>
 {% endfor %}
@@ -88,6 +88,6 @@ permalink: "/team"
 </p>
 <ul>
 {% for member in site.data.seniors %}
-    <li>{{member[1].name}} ({{member[1].year}})</li>
+    <li><b>{{member[1].name}}</b> ({{member[1].year}})</li>
 {% endfor %}
 </ul>

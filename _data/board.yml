@@ -3,11 +3,6 @@ mwang:
   title: "President"
   github: malsf21 
   img: mwang.jpg
-cindudhara:
-  name: "Christina Indudhara"
-  title: "President"
-  github: christinaind
-  img: cindudhara.jpg
 asubramonian:
   name: "Arjun Subramonian"
   title: "Logistics Director"
@@ -15,7 +10,7 @@ asubramonian:
   img: asubramonian.jpg
 blee:
   name: "Bonnie Lee"
-  title: "Outreach Director"
+  title: "Advisor"
   github: bonniebonnielee
   img: blee.jpg
 mhmimy:
@@ -49,13 +44,16 @@ nkumar:
   img: nkumar.jpg
 cuy:
   name: "Chloe Uy"
-  title: "Curriculum Director"
+  title: "Outreach Director"
   img: cuy.png
 regina:
   name: "Regina Wang"
   title: "Special Events Director"
   github: reginawang99
   img: regina.jpg
+kwang:
+  name: Kaitlyn Wang
+  title: Special Events Director
 krash:
   name: "Leo Krashanoff"
   title: "Dev Team Director"
