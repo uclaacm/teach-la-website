@@ -7,10 +7,13 @@
     margin: 0;
     padding: 0;
     padding-top: 70px;
-    min-height: 100%;
+    // min-height: 100%;
+    min-height: calc(100vh - 70px);
     min-width: 100%;
     font-family: $font-body;
     color: $font-primary-color;
+    display: flex;
+    flex-direction: column;
 }
 
 .word-splitter {
@@ -22,7 +25,8 @@
 .container {
     padding: 1em;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1000px; // enforces a not-too-wide text viewport
+    flex: 1 0 auto; // makes container grow into screen
 }
 
 .list-unstyled {
