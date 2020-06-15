@@ -69,12 +69,25 @@ permalink: "/team"
     {% endfor %}
 </div>
 
-<h2 class="title">Previous Board Members</h2>
+<h2 class="title">Previous Boards</h2>
 <p>
     Teach LA has been successful thanks to many dedicated instructors, curriculum developers, and project developers.
 </p>
+{% for year in site.data.alums %}
+<h3 class="title">{{ year[0] }} Board</h3>
 <ul>
-{% for member in site.data.alums %}
-    <li>{{member[1].name}} ({{member[1].title}})</li>
+{% for member in year[1] %}
+    <li>{{member[1].name}} ({{member[1].title}}, {{member[1].year}})</li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<h2 class="title">Awesome Seniors</h2>
+<p>
+    Teach LA honors its seniors who have stayed with the organization through graduation.
+</p>
+<ul>
+{% for member in site.data.seniors %}
+    <li>{{member[1].name}} ({{member[1].year}})</li>
 {% endfor %}
 </ul>
