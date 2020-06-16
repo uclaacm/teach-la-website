@@ -26,6 +26,9 @@
     padding: 1em;
     margin: auto;
     max-width: 1000px; // enforces a not-too-wide text viewport
+}
+
+.container-fill{
     flex: 1 0 auto; // makes container grow into screen
 }
 
