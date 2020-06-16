@@ -1,0 +1,9 @@
+- name: "Intro to Artificial Intelligence and Machine Learning"
+  blurb: "something about AI & ML"
+  goals:
+    - "understand the difference between AI & ML"
+    - "understand linear regression"
+  links:
+    - icon: "user"
+      text: "Contact School Lead"
+      link: "#"

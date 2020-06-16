@@ -1,0 +1,41 @@
+---
+layout: default
+title: "Classes and Curriculum"
+permalink: "/classes"
+---
+
+<h1 class="title">Classes &amp; Curriculum</h1>
+
+{% for class in site.data.classes %}
+    <div class="class-card">
+        <div class="class-row">
+            <div>
+                <img class="img-responsive" src="{{site.baseurl}}/img/undraw/ai.svg" />
+            </div>
+            <div class="class-content">
+                <h2 class="title">{{class.name}}</h2>
+                <p>{{class.blurb}}</p>
+                <details>
+                    <summary>Learning Goals</summary>
+                    <ul>
+                        {% for goal in class.goals %}
+                            <li>{{goal}}</li>
+                        {% endfor %}
+
+                    </ul>
+                </details>
+                <br />
+                <div class="button-container">
+                    {% for link in class.links %}
+                        <a class="button" href="{{link.link}}">
+                            {% if link.icon %}
+                            <span class="fa fa-{{link.icon}}"></span>
+                            {% endif %}
+                            {{link.text}}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
