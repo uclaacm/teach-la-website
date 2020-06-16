@@ -1,0 +1,24 @@
+.divider-container {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider-container-flip {
+    transform: rotate(180deg);
+}
+
+.divider-container svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.divider-container .shape-fill-green {
+    fill: #A1D900;
+}
+
+.divider-container .shape-fill-white {
+    fill: white;
+}

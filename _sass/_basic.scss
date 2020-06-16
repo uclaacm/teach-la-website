@@ -31,6 +31,10 @@
     list-style: none;
 }
 
+.bg-teachla{
+    background-color: $teachla-green;
+}
+
 .text-teachla{
     color: $teachla-green;
 }
@@ -141,6 +145,10 @@
     margin-right: auto;
 }
 
+.img-half{
+    max-width: 50%;
+}
+
 .img-push-down{
     margin-top: 2em;
 }
@@ -236,4 +244,15 @@ h2:target {
     margin-top: -70px;
     display: block;
     position: relative;
+}
+
+.v-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-title{
+    font-size: 3rem;
 }
