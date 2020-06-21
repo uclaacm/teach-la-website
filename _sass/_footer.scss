@@ -1,9 +1,9 @@
 .footer{
     width: 100%;
-	min-height: 120px;
     background-color: $teachla-green;
     color: white;
     font-family: $font-display;
+    flex-shrink: 0; // this is to make it a sticky footer
 
     .footer-title{
         margin-top: 0;

@@ -1,0 +1,61 @@
+mwang:
+  name: "Matt Wang"
+  title: "President"
+  github: malsf21 
+  img: mwang.jpg
+asubramonian:
+  name: "Arjun Subramonian"
+  title: "Logistics Director"
+  github: ArjunSubramonian
+  img: asubramonian.jpg
+blee:
+  name: "Bonnie Lee"
+  title: "Advisor"
+  github: bonniebonnielee
+  img: blee.jpg
+mhmimy:
+  name: "Malak Hmimy"
+  title: "Sepulveda Team Lead"
+  github: malakh21
+  img: mhmimy.jpg
+scho:
+  name: "Shane Cho"
+  title: "Curriculum Director"
+  github: shanefcho
+pragathi:
+  name: "Pragathi Venkatesh"
+  title: "Brockton Team Lead"
+  img: pragathi.jpg
+knamuduri:
+  name: "Keertana Namuduri"
+  title: "Special Events Director"
+  img: knamuduri.jpeg
+nlu:
+  name: "Nina Lu"
+  title: "Special Events Director"
+  img: nlu.jpg
+sschoenmeyer:
+  name: "Sophie Schoenmeyer"
+  title: "Logistics Director"
+  img: sschoenmeyer.jpg
+nkumar:
+  name: "Nikhil Kumar"
+  title: "Curriculum Director"
+  img: nkumar.jpg
+cuy:
+  name: "Chloe Uy"
+  title: "Outreach Director"
+  img: cuy.png
+regina:
+  name: "Regina Wang"
+  title: "Special Events Director"
+  github: reginawang99
+  img: regina.jpg
+kwang:
+  name: Kaitlyn Wang
+  title: Special Events Director
+krash:
+  name: "Leo Krashanoff"
+  title: "Dev Team Director"
+  github: krashanoff
+  img: krash.jpg
