@@ -19,8 +19,15 @@
   blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
   img: "undraw/dev-activity.svg"
   goals:
-    - "understand the difference between AI & ML"
-    - "understand linear regression"
+    - "understand the technology stack behind a website"
+    - "learn how to use HTML to outline the structure of a website"
+    - "learn basic CSS to style elements on a page"
+    - "learn to use CSS Grid to create different layouts"
+    - "learn basic programming fundamentals in Javascript: variables, loops, and functions"
+    - "understand how to use JS to manipulate web pages"
+    - "finish two practical projects: a personal website and a quiz"
+    - "use git and GitHub to keep track of their code"
+    - "deploy their projects using GitHub Pages"
   links:
     - icon: "user"
       text: "Contact School Lead"
@@ -30,8 +37,7 @@
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to create their own neural networks."
   img: "undraw/ai.svg"
   goals:
-    - "understand the difference between AI & ML"
-    - "understand linear regression"
+    - "TBD!"
   links:
     - icon: "user"
       text: "Contact School Lead"
@@ -41,8 +47,7 @@
   blurb: "A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native."
   img: "undraw/girl-phone.svg"
   goals:
-    - "understand the difference between AI & ML"
-    - "understand linear regression"
+    - "TBD!"
   links:
     - icon: "user"
       text: "Contact School Lead"
