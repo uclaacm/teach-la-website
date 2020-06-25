@@ -51,6 +51,10 @@
     margin-bottom: 0;
 }
 
+.font-display{
+    font-family: $font-display;
+}
+
 .tla-descrip {
     font-size: 5.5vw;
 
@@ -187,24 +191,6 @@
         &:nth-child(even) {
             background-color: $teachla-tint;
         }
-    }
-}
-
-.member-name{
-    font-size: 1.4em;
-}
-
-.team-content {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    @media (max-width: $desktop-width) {
-        height: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 100%;
     }
 }
 
