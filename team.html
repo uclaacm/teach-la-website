@@ -3,67 +3,91 @@ layout: default
 title: "Team"
 permalink: "/team"
 ---
-<h1 class="title page-title">Board</h1>
+<h1 class="title page-title">Team</h1>
 <p>
-    Our board consists of UCLA students who have dedicated themselves to empowering students through computer science.
+    Here are all of the awesome people that make Teach LA happen! We're UCLA students who have dedicated themselves to empowering students through computer science.
+</p>
+<h2 class="title">Board</h2>
+
+<p>
+    Our directors, school leads, and curriculum leads. Feel free to reach out to any of our board for more information about what we do!
 </p>
 
-<div class="team-content">
+<div class="team-member-grid board-member-grid">
     {% for member in site.data.board %}
-    <div class="grid-row">
-
-        {% if member[1].github %}
-        <a class="profile-link" href="https://github.com/{{ member[1].github }}">
-        {% endif %}
-
-        <div class="profile-img-container">
-            {% if member[1].img %}
-                <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
-            {% else %}
-                <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
-            {% endif %}
+    <div class="grid-row" id="{{member[0]}}">
+        <div class="grid-col">
+            <div class="profile-img-container">
+                {% if member[1].img %}
+                    <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+                {% else %}
+                    <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
+                {% endif %}
+            </div>
         </div>
 
-        {% if member[1].github %}
-        </a>
-        {% endif %}
-
         <div class="grid-col">
-            <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
-            <p class="no-margin">{{member[1].title}}</p>
+            <div class="team-member-content">
+                <h3 class="no-margin title">{{ member[1].name }}</h3>
+                <p class="team-member-position">
+                    {{member[1].title}}
+                    {% if member[1].secondary %}
+                        &amp; {{member[1].secondary}}
+                    {% endif %}
+                </p>
+                <ul class="list-unstyled">
+                    {% if member[1].email %}
+                    <li>
+                        <a class="tla-link" href="mailto:{{member[1].email}}"><span class="fa fa-envelope"></span> {{member[1].email}}</a>
+                    </li>
+                    {% endif %}
+                    {% if member[1].github %}
+                        <li>
+                            <a class="tla-link" href="https://github.com/{{member[1].github}}"><span class="fab fa-github"></span> {{member[1].github}}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<h1 class="title page-title">Team</h1>
+<h2 class="title">Instructors and Developers</h2>
 <p>
-    Our team of instructors and developers teach in person at schools all throughout the LAU school district while developing new, interactive ways of making an education in computer science possible for everyone.
+    Our team of instructors and developers teach in person at schools all throughout the Los Angeles Unified School District while developing new, interactive ways of making an education in computer science possible for everyone.
 </p>
 
-<div class="team-content">
+<div class="team-member-grid">
     {% for member in site.data.team %}
-    <div class="grid-row">
-
-        {% if member[1].github %}
-        <a class="profile-link" href="https://github.com/{{ member[1].github }}">
-        {% endif %}
-
-        <div class="profile-img-container">
-            {% if member[1].img %}
-                <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
-            {% else %}
-                <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
-            {% endif %}
+    <div class="grid-row" id="{{member[0]}}">
+        <div class="grid-col">
+            <div class="profile-img-container">
+                {% if member[1].img %}
+                    <img class="profile-img" src="{{site.baseurl}}/img/team/{{member[1].img}}" alt="picture of {{member[1].name}}"/>
+                {% else %}
+                    <img class="profile-img" src="https://api.adorable.io/avatars/512/{{member[0]}}.png" alt="temporary picture"/>
+                {% endif %}
+            </div>
         </div>
 
-        {% if member[1].github %}
-        </a>
-        {% endif %}
-
         <div class="grid-col">
-            <h4 class="title no-margin member-name">{{ member[1].name }}</h4>
-            <p class="no-margin">{{member[1].title}}</p>
+            <div class="team-member-content">
+                <h3 class="no-margin title">{{ member[1].name }}</h3>
+                <p class="team-member-position">{{member[1].title}}</p>
+                <ul class="list-unstyled">
+                    {% if member[1].email %}
+                    <li>
+                        <a class="tla-link" href="mailto:{{member[1].email}}"><span class="fa fa-envelope"></span> {{member[1].email}}</a>
+                    </li>
+                    {% endif %}
+                    {% if member[1].github %}
+                        <li>
+                            <a class="tla-link" href="https://github.com/{{member[1].github}}"><span class="fab fa-github"></span> {{member[1].github}}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </div>
     {% endfor %}
@@ -71,7 +95,7 @@ permalink: "/team"
 
 <h2 class="title">Previous Boards</h2>
 <p>
-    Teach LA has been successful thanks to many dedicated instructors, curriculum developers, and project developers.
+    <a class="tla-link" href="https://en.wikipedia.org/wiki/Rome_wasn%27t_built_in_a_day" target="_blank" rel="noopener noreferrer">Rome wasn't built in a day</a>, and neither was Teach LA! Many thanks to our previous boards for steering our organization in the right direction.
 </p>
 {% for year in site.data.alums %}
 <h3 class="title">{{ year[0] }} Board</h3>
@@ -82,9 +106,9 @@ permalink: "/team"
 </ul>
 {% endfor %}
 
-<h2 class="title">Awesome Seniors</h2>
+<h2 class="title">Awesome Alumni!</h2>
 <p>
-    Teach LA honors its seniors who have stayed with the organization through graduation.
+    Teach LA honors its alumni who have stayed with the organization through graduation.
 </p>
 <ul>
 {% for member in site.data.seniors %}
