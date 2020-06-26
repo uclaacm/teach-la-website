@@ -6,10 +6,14 @@ permalink: "/classes"
 
 <h1 class="title page-title">Classes &amp; Curriculum</h1>
 
+<p>
+    Here is a comprehensive list of all of the classes that ACM Teach LA provides! You can find more information about what the class is about, its learning goals, and its curriculum. Part of our mission is making our education truly accessible, and that involves open-sourcing as much information as possible: <b>everything our instructors have, you'll find here.</b>
+</p>
+
 {% for class in site.data.classes %}
     <div class="class-card">
         <div class="class-row">
-            <div>
+            <div class="grid-col">
                 <img class="img-responsive" src="{{site.baseurl}}/img/{{class.img}}" />
             </div>
             <div class="class-content">
@@ -39,6 +43,16 @@ permalink: "/classes"
                 </p>
                 {% endif %}
                 <br />
+                <div class="button-container">
+                    <a class="button button-dark" href="#">
+                        <span class="fa fa-map-signs"></span>
+                        Step-by-Step Learning Path
+                    </a>
+                    <a class="button button-dark" href="#">
+                        <span class="fab fa-google-drive"></span>
+                        Curriculum Outline
+                    </a>
+                </div>
 
                 <!-- <div class="button-container">
                     {% for link in class.links %}
