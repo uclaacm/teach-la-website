@@ -4,7 +4,7 @@ title: "Classes and Curriculum"
 permalink: "/classes"
 ---
 
-<h1 class="title">Classes &amp; Curriculum</h1>
+<h1 class="title page-title">Classes &amp; Curriculum</h1>
 
 {% for class in site.data.classes %}
     <div class="class-card">
@@ -14,19 +14,32 @@ permalink: "/classes"
             </div>
             <div class="class-content">
                 <h2 class="title">{{class.name}}</h2>
+                <p class="no-margin">
+                    {% if class.tags %}
+                        {% for tag in class.tags %}
+                            {{tag}} •
+                        {% endfor %}
+                    {% endif %}
+                    <a class="tla-link" href="#">our partnered schools</a>
+                </p>
                 <p>{{class.blurb}}</p>
                 <details>
-                    <summary>Learning Goals</summary>
+                    <summary>Learning Goals (click to expand)</summary>
                     <br />
                     students will:
                     <ul>
                         {% for goal in class.goals %}
                             <li>{{goal}}</li>
                         {% endfor %}
-
                     </ul>
                 </details>
+                {% if class.lead %}
+                <p>
+                    have questions? <a class="tla-link" href="{{site.baseurl}}/team#{{class.lead.hash}}">contact our curriculum lead {{class.lead.name}}!</a>
+                </p>
+                {% endif %}
                 <br />
+
                 <!-- <div class="button-container">
                     {% for link in class.links %}
                         <a class="button" href="{{link.link}}">

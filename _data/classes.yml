@@ -1,6 +1,9 @@
 - name: "Intro to Programming with Python"
   blurb: "Perfect for students with no previous coding experience, this class emphasizes an understanding of basic programming principles that students will use throughout their journey in computer science, while also teaching one of the most popular, powerful, and easy-to-learn languages."
   img: "undraw/dev-focus.svg"
+  tags: 
+    - 10 classes
+    - no experience required
   goals:
     - understand how to solve problems with computers
     - use different basic data types (integers, floats, strings, booleans)
@@ -10,14 +13,16 @@
     - understand how to use loops to iterate over objects
     - use and manipulate lists to store sets of data 
     - write and use functions to modularize their code
-  links:
-    - icon: "user"
-      text: "Contact School Lead"
-      link: "#"
+  lead:
+    name: "Nikhil"
+    hash: nkumar
 
 - name: "Intro to Web Development"
   blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
   img: "undraw/dev-activity.svg"
+  tags: 
+    - 10+ classes
+    - no experience required
   goals:
     - "understand the technology stack behind a website"
     - "learn how to use HTML to outline the structure of a website"
@@ -28,27 +33,29 @@
     - "finish two practical projects: a personal website and a quiz"
     - "use git and GitHub to keep track of their code"
     - "deploy their projects using GitHub Pages"
-  links:
-    - icon: "user"
-      text: "Contact School Lead"
-      link: "#"
+  lead:
+    name: "Matt"
+    hash: mwang
 
 - name: "Intro to Artificial Intelligence and Machine Learning"
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to create their own neural networks."
   img: "undraw/ai.svg"
+  tags: 
+    - 25+ classes
+    - precalculus and some coding preferred
   goals:
     - "TBD!"
-  links:
-    - icon: "user"
-      text: "Contact School Lead"
-      link: "#"
-
+  lead:
+    name: "Arjun"
+    hash: asubramonian
 - name: "App Development with React Native"
   blurb: "A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native."
   img: "undraw/girl-phone.svg"
+  tags: 
+    - 25+ classes
+    - no experience required
   goals:
     - "TBD!"
-  links:
-    - icon: "user"
-      text: "Contact School Lead"
-      link: "#"
+  lead:
+    name: "Matt"
+    hash: mwang

@@ -224,9 +224,7 @@
     background-position-y: 100%;
 }
 
-h2:target {
+*:target {
     padding-top: 70px;
     margin-top: -70px;
-    display: block;
-    position: relative;
 }
