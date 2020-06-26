@@ -1,57 +1,16 @@
-sjha:
-  name: "Sharvani Jha"
-  title: "ACM Moonshots & AI Advisor"
-  img: sharvani.png
 jliu:
   name: "Jamie Liu"
-  title: "Dev Team Member"
+  title: "Lead Developer"
   github: jamieliu386
   img: jliu.jpg
-asane:
-  name: "Aseem Sane"
-  title: "Dev Team Member"
-  github: aseem191
-  img: asane.jpg
-awang:
-  name: "Alyssa Wang"
-  title: "Dev Team Member"
-  github: alyssamw
-  img: awang.jpg
 wobrien:
   name: "Will O'Brien"
-  title: "Dev Team Member"
+  title: "Lead Developer"
   github: willob99
   img: willob.jpg
-mattf:
-  name: "Matt Fan"
-  title: "Dev Team Member"
-  github: fan-matt
-  img: mattf.png
-rl:
-  name: "Rachel Li"
-  title: "Dev Team Member"
-  github: rachelli99
-mkang:
-  name: "Miles Kang"
-  title: "Dev Team Member"
-  img: miles.jpg
-michellz:
-  name: "Michelle Zhuang"
-  title: "Dev Team Member"
-  img: michellz.jpg
-anguyen:
-  name: "Alvin Nguyen"
-  title: "Dev Team Member"
-  github: AlvinoNguyen
-  img: anguyen.jpg
-tomokif:
-  name: "Tomoki T. Fukazawa"
-  title: "Dev Team Member"
-  github: tfukaza
-  img: tomokif.jpg
 nvan:
   name: "Nhi Van"
-  title: "Dev Team Member"
+  title: "Lead Developer"
   github: vohndernet
   img: nvan.jpg
 aghodsian:
@@ -66,23 +25,60 @@ ckapler:
   name: "Chase Kapler"
   title: "Instructor"
   img: ckapler.jpg
+asane:
+  name: "Aseem Sane"
+  title: "Developer"
+  github: aseem191
+  img: asane.jpg
+awang:
+  name: "Alyssa Wang"
+  title: "Developer"
+  github: alyssamw
+  img: awang.jpg
+mattf:
+  name: "Matt Fan"
+  title: "Developer"
+  github: fan-matt
+  img: mattf.png
+rl:
+  name: "Rachel Li"
+  title: "Developer"
+  github: rachelli99
+mkang:
+  name: "Miles Kang"
+  title: "Developer"
+  img: miles.jpg
+michellz:
+  name: "Michelle Zhuang"
+  title: "Developer"
+  img: michellz.jpg
+anguyen:
+  name: "Alvin Nguyen"
+  title: "Developer"
+  github: AlvinoNguyen
+  img: anguyen.jpg
+tomokif:
+  name: "Tomoki T. Fukazawa"
+  title: "Developer"
+  github: tfukaza
+  img: tomokif.jpg
 hco:
   name: "Hanna Co"
-  title: "Dev Team Member"
+  title: "Developer"
   github: hannaco
   img: hco.jpg
 jtsai:
   name: "Janice Tsai"
-  title: "Dev Team Member"
+  title: "Developer"
   github: janicetsai1
   img: jtsai.jpg
 tpoon:
   name: "Timothy Poon"
-  title: "Dev Team Member"
+  title: "Developer"
   github: lumisphere902
   img: tpoon.jpg
 ezhong:
   name: "Evan Zhong"
-  title: "Dev Team Member"
+  title: "Developer"
   github: evazhog
   img: ezhong.jpg

@@ -1,31 +1,46 @@
 mwang:
-  name: "Matt Wang"
+  name: "Matthew Wang"
   title: "President"
   github: malsf21 
+  email: matt@matthewwang.me
   img: mwang.jpg
 asubramonian:
   name: "Arjun Subramonian"
   title: "Logistics Director"
+  secondary: "AI/ML Lead"
   github: ArjunSubramonian
   img: asubramonian.jpg
-blee:
-  name: "Bonnie Lee"
-  title: "Advisor"
-  github: bonniebonnielee
-  img: blee.jpg
-mhmimy:
-  name: "Malak Hmimy"
-  title: "Sepulveda Team Lead"
-  github: malakh21
-  img: mhmimy.jpg
-scho:
-  name: "Shane Cho"
+sschoenmeyer:
+  name: "Sophie Schoenmeyer"
+  title: "Logistics Director"
+  img: sschoenmeyer.jpg
+krash:
+  name: "Leo Krashanoff"
+  title: "Dev Team Director"
+  github: krashanoff
+  img: krash.jpg
+cuy:
+  name: "Chloe Uy"
+  title: "Outreach Director"
+  secondary: "Emerson Lead"
+  img: cuy.png
+nkumar:
+  name: "Nikhil Kumar"
   title: "Curriculum Director"
-  github: shanefcho
+  secondary: "Python Lead"
+  img: nkumar.jpg
+# scho:
+#   name: "Shane Cho"
+#   title: "Curriculum Director"
 pragathi:
   name: "Pragathi Venkatesh"
-  title: "Brockton Team Lead"
+  title: "Brockton School Lead"
+  secondary: "Scratch Lead"
   img: pragathi.jpg
+mhmimy:
+  name: "Malak Hmimy"
+  title: "Sepulveda School Lead"
+  img: mhmimy.jpg
 knamuduri:
   name: "Keertana Namuduri"
   title: "Special Events Director"
@@ -34,18 +49,6 @@ nlu:
   name: "Nina Lu"
   title: "Special Events Director"
   img: nlu.jpg
-sschoenmeyer:
-  name: "Sophie Schoenmeyer"
-  title: "Logistics Director"
-  img: sschoenmeyer.jpg
-nkumar:
-  name: "Nikhil Kumar"
-  title: "Curriculum Director"
-  img: nkumar.jpg
-cuy:
-  name: "Chloe Uy"
-  title: "Outreach Director"
-  img: cuy.png
 regina:
   name: "Regina Wang"
   title: "Special Events Director"
@@ -54,8 +57,11 @@ regina:
 kwang:
   name: Kaitlyn Wang
   title: Special Events Director
-krash:
-  name: "Leo Krashanoff"
-  title: "Dev Team Director"
-  github: krashanoff
-  img: krash.jpg
+sjha:
+  name: "Sharvani Jha"
+  title: "Moonshots Advisor"
+  img: sharvani.png
+blee:
+  name: "Bonnie Lee"
+  title: "Advisor"
+  img: blee.jpg
