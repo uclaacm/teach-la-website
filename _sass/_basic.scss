@@ -210,6 +210,7 @@
 .tla-link{
     color: black;
     text-decoration: none;
+    font-weight: bold;
     background-position-y: -0%;
     background-image: linear-gradient( white 50%, $teachla-tint 50%);
     transition: background 500ms ease;
@@ -227,4 +228,9 @@
 *:target {
     padding-top: 70px;
     margin-top: -70px;
+}
+
+.cta-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
