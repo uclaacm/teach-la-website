@@ -1,6 +1,7 @@
 mwang:
   name: "Matthew Wang"
   title: "President"
+  secondary: "Web Dev Lead"
   github: malsf21 
   email: matt@matthewwang.me
   img: mwang.jpg
@@ -52,6 +53,7 @@ nlu:
 regina:
   name: "Regina Wang"
   title: "Special Events Director"
+  secondary: "Developer"
   github: reginawang99
   img: regina.jpg
 kwang:

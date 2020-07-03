@@ -74,7 +74,12 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">{{ member[1].name }}</h3>
-                <p class="team-member-position">{{member[1].title}}</p>
+                <p class="team-member-position">
+                    {{member[1].title}}
+                    {% if member[1].secondary %}
+                        &amp; {{member[1].secondary}}
+                    {% endif %}
+                </p>
                 <ul class="list-unstyled">
                     {% if member[1].email %}
                     <li>
@@ -98,15 +103,15 @@ permalink: "/team"
     <a class="tla-link" href="https://en.wikipedia.org/wiki/Rome_wasn%27t_built_in_a_day" target="_blank" rel="noopener noreferrer">Rome wasn't built in a day</a>, and neither was Teach LA! Many thanks to our previous boards for steering our organization in the right direction.
 </p>
 {% for year in site.data.alums %}
-<h3 class="title">{{ year[0] }} Board</h3>
+<h3 class="title">{{ year[1].name }}</h3>
 <ul>
-{% for member in year[1] %}
+{% for member in year[1].team %}
     <li><b>{{member[1].name}}</b> ({{member[1].year}}): {{member[1].title}}</li>
 {% endfor %}
 </ul>
 {% endfor %}
 
-<h2 class="title">Awesome Alumni!</h2>
+<h2 class="title">Graduating Greats!</h2>
 <p>
     Teach LA honors its alumni who have stayed with the organization through graduation.
 </p>
