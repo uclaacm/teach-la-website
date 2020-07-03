@@ -17,6 +17,7 @@
     full: go
     abbrev: go
   link: https://editor.uclaacm.com
+  repo: uclaacm/teach-la-go-backend
   description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
   tech:
     - go
