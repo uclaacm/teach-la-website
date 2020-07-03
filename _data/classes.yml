@@ -2,7 +2,7 @@
   blurb: "Perfect for students with no previous coding experience, this class emphasizes an understanding of basic programming principles that students will use throughout their journey in computer science, while also teaching one of the most popular, powerful, and easy-to-learn languages."
   img: "undraw/dev-focus.svg"
   tags: 
-    - 10 classes
+    - 8 one-hour classes
     - no experience required
   goals:
     - understand how to solve problems with computers
@@ -13,6 +13,7 @@
     - understand how to use loops to iterate over objects
     - use and manipulate lists to store sets of data 
     - write and use functions to modularize their code
+  outline: "https://docs.google.com/document/d/1QwrN7aPDcMhD0MakJxIo3K877_i77NR1xSgEzkv3b6U/"
   lead:
     name: "Nikhil"
     hash: nkumar
@@ -21,10 +22,10 @@
   blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
   img: "undraw/dev-activity.svg"
   tags: 
-    - 10+ classes
+    - 10+ one-hour classes
     - no experience required
   goals:
-    - "understand the technology stack behind a website"
+    - "understand the technology involved behind a website"
     - "learn how to use HTML to outline the structure of a website"
     - "learn basic CSS to style elements on a page"
     - "learn to use CSS Grid to create different layouts"
@@ -41,10 +42,22 @@
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to create their own neural networks."
   img: "undraw/ai.svg"
   tags: 
-    - 25+ classes
+    - 25+ one-hour classes
     - precalculus and some coding preferred
   goals:
-    - "TBD!"
+    - "Understand what AI and ML are, and their differences"
+    - "Learn about Deep Learning and its applications"
+    - "Differentiate between supervised and unsupervised learning"
+    - "Use Python and related libraries in Juptyer Notebook"
+    - "Plot and explore data with matplotlib in Jupyter Notebook"
+    - "Learn and apply linear regression to best-fit datasets"
+    - "Understand the concept behind gradient descent"
+    - "Learn and apply logistic regression to classify datasets"
+    - "Understand conceptually Bayes Theorem, Cross-Entropy, and distributions"
+    - "Walk through and devise a neural network"
+    - "Understand the challenges behind optimization and the applications of regularization"
+    - "Conceptually grasp and implement convolutional neural networks"
+    - "Explore the ethics behind applications of AI and ML"
   lead:
     name: "Arjun"
     hash: asubramonian
@@ -55,7 +68,7 @@
     - 25+ classes
     - no experience required
   goals:
-    - "TBD!"
+    - "coming soon!"
   lead:
     name: "Matt"
     hash: mwang

@@ -10,6 +10,10 @@ permalink: "/classes"
     Here is a comprehensive list of all of the classes that ACM Teach LA provides! You can find more information about what the class is about, its learning goals, and its curriculum. Part of our mission is making our education truly accessible, and that involves open-sourcing as much information as possible: <b>everything our instructors have, you'll find here.</b>
 </p>
 
+<p>
+    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our internal documentation. We'll have all of the information fully prepared by the end of August.
+</p>
+
 {% for class in site.data.classes %}
     <div class="class-card">
         <div class="class-row">
@@ -44,14 +48,18 @@ permalink: "/classes"
                 {% endif %}
                 <br />
                 <div class="button-container">
-                    <a class="button button-dark" href="#">
+                    {% if class.path %}
+                    <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
                         <span class="fa fa-map-signs"></span>
                         Step-by-Step Learning Path
                     </a>
-                    <a class="button button-dark" href="#">
-                        <span class="fab fa-google-drive"></span>
+                    {% endif %}
+                    {% if class.outline %}
+                    <a class="button button-dark" href="{{class.outline}}">
+                        <span class="fa fa-books"></span>
                         Curriculum Outline
                     </a>
+                    {% endif %}
                 </div>
 
                 <!-- <div class="button-container">
