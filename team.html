@@ -74,7 +74,12 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">{{ member[1].name }}</h3>
-                <p class="team-member-position">{{member[1].title}}</p>
+                <p class="team-member-position">
+                    {{member[1].title}}
+                    {% if member[1].secondary %}
+                        &amp; {{member[1].secondary}}
+                    {% endif %}
+                </p>
                 <ul class="list-unstyled">
                     {% if member[1].email %}
                     <li>
