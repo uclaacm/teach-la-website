@@ -1,0 +1,45 @@
+- name: Editor Frontend
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://editor.uclaacm.com
+  repo: uclaacm/TeachLAFrontend
+  description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
+  tech:
+    - react 
+    - redux 
+    - firebase 
+    - sass
+    - jest & enzyme
+
+- name: Editor Backend
+  lang: 
+    full: go
+    abbrev: go
+  link: https://editor.uclaacm.com
+  description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
+  tech:
+    - go
+    - firebase
+
+- name: Passworks
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://passworks.uclaacm.com
+  repo: uclaacm/passworks
+  description: "This interactive learning module teaches kids about different types of password security, and why they're important. It ends with some social engineering and hands-on hacking! A collaboration with ACM Cyber."
+  tech:
+    - react 
+
+- name: Static Website
+  lang: 
+    full: HTML
+    abbrev: html
+  link: https://teachla.uclaacm.com
+  repo: uclaacm/teach-la-website
+  description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
+  tech:
+    - html
+    - sass
+    - jekyll

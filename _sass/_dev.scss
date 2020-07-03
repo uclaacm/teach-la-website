@@ -1,0 +1,87 @@
+.dev-hero {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+    }
+}
+
+.dev-content {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.dev-projects-grid {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+    }
+}
+
+.dev-project-card {
+    padding: 0.5em;
+    margin-top: 2em;
+    border: 2px solid $teachla-green;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-project-card-content {
+    flex: 1 0 auto;
+}
+
+.dev-project-title {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.dev-project-badge {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+    top: 0.125em;
+    margin-right: 0.25em;
+
+    &.lang-js{
+        background-color: #EFDF6A;
+    }
+
+    &.lang-go{
+        background-color: #4AABD5;
+    }
+
+    &.lang-html{
+        background-color: #D35A31;
+    }
+}
+
+.dev-project-info-row {
+    margin-top: 0.25em;
+    font-size: 1em;
+}
+
+.dev-project-tag-container {
+    flex-shrink: 0;
+}
+
+.dev-project-tech-tag {
+    display: inline-block;
+    border: 2px solid $teachla-green;
+    border-radius: 10px;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    margin-right: 0.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
