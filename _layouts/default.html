@@ -11,7 +11,18 @@
     </div>
 
     {%- include footer.html -%}
+    <script>
+      function logTopSecretMessage(message){
+        console.log(
+          `%c${message}`,
+          "color:#A1D900;"
+        )
+      }
 
+      logTopSecretMessage("Hey! You there! Yes, you, the person going through our JS logs.");
+      logTopSecretMessage("Don't worry, our site isn't collecting any data about you, or anything, really. Pinky promise.");
+      logTopSecretMessage("You look like somebody who likes web programming and hacking. Why not join our dev team? Check out https://teachla.uclaacm.com/dev");
+    </script>
   </body>
 
 </html>
