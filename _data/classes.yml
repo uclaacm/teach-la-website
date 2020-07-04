@@ -42,22 +42,22 @@
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to create their own neural networks."
   img: "undraw/ai.svg"
   tags: 
-    - 25+ one-hour classes
+    - 20+ one-hour classes
     - precalculus and some coding preferred
   goals:
-    - "Understand what AI and ML are, and their differences"
-    - "Learn about Deep Learning and its applications"
-    - "Differentiate between supervised and unsupervised learning"
-    - "Use Python and related libraries in Juptyer Notebook"
-    - "Plot and explore data with matplotlib in Jupyter Notebook"
-    - "Learn and apply linear regression to best-fit datasets"
-    - "Understand the concept behind gradient descent"
-    - "Learn and apply logistic regression to classify datasets"
-    - "Understand conceptually Bayes Theorem, Cross-Entropy, and distributions"
-    - "Walk through and devise a neural network"
-    - "Understand the challenges behind optimization and the applications of regularization"
-    - "Conceptually grasp and implement convolutional neural networks"
-    - "Explore the ethics behind applications of AI and ML"
+    - "understand what AI and ML are, and their differences"
+    - "learn about Deep Learning and its applications"
+    - "differentiate between supervised and unsupervised learning"
+    - "use Python and related libraries in Juptyer Notebook"
+    - "plot and explore data with matplotlib in Jupyter Notebook"
+    - "learn and apply linear regression to best-fit datasets"
+    - "understand the concept behind gradient descent"
+    - "learn and apply logistic regression to classify datasets"
+    - "understand conceptually Bayes Theorem, Cross-Entropy, and distributions"
+    - "walk through and devise a neural network"
+    - "understand the challenges behind optimization and the applications of regularization"
+    - "conceptually grasp and implement convolutional neural networks"
+    - "explore the ethics behind applications of AI and ML"
   lead:
     name: "Arjun"
     hash: asubramonian
