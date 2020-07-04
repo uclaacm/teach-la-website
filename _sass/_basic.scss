@@ -16,6 +16,14 @@
     flex-direction: column;
 }
 
+p {
+    line-height: 1.25;
+}
+
+ul > li {
+    line-height: 1.5;
+}
+
 .word-splitter {
     @media (min-width: $desktop-width) {
         display: none;
