@@ -16,6 +16,14 @@
     flex-direction: column;
 }
 
+p {
+    line-height: 1.25;
+}
+
+ul > li {
+    line-height: 1.5;
+}
+
 .word-splitter {
     @media (min-width: $desktop-width) {
         display: none;
@@ -210,6 +218,7 @@
 .tla-link{
     color: black;
     text-decoration: none;
+    font-weight: bold;
     background-position-y: -0%;
     background-image: linear-gradient( white 50%, $teachla-tint 50%);
     transition: background 500ms ease;
@@ -224,9 +233,12 @@
     background-position-y: 100%;
 }
 
-h2:target {
+*:target {
     padding-top: 70px;
     margin-top: -70px;
-    display: block;
-    position: relative;
+}
+
+.cta-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

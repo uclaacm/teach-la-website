@@ -1,0 +1,21 @@
+.class-card{
+    padding: 2em;
+    margin-top: 2em;
+    border: 2px solid $teachla-green;
+    border-radius: 10px;
+}
+
+.class-row {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+    }
+}
+
+.class-content{
+    padding-left: 2em;
+    padding-right: 2em;
+}
