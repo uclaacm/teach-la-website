@@ -160,6 +160,12 @@ ul > li {
     margin-right: auto;
 }
 
+.img-half-on-large{
+    @media (min-width: $desktop-width) {
+        max-width: 50%;
+    }
+}
+
 .img-push-down{
     margin-top: 2em;
 }
