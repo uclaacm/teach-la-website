@@ -32,6 +32,8 @@
   description: "This interactive learning module teaches kids about different types of password security, and why they're important. It ends with some social engineering and hands-on hacking! A collaboration with ACM Cyber."
   tech:
     - react 
+    - css
+    - material
 
 - name: Static Website
   lang: 
@@ -44,3 +46,63 @@
     - html
     - sass
     - jekyll
+
+- name: Getting Mean About Error
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://uclaacm.github.io/getting-mean-about-error/
+  repo: uclaacm/getting-mean-about-error
+  description: "This narrative version of a critical portion of machine learning walks students through the intuition behind Mean-Squared Error, with interactive math and graphs."
+  tech:
+    - function-plot/d3
+    - js
+    - bulma
+
+- name: Cipher Salad
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://romantic-visvesvaraya-10fce2.netlify.app/
+  repo: uclaacm/cipher-salad
+  description: "In a collaboration with ACM Cyber, we explain historical methods of how we've used math to create secret messages (e.g. ciphers), and how computers have changed the game!"
+  tech:
+    - react
+    - css
+    - bulma
+
+- name: Gradient Descent Visualiser
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://uclaacm.github.io/gradient-descent-visualiser/
+  repo: uclaacm/gradient-descent-visualiser
+  description: "This mini-app acts as an interactive supplement to our AI/ML course and curriculum on linear regression and gradient descent - visualising what can be a very complex mathematical concept."
+  tech:
+    - function-plot/d3
+    - js
+    - bulma
+
+- name: Network Tarines
+  lang: 
+    full: javascript 
+    abbrev: js
+  link: https://trusting-goodall-de8259.netlify.com/
+  repo: uclaacm/network-tarines
+  description: "A cute mini-lesson that looks to demo networking infrastructure for elementary school kids - telling them just how online games and websites are delivered straight to your computer! Features a React Frontend and an Express backend!"
+  tech:
+    - react
+    - express
+    - sockets
+
+# - name: How Does The Net Work?
+#   lang: 
+#     full: javascript 
+#     abbrev: js
+#   link: https://pensive-almeida-d164d5.netlify.app/
+#   repo: uclaacm/how-does-the-net-work
+#   description: "..."
+#   tech:
+#     - react
+#     - css
+#     - bulma
