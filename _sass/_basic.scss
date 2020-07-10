@@ -7,10 +7,21 @@
     margin: 0;
     padding: 0;
     padding-top: 70px;
-    min-height: 100%;
+    // min-height: 100%;
+    min-height: calc(100vh - 70px);
     min-width: 100%;
     font-family: $font-body;
     color: $font-primary-color;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    line-height: 1.25;
+}
+
+ul > li {
+    line-height: 1.5;
 }
 
 .word-splitter {
@@ -22,7 +33,11 @@
 .container {
     padding: 1em;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1000px; // enforces a not-too-wide text viewport
+}
+
+.container-fill{
+    flex: 1 0 auto; // makes container grow into screen
 }
 
 .list-unstyled {
@@ -34,7 +49,7 @@
 .text-teachla{
     color: $teachla-green;
 }
-  
+
 .text-center{
     text-align: center;
 }
@@ -42,6 +57,10 @@
 .title{
     font-family: $font-display;
     margin-bottom: 0;
+}
+
+.font-display{
+    font-family: $font-display;
 }
 
 .tla-descrip {
@@ -55,7 +74,7 @@
 .page-title{
     font-size: 12vw;
     margin-bottom: 0;
-   
+
     @media (min-width: $desktop-width) {
         font-size: 3em;
     }
@@ -141,6 +160,12 @@
     margin-right: auto;
 }
 
+.img-half-on-large{
+    @media (min-width: $desktop-width) {
+        max-width: 50%;
+    }
+}
+
 .img-push-down{
     margin-top: 2em;
 }
@@ -173,31 +198,13 @@
             padding-bottom: 15px;
 
             @media (min-width: $desktop-width) {
-                padding: 15px;   
+                padding: 15px;
             }
         }
 
         &:nth-child(even) {
             background-color: $teachla-tint;
         }
-    }
-}
-
-.member-name{
-    font-size: 1.4em;
-}
-
-.team-content {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    @media (max-width: $desktop-width) {
-        height: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 100%;
     }
 }
 
@@ -212,4 +219,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.tla-link{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-position-y: -0%;
+    background-image: linear-gradient( white 50%, $teachla-tint 50%);
+    transition: background 500ms ease;
+    background-size: 2.5px;
+    background-size: auto 175%;
+
+    display:inline-block;
+    line-height: 16.5px;
+}
+
+.tla-link:hover {
+    background-position-y: 100%;
+}
+
+*:target {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+.cta-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

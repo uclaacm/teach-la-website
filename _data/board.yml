@@ -1,0 +1,69 @@
+mwang:
+  name: "Matthew Wang"
+  title: "President"
+  secondary: "Web Dev Lead"
+  github: malsf21 
+  email: matt@matthewwang.me
+  img: mwang.jpg
+asubramonian:
+  name: "Arjun Subramonian"
+  title: "Logistics Director"
+  secondary: "AI/ML Lead"
+  github: ArjunSubramonian
+  img: asubramonian.jpg
+sschoenmeyer:
+  name: "Sophie Schoenmeyer"
+  title: "Logistics Director"
+  img: sschoenmeyer.jpg
+krash:
+  name: "Leo Krashanoff"
+  title: "Dev Team Director"
+  github: krashanoff
+  img: krash.jpg
+cuy:
+  name: "Chloe Uy"
+  title: "Outreach Director"
+  secondary: "Emerson Lead"
+  img: cuy.png
+nkumar:
+  name: "Nikhil Kumar"
+  title: "Curriculum Director"
+  secondary: "Python Lead"
+  img: nkumar.jpg
+# scho:
+#   name: "Shane Cho"
+#   title: "Curriculum Director"
+pragathi:
+  name: "Pragathi Venkatesh"
+  title: "Brockton School Lead"
+  secondary: "Scratch Lead"
+  img: pragathi.jpg
+mhmimy:
+  name: "Malak Hmimy"
+  title: "Sepulveda School Lead"
+  img: mhmimy.jpg
+knamuduri:
+  name: "Keertana Namuduri"
+  title: "Special Events Director"
+  img: knamuduri.jpeg
+nlu:
+  name: "Nina Lu"
+  title: "Special Events Director"
+  img: nlu.jpg
+regina:
+  name: "Regina Wang"
+  title: "Special Events Director"
+  secondary: "Developer"
+  github: reginawang99
+  img: regina.jpg
+kwang:
+  name: Kaitlyn Wang
+  title: Special Events Director
+sjha:
+  name: "Sharvani Jha"
+  title: "Moonshots Advisor"
+  img: sharvani.png
+blee:
+  name: "Bonnie Lee"
+  title: "Advisor"
+  img: blee.jpg
