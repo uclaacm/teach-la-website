@@ -1,6 +1,7 @@
 # Teach LA Website
 
-[![Build Status](https://travis-ci.com/uclaacm/teach-la-website.svg?branch=master)](https://travis-ci.com/uclaacm/teach-la-website)
+![GH Pages Production Deploy](https://github.com/uclaacm/teach-la-website/workflows/GH%20Pages%20Production%20Deploy/badge.svg)
+![Test Jekyll Build](https://github.com/uclaacm/teach-la-website/workflows/Test%20Jekyll%20Build/badge.svg)
 [![Site Up Status](https://img.shields.io/website?url=https%3A%2F%2Fteachla.uclaacm.com)](https://teachla.uclaacm.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d79c1e55-71c6-45c5-8938-f0ffe477e8a3/deploy-status)](https://app.netlify.com/sites/unruffled-perlman-fe51d2/deploys)
 
