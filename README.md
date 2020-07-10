@@ -7,9 +7,7 @@
 
 Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
 
-This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with Travis CI, and deploy it on GitHub Pages.
-
-*Note:* we've elected to use Travis to auto-build and deploy to GitHub Pages rather than use the `github-pages` gem. This allows us a bit more fine-tuning in exactly what is deployed, and allows for more modularity in the future!
+This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [GitHub Pages](https://github.pages.com).
 
 ## Development Setup
 
@@ -20,13 +18,17 @@ To get a copy of this website running locally on your machine, you'll need [Ruby
 First, let's install [Bundler](https://bundler.io/), a gem environment manager for ruby. Type this anywhere in your shell:
 
 ```bash
-gem install bundler
+$ gem install bundler
+...
 ```
 
-Then, inside our project, run
+Then, let's clone our project with git, and install our dependencies!
 
 ```bash
-bundle
+$ git clone https://github.com/uclaacm/teach-la-website.git
+$ cd teach-la-website
+$ bundle
+...
 ```
 
 This should install all of our RubyGems dependencies! Note that we've committed a `Gemfile.lock`, so you should get a working set of gems.
@@ -36,13 +38,13 @@ Finally, run:
 ```bash
 
 $ bundle exec jekyll serve
-Configuration file: /Users/malsf21/code/teach-la-website/_config.yml
-            Source: /Users/malsf21/code/teach-la-website
-       Destination: /Users/malsf21/code/teach-la-website/_site
+Configuration file: /Users/matt/code/tla/static/_config.yml
+            Source: /Users/matt/code/tla/static
+       Destination: /Users/matt/code/tla/static/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
-                    done in 0.219 seconds.
- Auto-regeneration: enabled for '/Users/malsf21/code/teach-la-website'
+                    done in 0.17 seconds.
+ Auto-regeneration: enabled for '/Users/matt/code/tla/static'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 
