@@ -8,6 +8,21 @@
     }
 }
 
+.dev-join {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 67% 33%;
+    margin-top: 4em;
+    @media (max-width: $desktop-width) {
+        margin-top: 2em;
+        grid-template-columns: 100%;
+        & .grid-col{
+            display: none;
+        }
+    }
+}
+
 .dev-content {
     padding-left: 2em;
     padding-right: 2em;

@@ -16,14 +16,58 @@ permalink: "/dev"
             ACM Teach LA has a vibrant development team focused on using software to democratize access to education. We develop a range of web applications, from tools like <a class="tla-link" href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">our online code editor</a>, to our interactive and narrative-focused learning labs, to this very website!
         </p>      
         <p>
-            In parallel, we're an organization focused on developer training, education, and growth. Our team has no application, doesn't require prior knowledge, and includes developers of various backgrounds. Interested in joining us? ...
+            We're also an organization committed to open-source. Everything we do, from all of our projects to developer training, is available on ACM @ UCLA <a class="tla-link" href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener noreferrer">GitHub organization</a>. You can even view <a class="tla-link" href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener noreferrer">this page on GitHub</a>.
         </p>
-        
-        <p>We're an organization committed to open-source. Everything we do, from all of our projects to developer training, is available on ACM @ UCLA <a class="tla-link" href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener noreferrer">GitHub organization</a>. You can even view <a class="tla-link" href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener noreferrer">this page on GitHub</a>.</p>  
+        <div class="button-container">
+            <a class="button button-dark" href="#">
+                <span class="fa fa-file-alt"></span> Join Us!
+            </a>
+            <a class="button button-dark" href="#projects">
+                <span class="fab fa-github"></span> Our Projects
+            </a>
+        </div>
     </div>
 </div>
 
-<h2 class="title page-title text-center">Our Projects</h2>
+<div class="dev-join">
+    <div class="dev-content">
+        <h2 class="title" id="join">Join us!</h2>
+        <p>
+            In parallel, we're a dev team focused on developer training, education, and growth. There's no application, we don't require prior knowledge, and <b>we want to see you succeed.</b>
+        </p>
+        <p>
+            Who are we looking for? The short answer is, lots of people! We care most about people who are passionate about education and technology and want to help teach the world - previous experience or tech skills is a plus, but absolutely not required. Relevant roles include:
+        </p>
+        <ul>
+            <li>
+                Content Developers (no coding required!)
+            </li>
+            <li>
+                Frontend Web Developers
+            </li>
+            <li>
+                Backend Web Developers
+            </li>
+            <li>
+                UI/UX Designers
+            </li>
+            <li>
+                Graphic Designers
+            </li>
+            <li>
+                ... and, <b>your role</b>, even if it's not here
+            </li>
+        </ul>
+        <p>
+            Sound like something you want to do? <a class="tla-link" href="#">Fill out our interest form!</a> Or, if you want more information, you can email our <a class="tla-link" href="{{site.baseurl}}/team#krash">our dev team director, Leo</a>. We're excited to see you soon!
+        </p>
+    </div>
+    <div class="grid-col">
+        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" />
+    </div>
+</div>
+
+<h2 class="title page-title text-center" id="projects">Our Projects</h2>
 <div class="dev-projects-grid">
     {% for proj in site.data.projects %}
     <div class="dev-project-card">
@@ -52,3 +96,5 @@ permalink: "/dev"
     </div>
     {% endfor %}
 </div>
+
+{% include contact-cta.html %}
