@@ -1,71 +1,108 @@
-2017-2018:
-  apanse: 
-    name: Apurva Panse 
-    title: President and Outreach Director
-    year: 2018
-  rwen:
-    name: Richard Wen 
-    title: Curriculum Director
-    year: 2019
-  kbabu:
-    name: Krishna Babu
-    title: Logistics Director
-    year: 2018
-2018-2019:
-  jstucky:
-    name: John Stucky
-    title: President
-    year: 2019
-  rwen:
-    name: Richard Wen
-    title: President and Outreach Director
-    year: 2019
-  mgrieve:
-    name: Michael Grieve
-    title: Curriculum Director, Lead Instructor
-    year: 2019
-  ftech:
-    name: Furn Techalertumpai
-    title: Logistics Director
-    year: 2020
-  cborden:
-    name: Connor Borden
-    title: Dev Team Director
-    year: 2019
-  blee:
-    name: Bonnie Lee
-    title: Expansion Director
-    year: 2021
 2019-2020:
-  cindudhara:
-    name: Christina Indudhara
-    title: President
-    year: 2020
-  asubramonian:
-    name: Arjun Subramonian
-    title: Logistics Director, NHHS Lead
-    year: 2021
-  mwang:
-    name: Matthew Wang
-    title: Dev Team Director
-    year: 2022
-  blee:
-    name: Bonnie Lee
-    title: Outreach Director
-    year: 2021
-  mhmimy:
-    name: Malak Hmimy
-    title: Activities Director, Sepulveda Lead
-    year: 2021
-  scho:
-    name: Shane Cho
-    title: Activities Director, Emerson Lead
-    year: 2021
-  pvenkatesh:
-    name: Pragathi Venkatesh
-    title: Brockton Lead
-    year: 2022
-  sjha:
-    name: Sharvani Jha
-    title: NHHS Lead
-    year: 2021
+  name: "2019-2020 Teach LA Board"
+  team: 
+    cindudhara:
+      name: Christina Indudhara
+      title: President
+      year: 2020
+    asubramonian:
+      name: Arjun Subramonian
+      title: Logistics Director, NHHS Lead
+      year: 2021
+    mwang:
+      name: Matthew Wang
+      title: Dev Team Director
+      year: 2022
+    blee:
+      name: Bonnie Lee
+      title: Outreach Director
+      year: 2021
+    mhmimy:
+      name: Malak Hmimy
+      title: Activities Director, Sepulveda Lead
+      year: 2021
+    scho:
+      name: Shane Cho
+      title: Activities Director, Emerson Lead
+      year: 2021
+    pvenkatesh:
+      name: Pragathi Venkatesh
+      title: Brockton Lead
+      year: 2022
+    sjha:
+      name: Sharvani Jha
+      title: NHHS Lead
+      year: 2021
+2018-2019:
+  name: "2018-2019 Teach LA Board"
+  team:
+    jstucky:
+      name: John Stucky
+      title: President
+      year: 2019
+    rwen:
+      name: Richard Wen
+      title: President and Outreach Director
+      year: 2019
+    mgrieve:
+      name: Michael Grieve
+      title: Curriculum Director, Lead Instructor
+      year: 2019
+    ftech:
+      name: Furn Techalertumpai
+      title: Logistics Director
+      year: 2020
+    cindudhara:
+      name: Christina Indudhara
+      title: Curriculum Director
+      year: 2020
+    cborden:
+      name: Connor Borden
+      title: Dev Team Director
+      year: 2019
+    blee:
+      name: Bonnie Lee
+      title: Expansion Director
+      year: 2021
+2017-2018:
+  name: "2017-2018 Teach LA/ACM Outreach Board"
+  team:
+    apanse: 
+      name: Apurva Panse 
+      title: President and Outreach Director
+      year: 2018
+    jstucky:
+      name: John Stucky
+      title: Head Instructor
+      year: 2019
+    rwen:
+      name: Richard Wen 
+      title: Curriculum Director
+      year: 2019
+    kbabu:
+      name: Krishna Babu
+      title: Logistics Director
+      year: 2018
+2016-2017:
+  name: "2016-2017 Founding Team"
+  team: 
+    apanse: 
+      name: Apurva Panse 
+      title: Director of Outreach
+      year: 2018
+    acervantes:
+      name: Alejandra Cervantes
+      title: Director of Pedagogy
+      year: 2019
+    jstucky:
+      name: John Stucky
+      title: Instructor
+      year: 2019
+    esegura:
+      name: Enrique Segura
+      title: Instructor
+      year: 2017
+    mwang:
+      name: Michael Wang
+      title: Instructor
+      year: 2018
