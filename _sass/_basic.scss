@@ -16,6 +16,14 @@
     flex-direction: column;
 }
 
+p {
+    line-height: 1.25;
+}
+
+ul > li {
+    line-height: 1.5;
+}
+
 .word-splitter {
     @media (min-width: $desktop-width) {
         display: none;
@@ -49,6 +57,10 @@
 .title{
     font-family: $font-display;
     margin-bottom: 0;
+}
+
+.font-display{
+    font-family: $font-display;
 }
 
 .tla-descrip {
@@ -148,6 +160,12 @@
     margin-right: auto;
 }
 
+.img-half-on-large{
+    @media (min-width: $desktop-width) {
+        max-width: 50%;
+    }
+}
+
 .img-push-down{
     margin-top: 2em;
 }
@@ -190,24 +208,6 @@
     }
 }
 
-.member-name{
-    font-size: 1.4em;
-}
-
-.team-content {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    @media (max-width: $desktop-width) {
-        height: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 100%;
-    }
-}
-
 .grid-row {
     display: flex;
     justify-content: flex-start;
@@ -224,6 +224,7 @@
 .tla-link{
     color: black;
     text-decoration: none;
+    font-weight: bold;
     background-position-y: -0%;
     background-image: linear-gradient( white 50%, $teachla-tint 50%);
     transition: background 500ms ease;
@@ -238,9 +239,12 @@
     background-position-y: 100%;
 }
 
-h2:target {
+*:target {
     padding-top: 70px;
     margin-top: -70px;
-    display: block;
-    position: relative;
+}
+
+.cta-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

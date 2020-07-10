@@ -1,0 +1,86 @@
+---
+layout: default
+title: "Classes and Curriculum"
+permalink: "/classes"
+---
+
+<h1 class="title page-title">Classes &amp; Curriculum</h1>
+
+<p>
+    Here is a comprehensive list of all of the classes that ACM Teach LA provides! You can find more information about what the class is about, its learning goals, and its curriculum. Part of our mission is making our education truly accessible, and that involves open-sourcing as much information as possible: <b>everything our instructors have, you'll find here.</b>
+</p>
+
+<p>
+    UCLA's currently on summer break, which is when we begin our recruiting cycle for schools. We're still hashing out renewing existing partnerships and seeking new ones - if you're interested in working with us, please shoot us an email at <a class="tla-link" href="mailto:{{site.email}}">{{site.email}}</a>!
+</p>
+
+<hr class="divider" />
+
+<p>
+    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our internal documentation. We'll have all of the information fully prepared by the end of August.
+</p>
+
+{% for class in site.data.classes %}
+    <div class="class-card">
+        <div class="class-row">
+            <div class="img-push-down">
+                <img class="img-responsive" src="{{site.baseurl}}/img/{{class.img}}" />
+            </div>
+            <div class="class-content">
+                <h2 class="title">{{class.name}}</h2>
+                <p class="no-margin">
+                    {% if class.tags %}
+                        {% for tag in class.tags %}
+                            {{tag}} •
+                        {% endfor %}
+                    {% endif %}
+                    <a class="tla-link" href="{{site.baseurl}}/schools">our partnered schools</a>
+                </p>
+                <p>{{class.blurb}}</p>
+                <details>
+                    <summary>Learning Goals (click to expand)</summary>
+                    <br />
+                    students will:
+                    <ul>
+                        {% for goal in class.goals %}
+                            <li>{{goal}}</li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% if class.lead %}
+                <p>
+                    have questions? <a class="tla-link" href="{{site.baseurl}}/team#{{class.lead.hash}}">contact our curriculum lead {{class.lead.name}}!</a>
+                </p>
+                {% endif %}
+                <br />
+                <div class="button-container">
+                    {% if class.path %}
+                    <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
+                        <span class="fa fa-map-signs"></span>
+                        Step-by-Step Learning Path
+                    </a>
+                    {% endif %}
+                    {% if class.outline %}
+                    <a class="button button-dark" href="{{class.outline}}">
+                        <span class="fa fa-books"></span>
+                        Curriculum Outline
+                    </a>
+                    {% endif %}
+                </div>
+
+                <!-- <div class="button-container">
+                    {% for link in class.links %}
+                        <a class="button" href="{{link.link}}">
+                            {% if link.icon %}
+                            <span class="fa fa-{{link.icon}}"></span>
+                            {% endif %}
+                            {{link.text}}
+                        </a>
+                    {% endfor %}
+                </div> -->
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% include contact-cta.html %}
