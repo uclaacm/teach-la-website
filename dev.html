@@ -84,6 +84,16 @@ permalink: "/dev"
             <p>
                 {{proj.description}}
             </p>
+            {% if proj.lead %}
+            <p>
+                Lead(s): 
+                {% for lead in proj.lead %}
+                    <a class="tla-link" href="{{site.baseurl}}/team#{{lead.hash}}">
+                        {{lead.name}}
+                    </a>{% if forloop.last != true %},{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
         </div>
 
         <div class="dev-project-tech-container">
