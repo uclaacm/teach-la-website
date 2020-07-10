@@ -1,4 +1,4 @@
-name: Deploying site to GH Pages
+name: GH Pages Production Deploy
 
 on:
   push:
