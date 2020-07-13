@@ -11,6 +11,7 @@ layout: default
         {% capture words %}
             {{ page.content | number_of_words | minus: 250 }}
         {% endcapture %}
+        {{ words | plus: 250 | append: " words" }} • 
         <span class="fa fa-clock"></span>
         {% if words contains "-" %}
         a quick read
