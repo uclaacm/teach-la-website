@@ -1,0 +1,14 @@
+---
+layout: default
+title: The Teach LA Blog
+permalink: /blog/
+---
+
+<h1 class="title page-title">The Teach LA Blog</h1>
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>

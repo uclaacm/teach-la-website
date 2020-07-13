@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<h1 class="title page-title">{{page.title}}</h1>
+
+<div>
+    <p>
+        written by: <a class="tla-link" href="#authors">{{page.author}}</a> • 
+        {{ page.date | date: "%b %-d, %Y" }} • 
+        {% capture words %}
+            {{ page.content | number_of_words | minus: 250 }}
+        {% endcapture %}
+        <span class="fa fa-clock"></span>
+        {% if words contains "-" %}
+        a quick read
+        {% else %}
+        ~ {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
+        {% endif %}
+    </p>
+</div>
+
+<hr class="divider" />
+{{content}}
+
+<hr class="divider" />
+<div class="post-author-grid" id="authors">
+    <h2 class="title">Author{% if page.authorhashes.size > 1 %}s{% endif %}</h2>
+    {% for authorhash in page.authorhashes %}
+        {% if site.data.board[authorhash] %}
+            {% assign author = site.data.board[authorhash] %}
+            {% capture author_name %}
+                {{author.name}}
+            {% endcapture %}
+            {% capture author_role %}
+                {{author.title}}
+                {% if author.secondary %}
+                    &amp; {{author.secondary}}
+                {% endif %}
+            {% endcapture %}
+            {% capture author_img %}
+                {% if author.img %}
+                    {{site.baseurl}}/img/team/{{author.img}}
+                {% else %}
+                    https://api.adorable.io/avatars/512/{{member[0]}}.png
+                {% endif %}
+            {% endcapture %}
+            {% include blog-author-card.html name=author_name role=author_role img=author_img %}
+        {% else %}
+            {% assign author = site.data.team[authorhash] %}
+            {% capture author_name %}
+                {{author.name}}
+            {% endcapture %}
+            {% capture author_role %}
+                {{author.title}}
+                {% if author.secondary %}
+                    &amp; {{author.secondary}}
+                {% endif %}
+            {% endcapture %}
+            {% capture author_img %}
+                {% if author.img %}
+                    {{site.baseurl}}/img/team/{{author.img}}
+                {% else %}
+                    https://api.adorable.io/avatars/512/{{member[0]}}.png
+                {% endif %}
+            {% endcapture %}
+            {% include blog-author-card.html name=author_name role=author_role img=author_img %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% include contact-cta.html %}
