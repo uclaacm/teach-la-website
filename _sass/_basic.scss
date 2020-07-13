@@ -63,6 +63,10 @@ ul > li {
     margin-bottom: 0;
 }
 
+.text-2x{
+    font-size: 2em;
+}
+
 .font-display{
     font-family: $font-display;
 }
@@ -113,47 +117,6 @@ ul > li {
 
 .row-reverse {
     flex-direction: row-reverse;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-
-    a {
-        margin-top: .5em;
-    }
-
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
-
-        a {
-            margin-top: 0;
-            margin-right: .5em;
-        }
-    }
-}
-
-.bottom-button-container {
-    display: flex;
-    flex-direction: column;
-
-    a {
-        margin-top: .5em;
-    }
-
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
-        justify-content: center;
-
-        a {
-            margin-top: 0;
-            margin-left: .5em;
-        }
-
-        a:nth-child(1) {
-            margin-left: 0;
-        }
-    }
 }
 
 .img-responsive{
