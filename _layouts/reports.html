@@ -1,0 +1,14 @@
+---
+layout: default 
+---
+<h1 class="title page-title">Report: {{page.title}}</h1>
+<p>
+    Primarily authored by <b>{{page.author}}</b>, with input from {% if page.authors %}{{page.authors}} and {% endif%} the Teach LA community.
+</p>
+<p>
+    Date published: {{ page.date | date: "%b %-d, %Y" }}.
+</p>
+<hr class="divider" />
+<div class="generated-content">
+    {{content}}
+</div>
