@@ -54,6 +54,18 @@ Visit whatever follows the server address line in your browser, which is usually
 
 If you run into any issues, please let us know on our [issues tracker](https://github.com/uclaacm/teach-la-website)!
 
+## Contribution Workflow
+
+Want to make a change to the website? Great! Here are the steps:
+
+1. Either make a new branch or a fork of this repository. `master` is a protected branch, **so you cannot push to it**.
+2. Follow the instructions in "Development Setup" above. If you're on a fork, replace the URL with the fork's URL; if you're on a different branch, check it out using `git checkout`.
+3. Make your changes!
+4. **Before you push**, make sure your app builds with `npm build`. If there are any errors, our CI/CD service will **reject your build**.
+5. Once you're ready, stage and commit your changes!
+6. Make a [pull request](https://github.com/uclaacm/teach-la-website/pulls) with your changes, and let someone on the dev team know.
+7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
+
 ## Adding Yourself to the Teams Page
 
 Are you a member of ACM Teach LA? You should add yourself to our teams page, so we can show you off to all of the schools we teach!
