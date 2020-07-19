@@ -189,3 +189,12 @@ permalink: "/accountability/2019-2020"
     </tr>
     {% endfor %}
 </table>
+
+<script>
+    fetch('{{site.baseurl}}/accountability/budget-19-20.json')
+    .then(response => response.json())
+    .then(data => {
+        // sophie you'll edit this!
+        console.log(data)
+    });
+</script>
