@@ -105,7 +105,7 @@ permalink: "/accountability/2019-2020"
     <li>Mark Twain Middle School - $ 37.47</li>
     <li>Emerson Middle School - $ 86.82</li>
 </ul>
-
+<div id="school-by-school-pie-chart"></div>
 <p><b>Quarter-by-Quarter</b></p>
 
 <ul>
@@ -189,12 +189,54 @@ permalink: "/accountability/2019-2020"
     </tr>
     {% endfor %}
 </table>
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
     fetch('{{site.baseurl}}/accountability/budget-19-20.json')
     .then(response => response.json())
     .then(data => {
         // sophie you'll edit this!
         console.log(data)
+        let sepulveda = 0; 
+        let emerson = 0;
+        let brockton = 0;
+        let north_hollywood = 0;
+        for(let i=0; i<data.length; i++)
+        {
+            let event = data[i]["Event"];
+            let total = Number(data[i]["Total"].replace("$",""));
+            console.log(data[i]["Event"]);
+            if (event === "Sepulveda Middle School")
+            {
+                sepulveda+=total;
+            }
+            else if (event === "Emerson Middle School")
+            {
+                emerson+=total;
+            }
+            else if (event === "Brockton Elementary School")
+            {
+                brockton+=total;
+            }
+            else if (event === "North Hollywood High School")
+            {
+                north_hollywood+=total;
+            }
+        }
+        console.log(sepulveda);
+        console.log(emerson);
+        console.log(brockton);
+        console.log(north_hollywood);
+        var data = [{
+        values: [sepulveda, emerson, brockton, north_hollywood],
+        labels: ['Sepulveda Middle School', 'Emerson Middle School', 'Brockton Elementary School', 'North Hollywood High School'],
+        type: 'pie'
+        }];
+
+        var layout = {
+        height: 400,
+        width: 500
+        };
+
+Plotly.newPlot('school-by-school-pie-chart', data, layout);
     });
 </script>
