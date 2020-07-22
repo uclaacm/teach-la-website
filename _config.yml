@@ -15,6 +15,7 @@ dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 collections:
   reports:
     output: true
+    permalink: /reports/:name
 
 # Build settings
 markdown: kramdown
