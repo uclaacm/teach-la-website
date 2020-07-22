@@ -13,6 +13,8 @@ dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
 # collections
 collections:
+  posts:
+    permalink: /blog/:categories/:year/:month/:day/:title/
   reports:
     output: true
     permalink: /reports/:name

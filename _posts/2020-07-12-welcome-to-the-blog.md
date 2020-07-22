@@ -6,7 +6,9 @@ author: Matt and Leo # this is just what's used for SEO
 authorhashes:
     - mwang
     - krash
-categories: dev
+category: dev
+tags: 
+    - website
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus tincidunt ligula nec finibus. Nulla quis ullamcorper magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu felis mattis nunc rutrum mattis id et sem. Phasellus lorem elit, dignissim id justo eget, dictum tempus neque. Phasellus bibendum mattis mollis. Donec molestie aliquam justo.

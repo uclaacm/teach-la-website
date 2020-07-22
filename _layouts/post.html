@@ -2,31 +2,42 @@
 layout: default
 ---
 
-<h1 class="title page-title">{{page.title}}</h1>
+<article>
+    <h1 class="title page-title">{{page.title}}</h1>
 
-<div>
-    <p>
-        written by: <a class="tla-link" href="#authors">{{page.author}}</a> • 
-        {{ page.date | date: "%b %-d, %Y" }} • 
-        {% capture words %}
-            {{ page.content | number_of_words | minus: 250 }}
-        {% endcapture %}
-        {{ words | plus: 250 | append: " words" }} • 
-        <span class="fa fa-clock"></span>
-        {% if words contains "-" %}
-        a quick read
-        {% else %}
-        ~ {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
-        {% endif %}
-    </p>
-</div>
+    <div>
+        <p>
+            written by: <a class="tla-link" href="#authors">{{page.author}}</a> • 
+            {{ page.date | date: "%b %-d, %Y" }} • 
+            category: {{page.category }} • 
+            {% if page.tags %}
+                tags: 
+                {% for tag in page.tags %}
+                    {{tag}}{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            {% endif %} • 
+            {% capture words %}
+                {{ page.content | number_of_words | minus: 250 }}
+            {% endcapture %}
+            {{ words | plus: 250 | append: " words" }} • 
+            <span class="fa fa-clock"></span>
+            {% if words contains "-" %}
+            a quick read
+            {% else %}
+            ~ {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
+            {% endif %}
+        </p>
+    </div>
+
+    <hr class="divider" />
+    <div class="generated-content">
+        {{content}}
+    </div>
+</article>
 
 <hr class="divider" />
-{{content}}
-
-<hr class="divider" />
-<div class="post-author-grid" id="authors">
-    <h2 class="title">Author{% if page.authorhashes.size > 1 %}s{% endif %}</h2>
+<div class="post-author-grid">
+    <h2 class="title" id="authors">Author{% if page.authorhashes.size > 1 %}s{% endif %}</h2>
     {% for authorhash in page.authorhashes %}
         {% if site.data.board[authorhash] %}
             {% assign author = site.data.board[authorhash] %}
@@ -69,4 +80,7 @@ layout: default
         {% endif %}
     {% endfor %}
 </div>
-{% include contact-cta.html %}
+<hr class="divider" />
+<p class="text-center title post-get-more">
+    want more? <a class="tla-link" href="{{site.baseurl}}/blog">binge read some more posts here</a>
+</p>
