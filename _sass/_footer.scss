@@ -1,4 +1,5 @@
 .footer{
+    padding-top: 1em;
     width: 100%;
     background-color: $teachla-green;
     color: white;
@@ -15,6 +16,12 @@
         }
     }
 
+    .footer-subtitle {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        font-size: 2em;
+    }
+
     .footer-link{
         color:white;
         text-decoration: none;
@@ -22,11 +29,22 @@
             text-decoration: underline;
         }
     }
-    .footer-contact-list{
-        font-size: 5.5vw;
 
+    .footer-row {
+        display: grid;
         @media (min-width: $desktop-width) {
-            font-size: 1.5em;
+            grid-template-columns: 50% 25% 25%;
+        }
+    }
+
+    .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+
+        a {
+            @include tla-link(white, $teachla-green, $teachla-black);
         }
     }
 }
