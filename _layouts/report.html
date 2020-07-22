@@ -1,0 +1,23 @@
+---
+layout: default 
+---
+<article>
+    <h1 class="title page-title">Report: {{page.title}}</h1>
+    <p>
+        Authored by the Teach LA community, with significant contributions from {{page.author}}.
+    </p>
+    <p>
+        Date published: {{ page.date | date: "%b %-d, %Y" }}.
+    </p>
+    <hr class="divider" />
+    <div class="generated-content">
+        {{content}}
+    </div>
+    <hr class="divider" />
+    <p>
+        Thank you for reading this report, <b>{{page.title}}</b>. It was authored by the Teach LA community, with significant contributions from {{page.author}}.
+    </p>
+</article>
+<p>
+    <a class="tla-link" href="{{site.baseurl}}/reports">See more reports here.</a>
+</p>
