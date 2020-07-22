@@ -1,33 +1,62 @@
 <footer class="footer">
     <div class="container">
-        <h1 class="footer-title">ACM Teach LA</h1>
-        <ul class="list-unstyled footer-contact-list">
-            <li>
-                <a class="footer-link" href="mailto:{{site.email}}">
-                    <span class="fa fa-fw fa-envelope"></span> {{site.email}}
-                </a>
-            </li>
-            <li>
-                <a class="footer-link" href="https://www.facebook.com/{{site.facebook_username}}/">
-                    <span class="fab fa-fw fa-facebook"></span> Teach LA UCLA
-                </a>
-            </li>
-            <li>
-                <a class="footer-link" href="https://github.com/{{site.github_username}}">
-                    <span class="fab fa-fw fa-github"></span> uclaacm
-                </a>
-            </li>
-        </ul>
-        <p>
-            <a class="footer-link" href="{{site.baseurl}}/about">about</a> | 
-            <a class="footer-link" href="{{site.baseurl}}/resources">resources</a> | 
-            <a class="footer-link" href="{{site.baseurl}}/team">team</a> | 
-            <a class="footer-link" href="{{site.baseurl}}/instructor-faq">instructors</a>
-        </p>
-        <p>
-            &copy; ACM @ UCLA 2019
-            <br/>
-            Made with <span class="fa fa-heart animated-heartbeat" style="color:tomato"></span> and <a class="footer-link" href="https://github.com/uclaacm/teach-la-website"><span class="fab fa-github"></span></a>
+        <div class="footer-row">
+            <div>
+                <h2 class="footer-title">ACM Teach LA</h2>
+                <ul class="footer-nav">
+                    <li>
+                        <a href="mailto:{{site.email}}">
+                            <span class="fa fa-fw fa-envelope"></span> {{site.email}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/{{site.facebook_username}}/">
+                            <span class="fab fa-fw fa-facebook"></span> Teach LA UCLA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/{{site.github_username}}">
+                            <span class="fab fa-fw fa-github"></span> uclaacm
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-subtitle">what we do</h3>
+                <ul class="footer-nav">
+                    <li>
+                        <a href="{{site.baseurl}}/classes">classes</a>
+                    </li>
+                    <li>
+                        <a href="{{site.baseurl}}/dev">dev</a>
+                    </li>
+                    <li>
+                        <a href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">editor</a>
+                    </li>
+                    <li>
+                        <a href="{{site.baseurl}}/resources">resources</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-desktop-right">
+                <h3 class="footer-subtitle">
+                    who we are
+                </h3>
+                <ul class="footer-nav">
+                    <li>
+                        <a href="{{site.baseurl}}/about">about</a>
+                    </li>
+                    <li>
+                        <a href="{{site.baseurl}}/reports">reports</a>
+                    </li>
+                    <li>
+                        <a href="{{site.baseurl}}/team">team</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center">
+            &copy; ACM @ UCLA 2019-* // made with <span class="fa fa-heart animated-heartbeat" style="color:tomato" aria-label="animated heartbeat"></span> and <a class="footer-link" href="https://github.com/uclaacm/teach-la-website"><span class="fab fa-github" aria-label="GitHub Logo & Repository"></span></a>
         </p>
     </div>
 </footer>
