@@ -7,13 +7,15 @@
     margin: 0;
     padding: 0;
     padding-top: 70px;
-    // min-height: 100%;
     min-height: calc(100vh - 70px);
     min-width: 100%;
     font-family: $font-body;
     color: $font-primary-color;
     display: flex;
     flex-direction: column;
+    @media (max-width: $desktop-width) {
+        padding-top: 50px;
+    }
 }
 
 p {
@@ -31,7 +33,7 @@ ul > li {
 }
 
 .container {
-    padding: 1em;
+    padding: 0 1em;
     margin: auto;
     max-width: 1000px; // enforces a not-too-wide text viewport
 }
@@ -52,6 +54,10 @@ ul > li {
 
 .text-center{
     text-align: center;
+}
+
+.text-it{
+    font-style: italic;
 }
 
 .title{
@@ -76,7 +82,7 @@ ul > li {
 }
 
 .page-title{
-    font-size: 12vw;
+    font-size: 10vw;
     margin-bottom: 0;
 
     @media (min-width: $desktop-width) {
@@ -184,30 +190,41 @@ ul > li {
     justify-content: center;
 }
 
-.tla-link{
-    color: black;
-    text-decoration: none;
+@mixin tla-link(){
+    color: inherit;
     font-weight: bold;
-    background-position-y: -0%;
-    background-image: linear-gradient( white 50%, $teachla-tint 50%);
-    transition: background 500ms ease;
-    background-size: 2.5px;
-    background-size: auto 175%;
+    @media (min-width: $desktop-width) {
+        text-decoration: none;
+        background-position-y: -0%;
+        background-image: linear-gradient( white 50%, $teachla-tint 50%);
+        transition: background 500ms ease;
+        background-size: 2.5px;
+        background-size: auto 175%;
 
-    display:inline-block;
-    line-height: 16.5px;
+        display:inline-block;
+        line-height: calc(1em + 2px);
+
+        &:hover{
+            background-position-y: 100%;
+        }
+    }
+    @media (max-width: $desktop-width) {
+        text-decoration-color: scale-color($teachla-green, $lightness: -10%);
+    }
 }
 
-.tla-link:hover {
-    background-position-y: 100%;
+
+.tla-link {
+    @include tla-link();
 }
+
 
 *:target {
     padding-top: 70px;
     margin-top: -70px;
 }
 
-.cta-container{
+.cta-container {
     margin-top: 3em;
     margin-bottom: 3em;
 }

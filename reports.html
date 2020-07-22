@@ -1,0 +1,27 @@
+---
+layout: default
+title: Reports, Reflections, & Accountability
+---
+
+<h1 class="title page-title">Reports, Reflections, & Accountability</h1>
+<p>
+    As an organization, we believe it's important to constantly reflect and grow. In the spirit of one of our core values, transparency, we invite you to reflect and grow with us.
+</p>
+
+<hr class="divider" />
+
+{% for report in site.reports %}
+    <section>
+        <h2 class="title">
+            <a class="tla-link" href="{{report.url}}">{{report.title}}</a>
+        </h2>
+        <p class="text-it">
+           Date published: {{ report.date | date: "%b %-d, %Y" }}
+        </p>
+        <p>
+            {{report.blurb}}
+        </p>
+    </section>
+    <hr class="divider" />
+{% endfor %}
+

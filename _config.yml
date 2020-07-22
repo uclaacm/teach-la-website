@@ -11,6 +11,11 @@ editor_link: https://editor.uclaacm.com
 
 dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
+# collections
+collections:
+  reports:
+    output: true
+
 # Build settings
 markdown: kramdown
 plugins:
