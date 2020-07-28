@@ -56,6 +56,12 @@ ul > li {
     text-align: center;
 }
 
+.text-desktop-right {
+    @media (min-width: $desktop-width) {
+        text-align: right;
+    }
+}
+
 .text-it{
     font-style: italic;
 }
@@ -190,26 +196,28 @@ ul > li {
     justify-content: center;
 }
 
-@mixin tla-link(){
+@mixin tla-link(
+    $link-effect-color: $teachla-tint, 
+    $off-color: white, 
+    $effect-text-color: inherit
+){
+
     color: inherit;
     font-weight: bold;
-    @media (min-width: $desktop-width) {
-        text-decoration: none;
-        background-position-y: -0%;
-        background-image: linear-gradient( white 50%, $teachla-tint 50%);
-        transition: background 500ms ease;
-        background-size: 2.5px;
-        background-size: auto 175%;
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( $off-color 50%, $link-effect-color 50%);
+    background-size: 2.5px;
+    background-size: auto 175%;
 
-        display:inline-block;
+    @media (min-width: $desktop-width) {
+        transition: background 500ms ease;
         line-height: calc(1em + 2px);
 
         &:hover{
             background-position-y: 100%;
+            color: $effect-text-color;
         }
-    }
-    @media (max-width: $desktop-width) {
-        text-decoration-color: scale-color($teachla-green, $lightness: -10%);
     }
 }
 
