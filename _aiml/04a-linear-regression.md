@@ -7,4 +7,4 @@ slides_link: "https://docs.google.com/presentation/d/16b5fIM80mlOgvMK4_ly5ESvD9a
 colab_link: "https://colab.research.google.com/drive/1nDYDtYytcDvz6q3_mneFHIbVigYUiGIT"
 ---
 
-You've probably heard of Artificial Intelligence and Machine Learning in the news. But what *exactly is AI & ML*?
+Lines are powerful! (You may take a look at the Colab now, but it will make more sense by Lesson 4d.)

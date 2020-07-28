@@ -39,22 +39,21 @@
     hash: mwang
 
 - name: "Intro to Artificial Intelligence and Machine Learning"
-  blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to create their own neural networks."
+  blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
   img: "undraw/ai.svg"
   tags: 
     - 20+ one-hour classes
-    - precalculus and some coding preferred
+    - precalculus and some coding experience recommended
   goals:
     - "understand what AI and ML are, and their differences"
-    - "learn about Deep Learning and its applications"
-    - "differentiate between supervised and unsupervised learning"
-    - "use Python and related libraries in Juptyer Notebook"
-    - "plot and explore data with matplotlib in Jupyter Notebook"
-    - "learn and apply linear regression to best-fit datasets"
-    - "understand the concept behind gradient descent"
-    - "learn and apply logistic regression to classify datasets"
-    - "understand conceptually Bayes Theorem, Cross-Entropy, and distributions"
-    - "walk through and devise a neural network"
+    - "learn about deep learning and its applications"
+    - "differentiate between classification and regression"
+    - "use Python and related libraries in Google Colab to manipulate data"
+    - "learn and apply linear regression to real-world datasets"
+    - "understand the intuition behind gradient descent"
+    - "learn and apply logistic regression to real-world datasets"
+    - "understand probability, Bayes' Theorem, and binary cross-entropy loss at a conceptual level"
+    - "walk through the building blocks of a neural network"
     - "understand the challenges behind optimization and the applications of regularization"
     - "conceptually grasp and implement convolutional neural networks"
     - "explore the ethics behind applications of AI and ML"
