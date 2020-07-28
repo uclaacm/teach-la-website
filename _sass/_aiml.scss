@@ -1,0 +1,59 @@
+.ai-link {
+    @include tla-link($ai-blue);
+}
+
+.divider-ai {
+    border-top: 1px solid $ai-blue;
+}
+
+.ai-lessons-grid {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+    }
+    margin-bottom: 2em;
+}
+
+.ai-lesson-card {
+    padding: 0.5em;
+    margin-top: 2em;
+    border: 2px solid $ai-blue;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-content-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+        min-height: 70vh;
+    }
+}
+
+.ai-content-card {
+    margin-top: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid $ai-blue;
+}
+
+.ai-slide-iframe{
+    display: block;
+    width: 100%;
+    height: calc(100% * 1469/2559);
+}
+
+.iframe-container {
+    padding: 3em;
+    width: calc(100% - 6em);
+    position: relative;
+}

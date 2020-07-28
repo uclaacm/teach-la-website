@@ -13,6 +13,9 @@ dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
 # collections
 collections:
+  aiml:
+    permalink: /classes/ml/:name
+    output: true
   reports:
     output: true
     permalink: /reports/:name
