@@ -10,7 +10,7 @@ title: Reports, Reflections, & Accountability
 
 <hr class="divider" />
 
-{% for report in site.reports %}
+{% for report in site.reports reversed %}
     <section>
         <h2 class="title">
             <a class="tla-link" href="{{report.url}}">{{report.title}}</a>
