@@ -6,8 +6,9 @@
   <body>
 
     {%- include header.html -%}
-    <div class="container container-fill {% if page.fw != true %}container-restricted{% endif %}">
+    <div class="container container-fill {% if layout.fw %}{% else %}container-restricted{% endif %}">
       {{ content }}
+      {{page.fw}}
     </div>
 
     {%- include footer.html -%}
