@@ -19,7 +19,7 @@
 
 .ai-lesson-card {
     padding: 0.5em;
-    margin-top: 2em;
+    margin-top: 1em;
     border: 2px solid $ai-blue;
     border-radius: 10px;
     width: 90%;
@@ -27,6 +27,10 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
+}
+
+.ai-lesson-card-content {
+    flex: 1 0 auto;
 }
 
 .ai-content-container{
@@ -50,6 +54,9 @@
     display: block;
     width: 100%;
     height: calc(100% * 1469/2559);
+    @media (max-width: $desktop-width) {
+        height: 100%;
+    }
 }
 
 .iframe-container {

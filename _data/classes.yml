@@ -57,6 +57,7 @@
     - "understand the challenges behind optimization and the applications of regularization"
     - "conceptually grasp and implement convolutional neural networks"
     - "explore the ethics behind applications of AI and ML"
+  path: ml
   lead:
     name: "Arjun"
     hash: asubramonian

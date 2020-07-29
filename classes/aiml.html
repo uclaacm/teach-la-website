@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Introduction to AI & ML"
-permalink: /classes/ml/
+permalink: /classes/ml
 ---
 
 <h1 class="title page-title">Introduction to AI & ML</h1>
@@ -15,9 +15,11 @@ permalink: /classes/ml/
 
 <p>
     We present a year-long, modern machine learning class led by UCLA students! Students will discover and explore the computational and mathematical tools behind artificial intelligence and machine learning! In a single year, they will advance from understanding simple AI models that predict weather to analyzing the complex AI systems that power self-driving cars.
-    <br><br>
+</p>
+<p>
     Throughout the year, students will have numerous opportunities to learn and code with Python. Python is one of the most popular programming languages in use today, with wide-ranging applications in data processing, web development, and machine learning. Last year, our students used Python to train AI models that predict stock market prices, guess the popularity of a song on Spotify, and detect handwritten digits.
-    <br><br>
+</p>
+<p>
     Learning machine learning does not occur in a vacuum! We encourage our students to think critically about the applications and ethics of AI. In the past, we’ve brainstormed which types of AI are best-suited to tackle facial recognition and estimate house prices. Furthermore, we’ve held in-depth discussions on the ethics of AI-powered self-driving cars and what it actually means for AI to be racist.
 </p>
 
@@ -28,10 +30,12 @@ permalink: /classes/ml/
 <div class="ai-lessons-grid">
     {% for lesson in site.aiml %}
         <div class="ai-lesson-card">
-            <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span> 
-                <a class="ai-link" href="{{lesson.url}}">{{lesson.title}}</a>
-            </h3>
-            {{lesson.excerpt}}
+            <div class="ai-lesson-card-content">
+                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span> 
+                    <a class="ai-link" href="{{lesson.url}}">{{lesson.title}}</a>
+                </h3>
+                {{lesson.excerpt}}
+            </div>
             <div class="button-container">
                 {% if lesson.slides_link %}
                     <a class="button button-ai" href="{{lesson.slides_link}}" target="_blank" rel="noopener noreferrer">
