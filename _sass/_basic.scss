@@ -86,6 +86,10 @@ ul > li {
     font-size: 1.5em;
 }
 
+.text-25x{
+    font-size: 2.5em;
+}
+
 .font-display{
     font-family: $font-display;
 }
@@ -208,8 +212,8 @@ ul > li {
 }
 
 @mixin tla-link(
-    $link-effect-color: $teachla-tint, 
-    $off-color: white, 
+    $link-effect-color: $teachla-tint,
+    $off-color: white,
     $effect-text-color: inherit
 ){
 

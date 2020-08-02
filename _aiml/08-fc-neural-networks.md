@@ -1,7 +1,6 @@
 ---
 title: "Fully-Connected Neural Networks"
 num: 8
-prev_slug: 07-bce-loss
 slides_link: "https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/"
 ---
 

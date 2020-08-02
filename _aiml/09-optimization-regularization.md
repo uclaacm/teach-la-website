@@ -1,7 +1,6 @@
 ---
 title: "Optimization & Regularization"
 num: 9
-prev_slug: 08-fc-neural-networks
 slides_link: "https://docs.google.com/presentation/d/12NXfWnHBUz20b4QpF_br_sJtAtjxue7Wb2M8f9Q4YBQ/"
 colab_link: "https://colab.research.google.com/drive/1XSBk5EywDSUutcRh4HR4tV2_ggH7M9H5"
 ---

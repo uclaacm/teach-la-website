@@ -1,7 +1,6 @@
 ---
 title: "Binary Cross-Entropy Loss"
 num: 7
-prev_slug: 06-bayes-theorem
 slides_link: "https://docs.google.com/presentation/d/1Vqsy1wmZqD-1tP1dbleiJRG0irw1Or_TZ5rEMOcNnxk/"
 ---
 
