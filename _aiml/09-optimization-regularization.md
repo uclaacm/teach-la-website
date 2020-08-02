@@ -1,6 +1,5 @@
 ---
 title: "Optimization & Regularization"
-layout: aiml-lesson
 num: 9
 prev_slug: 08-fc-neural-networks
 slides_link: "https://docs.google.com/presentation/d/12NXfWnHBUz20b4QpF_br_sJtAtjxue7Wb2M8f9Q4YBQ/"

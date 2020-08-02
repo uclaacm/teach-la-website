@@ -11,11 +11,34 @@ editor_link: https://editor.uclaacm.com
 
 dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
+# defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docs-default"
+  -
+    scope:
+      path: ""
+      type: "aiml"
+    values:
+      layout: "aiml-lesson"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
 # collections
 collections:
   aiml:
     permalink: /classes/ml/:name
     output: true
+  docs:
+    output: true
+    permalink: /docs/:name
   reports:
     output: true
     permalink: /reports/:name

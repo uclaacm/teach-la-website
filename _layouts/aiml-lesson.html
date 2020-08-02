@@ -31,7 +31,7 @@ fw: true
             <div>
                 {% if page.next %}
                     <a class="button button-ai button-block" href="{{page.next.slug}}">
-                        <span class="fa fa-arrow-right"></span> next lesson: {{page.next_text}}
+                        <span class="fa fa-arrow-right"></span> next lesson{% if page.next_text %}: {{page.next_text}}{% endif %}
                     </a>
                 {% endif %}
                 <a class="button button-ai button-block" href="{{site.baseurl}}/classes/ml/">

@@ -1,6 +1,5 @@
 ---
 title: "Gradient Descent"
-layout: aiml-lesson
 num: 4c
 prev_slug: 04b-ml-math
 slides_link: "https://docs.google.com/presentation/d/171qmNd9pk2Bmd8NEUVTYSd23Us8icOcEaAG0eIwjtyA/"
