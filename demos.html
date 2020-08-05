@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Student Demos"
+permalink: "/demos"
+---
+
+<h1 class="title page-title">Demos</h1>
+<p>
+    Checkout our awesome demos! 
+</p>
+
+<div class="card-container">
+    {% for member in site.data.demos %}
+    <div class="grid-row-shadow">
+        <div class="card-img-container">
+            {% if member[1].img %}
+                <img class="card-img" src="{{site.baseurl}}/img/demos/{{member[1].img}}" alt="picture of {{member[1].title}}"/>
+            {% else %}
+                <img class="card-img" src="{{site.baseurl}}/img/demos/no_img.jpg" alt="temporary picture"/>
+            {% endif %}
+        </div>
+        <div class="card-content">
+            <h4 class="title content-margin member-name">{{ member[1].title }}</h4>
+            <p class="content-margin" style="color: grey; font-size: small;">{{member[1].subtitle}}</p>
+            <p class="content-margin" >{{member[1].description}}</p>
+            <a href="{{member[1].link}}" style="text-decoration: none;">
+                <p class="no-margin background-link card-content card-link">View demo</p>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
