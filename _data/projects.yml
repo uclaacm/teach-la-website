@@ -83,6 +83,9 @@
   link: https://romantic-visvesvaraya-10fce2.netlify.app/
   repo: uclaacm/cipher-salad
   description: "In a collaboration with ACM Cyber, we explain historical methods of how we've used math to create secret messages (e.g. ciphers), and how computers have changed the game!"
+  lead: 
+    - name: Lisha
+      hash: lmohan
   tech:
     - react
     - css
