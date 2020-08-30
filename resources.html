@@ -5,6 +5,9 @@ permalink: "/resources"
 ---
 
 <h1 class="title page-title">Resources</h1>
+<p class="title text-15x">
+        Heads up! We're moving most of the content of this page to other parts of our site, like our <a class="tla-link" href="{{site.baseurl}}/classes">new classes page</a> where you can find all of our updated and digitized curriculum/lesson plans!
+</p>
 <div class="row">
         <div class="col">
                 <h2 class="title">Editor</h2>
@@ -101,24 +104,3 @@ permalink: "/resources"
                 </a>
         </li>
 </ul>
-<h2 class="title">Further Learning</h2>
-<p>
-        Here are our team's favourite resources for learning more, organized by topic and relevant course material:
-</p>
-{% for category in site.data.curriculum_resources.further %}
-        <h3 class="title">{{category.title}}</h3>
-        <p>{{category.description}}</p>
-        {% for subcategory in category.items %}
-                <h4 class="title">{{subcategory.title}}</h4>
-                <ul>
-                        {% for item in subcategory.items %}
-                        <li>
-                                <a class="tla-link" target="_blank" rel="noopener noreferrer"
-                                        href="{{item.link}}">
-                                        {{item.name}}
-                                </a>
-                        </li>
-                        {% endfor %}
-                </ul>
-        {% endfor %}
-{% endfor %}
