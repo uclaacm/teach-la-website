@@ -34,12 +34,15 @@ ul > li {
 
 .container {
     padding: 0 1em;
-    margin: auto;
-    max-width: 1000px; // enforces a not-too-wide text viewport
 }
 
 .container-fill{
     flex: 1 0 auto; // makes container grow into screen
+}
+
+.container-restricted {
+    margin: auto;
+    max-width: 1000px; // enforces a not-too-wide text viewport
 }
 
 .list-unstyled {
@@ -66,13 +69,25 @@ ul > li {
     font-style: italic;
 }
 
+.text-normal{
+    font-weight: normal;
+}
+
 .title{
     font-family: $font-display;
     margin-bottom: 0;
 }
 
+.text-1x {
+    font-size: 1rem !important;
+}
+
 .text-2x{
     font-size: 2em;
+}
+
+.text-15x{
+    font-size: 1.5em;
 }
 
 .font-display{
@@ -197,8 +212,8 @@ ul > li {
 }
 
 @mixin tla-link(
-    $link-effect-color: $teachla-tint, 
-    $off-color: white, 
+    $link-effect-color: $teachla-tint,
+    $off-color: white,
     $effect-text-color: inherit
 ){
 

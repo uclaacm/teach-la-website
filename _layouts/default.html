@@ -6,11 +6,6 @@
   <body>
 
     {%- include header.html -%}
-    <div class="container container-fill">
-      {{ content }}
-    </div>
-
-    {%- include footer.html -%}
     <script>
       function logTopSecretMessage(message){
         console.log(
@@ -23,6 +18,12 @@
       logTopSecretMessage("Don't worry, our site isn't collecting any data about you, or anything, really. Pinky promise.");
       logTopSecretMessage("You look like somebody who likes web programming and hacking. Why not join our dev team? Check out https://teachla.uclaacm.com/dev");
     </script>
+    <div class="container container-fill {% if layout.fw %}{% else %}container-restricted{% endif %}">
+      {{ content }}
+      {{page.fw}}
+    </div>
+
+    {%- include footer.html -%}
   </body>
 
 </html>

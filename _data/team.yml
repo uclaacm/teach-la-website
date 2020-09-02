@@ -86,10 +86,12 @@ mattf:
 mkang:
   name: "Miles Kang"
   title: "Developer"
+  github: kilometerskang
   img: miles.jpg
 michellz:
   name: "Michelle Zhuang"
   title: "Developer"
+  github: "michelle-zhuang"
   img: michellz.jpg
 anguyen:
   name: "Alvin Nguyen"
