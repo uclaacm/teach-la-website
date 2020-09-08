@@ -1,39 +1,41 @@
-further:
-  - aiml:
-    title: "Artificial Intelligence and Machine Learning"
-    description: "These are our favorite AI/ML resources! We've ordered them by how relevant and useful we think they are, but they're all awesome."
-    items: 
-      - acmai:
-        title: "ACM AI Resources"
-        items: 
-          - name: "ACM AI Blog"
-            link: "http://uclaacmai.github.io/"
-      - introdl:
-        title: "Intro to Deep Learning"
-        items:
-          - name: "Coursera: Deep Learning Specialization"
-            link: "https://www.coursera.org/specializations/deep-learning"
-          - name: "The Deep Learning Textbook"
-            link: "http://www.deeplearningbook.org/"
-          - name: "3Blue1Brown: Neural Networks"
-            link: "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
-          - name: "Udacity: Intro to Deep Learning with TensorFlow"
-            link: "https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187"
-      - tfpytorch:
-        title: "Tensorflow and Pytorch"
-        items:
-          - name: "UC Berkeley: CS294 Tensorflow Tutorial"
-            link: "https://youtu.be/xZKj7Z1CwHc"
-          - name: "UC Berkeley: CS285 (Deep Reinforcement Learning) Resources"
-            link: "http://rail.eecs.berkeley.edu/deeprlcourse/resources/"
-          - name: "Pytorch: Getting Started with Pytorch"
-            link: "https://pytorch.org/tutorials/"
-      - introml:
-        title: "Intro to Machine Learning"
-        items:
-          - name: "Coursera: Introduction to Machine Learning"
-            link: "https://www.coursera.org/learn/machine-learning"
-          - name: "Hal Daumé III: A Course in Machine Learning"
-            link: "http://ciml.info/"
-          - name: "Google: Machine Learning Crash Course"
-            link: "https://developers.google.com/machine-learning/crash-course/"
+aiml:
+  - acmai:
+    title: "ACM AI Resources"
+    items:
+      - name: "You Belong in AI! Podcast"
+        link: "https://anchor.fm/ucla-acm-ai"
+      - name: "ACM AI Blog"
+        link: "http://uclaacmai.github.io/"
+      - name: "Plotting Data Notebook"
+        link: "https://drive.google.com/file/d/1b-NUdhieq6yPRvsEWn_MxaLUZ8sIw0vk/"
+      - name: "MNIST Dataset with Keras Notebook (Archer School Event)"
+        link: "https://colab.research.google.com/drive/13YIFjKEWZolW1nZhPl72Es3nTRb6QixP"
+  - introdl:
+    title: "Intro to Deep Learning"
+    items:
+      - name: "Coursera: Deep Learning Specialization"
+        link: "https://www.coursera.org/specializations/deep-learning"
+      - name: "The Deep Learning Textbook"
+        link: "http://www.deeplearningbook.org/"
+      - name: "3Blue1Brown: Neural Networks"
+        link: "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+      - name: "Udacity: Intro to Deep Learning with TensorFlow"
+        link: "https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187"
+  - tfpytorch:
+    title: "Tensorflow and Pytorch"
+    items:
+      - name: "UC Berkeley: CS294 Tensorflow Tutorial"
+        link: "https://youtu.be/xZKj7Z1CwHc"
+      - name: "UC Berkeley: CS285 (Deep Reinforcement Learning) Resources"
+        link: "http://rail.eecs.berkeley.edu/deeprlcourse/resources/"
+      - name: "Pytorch: Getting Started with Pytorch"
+        link: "https://pytorch.org/tutorials/"
+  - introml:
+    title: "Intro to Machine Learning"
+    items:
+      - name: "Coursera: Introduction to Machine Learning"
+        link: "https://www.coursera.org/learn/machine-learning"
+      - name: "Hal Daumé III: A Course in Machine Learning"
+        link: "http://ciml.info/"
+      - name: "Google: Machine Learning Crash Course"
+        link: "https://developers.google.com/machine-learning/crash-course/"
