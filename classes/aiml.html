@@ -31,7 +31,7 @@ permalink: /classes/ml
     {% for lesson in site.aiml %}
         <div class="ai-lesson-card">
             <div class="ai-lesson-card-content">
-                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span> 
+                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
                     <a class="ai-link" href="{{lesson.url}}">{{lesson.title}}</a>
                 </h3>
                 {{lesson.excerpt}}
@@ -51,3 +51,21 @@ permalink: /classes/ml
         </div>
     {% endfor %}
 </div>
+
+<h2 class="title">More Resources</h2>
+<p>
+    These are our favorite AI/ML resources - they're all awesome!
+</p>
+{% for subcategory in site.data.curriculum_resources.aiml %}
+        <h3 class="title">{{subcategory.title}}</h3>
+        <ul>
+                {% for item in subcategory.items %}
+                <li>
+                        <a class="ai-link" target="_blank" rel="noopener noreferrer"
+                                href="{{item.link}}">
+                                {{item.name}}
+                        </a>
+                </li>
+                {% endfor %}
+        </ul>
+{% endfor %}
