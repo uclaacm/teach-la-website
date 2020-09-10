@@ -308,7 +308,9 @@ To `push` and `pull`, use the sync button in the interface.
 First we need to add the PGP keys of the project maintainer to ensure that the installer we download isn't malicious. We can do this with:
 
 ```sh
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg --keyserver hkp://pool.sks-keyservers.net \
+  --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 \
+  7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
 This assumes that you have `gpg` installed on your device. It is standard on OSX (Macs), and *highly recommended* on Linux distributions. If you don't have `gpg` installed for some reason on your system, you likely know what you are doing. To reinstall it, use the packages provided on the [GnuPG](https://gnupg.org/download/) website.
