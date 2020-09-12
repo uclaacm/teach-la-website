@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="team-container">
+    {% if page.img %}
+        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.name }}">
+    {% else %}
+        <img class="profile-img" src="https://api.adorable.io/avatars/512/{{ page.name }}.png" alt="temporary picture"/>
+    {% endif %}
+
+    <h1>{{ page.name }}</h1>
+    <p>{{ page.title }}</p>
+
+    {% if page.email %}
+    <a href="mailto:{{ page.email }}">Email me~</a>
+    {% endif %}
+
+    {% if page.links %}
+    <div class="team-links">
+        <ul>
+            {% for link in page.links %}
+            <li><a href="{{ link.href }}">{{ link.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <p class="about">
+        {{ page.content }}
+    </p>
+</div>
