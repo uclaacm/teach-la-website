@@ -13,13 +13,14 @@ permalink: "/team"
     Our directors, school leads, and curriculum leads. Feel free to reach out to any of our board for more information about what we do!
 </p>
 
-{% assign board = site.team | where_exp:"item", "item.group contains 'board'" %}
-{% assign members = site.team | where_exp:"item", "item.group contains 'member'" %}
+{% assign board = site.team | where_exp:"item", "item.group contains 'board'" | sort:"lastname" | group_by:"index" | reverse %}
+{% assign members = site.team | where_exp:"item", "item.group contains 'member'" | sort:"lastname" %}
 {% assign boardalums = site.team | where_exp:"item", "item.group contains 'alum'" | group_by:"year" %}
 {% assign alumsplus = site.team | where_exp:"item", "item.group contains 'alum+'" | order_by:"year" %}
 
 <div class="team-member-grid board-member-grid">
-    {% for member in board %}
+    {% for idx in board %}
+    {% for member in idx.items %}
     <div class="grid-row" id="{{ member.slug }}">
         <div class="grid-col">
             <div class="profile-img-container">
@@ -57,6 +58,7 @@ permalink: "/team"
             </div>
         </div>
     </div>
+    {% endfor %}
     {% endfor %}
 </div>
 
