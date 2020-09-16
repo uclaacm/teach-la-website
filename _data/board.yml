@@ -2,7 +2,7 @@ mwang:
   name: "Matthew Wang"
   title: "President"
   secondary: "Web Dev Lead"
-  github: malsf21 
+  github: malsf21
   email: matt@matthewwang.me
   img: mwang.jpg
 asubramonian:
@@ -63,9 +63,9 @@ kwang:
   title: Special Events Director
 sjha:
   name: "Sharvani Jha"
-  title: "Moonshots Advisor"
+  title: "Advisor (Moonshots)"
   img: sharvani.png
 blee:
   name: "Bonnie Lee"
-  title: "Advisor"
+  title: "Advisor (ACM)"
   img: blee.jpg

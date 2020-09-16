@@ -22,7 +22,7 @@ fw: true
                 {% if page.colab_link %}
                     <li>
                         <a class="ai-link" href="{{page.colab_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-book"></span> Link to Google Colab
+                            <span class="fa fa-code"></span> Link to Code (Google Colab)
                         </a>
                     </li>
                 {% endif %}
@@ -34,7 +34,7 @@ fw: true
                         <span class="fa fa-arrow-right"></span> next lesson: {{page.next_text}}
                     </a>
                 {% endif %}
-                <a class="button button-ai button-block" href="{{site.baseurl}}/classes/ml/">
+                <a class="button button-ai button-block" href="{{site.baseurl}}/classes/ml">
                     <span class="fa fa-arrow-left"></span> back to lessons
                 </a>
             </div>
@@ -44,3 +44,7 @@ fw: true
         <iframe class="ai-slide-iframe" src="{{page.slides_link}}embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
+
+<script>
+    logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
+</script>
