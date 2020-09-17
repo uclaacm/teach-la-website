@@ -27,8 +27,6 @@ Oh wow, this looks like a lot! But trust us, this only takes 15 minutes, max.
   * [Running Jekyll with Bundle](#running-jekyll-with-bundle)
   * [Make your Changes](#make-your-changes)
   * [Add, Commit, and Push](#add-commit-and-push)
-  * [Making a Pull Request](#making-a-pull-request)
-  * [Code Review](#code-review)
 * [Next Steps](#next-steps)
 * [Appendix: GitHub Desktop](#appendix-github-desktop)
 * [Appendix: Installing Ruby with RVM](#appendix-installing-ruby-with-rvm)
@@ -250,27 +248,9 @@ $ git push --set-upstream origin implement-docs-collection
 
 And we're done! If you go to the [branches section of our GitHub repository](https://github.com/uclaacm/teach-la-website/branches), you should see your branch there!
 
-You can keep on adding, committing, and pushing changes as you see fit. As soon as you're 100% done and ready to update the live website, you need to make a pull request.
+You can keep on adding, committing, and pushing changes as you see fit.
 
-### Making a Pull Request
-
-Now that you've pushed some code to the repository, you can submit what's called a **pull request**, or a request to merge your changes on one branch into another. GitHub makes this very easy, so let's navigate to our [repository's GitHub page](https://github.com/uclaacm/teach-la-website). If we're fast enough, we'll see a notification stating that our branch was recently pushed, along with a suggestion to make a pull request from it.
-
-Go ahead and click on "create a pull request" to proceed, and you'll be presented a form to write a title for your pull request, along with a description of the finer details. If we're adding this page, then we might title it ["Implement Internal Docs Collection"](https://github.com/uclaacm/teach-la-website/pull/68). For the description, we might describe the files added and any modifications to existing code. But wait, we haven't finished our work yet! Why open a pull request now?
-
-We can always update the description and title later, so it might be beneficial to submit what's called a **draft** pull request so that project maintainers have the opportunity to [review our code](#Code%20Review), and get us feedback early:
-
-![selecting a reviewer for the pull request]({{ site.baseurl }}/img/docs/dev-setup-reviewers.png)
-
-From here, we can request the review of project maintainers or fellow peers and see our changes merged!
-
-### Code Review
-
-Once your pull request is submitted, you'll notice that you can't immediately merge it (i.e., have your changes added to the source code). This is because we enforce a mandatory code review from a maintainer prior to merging. Code review is an essential part of development. What it means is that someone who owns or manages the repository looks over your changes to make sure that nothing breaks, everything works as expected, and that - in some cases - your coding style is up to the project's standards.
-
-A code review will appear on your pull request on GitHub as a comment, with specific comments on parts of your code. A review can either approve (ready to merge), deny (needs some changes before it is ready), or remain neutral (often an interim review) on your changes.
-
-Once the review process is complete and your pull request is approved, you will be able to merge your changes into the `master` branch! Congratulations on your first PR!
+When you are ready to merge, then you can create a **pull request** -- something we cover in [our next guide]({{ site.baseurl }}/docs/static-setup)!
 
 ## Next Steps
 
