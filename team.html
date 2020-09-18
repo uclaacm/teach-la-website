@@ -17,9 +17,10 @@ permalink: "/team"
 {% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"lastname" | group_by:"title" | sort:"name" %}
 {% assign leadership = president | concat: board %}
 
-{% assign members = site.team | where_exp:"item", "item.group contains 'member'" | sort:"lastname" %}
-{% assign boardalums = site.team | where_exp:"item", "item.group contains 'alum'" | group_by:"year" %}
-{% assign alumsplus = site.team | where_exp:"item", "item.group contains 'alum+'" | order_by:"year" %}
+{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"lastname" %}
+
+{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"lastname" %}
+{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"lastname" %}
 
 <div class="team-member-grid board-member-grid">
     {% for group in leadership %}
@@ -117,13 +118,23 @@ permalink: "/team"
     <a class="tla-link" href="https://en.wikipedia.org/wiki/Rome_wasn%27t_built_in_a_day" target="_blank" rel="noopener noreferrer">Rome wasn't built in a day</a>, and neither was Teach LA! Many thanks to our previous boards for steering our organization in the right direction.
 </p>
 
-{% for year in boardalums %}
-<h3 class="title">{{ year.name }}</h3>
-<ul>
-    {% for member in year %}
-    <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.year }}): {{ member.title }}</li>
+{% assign foundingYear = "2016" %}
+{% assign currentYear = site.time | date: '%Y' | minus: 1 %}
+
+{% for year in (foundingYear..currentYear) %}
+
+{% assign nextYear = year | plus: 1 %}
+{% assign boardYear = year | append:'-' | append: nextYear %}
+
+<h3 class="title">{{ boardYear }}</h3>
+
+{% for member in boards %}
+    {% for position in member.positions %}
+        {% if position.year == boardYear %}
+        <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.year }}): {{ position.title }}</li>
+        {% endif %}
     {% endfor %}
-</ul>
+{% endfor %}
 {% endfor %}
 
 <h2 class="title">Graduating Greats!</h2>

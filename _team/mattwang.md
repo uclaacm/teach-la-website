@@ -7,8 +7,11 @@ group: "board"
 img: "mwang.jpg"
 email: "matt@matthewwang.me"
 github: "malsf21"
+year: 2022
 
-index: 1
+positions:
+  - year: 2019-2020
+    title: Dev Team Director
 ---
 
 Matt's page
