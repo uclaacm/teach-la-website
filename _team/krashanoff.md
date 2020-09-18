@@ -12,5 +12,3 @@ links:
   - name: "Website"
     href: "krashanoff.com"
 ---
-
-This is a blurb about me. There are many like it, but this one is mine.
