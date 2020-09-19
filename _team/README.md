@@ -31,7 +31,7 @@ text **to be bold**, *italicized*, or make lists:
 |-|-|-|
 | `firstname` | Your preferred first name! | ✅ |
 | `lastname` | Your last name! | ✅ |
-| `group` | Exactly one of the following: "member" \| "board \| "alum+" | ✅ |
+| `group` | Exactly one of the following: "member" (standard) \| "board" (serving the **current** board) \| "alum" (graduated) \| "alum+" (graduated in club, a.k.a. one of our "Graduated Greats") | ✅ |
 | `title` | What you do in club | ✅ |
 | `graduating_year` | What year you plan to graduate in. If you graduate as a Teach LA member, you will be added to our list of "Graduating Greats!" | ✅ |
 | `secondary` | If you do something in addition to your primary role | ❌ |

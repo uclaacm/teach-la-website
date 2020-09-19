@@ -1,7 +1,7 @@
 ---
 firstname: Alejandra
 lastname: Cervantes
-group: alum+
+group: alum
 graduating_year: 2019
 
 positions:

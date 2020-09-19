@@ -20,13 +20,17 @@ layout: default
             <div class="team-links">
                 <ul>
                     {% if page.email %}
-                    <li><a class="tla-link" href="mailto:{{ page.email }}">{{ page.email }}</a></li>
+                    <li><a class="tla-link" href="mailto:{{ page.email }}"><span class="fa fa-envelope"></span> {{ page.email }}</a></li>
                     {% endif %}
                     {% if page.github %}
-                    <li><a class="tla-link" href="https://github.com/{{ page.github }}" rel="noopener noreferrer" target="_blank">{{ page.github }}</a></li>
+                    <li><a class="tla-link" href="https://github.com/{{ page.github }}" rel="noopener noreferrer" target="_blank"><span class="fab fa-github"></span> {{ page.github }}</a></li>
                     {% endif %}
                     {% for link in page.links %}
-                    <li><a class="tla-link" href="{{ link.href }}" rel="noopener noreferrer" target="_blank">{{ link.name }}</a></li>
+                    <li>
+                        <a class="tla-link" href="{{ link.href }}" rel="noopener noreferrer" target="_blank">
+                            {{ link.name }}
+                        </a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
