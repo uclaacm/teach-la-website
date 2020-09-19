@@ -50,3 +50,9 @@
         }
     }
 }
+
+.team-profile {
+    @media (max-width: $desktop-width) {
+        margin: 50px auto;
+    }
+}
