@@ -20,7 +20,7 @@ permalink: "/team"
 {% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"lastname" %}
 
 {% assign boards = site.team | where_exp:"item", "item.positions" | sort:"lastname" %}
-{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"lastname" %}
+{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"lastname" | group_by:"graduating_year" | sort:"name" %}
 
 <div class="team-member-grid board-member-grid">
     {% for group in leadership %}
@@ -131,7 +131,7 @@ permalink: "/team"
 {% for member in boards %}
     {% for position in member.positions %}
         {% if position.year == boardYear %}
-        <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.year }}): {{ position.title }}</li>
+        <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
         {% endif %}
     {% endfor %}
 {% endfor %}
@@ -142,7 +142,9 @@ permalink: "/team"
     Teach LA honors its alumni who have stayed with the organization through graduation.
 </p>
 <ul>
-{% for member in alumsplus %}
-    <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.year }})</li>
+{% for year in alumsplus %}
+{% for member in year.items %}
+    <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }})</li>
+{% endfor %}
 {% endfor %}
 </ul>

@@ -1,7 +1,7 @@
 ---
 firstname: Shane
 lastname: Cho
-year: 2021
+graduating_year: 2021
 
 positions:
   - year: 2019-2020

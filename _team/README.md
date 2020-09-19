@@ -33,7 +33,7 @@ text **to be bold**, *italicized*, or make lists:
 | `lastname` | Your last name! | ✅ |
 | `group` | Exactly one of the following: "member" \| "board \| "alum+" | ✅ |
 | `title` | What you do in club | ✅ |
-| `year` | What year you plan to graduate in. If you graduate as a Teach LA member, you will be added to our list of "Graduating Greats!" | ✅ |
+| `graduating_year` | What year you plan to graduate in. If you graduate as a Teach LA member, you will be added to our list of "Graduating Greats!" | ✅ |
 | `secondary` | If you do something in addition to your primary role | ❌ |
 | `img` | Filename of an image of your face, as located in our [img/team folder](../img/team)! | ❌ (but recommended!) |
 | `github` | Your GitHub username | ❌ |
@@ -57,7 +57,7 @@ firstname: Joe
 lastname: Bruin
 group: member
 title: Instructor
-year: 1923
+graduating_year: 1923
 
 img: jbruin.png
 github: uclaacm
@@ -76,7 +76,7 @@ The fully-evolved Teach LA member: served on multiple boards, is a "Graduating G
 firstname: Josie
 lastname: Bruin
 group: alum+
-year: 1923
+graduating_year: 1923
 
 img: josiebruin.png
 github: uclaacm

@@ -1,9 +1,10 @@
 ---
 firstname: Alejandra
 lastname: Cervantes
-year: 2019
+group: alum+
+graduating_year: 2019
 
 positions:
-  - year: 2019
+  - year: 2016-2017
     title: Director of Pedagogy
 ---

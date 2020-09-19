@@ -2,7 +2,7 @@
 firstname: "Christina"
 lastname: "Indudhara"
 group: "alum+"
-year: 2020
+graduating_year: 2020
 
 positions:
   - year: "2019-2020"

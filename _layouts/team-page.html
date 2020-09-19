@@ -19,12 +19,15 @@ layout: default
             {% if page.links or page.email %}
             <div class="team-links">
                 <ul>
-                    {% for link in page.links %}
-                    <li><a class="tla-link" href="{{ link.href }}" target="_blank">{{ link.name }}</a></li>
-                    {% endfor %}
                     {% if page.email %}
                     <li><a class="tla-link" href="mailto:{{ page.email }}">{{ page.email }}</a></li>
                     {% endif %}
+                    {% if page.github %}
+                    <li><a class="tla-link" href="https://github.com/{{ page.github }}" rel="noopener noreferrer" target="_blank">{{ page.github }}</a></li>
+                    {% endif %}
+                    {% for link in page.links %}
+                    <li><a class="tla-link" href="{{ link.href }}" rel="noopener noreferrer" target="_blank">{{ link.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             {% endif %}
@@ -37,3 +40,10 @@ layout: default
     {{ page.content }}
 </div>
 {% endif %}
+
+<div class="cta-container">
+    <hr class="divider">
+    <p class="bottom-button-container">
+        <a class="button" href="{{ site.baseurl }}/team">Meet more of our team!</a>
+    </p>
+</div>

@@ -2,7 +2,7 @@
 firstname: Apurva
 lastname: Panse
 group: alum+
-year: 2018
+graduating_year: 2018
 
 positions:
   - year: 2017-2018

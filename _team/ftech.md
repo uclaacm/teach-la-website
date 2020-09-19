@@ -1,7 +1,8 @@
 ---
 firstname: Furn
 lastname: Techalertumpai
-year: 2020
+graduating_year: 2020
+group: alum
 
 positions:
   - year: 2018-2019
