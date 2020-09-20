@@ -22,6 +22,8 @@ defaults:
 
 # collections
 collections:
+  posts:
+    permalink: /blog/:categories/:year/:month/:day/:title/
   aiml:
     permalink: /classes/ml/:name
     output: true

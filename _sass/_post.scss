@@ -1,0 +1,47 @@
+.post-container {
+    max-width: 50rem;
+}
+
+.post-author-grid{
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+        > div {
+            margin-top: 2em;
+        }
+    }
+}
+
+.post-author-img{
+    width: 4em;
+    height: 4em;
+    display: block;
+    border-radius: 10px;
+}
+
+.post-author-info{
+    padding-left: 2em;
+}
+
+.post-get-more {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+}
+
+.post-blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid $teachla-green;
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+
+    .tla-link, a {
+        @include tla-link($teachla-green, #f9f9f9);
+    }
+
+}

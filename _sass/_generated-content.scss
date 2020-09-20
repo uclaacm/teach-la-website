@@ -1,6 +1,6 @@
 .generated-content{
     h1, h2, h3, h4, h5, h6 {
-        font-family: $font-display;
+        font-family: $font-header;
         margin-bottom: 0;
     }
 
@@ -8,7 +8,13 @@
         @include tla-link();
     }
 
-    ul, ol {
-        font-size: 1.5rem;
+    p {
+        line-height: 1.5;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 }
