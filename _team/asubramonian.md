@@ -1,7 +1,7 @@
 ---
 firstname: "Arjun"
 lastname: "Subramonian"
-title: "Logistics Director"
+title: "Advisor (JEDI)"
 secondary: "AI/ML Lead"
 group: "board"
 img: "asubramonian.jpg"

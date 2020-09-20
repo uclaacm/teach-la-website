@@ -2,7 +2,7 @@
 firstname: "Alyssa"
 lastname: "Wang"
 title: "Developer"
-secondary: "Cyber Content Lead"
+secondary: "Cyber Lead"
 group: "member"
 github: "alyssamw"
 img: "awang.jpg"

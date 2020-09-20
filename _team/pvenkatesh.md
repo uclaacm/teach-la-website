@@ -1,9 +1,9 @@
 ---
 firstname: "Pragathi"
 lastname: "Venkatesh"
-title: "Brockton School Lead"
+title: "Advisor"
 secondary: "Scratch Lead"
-group: "board"
+group: "member"
 img: pragathi.jpg
 graduating_year: 2022
 
