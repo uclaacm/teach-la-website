@@ -17,9 +17,9 @@ permalink: /blog/
 <section>
   <h2 class="title">
       <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+      <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
   </h2>
   <p>
-    <strong>{{post.author}}</strong> • {{ post.date | date: "%b %-d, %Y" }}
     {% comment %}
     <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
     •
