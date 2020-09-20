@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How We Made "Getting Mean About Error"
-date: 2020-07-21 19:55:55 UTC
+date: 2020-09-19 19:55:56 UTC
 author: Miles and Michelle # this is just what's used for SEO
 authors:
     - fname: Miles
@@ -13,6 +13,8 @@ tags:
     - learning labs
     - dev team
 ---
+
+*Note: this post was originally finished in June, but went through a few iterations as we implemented the blogs feature. Many thanks to Miles & Michelle for their patience!*
 
 The [“Getting Mean About Error” module](https://uclaacm.github.io/getting-mean-about-error/) was a two-quarter-long project that we dove into with a negligible background in web development. Along the way, we picked up a few skills and upgraded our web-dev background from beginner to slightly-less-beginner.
 
