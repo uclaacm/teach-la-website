@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Welcome to Our Blog!
-date: 2020-09-18 19:55:55 UTC
 author: Matt and Leo # this is just what's used for SEO
 authors:
     - fname: Matthew

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: How We Made "Getting Mean About Error"
-date: 2020-09-19 19:55:56 UTC
 author: Miles and Michelle # this is just what's used for SEO
 authors:
     - fname: Miles
