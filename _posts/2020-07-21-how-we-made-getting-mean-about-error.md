@@ -1,13 +1,15 @@
 ---
-layout: post 
+layout: post
 title: How We Made "Getting Mean About Error"
 date: 2020-07-21 19:55:55 UTC
 author: Miles and Michelle # this is just what's used for SEO
-authorhashes:
-    - mkang
-    - michellz
+authors:
+    - fname: Miles
+      lname: Kang
+    - fname: Michelle
+      lname: Zhuang
 category: dev
-tags: 
+tags:
     - learning labs
     - dev team
 ---

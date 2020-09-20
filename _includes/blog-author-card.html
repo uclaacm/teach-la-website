@@ -1,15 +1,17 @@
 <div class="grid-row">
     <div class="grid-col">
-        <img 
+        <img
             class="post-author-img"
-            src="{{include.img}}" 
-            alt="photo of {{include.name}}" 
+            src="{{include.img}}"
+            alt="photo of {{include.name}}"
         />
     </div>
     <div class="grid-col">
         <div class="post-author-info">
             <h3 class="no-margin title">
-                {{include.name}}
+                <a class="tla-link" href="{{include.url}}">
+                    {{include.name}}
+                </a>
             </h3>
             <p class="no-margin">
                 {{include.role}}

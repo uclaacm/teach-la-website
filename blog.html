@@ -19,22 +19,22 @@ permalink: /blog/
       <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
   </h2>
   <p>
-    written by {{post.author}} on {{ post.date | date: "%b %-d, %Y" }} • 
-    category: {{post.category }} • 
+    <strong>{{post.author}}</strong> • {{ post.date | date: "%b %-d, %Y" }}
+    {% comment %}
+    <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
+    •
+    category: {{post.category }} •
     {% if post.tags %}
-        tags: 
+        tags:
         {% for tag in post.tags %}
             {{tag}}{% if forloop.last == false %}, {% endif %}
         {% endfor %}
-    {% endif %} • 
-    {% capture words %}
-        {{ post.content | number_of_words | minus: 250 }}
-    {% endcapture %}
-    {{ words | plus: 250 | append: " words" }}
+    {% endif %}
+    {% endcomment %}
   </p>
   <blockquote class="post-blockquote">
     {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
-  </blockquote> 
+  </blockquote>
 </section>
 <hr class="divider" />
 {% endfor %}

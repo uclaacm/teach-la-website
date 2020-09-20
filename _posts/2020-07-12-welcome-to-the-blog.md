@@ -1,13 +1,15 @@
 ---
-layout: post 
+layout: post
 title: Welcome to the ACM Teach LA Blog!
 date: 2020-07-12 19:55:55 UTC
 author: Matt and Leo # this is just what's used for SEO
-authorhashes:
-    - mwang
-    - krash
+authors:
+    - fname: Matthew
+      lname: Wang
+    - fname: Leo
+      lname: Krashanoff
 category: dev
-tags: 
+tags:
     - website
 ---
 
