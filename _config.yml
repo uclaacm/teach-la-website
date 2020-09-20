@@ -12,14 +12,27 @@ editor_link: https://editor.uclaacm.com
 
 dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team-page"
+
 # collections
 collections:
+  posts:
+    permalink: /blog/:categories/:year/:month/:day/:title/
   aiml:
     permalink: /classes/ml/:name
     output: true
   reports:
     output: true
     permalink: /reports/:name
+  team:
+    output: true
+    permalink: /team/:slug
 
 # Build settings
 markdown: kramdown

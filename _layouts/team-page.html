@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="team-profile">
+    <div class="row">
+        <div class="col">
+            {% if page.img %}
+            <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.name }}">
+            {% else %}
+            <img class="profile-img" src="https://api.adorable.io/avatars/512/{{ page.name }}.png" alt="temporary picture"/>
+            {% endif %}
+        </div>
+        
+        <div class="col">
+            <h1 class="title">{{ page.firstname }} {{ page.lastname }}</h1>
+            <p class="no-margin text-15x">{{ page.title }}</p>
+
+            {% if page.links or page.email %}
+            <div class="team-links">
+                <ul>
+                    {% if page.email %}
+                    <li><a class="tla-link" href="mailto:{{ page.email }}"><span class="fa fa-envelope"></span> {{ page.email }}</a></li>
+                    {% endif %}
+                    {% if page.github %}
+                    <li><a class="tla-link" href="https://github.com/{{ page.github }}" rel="noopener noreferrer" target="_blank"><span class="fab fa-github"></span> {{ page.github }}</a></li>
+                    {% endif %}
+                    {% for link in page.links %}
+                    <li>
+                        <a class="tla-link" href="{{ link.href }}" rel="noopener noreferrer" target="_blank">
+                            {{ link.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% if page.content %}
+<div class="team-content">
+    {{ page.content }}
+</div>
+{% endif %}
+
+<div class="cta-container">
+    <hr class="divider">
+    <p class="bottom-button-container">
+        <a class="button" href="{{ site.baseurl }}/team">Meet more of our team!</a>
+    </p>
+</div>

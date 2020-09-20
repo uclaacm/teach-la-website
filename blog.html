@@ -1,0 +1,40 @@
+---
+layout: default
+title: The Teach LA Blog
+permalink: /blog/
+---
+
+<h1 class="title page-title">The Teach LA Blog</h1>
+<p>
+  We love what we do, and we want to share it with you! Here are some insights from our members on how our club operates: how we teach, write code, and create a community!
+</p>
+<p>
+  Interested in more formal reflections on the inner workings of our club? Check out <a class="tla-link" href="{{site.baseurl}}/reports">reports section</a>.
+</p>
+
+<hr class="divider">
+{% for post in site.posts %}
+<section>
+  <h2 class="title">
+      <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+      <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
+  </h2>
+  <p>
+    {% comment %}
+    <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
+    •
+    category: {{post.category }} •
+    {% if post.tags %}
+        tags:
+        {% for tag in post.tags %}
+            {{tag}}{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endcomment %}
+  </p>
+  <blockquote class="post-blockquote">
+    {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
+  </blockquote>
+</section>
+<hr class="divider" />
+{% endfor %}
