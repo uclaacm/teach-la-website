@@ -1,7 +1,7 @@
 ---
 title: "Logistic Regression"
 num: 5
-slides_link: "https://docs.google.com/presentation/d/10Jhvqlr5pM5orlLxpS4Y4z1QNkOB8nq6zz1xmk_spn0/"
+slides_link: "https://docs.google.com/presentation/d/1Y38rrQ_36ECjfGqUhRLJhTTeoBPRa_DcYkI4SO5v2Bk/"
 ---
 
 Let's train a model that can classify an image as being of either a dog or cat!

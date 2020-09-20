@@ -31,6 +31,12 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team-page"
 
 # collections
 collections:
@@ -43,6 +49,9 @@ collections:
   reports:
     output: true
     permalink: /reports/:name
+  team:
+    output: true
+    permalink: /team/:slug
 
 # Build settings
 markdown: kramdown
