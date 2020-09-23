@@ -47,4 +47,11 @@
             @include tla-link(white, $teachla-green, $teachla-black);
         }
     }
+
+    .footer-fullheight-col {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
