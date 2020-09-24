@@ -2,8 +2,7 @@
 title: "Introduction to Linear Regression"
 layout: aiml-lesson
 num: 4a
-prev_slug: 03-supervised-learning
-slides_link: "https://docs.google.com/presentation/d/1WA0BHl-MRCG1dI4u7SRSsTxZr9Zz1J70ywUARgMstzU/"
+slides_link: "https://docs.google.com/presentation/d/17kOcHULTOR7XomqxCWB0HNO8XJK1lQQipT9aeF19DfQ/"
 colab_link: "https://colab.research.google.com/drive/1DdzS5dAvj1RjiPU-QVz82w4d2K-bbVvs"
 ---
 
