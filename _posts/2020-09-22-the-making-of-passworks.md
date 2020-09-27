@@ -150,7 +150,7 @@ In each `Chat` component, I passed in `key={getChatKey()}` to generate a unique 
 
 ---
 
-### `react-countup` Bug
+### react-countup Bug
 
 I encountered a strange bug after deciding to print the counter's output to the console (while debugging a different issue). I had set a 10 second delay for the counter to automatically start, and I discovered that the counter would start after waiting out this delay even if I navigated to the next slide, where the counter shouldn't exist. It appeared that the `useCountUp` hook wasn't unmounted properly when it should have.
 
