@@ -62,7 +62,7 @@ Probably one of the biggest decisions during the building of the app was how I w
 
 In addition, there were many instances where two different activities would be able to reuse previous components. For example, the first two activities both feature a password input and password generator. I realized that I could create a declarative framework, where each lesson is defined by an array of JavaScript objects. For example, the block of code below represents a single slide in a lesson:
 
-```js
+```jsx
 [
   // ...
   {
@@ -186,7 +186,7 @@ This is not so much a bug as it was something I noticed or learned throughout th
 
 [This commit](https://github.com/uclaacm/passworks/commit/eaaf2527cae3cdb232a93335640a248e57f262a8) contains most of the work I had to do while transitioning from components to hooks, and provides a decent illustration of the gains from fully switching to hooks. In particular, compare the following code snippets: the first using the `CountUp` component and the second using the equivalent hook:
 
-```js
+```jsx
 return (
   <CountUp
     start={0}
@@ -209,7 +209,7 @@ return (
   </CountUp>
 );
 ```
-```js
+```jsx
 const { countUp: countUp1, start: start1 } = useCountUp({ start: 0, end: 100 });
 const { countUp: countUp2, start: start2 } = useCountUp({ start: 0, end: 100 });
 return (
@@ -256,7 +256,6 @@ I used regular expressions to validate user inputs by writing callbacks that tes
 
 ---
 
-<a id="counting-up-to-strings"></a>
 ### Counting Up to Strings
 
 As previously promised, I'll discuss how I took advantage of the `react-countup` module's flexibility. While it was relatively straightforward to implement a brute-force password generator for numbers by using this module, I needed some way to use the module to generate strings in a similar fashion. A look into the API of the `react-countup` module revealed a [`formattingFn` prop](https://www.npmjs.com/package/react-countup#formattingfn-value-number--string), which accepts a function that accepts a number and returns a string.
