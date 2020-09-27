@@ -158,7 +158,7 @@ One workaround I tried out was setting the `delay` prop to be a really high numb
 
 This bug and the workaround I implemented were quite unsettling, so I investigated the source code of the `useCountUp` hook that I was using. I found the following code snippet from [this file](https://github.com/RideReport/react-countup/blob/a8a505d073deef5cc6211dfaed5f963374e9285e/src/useCountUp.js):
 
-``` js
+```js
 useEffect(() => {
   const { delay, onStart, onEnd, startOnMount } = _props;
   if (startOnMount) {
