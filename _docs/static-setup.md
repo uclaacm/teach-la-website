@@ -1,12 +1,12 @@
 ---
-title: Adding yourself to the team page
+title: "Adding yourself to the team page"
 ---
 
 ## Table of Contents
 
 * [Create a New Branch](#create-a-new-branch)
-* [Monitoring our Changes w/ Jekyll](#running-jekyll-with-bundle)
-* [Create your team page](#make-your-changes)
+* [Monitoring our Changes with Jekyll](#running-jekyll-with-bundle)
+* [Create Your Team Page](#make-your-changes)
 * [Add, Commit, and Push](#add-commit-and-push)
 * [Making a Pull Request](#making-a-pull-request)
 * [Code Review](#code-review)
@@ -16,9 +16,9 @@ title: Adding yourself to the team page
 
 Before we get started, we highly encourage that you follow along with our [dev setup guide]({{ site.baseurl }}/docs/dev-setup) to get a working development environment set up.
 
-## Create a new branch
+## Create a New Branch
 
-For a brief review from our previous guide, to create a branch from your **terminal**:
+To create a branch from our **terminal**, we reference a one-liner from our [previous guide]({{ site.baseurl }}/docs/dev-setup):
 
 ```sh
 $ git checkout -b my-branch-name
@@ -26,7 +26,9 @@ $ git checkout -b my-branch-name
 
 This will automatically create and **checkout** your new branch for you with the supplied name.
 
-## Monitoring our changes with Jekyll
+We will be using the terminal throughout this guide, but if you are using a graphical Git client (like [GitHub Desktop](https://desktop.github.com/)), then the steps are exactly the same. The only thing that changes is how you perform them.
+
+## Monitoring our Changes with Jekyll
 
 We would like to be able to monitor our changes live with Jekyll. We can do this easily with `jekyll serve`, as discussed in our [setup guide]({{ site.baseurl }}/docs/dev-setup).
 
@@ -34,9 +36,11 @@ We would like to be able to monitor our changes live with Jekyll. We can do this
 $ jekyll serve
 ```
 
+If Jekyll complains of lacking dependencies, or failing to compile, then you should run `bundle install`.
+
 Now, we will have a server running locally where we can see the changes that we are making to the website reflected in our web browser.
 
-## Create your team page
+## Create Your Team Page
 
 Now to add yourself to our [team page]({{ site.basurl }}/team)! When you add yourself to our team, you are not only adding your name to the team page, but you are also creating your own webpage on the website, and associating yourself to any future blog posts that you might write!
 
@@ -56,7 +60,7 @@ If we refresh the team page in our web browser, now, we should see that our name
 
 After those last three dashes, you are free to write whatever you'd like in [Markdown formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to have it generate your user page, reachable via clicking on your profile image.
 
-## Add, commit, and push
+## Add, Commit, and Push
 
 Now, you are ready to add your files to the stage, commit, and push as discussed in [our setup guide]({{ site.baseurl }}/docs/dev-setup).
 
