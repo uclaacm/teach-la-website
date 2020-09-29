@@ -9,11 +9,11 @@ permalink: /blog/
   We love what we do, and we want to share it with you! Here are some insights from our members on how our club operates: how we teach, write code, and create a community!
 </p>
 <p>
-  Interested in more formal reflections on the inner workings of our club? Check out <a class="tla-link" href="{{site.baseurl}}/reports">reports section</a>.
+  Interested in more formal reflections on the inner workings of our club? Check out <a class="tla-link" href="{{site.baseurl}}/reports">reports section</a>. Curious in how we handle teaching an artificial intelligence and machine learning class at a high school, or our joint efforts to provide AI education? Peep the <a class="ai-link" href="https://uclaacmai.github.io/blog/" target="_blank" rel="noopener noreferrer">ACM AI blog!</a>
 </p>
 
-<hr class="divider">
 {% for post in site.posts %}
+<hr class="divider" />
 <section>
   <h2 class="title">
       <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
@@ -36,5 +36,6 @@ permalink: /blog/
     {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
   </blockquote>
 </section>
-<hr class="divider" />
 {% endfor %}
+
+{% include contact-cta.html %}
