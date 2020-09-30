@@ -146,8 +146,14 @@ ul > li {
     }
 }
 
+.no-gutter {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .flex-center {
     align-self: center;
+    justify-self: center;
 }
 
 .row-reverse {
@@ -160,10 +166,6 @@ ul > li {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-}
-
-.img-quarter {
-    max-width: 75%;
 }
 
 .img-half-on-large{
