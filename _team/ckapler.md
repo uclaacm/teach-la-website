@@ -1,7 +1,7 @@
 ---
 firstname: "Chase"
 lastname: "Kapler"
-title: "Instructor"
-group: "member"
+title: "React Native Lead"
+group: "board"
 img: "ckapler.jpg"
 ---
