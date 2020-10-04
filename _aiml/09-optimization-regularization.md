@@ -1,6 +1,5 @@
 ---
 title: "Optimization & Regularization"
-layout: aiml-lesson
 num: 9
 slides_link: "https://docs.google.com/presentation/d/16C266plu3GsPvmka_teumqWmObpuxyOACwK5RDkg40w/"
 colab_link: "https://colab.research.google.com/drive/1x17h-KEKMEOecsi9VByQGNZjl7fj-xk-"

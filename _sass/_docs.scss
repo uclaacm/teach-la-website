@@ -1,6 +1,14 @@
 .generated-content {
     img {
         max-height: 25rem;
+        max-width: 94%;
+        padding: 2%;
+    }
+
+    pre {
+        border-radius: 4px;
+        padding: 15px;
+        border: 2px solid $teachla-green;
     }
 
     // syntax-highlighting

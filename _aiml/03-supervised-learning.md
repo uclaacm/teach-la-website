@@ -1,6 +1,5 @@
 ---
 title: "Supervised Learning"
-layout: aiml-lesson
 num: 3
 next_text: Intro to Linear Regression
 slides_link: "https://docs.google.com/presentation/d/1oziAF78YCEAzR9Q6oPnlPXsZOXM8aNzAp-ryJq-skPM/"
