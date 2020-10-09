@@ -54,7 +54,7 @@ collections:
     permalink: /reports/:name
   team:
     output: true
-    permalink: /team/:slug
+    permalink: /team/:name
 
 # Build settings
 markdown: kramdown
