@@ -12,13 +12,14 @@ You may ask: why is the website so complicated to set up! You may have a point, 
 
 ## Table of Contents
 
-Oh wow, this looks like a lot! But trust us, this only takes 15 minutes, max.
-
 * [Table of Contents](#table-of-contents)
+* [Navigating your Shell](#navigating-your-shell)
 * [GitHub](#github)
   * [Creating a GitHub Account](#creating-a-github-account)
   * [Joining our GitHub Organization](#joining-our-github-organization)
-* [Finding your Shell](#finding-your-shell)
+* [Installing Git](#installing-git)
+  * [If you're using WSL or Linux](#if-youre-using-wsl-or-linux)
+  * [If you're using OSX](#if-youre-using-osx)
 * [One-Time Setup](#one-time-setup)
   * [Cloning our Repository](#cloning-our-repository)
   * [Installing Dependencies](#installing-dependencies)
@@ -28,12 +29,52 @@ Oh wow, this looks like a lot! But trust us, this only takes 15 minutes, max.
   * [Make your Changes](#make-your-changes)
   * [Add, Commit, and Push](#add-commit-and-push)
 * [Next Steps](#next-steps)
-* [Appendix: GitHub Desktop](#appendix-github-desktop)
-* [Appendix: Installing Ruby with RVM](#appendix-installing-ruby-with-rvm)
+* [Appendix](#appendix)
+  * [GitHub Desktop](#github-desktop)
+  * [Installing Ruby with RVM](#installing-ruby-with-rvm)
+  * [Installing WSL](#installing-wsl)
+
+## Navigating your Shell
+
+*If you've used a shell before, you can skip this step.*
+
+The first step in our dev journey is to get ourselves accustomed to working in the terminal. We'll use the terminal to help preview what our website code looks like, and also work with all the tools that track the changes to it. This may be a bit scary if you've never used one before, but have no fear - we're here to guide you!
+
+Your shell depends on what operating system you're using:
+
+* If you're on Windows, you will first need to install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about). An install guide is provided in [the appendix](#Installing-WSL), which we recommend you follow first.
+* If you're on macOS, your default shell is the "Terminal" app.
+* If you're on Linux, well, you probably know what your default shell is. If you're on Ubuntu, though, it will be the "Terminal" app.
+
+Great! Once you have it open, we should introduce a few basic tools:
+* `cd`: **Change directory**
+* `ls`: **List directory**
+
+```sh
+$ cd                    # executing cd will take you to your home directory.
+$ cd /some/directory    # this will take you to a specific directory!
+$ ls                    # this will list contents of your current directory.
+```
+
+We will be using this to navigate our computer's files going forward. Any time you see a block of code that looks like:
+
+```sh
+$ command
+```
+
+Then you should know that this should be typed into your terminal!
+
+Last thing, **if you are on WSL**, things are a little different. Your computer's traditional disk drives like `C:` will be found at the location `/mnt`. For example, if I wanted to go to the Windows path `C:\Users\teachla\Desktop\teach-la-website`, then you would use the command `cd /mnt/c/Users/teachla/Desktop/teach-la-website`.
+
+Now we can move on to our next step in working on our website: getting a GitHub!
 
 ## GitHub
 
+GitHub is the website that we use for tracking all the changes to all of our projects. It hosts our project folders (called "repositories"), that are controlled by another piece of software we'll be using, called Git.
+
 ### Creating a GitHub Account
+
+The first step on this journey is to create our actual account. We can do so by visiting [the "Sign up" page](https://github.com/join).
 
 ### Joining our GitHub Organization
 
@@ -43,19 +84,37 @@ Great, so now you have a GitHub account. To make changes to our website, you nee
 
 If you're not part of our GitHub organization, you need to ask someone to add you! Your best bet is either our president or our dev team director. Reach out to them about getting permissions. Don't worry if this takes a bit of time; you can make changes to the website on your computer without being part of the organization; it's only in **uploading those changes** that you need to be part of the organization.
 
-## Finding your Shell
+## Installing Git
 
-*If you've used a shell before, you can skip this step.*
+Git is a piece of software that controls the changes to our repository. Since GitHub hosts *repositories*, we need to install it to actually work with GitHub. To download and install it, see below:
 
-Now, we're going to start using our terminal! This may be a bit scary if you've never used one before, but have no fear - we're here to guide you!
+### If you're using WSL or Linux
 
-Your shell depends on what operating system you're using:
+For Linux or WSL, you can install the `git` package from your provided package manager.
 
-* If you're on Windows, your default shell will be the "Command Prompt" application. This said, in our experience, it is much easier to develop on Windows with aid of the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about). An install guide is provided in [the appendix](#Installing-WSL).
-* If you're on macOS, your default shell is the "Terminal" app.
-* If you're on Linux, well, you should know what your default shell is.
+Assuming that you are using Ubuntu, specifically, you can just run:
 
-Great! Once you have it open, we can move on to our next step: running the website!
+```sh
+sudo apt update
+sudo apt install -y git
+```
+
+### If you're using OSX
+
+Visit the [Git downloads page](https://git-scm.com/downloads) and pick out the installer for your system. After downloading, run the installer.
+
+For OSX, the installation process will seem rather complicated, but you should ensure that the installation process **adds Git to your PATH**. The option to do this if you're using a graphical installer will be very explicit. This means that you will be able to use the command `git` from your default shell, as we found earlier.
+
+To check to make sure that Git is working as expected, open your shell and run `git -v`. It should output something like this:
+
+```sh
+tla@acm:/my/path/to/teach-la-website$ git --version
+git version 2.25.1
+```
+
+Don't worry if your prompt looks a little different. What we care about is the version output here.
+
+After this, we are ready to get started.
 
 ## One-Time Setup
 
@@ -105,6 +164,10 @@ First, we'll install a "helper" tool called `bundler` that lets us install libra
 ```sh
 $ gem install bundler
 ```
+
+If this command doesn't execute properly, then there's two things you can do:
+1. Run `sudo gem install bundler` instead.
+2. Install RVM [using our appendix entry](#appendix-installing-ruby-with-rvm) and then re-run the command.
 
 Then, we'll run a new command, called `bundle`. It will install all of our dependencies.
 
@@ -283,7 +346,9 @@ To `push` and `pull`, use the sync button in the interface.
 
 ### Installing Ruby with RVM
 
-[RVM](http://rvm.io/) stands for the **Ruby Version Manager**. It is a handy shell script that lets us keep multiple versions of the Ruby interpreter on our computer without breaking any existing ones! Following along with the installation guide available on [their website](http://rvm.io/rvm/install) is usually enough, but there are a few hitches you might run into along the way. Here's our version of the installation guide:
+[RVM](http://rvm.io/) stands for the **Ruby Version Manager**. It is a handy shell script that lets us keep multiple versions of the Ruby interpreter on our computer without breaking any existing ones! The only catch? It only works on UNIX-based operating systems. That means that it won't work on Windows by default, but it **will** work on WSL.
+
+Following along with the installation guide available on [their website](http://rvm.io/rvm/install) is usually enough, but there are a few hitches you might run into along the way. Here's our version of the installation guide:
 
 First we need to add the PGP keys of the project maintainer to ensure that the installer we download isn't malicious. We can do this with:
 
@@ -316,6 +381,9 @@ For RVM to work properly, we are required to place its binaries at the first pos
 # prepend to PATH:
 echo "export PATH=${HOME}/.rvm/bin:${PATH}" >> ${HOME}/.bashrc
 
+# load rvm into every shell
+echo "source ${HOME}/.rvm/scripts/rvm" >> ${HOME}/.bashrc
+
 # load rvm
 source ${HOME}/.rvm/scripts/rvm
 ```
@@ -323,19 +391,23 @@ source ${HOME}/.rvm/scripts/rvm
 Now, log out and back in to your terminal (close and reopen it, if using a GUI), and choose a version of Ruby to install and use:
 
 ```sh
-rvm install 2.7.3
-rvm use 2.7.3
+rvm install 2.7.0
+rvm use 2.7.0
 ```
 
-You're all set for Ruby development!
+If either of these commands output any kind of error, then you should retry our installation guide.
+
+You're all set for Ruby development! If you followed this chapter while you were going through the docs for the first time, then you should be able to resume your setup process from [the installing dependencies header](#installing-dependencies).
 
 ### Installing WSL
 
 The **Windows Subsystem for Linux (WSL)** is a way to run native Linux applications from within Windows, by compartmentalizing a Linux kernel on your Windows installation. It opens up the whole of native Linux tools and programs to you without sacrificing the more familiar GUI and software compatability of Windows. Here's how to install it:
-* Open Powershell as an administrator (`<Windows Key + X> <a>`)
+* Open Powershell/Command Prompt as an administrator (`<Windows Key + X> <a>`)
 * Enable WSL as a Windows feature by running: `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
 * Reboot.
 * Install your Linux operating system of choice from the [Windows Store](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice) and follow along with the install instructions.
 * Now you can shell into your Linux subsystem by opening a terminal and running `wsl`!
+
+For our dev setup, you will want to install Ruby to your system. We personally recommend that you follow along with our [RVM install guide](#installing-ruby-with-rvm) in the chapter before this.
 
 After installing WSL, you can follow along with the development environment setup instructions for any standard Linux distribution for not just the development software we use here, but for any at all!
