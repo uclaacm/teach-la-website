@@ -66,7 +66,7 @@ layout: default
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
     {% endfor %}
 
-    <!--Idea: piggyback off of them finsing the author object to use it to relate posts-->
+    <!--Idea: piggyback off of them fishing the author object to use it to relate posts-->
     <!--Also, time / tag info is already defined on each page-->
     <!--Recommend criteria: tag -> category -> author -> time-->
 </div>
@@ -75,15 +75,20 @@ layout: default
     want more? here are some related posts:
 
 <div class="text-center title post-recommendations">
+    {% assign iterations = 4 %} <!--Iterations may change if a recommendation is skipped due to being the same-->
     {% for post in site.posts %}
-    {% if forloop.index == 4 %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
-        {% break %}
-    {% endif %}
-    <div>
-        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-    </div>
+        {% if post.title == page.title %} <!--Skip the current page-->
+            {% assign iterations = iterations | plus: 1 %}
+            {% continue %}
+        {% endif %}
+        {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
+            {% break %}
+        {% endif %}
+        <div>
+            <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+        </div>
     {% endfor %}
     <hr class="divider" />
-    <a class="tla-link" href="{{site.baseurl}}/blog"> or binge read the whole blog here</a>
+    or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
 </div>
 </div> 
