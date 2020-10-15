@@ -65,8 +65,17 @@ layout: default
         {% endcapture %}
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
     {% endfor %}
+
+    <!--Idea: piggyback off of them finsing the author object to use it to relate posts-->
+    <!--Also, time / tag info is already defined on each page-->
+    <!--Recommend criteria: tag -> category -> author -> time-->
 </div>
 <hr class="divider" />
 <p class="text-center title post-get-more">
-    want more? <a class="tla-link" href="{{site.baseurl}}/blog">binge read some more posts here</a>
+    want more? here are some related posts: 
+    {% for post in site.posts %}
+        <a href="{{post.url}}">{{post.title}}</a>
+    {% endfor %}
+    <a class="tla-link" href="{{site.baseurl}}/blog"> or binge read the whole blog here</a>
+
 </p>
