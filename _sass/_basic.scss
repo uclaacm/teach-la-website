@@ -47,7 +47,8 @@ ul > li {
 
 .container-restricted {
     margin: auto;
-    max-width: 1000px; // enforces a not-too-wide text viewport
+    max-width: calc(100vw - 3em); // enforces a not-too-wide text viewport
+    width: 1000px;
 }
 
 .list-unstyled {
