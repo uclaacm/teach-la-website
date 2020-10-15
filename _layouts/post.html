@@ -9,9 +9,11 @@ layout: default
         <p>
             written by: <a class="tla-link" href="#authors">{{page.author}}</a> •
             {{ page.date | date: "%b %-d, %Y" }} •
-            {% comment %}
             <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
-            category: {{page.category }} •
+            category: <a class="tla-link" href="{{site.baseurl}}/category/{{page.category}}/">{{page.category}}</a> •
+            
+            <a class="tla-link" href="{{site.baseurl}}/blog/categories/index.html">TEST</a>
+            {% comment %}
             {% if page.tags %}
                 tags:
                 {% for tag in page.tags %}
@@ -19,6 +21,7 @@ layout: default
                 {% endfor %}
             {% endif %} •
             {% endcomment %}
+
             {% capture words %}
                 {{ page.content | number_of_words | minus: 250 }}
             {% endcapture %}
