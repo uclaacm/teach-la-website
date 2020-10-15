@@ -71,11 +71,19 @@ layout: default
     <!--Recommend criteria: tag -> category -> author -> time-->
 </div>
 <hr class="divider" />
-<p class="text-center title post-get-more">
-    want more? here are some related posts: 
-    {% for post in site.posts %}
-        <a href="{{post.url}}">{{post.title}}</a>
-    {% endfor %}
-    <a class="tla-link" href="{{site.baseurl}}/blog"> or binge read the whole blog here</a>
+<div class="text-center title post-want-more">
+    want more? here are some related posts:
 
-</p>
+<div class="text-center title post-recommendations">
+    {% for post in site.posts %}
+    {% if forloop.index == 4 %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
+        {% break %}
+    {% endif %}
+    <div>
+        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+    </div>
+    {% endfor %}
+    <hr class="divider" />
+    <a class="tla-link" href="{{site.baseurl}}/blog"> or binge read the whole blog here</a>
+</div>
+</div> 
