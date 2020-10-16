@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Introduction to React Native"
+permalink: /classes/rnative
+---
+
+<div class="rnative-table-contents-wrapper">
+    <h1 class="main-title">
+        Introduction to React Native!
+    </h1>
+    <h2 class="overview-title">
+        Course Outline
+    </h2>
+    <h3 class="general-titles">
+        Brief Overview
+    </h3>
+    <p>React native is cool</p>
+    <p>you should check it out</p>
+
+    <h3 class="general-titles">
+        Lessons
+    </h3>
+    {%for lesson in site.rnative%}
+    <div class="rnative-lesson-card">
+        <div class="lesson-card-content">
+            <h4 class="lesson-card-title">
+                <span class="lesson-card-title-text">
+                    #{{lesson.num}}
+                </span>
+                <a href="{{lesson.url}}">
+                    {{lesson.title}}
+                </a>
+            </h4>
+            <p class="lesson-card-desc">
+                {{lesson.desc}}
+            </p>
+        </div>
+        <div class="lesson-card-buttons">
+            {%if lesson.slides_link%}
+            <form class="slides-button" action="{{lesson.slides_link}}">
+                <input type="submit" value="Slides"/>
+            </form>
+            {%endif%}
+            {%if lesson.code_link%}
+            <form class="code-link-button" action="{{lesson.code_link}}">
+                <input type="submit" value="Code"/>
+            </form>
+            {%endif%}
+        </div>
+    </div>
+    {%endfor%}
+    
+    <h1 class="general-titles">
+        Additional Resources 
+    </h1>
+    <p>youtube is cool</p>
+    
+</div>
