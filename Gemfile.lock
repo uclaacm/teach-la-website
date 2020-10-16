@@ -88,7 +88,6 @@ GEM
     tzinfo-data (1.2020.2)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
     yell (2.2.2)
 
 PLATFORMS
@@ -101,7 +100,6 @@ DEPENDENCIES
   jekyll-seo-tag
   rake
   tzinfo-data
-  wdm (~> 0.1.0)
 
 BUNDLED WITH
    2.1.4
