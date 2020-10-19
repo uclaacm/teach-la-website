@@ -3,7 +3,54 @@ layout: default
 title: "Introduction to React Native"
 permalink: /classes/rnative
 ---
+<h1 class="title page-title">Introduction to React Nnative</h1>
+<p class="title text-2x no-margin">Class & Curriculum Outline</p>
+<hr class="divider-ai" />
+<p>Learn mobile web development with us! </p>
 
+<h2 class="title">
+    Brief Overview
+</h2>
+
+<p>React native is cool</p>
+    <p>you should check it out</p>
+<h2 class="title" id="lessons">
+    Lessons
+</h2>
+
+<div class="rnative-lessons-grid">
+    {% for lesson in site.rnative %}
+        <div class="rnative-lesson-card">
+            <div class="rnative-lesson-card-content">
+                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
+                    <a class="rnative-link" href="{{lesson.url}}">{{lesson.title}}</a>
+                </h3>
+                {{lesson.desc}}
+            </div>
+            <div class="button-container">
+                {% if lesson.github_link %}
+                    <a class="button button-sm button-rnative" href="{{lesson.github_link}}" target="_blank" rel="noopener noreferrer">
+                        <span class="fa fa-chalkboard-teacher"></span> Github
+                    </a>
+                {% endif %}
+                {% if lesson.code_link %}
+                    <a class="button button-sm button-rnative" href="{{lesson.code_link}}" target="_blank" rel="noopener noreferrer">
+                        <span class="fa fa-code"></span> code
+                    </a>
+                {% endif %}
+                
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<h2 class="title">More Resources</h2>
+<p>
+    Youtube is good too
+</p>
+
+
+<!--
 <div class="rnative-table-contents-wrapper">
     <h1 class="main-title">
         Introduction to React Native!
@@ -56,3 +103,5 @@ permalink: /classes/rnative
     <p>youtube is cool</p>
     
 </div>
+
+-->
