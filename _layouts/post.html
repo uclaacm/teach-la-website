@@ -84,8 +84,10 @@ layout: default
         {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
             {% break %}
         {% endif %}
+        
         <div>
-            <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+            <a class="tla-link" href="{{post.url}}">{{post.title}}</a> posted on {{ post.date | date: "%b %-d, %Y" }}
+            
         </div>
     {% endfor %}
     <hr class="divider" />
