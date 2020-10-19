@@ -66,18 +66,15 @@ layout: default
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
     {% endfor %}
 
-    <!--Idea: piggyback off of them fishing the author object to use it to relate posts-->
-    <!--Also, time / tag info is already defined on each page-->
-    <!--Recommend criteria: tag -> category -> author -> time-->
 </div>
 <hr class="divider" />
 <div class="text-center title post-want-more">
     want more? here are some related posts:
 
-<div class="text-center title post-recommendations">
+<div class="text-center title post-recommendations post-recommend-container">
     {% assign iterations = 4 %} <!--Iterations may change if a recommendation is skipped due to being the same-->
     {% for post in site.posts %}
-        {% if post.title == page.title %} <!--Skip the current page-->
+        {% if post.title == page.title %} <!--Skip the current page so its not recommended-->
             {% assign iterations = iterations | plus: 1 %}
             {% continue %}
         {% endif %}
@@ -85,12 +82,12 @@ layout: default
             {% break %}
         {% endif %}
         
-        <div>
-            <a class="tla-link" href="{{post.url}}">{{post.title}}</a> posted on {{ post.date | date: "%b %-d, %Y" }}
-            
+        <div class="post-recommend-card">
+            <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
+            <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
         </div>
     {% endfor %}
-    <hr class="divider" />
-    or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
+    
 </div>
+or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
 </div> 

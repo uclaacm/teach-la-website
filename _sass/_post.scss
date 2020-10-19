@@ -38,6 +38,26 @@
     font-size: 1.25rem;
 }
 
+.post-recommend-container{
+    display: flex;
+    justify-content: center;
+}
+
+.post-recommend-card{
+    padding: 1.5em;
+    margin: 1em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    border: 2px solid $teachla-green;
+    border-radius: 10px;
+    flex: auto;
+}
+
+.post-recommend-info{
+    margin-top: 0.25em;
+    font-size: 0.9rem;
+}
+
 .post-blockquote {
     background: #f9f9f9;
     border-left: 10px solid $teachla-green;
