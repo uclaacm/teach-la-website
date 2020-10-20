@@ -59,7 +59,7 @@ collections:
 # Configure the plugin here
 # category_path: "jekyll/category" # <- default value
 # category_layout: "category_index.html" # <- default value
-# paginate: 2 # <- turn on pagination with two posts per page
+paginate: 2 # <- turn on pagination with two posts per page
 
 # Build settings
 markdown: kramdown

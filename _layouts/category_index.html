@@ -18,11 +18,11 @@ layout: default
     <!-- Show post excerpts for the current page -->
     <hr class="divider" />
     {% for post in paginator.posts limit:paginator.per_page %}
-      <article>
+      <!-- <article>
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <h5>{{ post.date }}</h5>
         <p>{{ post.excerpt }}</p>
-      </article>
+      </article> -->
     {% endfor %}
   </section>
   <!-- Show navigation next/previous page links if applicable -->
@@ -35,6 +35,8 @@ layout: default
 
   <!-- Pagination is not active -->
   <h1>Category index for &ldquo;{{ page.title }}&rdquo;</h1>
+
+  <a class="tla-link" href="{{site.baseurl}}/category-home/">Click me to go to a list of categories!</a>
 
   <hr class="divider" />
   {% for post in page.posts %}
