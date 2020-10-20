@@ -31,7 +31,7 @@
 
 .post-want-more {
     font-size: 1.5rem;
-    margin-bottom: 2em;
+    margin: 2em;
 }
 
 .post-recommendations{
@@ -39,23 +39,36 @@
 }
 
 .post-recommend-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    margin-top: 1.5em;
+    padding-top: auto;
+    padding-bottom: auto;
 }
 
 .post-recommend-card{
+    display: flex;
+    flex-direction: column;
     padding: 1.5em;
     margin: 1em;
     margin-left: 0.25em;
     margin-right: 0.25em;
     border: 2px solid $teachla-green;
     border-radius: 10px;
-    flex: auto;
+
+}
+
+.post-recommend-title{
+    flex-basis: 10em;
+    flex: 3;
 }
 
 .post-recommend-info{
+    margin: auto;
     margin-top: 0.25em;
     font-size: 0.9rem;
+    
 }
 
 .post-blockquote {

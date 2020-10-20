@@ -84,7 +84,7 @@ layout: default
         
         <div class="post-recommend-card">
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
-            <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+            <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
         </div>
     {% endfor %}
     
