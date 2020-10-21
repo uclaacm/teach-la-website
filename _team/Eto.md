@@ -6,7 +6,7 @@ title: "Developer"
 img: "eto.jpg"
 email: "etoe64@gmail.com"
 github: "ethanieltoe"
-graduating_year:"2021"
+graduating_year: "2021"
 
 ---
 
