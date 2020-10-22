@@ -244,50 +244,7 @@ ul > li {
 }
 
 // this should be refactored
-// @mixin tla-link( // pseudo::after
-//     $link-effect-color: $teachla-tint,
-//     $off-color: white,
-//     $effect-text-color: inherit
-// ){
-
-//     color: inherit;
-//     font-weight: bold;
-//     text-decoration: none;
-//     // debug
-//     // border: solid 1px red;
-//     position: relative;
-    
-//     // try: pseudo after element
-//     &:after{
-// 	content: "";
-// 	background-color: $link-effect-color;
-// 	height: 2px;
-// 	width: 100%;
-// 	position: absolute;
-// 	left: 0;
-// 	top: 85%;
-// 	// debug
-// 	// border: solid 1px red;
-// 	z-index: -1;
-//     }
-
-//     @media (min-width: $desktop-width) {
-//         transition: background 500ms ease;
-//         line-height: calc(1em + 2px); // ?
-
-//         &:hover{
-//             color: $effect-text-color;
-//         }
-
-// 	&:hover:after{
-// 	    transition: all 500ms ease;
-// 	    top: 15%;
-// 	    height: calc(1em + 2px);
-// 	}
-//     }
-// }
-
-@mixin tla-link( // resizing: overlap
+@mixin tla-link(
     $link-effect-color: $teachla-tint,
     $off-color: white,
     $effect-text-color: inherit
@@ -299,83 +256,21 @@ ul > li {
     background-position: left bottom;
     background-image: linear-gradient($off-color 0%, $link-effect-color 0%);
     background-size: auto 15%;
-    background-repeat: no-repeat; // key idea
-    // debug
-    border: solid 1px red;
+    background-repeat: no-repeat;
 
     @media (min-width: $desktop-width) {
         transition: background 500ms ease;
-        line-height: calc(1em + 2px); // ?
 
         &:hover{
-	    // background-position: left bottom;
-	    background-size: auto 100%;
+	    background-size: auto 85%;
             color: $effect-text-color;
         }
     }
 }
 
-// @mixin tla-link( // resizing: no overlap but too thin
-//     $link-effect-color: $teachla-tint,
-//     $off-color: white,
-//     $effect-text-color: inherit
-// ){
-
-//     color: inherit;
-//     font-weight: bold;
-//     text-decoration: none;
-//     background-position: left 87.5%;
-//     background-image: linear-gradient($off-color 0%, $link-effect-color 0%);
-//     background-size: auto 4%;
-//     background-repeat: no-repeat; // key idea
-//     // debug
-//     // border: solid 1px red;
-
-//     @media (min-width: $desktop-width) {
-//         // transition: background 500ms ease;
-// 	transition: background 1s ease;
-// 	line-height: calc(1em + 2px); // ?
-
-//         &:hover{
-// 	    background-position: left center;
-// 	    background-size: auto 88%;
-//             color: $effect-text-color;
-//         }
-//     }
-// }
-
-// @mixin tla-link( // replace background <gradient>
-//     $link-effect-color: $teachla-tint,
-//     $off-color: white,
-//     $effect-text-color: inherit
-// ){
-
-//     color: inherit;
-//     font-weight: bold;
-//     text-decoration: none;
-//     background-position: left center;
-//     background-image: linear-gradient($off-color 90.909%, $link-effect-color 90.909%);
-//     background-size: auto 73.333%;
-//     background-repeat: no-repeat; // key idea
-//     // debug
-//     // border: solid 1px red;
-
-//     @media (min-width: $desktop-width) {
-//         transition: all 500ms ease;
-//         line-height: calc(1em + 2px); // ?
-
-//         &:hover{
-// 	    background-image: linear-gradient($off-color 0%, $link-effect-color 0%);
-//             color: $effect-text-color;
-//         }
-//     }
-// }
-
-
 .tla-link {
     @include tla-link();
 }
-
 
 *:target {
     padding-top: 70px;
