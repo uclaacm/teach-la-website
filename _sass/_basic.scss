@@ -253,27 +253,24 @@ ul > li {
     color: inherit;
     font-weight: bold;
     text-decoration: none;
-    background-position-y: -0%;
-    background-image: linear-gradient( $off-color 50%, $link-effect-color 50%);
-    background-size: 2.5px;
-    background-size: auto 175%;
+    background-position: left bottom;
+    background-image: linear-gradient($off-color 0%, $link-effect-color 0%);
+    background-size: auto 15%;
+    background-repeat: no-repeat;
 
     @media (min-width: $desktop-width) {
         transition: background 500ms ease;
-        line-height: calc(1em + 2px);
 
         &:hover{
-            background-position-y: 100%;
+            background-size: auto 85%;
             color: $effect-text-color;
         }
     }
 }
 
-
 .tla-link {
     @include tla-link();
 }
-
 
 *:target {
     padding-top: 70px;
