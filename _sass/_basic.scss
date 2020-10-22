@@ -262,7 +262,7 @@ ul > li {
         transition: background 500ms ease;
 
         &:hover{
-	    background-size: auto 85%;
+            background-size: auto 85%;
             color: $effect-text-color;
         }
     }
