@@ -1,3 +1,21 @@
+.post-preview{
+    display: inline-grid;
+    border: solid black;
+
+}
+
+.post-preview-img{
+    border: solid black;
+    width: 100px;
+    height: 69px;
+}
+
+.post-preview-img img{
+    border: solid black;
+    width: 100%;
+    height: auto;
+}
+
 .post-container {
     max-width: 50rem;
 }

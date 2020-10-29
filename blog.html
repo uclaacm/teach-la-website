@@ -32,9 +32,15 @@ permalink: /blog/
     {% endif %}
     {% endcomment %}
   </p>
-  <blockquote class="post-blockquote">
-    {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
-  </blockquote>
+  <div class="post-preview">
+    <div class="post-preview-img">
+      <img src="/img/blog/caesar-cipher.png"/>
+    </div>
+    <p>heuo</p>
+    <blockquote class="post-blockquote">
+      {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
+    </blockquote>
+  </div>
 </section>
 {% endfor %}
 
