@@ -37,16 +37,19 @@
 .team-member-content{
     @media (max-width: $desktop-width) {
         > h3 {
-            font-size: 1.5em;
+            font-size: 1em;
+            word-wrap: break-word;
         }
 
         > .team-member-position {
-            font-size: 1.25em;
+            font-size: .75em;
+            word-wrap: break-word;
         }
     }
     @media (min-width: $desktop-width) {
         > p {
             margin: 0;
+            word-wrap: break-word;
         }
     }
 }
@@ -54,5 +57,23 @@
 .team-profile {
     @media (max-width: $desktop-width) {
         margin: 50px auto;
+        padding-top: 50vh;
     }
 }
+
+.grid-col{
+    .team-member-content{
+        @media(max-width: $desktop-width){
+            width: 40vw;
+        }
+    }
+    .tla-link{
+        @media(max-width: $desktop-width){
+        overflow-wrap: break-word;
+        width: 1vw;
+        font-size: .75em;
+        }
+    }
+    
+}
+
