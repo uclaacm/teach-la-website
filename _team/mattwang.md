@@ -8,6 +8,7 @@ img: "mwang.jpg"
 email: "matt@matthewwang.me"
 github: "malsf21"
 graduating_year: 2022
+pronouns: "he/him"
 
 positions:
   - year: 2019-2020

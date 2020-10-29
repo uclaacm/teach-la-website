@@ -40,7 +40,11 @@ permalink: "/team"
 
         <div class="grid-col">
             <div class="team-member-content">
-                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }}</h3>
+                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }} 
+                    {% if member.pronouns %}
+                        <span style = "font-size: medium"> ({{member.pronouns}})</span>
+                    {% endif %}
+                    </h3>
                 <p class="team-member-position">
                     {{ member.title }}
                     {% if member.secondary %}
@@ -88,7 +92,11 @@ permalink: "/team"
 
         <div class="grid-col">
             <div class="team-member-content">
-                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }}</h3>
+                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }}
+                    {% if member.pronouns %}
+                        <span style = "font-size: medium"> ({{member.pronouns}})</span>
+                    {% endif %}
+                </h3>
                 <p class="team-member-position">
                     {{ member.title }}
                     {% if member.secondary %}
