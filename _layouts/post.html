@@ -60,13 +60,34 @@ layout: default
             {% if author.img %}
                 {{site.baseurl}}/img/team/{{author.img}}
             {% else %}
-                https://api.adorable.io/avatars/512/{{member[0]}}.png
+                {{site.baseurl}}/img/blank-profile.jpg
             {% endif %}
         {% endcapture %}
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
     {% endfor %}
+
 </div>
 <hr class="divider" />
-<p class="text-center title post-get-more">
-    want more? <a class="tla-link" href="{{site.baseurl}}/blog">binge read some more posts here</a>
-</p>
+<div class="text-center title post-want-more">
+    want more? here are some related posts:
+
+<div class="text-center title post-recommendations post-recommend-container">
+    {% assign iterations = 4 %} <!--Iterations may change if a recommendation is skipped due to being the same-->
+    {% for post in site.posts %}
+        {% if post.title == page.title %} <!--Skip the current page so its not recommended-->
+            {% assign iterations = iterations | plus: 1 %}
+            {% continue %}
+        {% endif %}
+        {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
+            {% break %}
+        {% endif %}
+        
+        <div class="post-recommend-card">
+            <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
+            <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
+        </div>
+    {% endfor %}
+    
+</div>
+or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
+</div> 

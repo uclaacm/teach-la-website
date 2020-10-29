@@ -32,7 +32,7 @@ permalink: "/team"
                 {% if member.img %}
                         <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
                 {% else %}
-                    <img class="profile-img" src="https://api.adorable.io/avatars/512/{{ member.slug }}.png" alt="temporary picture"/>
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
                 {% endif %}
                 </a>
             </div>
@@ -83,8 +83,8 @@ permalink: "/team"
                 <a href='{{ site.baseurl }}/team/{{ member.slug }}'>
                 {% if member.img %}
                     <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
-                {% else %}
-                    <img class="profile-img" src="https://api.adorable.io/avatars/512/{{ member.slug }}.png" alt="temporary picture"/>
+                    {% else %}
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
                 {% endif %}
                 </a>
             </div>

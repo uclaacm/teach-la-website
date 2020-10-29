@@ -6,12 +6,12 @@ layout: default
     <div class="row">
         <div class="col">
             {% if page.img %}
-            <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.name }}">
+            <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.firstname }} {{ page.lastname }}">
             {% else %}
-            <img class="profile-img" src="https://api.adorable.io/avatars/512/{{ page.name }}.png" alt="temporary picture"/>
+            <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="picture of {{ page.firstname }} {{ page.lastname }}"/>
             {% endif %}
         </div>
-        
+
         <div class="col">
             <h1 class="title">{{ page.firstname }} {{ page.lastname }}
                 {% if page.pronouns %}
