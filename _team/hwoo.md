@@ -1,6 +1,6 @@
 ---
 firstname: "Helia"
 lastname: "Woo"
-title: "Instructor"
-group: "member"
+title: "JEDI (Advisor)"
+group: "board"
 ---
