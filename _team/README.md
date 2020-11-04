@@ -8,6 +8,7 @@ name: "My Name"
 group: "member"
 title: "My Position Title"
 img: "image_name.png"
+graduating_year: 1970
 email: "Your email (if you're comfortable sharing)"
 github: "username (optional)"
 links:
