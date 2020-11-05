@@ -63,7 +63,14 @@ layout: default
                 {{site.baseurl}}/img/blank-profile.jpg
             {% endif %}
         {% endcapture %}
-        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
+        {% if author.pronouns %}
+            {% capture author_pronouns %}
+                    {{author.pronouns}}
+            {% endcapture %}
+        {% else %}
+            {% capture author_pronouns %}{% endcapture %}
+        {% endif %}
+        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
     {% endfor %}
 
 </div>

@@ -13,7 +13,11 @@ layout: default
         </div>
 
         <div class="col">
-            <h1 class="title">{{ page.firstname }} {{ page.lastname }}</h1>
+            <h1 class="title">{{ page.firstname }} {{ page.lastname }}
+                {% if page.pronouns %}
+                    <span class = "pronouns"> ({{page.pronouns}})</span>
+                {% endif %}
+            </h1>
             <p class="no-margin text-15x">{{ page.title }}</p>
 
             {% if page.links or page.email or page.github %}
