@@ -40,7 +40,7 @@ permalink: "/team"
 
         <div class="grid-col">
             <div class="team-member-content">
-                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }} 
+                <h3 class="no-margin title">{{ member.firstname }} {{ member.lastname }}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -77,6 +77,10 @@ permalink: "/team"
 
 <div class="team-member-grid">
     {% for member in members %}
+
+    {% if member.inactive %}
+        {% continue %}
+    {% endif %}
     <div class="grid-row" id="{{ member.slug }}">
         <div class="grid-col">
             <div class="profile-img-container">
@@ -104,11 +108,13 @@ permalink: "/team"
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">
+                    {% comment %}
                     {% if member.email %}
                     <li>
                         <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
                     </li>
                     {% endif %}
+                    {% endcomment %}
                     {% if member.github %}
                         <li>
                             <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
