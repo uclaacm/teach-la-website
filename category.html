@@ -1,0 +1,22 @@
+---
+title: "Category Home"
+layout: default
+permalink: /blog/category/
+---
+
+<h1>These are the categories for all of our blog posts!</h1>
+
+<p>They link to the corresponding category pages!</p>
+
+<hr class="divider" />
+
+{% for category in site.categories %}
+<section>
+    <h2 class="title">
+        <a class="tla-link" href="{{ site.baseurl }}/blog/category/{{ category | first | url_encode }}">{{ category | first }}</a>
+    </h2>
+</section>
+{% endfor %}
+
+
+
