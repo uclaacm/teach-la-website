@@ -16,6 +16,7 @@ category: dev
 tags:
     - learning labs
     - dev team
+img: /img/posts/cipher_salad/default.png
 ---
 
 We prepared [Cipher Salad](https://ciphersalad.uclaacm.com/) in collaboration with [ACM Cyber](https://acmcyber.com/) and [CityLab at UCLA](https://www.facebook.com/citylabatucla/) as an introductory cryptography mini lesson for students of all ages. Cryptography is one of those subjects that can intimidate even a college CS student (ourselves included!), but it’s an important part of CS, and we wanted to make it accessible to as many people as possible. Particularly, we wanted to ease students into cryptography in a fun and engaging way so that anyone without a CS or math background could benefit. Creating an interactive mini web app allowed us to not only get creative in the way we presented the material, but also enable students to learn CS regardless of our ability to physically be there with them. With the consequences of COVID-19, this has been especially important. In fact, at the conclusion of the project, CityLab at UCLA used Cipher Salad in a [virtual cyber day](https://teachla.uclaacm.com/citylab-cyber) for high schoolers!

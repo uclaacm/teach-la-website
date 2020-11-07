@@ -10,6 +10,7 @@ category: dev
 tags:
     - learning labs
     - dev team
+img: /img/posts/passworks/default.png
 ---
 
 In this post, I'll discuss the process of building [Passworks](https://passworks.uclaacm.com), an educational module consisting of several activities designed to teach password security concepts.

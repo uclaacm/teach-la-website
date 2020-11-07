@@ -33,7 +33,9 @@ permalink: /blog/
     {% endcomment %}
   </p>
   <div class="post-preview">
-    <img  class="post-preview-img" src="/img/blog/caesar-cipher.png"/>
+    <a href={{post.url}}>
+      <img  class="post-preview-img" src={{post.img}}/>
+    </a>
     <div class="post-blockquote">
       {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
     </div>
