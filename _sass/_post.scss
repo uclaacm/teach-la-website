@@ -1,19 +1,14 @@
 .post-preview{
-    display: inline-grid;
+    display: grid;
     border: solid black;
-
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .post-preview-img{
-    border: solid black;
-    width: 100px;
-    height: 69px;
-}
-
-.post-preview-img img{
-    border: solid black;
     width: 100%;
     height: auto;
+    vertical-align: auto;;
 }
 
 .post-container {
