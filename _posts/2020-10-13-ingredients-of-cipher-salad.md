@@ -16,13 +16,14 @@ category: dev
 tags:
     - learning labs
     - dev team
+img: /img/posts/cipher_salad/default.png
 ---
 
 We prepared [Cipher Salad](https://ciphersalad.uclaacm.com/) in collaboration with [ACM Cyber](https://acmcyber.com/) and [CityLab at UCLA](https://www.facebook.com/citylabatucla/) as an introductory cryptography mini lesson for students of all ages. Cryptography is one of those subjects that can intimidate even a college CS student (ourselves included!), but it’s an important part of CS, and we wanted to make it accessible to as many people as possible. Particularly, we wanted to ease students into cryptography in a fun and engaging way so that anyone without a CS or math background could benefit. Creating an interactive mini web app allowed us to not only get creative in the way we presented the material, but also enable students to learn CS regardless of our ability to physically be there with them. With the consequences of COVID-19, this has been especially important. In fact, at the conclusion of the project, CityLab at UCLA used Cipher Salad in a [virtual cyber day](https://teachla.uclaacm.com/citylab-cyber) for high schoolers!
 
 Cipher Salad is a combination of many cipher modules combined with a game at the end where users can share and crack ciphers with their friends. We covered three types of ciphers and other simplified cryptography concepts, and included graphics and animations to keep students of all ages engaged. The Caesar cipher, also known as the shift cipher, is one of the simplest and most widely known encryption techniques. The Atbash cipher reverses every letter in the alphabet, and lastly, there's the Vigenere cipher, which is a little more advanced, for kids to further explore the fun of cryptography.
 
-![caesar cipher]({{site.baseurl}}/img/blog/caesar-cipher.png){:class='post-img'}
+![caesar cipher]({{site.baseurl}}/img/posts/cipher_salad/caesar-cipher.png){:class='post-img'}
 
 Alyssa, Teach LA’s dev and cybersecurity extraordinaire, was the ~key~ to the content creation and presentation (and she coded quite a few features!). She developed the lesson from scratch and created mock-ups using Figma, an online design prototyping tool. This enabled our developers to focus on the development side of things. Those of us who consider ourselves to be design challenged (aka Lisha) particularly appreciated this. Alyssa also taught much of the content to the developers, who, as it turns out, were also cryptographically challenged and weren’t familiar with some basic ciphers. This is a great example of Teach LA’s motto, learn what you teach, teach what you learn!
 
@@ -38,7 +39,7 @@ Once we got the hang of things, it was time to dive into building the module. On
 
 Another issue we encountered was making sure our app looked good on all screen sizes. This was important to us since we couldn’t make any assumptions about what devices students might use to access our site. To ensure a quality experience whether students view it on double monitors or a small tablet, we made sure to test the site on different viewports throughout development. However, we had a lot of trouble with the layout of the blackbox example. Initially, pixel measurements were used to position elements and animated icons elegantly, but we had trouble making everything look aligned on different viewport sizes, as absolute measurements don’t adapt to various sizes. As a result, we switched to relative units, and we made extensive use of CSS media queries to ensure that certain elements wouldn’t overlap on smaller viewports. 
 
-![black box example finished product]({{site.baseurl}}/img/blog/black-box.gif){:class='post-img'}
+![black box example finished product]({{site.baseurl}}/img/posts/cipher_salad/black-box.gif){:class='post-img'}
 
 In the process, we were able to learn from our mistakes, make adjustments, and be open to suggestions from other people. Finally, through trials and errors, we resolved the problems and finalized an intuitive and presentable site.
 

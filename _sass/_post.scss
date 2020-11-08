@@ -1,3 +1,16 @@
+.post-preview{
+    display: grid;
+    border: solid black;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.post-preview-img{
+    width: 100%;
+    height: auto;
+    vertical-align: auto;;
+}
+
 .post-container {
     max-width: 50rem;
 }

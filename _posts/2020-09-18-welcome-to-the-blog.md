@@ -10,6 +10,7 @@ authors:
 category: dev
 tags:
     - website
+img: /img/posts/welcome/default.png
 ---
 
 Hey there! This is Matt and Leo, Teach LA's current president and dev team director respectively. We've always wanted to make the inner workings of Teach LA more transparent: what goes on at our meetings, what do we learn from teaching, and what does our dev team even do?
