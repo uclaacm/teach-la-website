@@ -48,21 +48,28 @@ layout: default
           {% endcapture %}
             {% capture author_url %}
                {{author.url}}
-           {% endcapture %}
-           {% capture author_role %}
+            {% endcapture %}
+            {% capture author_role %}
                {{author.title}}
-             {% if author.secondary %}
+            {% if author.secondary %}
                     &amp; {{author.secondary}}
-              {% endif %}
-         {% endcapture %}
-           {% capture author_img %}
+            {% endif %}
+            {% endcapture %}
+            {% capture author_img %}
                {% if author.img %}
                   {{site.baseurl}}/img/team/{{author.img}}
                 {% else %}
                     {{site.baseurl}}/img/blank-profile.jpg
              {% endif %}
-           {% endcapture %}
-          {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
+            {% endcapture %}
+            {% if author.pronouns %}
+              {% capture author_pronouns %}
+                    {{author.pronouns}}
+              {% endcapture %}
+            {% else %}
+            {% capture author_pronouns %}{% endcapture %}
+          {% endif %}
+          {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
      {% endfor %}
 
     </div>
