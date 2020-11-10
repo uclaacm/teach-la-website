@@ -49,8 +49,8 @@ collections:
   docs:
     output: true
     permalink: /docs/:name
-  py:
-    permalink: /classes/py/:name
+  pyone:
+    permalink: /classes/pyone/:name
     # output: true
   reports:
     output: true
