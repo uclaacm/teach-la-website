@@ -39,33 +39,33 @@ layout: default
 
     <hr class="divider" />
     <div class="post-author-grid">
-     <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
+    <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
 
-      {% for authorobj in page.authors %}
-          {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
-          {% capture author_name %}
-               {{authorobj.fname}} {{authorobj.lname}}
-          {% endcapture %}
+        {% for authorobj in page.authors %}
+            {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
+            {% capture author_name %}
+                {{authorobj.fname}} {{authorobj.lname}}
+            {% endcapture %}
             {% capture author_url %}
-               {{author.url}}
+                {{author.url}}
             {% endcapture %}
             {% capture author_role %}
                {{author.title}}
             {% if author.secondary %}
-                    &amp; {{author.secondary}}
+                &amp; {{author.secondary}}
             {% endif %}
             {% endcapture %}
             {% capture author_img %}
-               {% if author.img %}
-                  {{site.baseurl}}/img/team/{{author.img}}
+                {% if author.img %}
+                    {{site.baseurl}}/img/team/{{author.img}}
                 {% else %}
                     {{site.baseurl}}/img/blank-profile.jpg
-             {% endif %}
+                {% endif %}
             {% endcapture %}
             {% if author.pronouns %}
-              {% capture author_pronouns %}
+                {% capture author_pronouns %}
                     {{author.pronouns}}
-              {% endcapture %}
+                {% endcapture %}
             {% else %}
             {% capture author_pronouns %}{% endcapture %}
           {% endif %}
@@ -89,13 +89,13 @@ layout: default
         {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
             {% break %}
         {% endif %}
-        
+
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}
-    
+
 </div>
 or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
-</div> 
+</div>
