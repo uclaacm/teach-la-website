@@ -35,13 +35,14 @@
 }
 
 .team-member-content{
+    word-wrap: break-word;
     @media (max-width: $desktop-width) {
         > h3 {
-            font-size: 1.5em;
+            font-size: 1em;
         }
 
         > .team-member-position {
-            font-size: 1.25em;
+            font-size: .75em;
         }
     }
     @media (min-width: $desktop-width) {
@@ -56,3 +57,17 @@
         margin: 50px auto;
     }
 }
+
+.grid-col{
+    @media(max-width: $desktop-width){
+        .team-member-content{
+            width: 40vw;
+        }
+        .tla-link{
+            overflow-wrap: break-word;
+            width: 1vw;
+            font-size: .75em;
+        }
+    }   
+}
+
