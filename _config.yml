@@ -37,7 +37,7 @@ defaults:
       path: ""
       type: "team"
     values:
-      layout: "team-page"
+      layout: "team-member"
 
 # collections
 collections:

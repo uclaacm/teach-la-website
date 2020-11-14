@@ -1,7 +1,7 @@
 ---
 firstname: "Ashley"
 lastname: "Ghodsian"
-title: "Instructor"
-group: "member"
+title: "JEDI (Advisor)"
+group: "board"
 img: "aghodsian.jpg"
 ---
