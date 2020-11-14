@@ -7,7 +7,9 @@ All our wonderful team profiles are stored here, and are used to track your past
 name: "My Name"
 group: "member"
 title: "My Position Title"
+pronouns: "your preferred pronouns (if you're comfortable sharing)"
 img: "image_name.png"
+graduating_year: 1970
 email: "Your email (if you're comfortable sharing)"
 github: "username (optional)"
 links:
@@ -34,6 +36,7 @@ text **to be bold**, *italicized*, or make lists:
 | `group` | Exactly one of the following: "member" (standard) \| "board" (serving the **current** board) \| "alum" (graduated) \| "alum+" (graduated in club, a.k.a. one of our "Graduated Greats") | ✅ |
 | `title` | What you do in club | ✅ |
 | `graduating_year` | What year you plan to graduate in. If you graduate as a Teach LA member, you will be added to our list of "Graduating Greats!" | ✅ |
+| `pronouns` | Your preferred pronouns | ❌ |
 | `secondary` | If you do something in addition to your primary role | ❌ |
 | `img` | Filename of an image of your face, as located in our [img/team folder](../img/team)! | ❌ (but recommended!) |
 | `github` | Your GitHub username | ❌ |

@@ -1,6 +1,6 @@
 ---
 firstname: "Jason"
 lastname: "Jewik"
-title: "Instructor"
+title: "AI Outreach Officer"
 group: "member"
 ---

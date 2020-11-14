@@ -5,5 +5,5 @@ title: "Developer"
 secondary: "Instructor"
 group: "member"
 img: "ezhong.jpg"
-github: "evazhog"
+github: "evanzhong"
 ---
