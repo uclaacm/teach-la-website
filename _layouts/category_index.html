@@ -6,15 +6,10 @@ layout: default
   <!-- Pagination is active -->
   {% assign paginator = page.paginator %}
 
-  {% if paginator.previous_page != nil or paginator.next_page != nil %}
-    <!-- Show page number if we have multiple pages -->
-    <h1>Category index page {{ paginator.page }} / {{ paginator.total_pages }} for &ldquo;{{ page.title }}&rdquo;</h1>
-  {% else %}
-    <!-- No page number if we only have a single page -->
-    <h1>Category index for &ldquo;{{ page.title }}&rdquo;</h1>
-  {% endif %}
+  <br>
+  <a class="tla-link" href="{{site.baseurl}}/blog/category/">← All Categories</a>
 
-  <a class="tla-link" href="{{site.baseurl}}/blog/category/">Click me to go to a list of categories!</a>
+  <h1>Category: &ldquo;{{ page.title }}&rdquo;</h1>
 
   <section>
     <!-- Show post excerpts for the current page -->
@@ -27,7 +22,7 @@ layout: default
         <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
       </h2>
       <p>
-        <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
+        <!-- TODO: IMPLEMENT TAGS! -->
         {% comment %}
         {% if post.tags %}
             tags:
@@ -47,7 +42,14 @@ layout: default
   <nav><p>
     <h2 class="title">
       {% if paginator.previous_page %}<a class="tla-link" href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>{% endif %}
-      {% if paginator.previous_page and paginator.next_page %} | {% endif %}
+
+      {% if paginator.previous_page != nil or paginator.next_page != nil %}
+        <!-- Show page number if we have multiple pages -->
+      {% if paginator.previous_page %} | {% endif %}
+      {{paginator.page}} 
+      {% if paginator.next_page %} | {% endif %}
+      {% endif %}
+
       {% if paginator.next_page %}<a class="tla-link" href="{{ paginator.next_page_path }}">Older <span aria-hidden="true">&rarr;</span></a>{% endif %}
     </h2>
   </p></nav>
@@ -67,7 +69,7 @@ layout: default
       <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
     </h2>
     <p>
-      <!-- TODO: IMPLEMENT CATEGORIES & TAGS! -->
+      <!-- TODO: IMPLEMENT TAGS! -->
       {% comment %}
       {% if post.tags %}
           tags:
