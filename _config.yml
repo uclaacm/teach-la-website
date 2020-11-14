@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://teachla.uclaacm.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter:
   username: uclaacm
-  image: /img/teachLA_logo_light.png
+  image: https://teachla.uclaacm.com/img/teachLA_logo_light.png
 github_username:  uclaacm
 facebook_username: acmteachla
 linkedin_url: https://www.linkedin.com/company/acm-teach-la-acm-ucla
