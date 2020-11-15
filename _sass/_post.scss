@@ -66,6 +66,8 @@
 }
 
 .post-recommend-card{
+    display: grid;
+    grid-template-columns: auto;
     padding: 1em;
     margin: 1em;
     margin-left: 0.25em;
@@ -75,7 +77,16 @@
 
 }
 
+.post-recommend-img{
+    align-self: center;
+    width: 10em;
+    height: auto;
+    margin: 1em;
+}
+
 .post-recommend-info{
+    
+    align-self: flex-end;
     margin: 1em;
     font-size: 0.9rem;
     
