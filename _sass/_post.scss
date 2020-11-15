@@ -1,5 +1,6 @@
 .post-preview{
     display: grid;
+    align-items: center;
     border: solid black;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
@@ -8,7 +9,7 @@
 .post-preview-img{
     width: 100%;
     height: auto;
-    vertical-align: auto;;
+    align-self: center;
 }
 
 .post-container {
@@ -85,11 +86,9 @@
 }
 
 .post-recommend-info{
-    
     align-self: flex-end;
     margin: 1em;
     font-size: 0.9rem;
-    
 }
 
 .post-blockquote {
