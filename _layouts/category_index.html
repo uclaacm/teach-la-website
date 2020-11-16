@@ -7,9 +7,9 @@ layout: default
   {% assign paginator = page.paginator %}
 
   <br>
-  <a class="tla-link" href="{{site.baseurl}}/blog/category/">← All Categories</a>
+  <a class="tla-link" href="{{site.baseurl}}/blog/category/"><span aria-hidden="true">&larr;</span> All Categories</a>
 
-  <h1>Category: &ldquo;{{ page.title }}&rdquo;</h1>
+  <h1>Posts in category: &ldquo;{{ page.title }}&rdquo;</h1>
 
   <section>
     <!-- Show post excerpts for the current page -->
@@ -40,26 +40,35 @@ layout: default
   </section>
   <!-- Show navigation next/previous page links if applicable -->
   <nav><p>
-    <h2 class="title">
-      {% if paginator.previous_page %}<a class="tla-link" href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>{% endif %}
+    <h2 class="title" style="display: flex">
+      <div style="flex:1" class="text-center">
+        {% if paginator.previous_page %}
+        <a class="tla-link" href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>
+        {% endif %}
+      </div>
 
-      {% if paginator.previous_page != nil or paginator.next_page != nil %}
+      <div style="flex:1" class="text-center">
+        {% if paginator.previous_page != nil or paginator.next_page != nil %}
         <!-- Show page number if we have multiple pages -->
-      {% if paginator.previous_page %} | {% endif %}
-      {{paginator.page}} 
-      {% if paginator.next_page %} | {% endif %}
-      {% endif %}
+        <span> Page {{paginator.page}} of {{paginator.total_pages}} </span>
+        {% endif %}
+      </div>
 
-      {% if paginator.next_page %}<a class="tla-link" href="{{ paginator.next_page_path }}">Older <span aria-hidden="true">&rarr;</span></a>{% endif %}
+      <div style="flex:1" class="text-center">
+        {% if paginator.next_page %}
+        <a class="tla-link" href="{{ paginator.next_page_path }}">Older <span aria-hidden="true">&rarr;</span></a>
+        {% endif %}
+      </div>
     </h2>
   </p></nav>
 
 {% else %}
 
   <!-- Pagination is not active -->
-  <h1>Category index for &ldquo;{{ page.title }}&rdquo;</h1>
+  <br>
+  <a class="tla-link" href="{{site.baseurl}}/blog/category/"><span aria-hidden="true">&larr;</span> All Categories</a>
 
-  <a class="tla-link" href="{{site.baseurl}}/blog/category/">Click me to go to a list of categories!</a>
+  <h1>Posts in category: &ldquo;{{ page.title }}&rdquo;</h1>
 
   {% for post in page.posts %}
   <hr class="divider" />
