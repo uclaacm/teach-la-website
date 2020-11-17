@@ -8,7 +8,7 @@ email: "leo@krashanoff.com"
 github: "krashanoff"
 links:
   - name: "LinkedIn"
-    href: "linkedin.com/in/leonidrlk/"
+    href: "https://www.linkedin.com/in/leonidrlk/"
   - name: "Website"
-    href: "krashanoff.com"
+    href: "https://krashanoff.com"
 ---
