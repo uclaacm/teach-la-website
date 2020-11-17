@@ -9,16 +9,20 @@
         border-radius: 4px;
         padding: 15px;
         border: 2px solid $teachla-green;
+
+        
     }
 
     // syntax-highlighting
     .highlight {
         padding-left: 1em;
         background: #FCFCFC;
-
+        word-wrap: break-word;
         pre {
             padding: 2%;
             line-height: 1.2;
+            overflow-x: scroll;
+            font-family: 'Fira Mono', monospace;
         }
 
         .highlighter-rouge & {
