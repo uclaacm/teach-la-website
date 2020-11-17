@@ -40,7 +40,7 @@ layout: default
   </section>
   <!-- Show navigation next/previous page links if applicable -->
   <nav><p>
-    <h2 class="title" style="display: flex">
+    <h2 class="title" style="display: flex; flex-flow: row wrap; align-items: center">
       <div style="flex:1" class="text-center">
         {% if paginator.previous_page %}
         <a class="tla-link" href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>
@@ -50,7 +50,10 @@ layout: default
       <div style="flex:1" class="text-center">
         {% if paginator.previous_page != nil or paginator.next_page != nil %}
         <!-- Show page number if we have multiple pages -->
-        <span> Page {{paginator.page}} of {{paginator.total_pages}} </span>
+        <span> 
+          Page <span aria-hidden="true"><br></span>
+          {{paginator.page}} of {{paginator.total_pages}} 
+        </span>
         {% endif %}
       </div>
 
