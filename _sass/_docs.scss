@@ -11,11 +11,16 @@
         border: 2px solid $teachla-green;
     }
 
+    code {
+        font-family: $font-code;
+        font-size: $code-font-size;
+    }
+
     // syntax-highlighting
     .highlight {
         padding-left: 1em;
         background: #FCFCFC;
-        
+
         pre {
             padding: 2%;
             line-height: 1.2;
@@ -23,7 +28,7 @@
             white-space: -moz-pre-wrap; 
             white-space: -pre-wrap; 
             white-space: -o-pre-wrap; 
-            font-family: "Source Code Pro", monospace;
+            font-family: $font-code;
         }
 
         .highlighter-rouge & {
