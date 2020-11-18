@@ -5,35 +5,129 @@ permalink: /classes/py1
 ---
 
 <!-- todo: custom layout? -->
-<div class="sidebar">
-  <p>how to get started in <span>Python</span></p>
-  <div class="sidebar-illo"></div>
-  <p>
-    confused about how to get started with 
-    python? here's a <span>step-by-step learning plan</span> 
-    that walks you through how to learn to make 
-    awesome programs, with no prior experience
-  </p>
-  <hr class="divider-sidebar-py1"/>
-  <p>
-    learned skills:
-  </p>
-  <!-- this part could be automated with markdown + loop -->
-  <ul class="learned-skills">
-    <li><p>data types and operators</p></li>
-    <li><p>booleans and conditional statements</p></li>
-    <li><p>while loops and for loops</p></li>
-    <li><p>lists</p></li>
-    <li><p>creating functions</p></li>
-  </ul>
-</div>
-<!-- materializes as a vertical line -->
-<div class="divider-py1"></div>
-<div class="curriculum">
-  <!-- types of boxes: -->
-  <!-- step (lessons and assignment), -->
-  <!-- lesson (card with outline, buttons and time estimate), -->
-  <!-- assignment (with button and time estimate), -->
-  <!-- project (layout slightly differs from assignment), -->
-  <!-- illustrations -->
+<div class="py1-wrapper">
+  <div class="py1-sidebar">
+    <p>how to get started in<br/>
+      <span class="py1-fancy-title">python</span>
+    </p>
+    <div class="py1-illo">
+      <!-- <img alt="a filler murray" src="https://www.fillmurray.com/900/600"/> -->
+    </div>
+    <p>
+      confused about how to get started with 
+      python? here's a <strong>step-by-step learning plan</strong> 
+      that walks you through how to learn to make 
+      awesome programs, with no prior experience!
+    </p>
+    <hr class="py1-divider-sidebar"/>
+    <div class="py1-learned-skills-wrapper">
+      <p>
+	learned skills:
+      </p>
+      <!-- this part could be automated with markdown + loop -->
+      <ul class="py1-learned-skills-list">
+	<li><span>data types and operators</span></li>
+	<li><span>booleans and conditional statements</span></li>
+	<li><span>while loops and for loops</span></li>
+	<li><span>lists</span></li>
+	<li><span>creating functions</span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- needs to materialize as a vertical line on desktop -->
+  <!-- and a horizontal line on mobile? -->
+  <!-- or implement using margin -->
+  <!-- <hr class="py1-divider"/> -->
+  <div class="py1-curriculum">
+    <!-- types of boxes: -->
+    <!-- section (lessons and assignment), -->
+    <!-- lesson (card with outline, buttons and time estimate), -->
+    <!-- assignment (with button and time estimate), -->
+    <!-- project (layout slightly differs from assignment), -->
+    <!-- illustrations -->
+
+    <!-- generation of boxes could be automated with markdown + loop -->
+    <section id="fundamentals">
+      <div class="section-header">
+	<h1>fundamentals</h1>
+	<p>goals: understand what Python is and the building blocks to
+	  creating your first working program!</p>
+      </div>
+      <div class="lessons-wrapper">
+	<div class="lesson">
+	  <div class="lesson-title-bar">
+	    <h2>getting started</h2>
+	    <p class="step-number">#1</p>
+	  </div>
+	  <div class="lesson-body">
+	    <ul>
+	      <li><span>what is Python?</span></li>
+	      <li><span>why is it important?</span></li>
+	      <li><span>how is it used?</span></li>
+	    </ul>
+	  </div>
+	  <div class="lesson-action-bar">
+	    <ul class="lesson-action-list">
+	      <li><a href="#">slides</a></li>
+	      <li><a href="#">video</a></li>
+	      <li><a href="#">worksheet</a></li>
+	    </ul>
+	    <p class="lesson-duration">10 min</p>
+	  </div>
+	</div>
+	<!-- more lessons -->
+	<!-- <div class="illustration"> -->
+	<!--   <img src="https://www.fillmurray.com/900/600"/> -->
+	<!-- </div> -->
+	<div class="lesson">
+	  <div class="lesson-title-bar">
+	    <h2>data types & operators</h2>
+	    <p class="step-number">#2</p>
+	  </div>
+	  <div class="lesson-body">
+	    <ul>
+	      <li><span>what is Python?</span></li>
+	      <li><span>why is it important?</span></li>
+	      <li><span>how is it used?</span></li>
+	    </ul>
+	  </div>
+	  <div class="lesson-action-bar">
+	    <ul class="lesson-action-list">
+	      <li><a href="#">slides</a></li>
+	      <li><a href="#">video</a></li>
+	      <li><a href="#">worksheet</a></li>
+	    </ul>
+	    <p class="lesson-duration">10 min</p>
+	  </div>
+	</div>
+	<!-- <div class="illustration"> -->
+	<!--   <img src="https://www.fillmurray.com/900/600"/> -->
+	<!-- </div> -->
+      </div>
+      <div class="assignments-wrapper">
+	<!-- <div class="illustration"> -->
+	<!--   <img src="https://www.fillmurray.com/g/900/600"/> -->
+	<!-- </div> -->
+	<div class="assignment">
+	  <div class="assignment-title-bar">
+	    <!-- should the title be h1 or h2 semantically even though -->
+	    <!-- they appear the same? -->
+	    <h2>assignment #1</h2>
+	    <p class="step-number">#4</p>
+	  </div>
+	  <div class="assignment-body">
+	    <p>Now, it's time to combine everything you've learned and put
+	      your knowledge to the test!</p>
+	  </div>
+	  <div class="assignment-action-bar">
+	    <ul class="assignment-action-list">
+	      <li><a href="#">let's go!</a></li>
+	    </ul>
+	    <p class="assignment-duration">30 min</p>
+	  </div>
+	</div>
+      </div>
+    </section>
+					
+  </div>
 </div>

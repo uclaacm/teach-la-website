@@ -1,0 +1,156 @@
+// debug
+.py1-wrapper * {
+    // border: solid 1px red;
+}
+
+.py1-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    p, span, a {
+	// everything seems set in Poppins?
+	font-family: $font-display;
+    }
+    @media (min-width: $desktop-width) {
+	flex-direction: row;
+    }
+}
+
+.illustration img {
+    max-width: 100%;
+}
+
+.py1-sidebar {
+    .py1-illo {
+	width: 60%;
+	img {
+	    max-width: 100%;
+	}
+	@media (max-width: $desktop-width) {
+	    max-width: 40%;
+	}
+    }
+    .py1-fancy-title {
+	line-height: 2em;
+	font-size: 1.6em;
+	font-weight: bold;
+    }
+    .py1-divider-sidebar {
+	visibility: hidden;
+    }
+    .py1-learned-skills-wrapper {
+	p {
+	    margin-bottom: 0;
+	}
+	.py1-learned-skills-list {
+	    margin-top: 0;
+	    padding-left: 1em;
+	    li {
+		padding-left: 0.5em;
+		list-style-type: "\2013";
+	    }
+	}
+    }
+    @media (min-width: $desktop-width) {
+	max-width: 36%;
+    }
+}
+
+// .py1-divider {
+//     // border: none;
+//     margin: 10px 10px;
+//     border-top: 5px solid $teachla-tint;
+//     color: $teachla-tint;
+//     overflow: visible;
+//     height: 100px;
+//     width: 20px;
+// }
+
+// haven't decided on absolutely naming every class
+// or nest classes instead
+// but nesting classes does look chaotic now
+
+.py1-curriculum {
+    section {
+	.section-header {
+	    h1 {
+		margin-bottom: 0;
+	    }
+	    p {
+		margin-top: 0;
+	    }
+	}
+	.lessons-wrapper {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    @media (min-width: $desktop-width) {
+		flex-flow: row wrap;
+	    }
+	    .lesson, .illustration {
+		margin: 2% 2%;
+		// flex-basis: 1;
+		@media (min-width: $desktop-width) {
+		    width: 40%;
+		}
+	    }
+	    .lesson {
+		border: solid 2px #1758d7;
+		border-radius: 10px;
+		padding: 2% 2%;
+		.lesson-title-bar {
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: space-between;
+		    h2, .step-number {
+			font-weight: bold;
+			font-size: 18px;
+		    }
+		}
+		.lesson-body {
+		    ul {
+			padding-left: 1em;
+		    }
+		}
+		.lesson-action-bar{
+		    // need to adjust font size
+		    // so no overflow
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: space-between;
+		    .lesson-action-list {
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+			padding: 0;
+			li {
+			    display: block;
+			    list-style: none;
+			    background: #1758d7;
+			    border-radius: 10px;
+			    padding: 2px 10px;
+			    margin: 0 5px;
+			    a {
+				color: white;
+				text-decoration: none;
+			    }
+			}
+		    }
+		    .lesson-duration {
+			// need to figure out how to make it
+			// drop to the bottom of the box
+		    }
+		}
+	    }
+	}
+    }
+
+    // i got lazy so this is it for now :(
+    // emphasis on for now because i will keep going
+	
+    @media (min-width: $desktop-width) {
+	max-width: 64%;
+    }
+}
+
+// sidebar is 36% wide on desktop, per sketch
