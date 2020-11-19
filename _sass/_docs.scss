@@ -1,3 +1,77 @@
+
+.sidebar {
+    top: 0;
+    right:0;
+    width: 290px; //290 + 10 of padding left = 300px
+    bottom: 0;
+    padding-top: 100px;
+    padding-left: 10px;
+    position: fixed;
+    background-color: #dbdbdb;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+#getting-started, #test {
+    ul.sidebar-items {
+        display: block;
+        list-style: none;
+    }
+    ul.sidebar-items li {
+        display: none;
+    }
+    ul.sidebar-items li a{
+        text-decoration: none;
+        color: $font-primary-color;
+    }
+}
+
+#gs-button:checked + #getting-started {
+        ul.sidebar-items li {
+        display: block;
+    }
+}
+
+#test-button:checked + #test {
+       ul.sidebar-items li {
+     display: block;
+    }
+}
+
+#docs-content{
+    padding-right:calc(300px + 1em);
+    max-width: calc(100vw - 300px - 3em); // 3em acounts for padding
+}
+
+.docs-footer-row {
+        display: grid;
+        @media (min-width: $desktop-width + 300px) {
+            grid-template-columns: 50% 25% 25%;
+        }
+}
+
+.docs-footer-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10vw;
+
+    @media (min-width: $desktop-width) {
+        font-size: 3em;
+    }
+}
+
+.docs-text-desktop-right {
+    @media (min-width: $desktop-width + 300px) {
+        text-align: right;
+    }
+}
+
 .generated-content {
     img {
         max-height: 25rem;
