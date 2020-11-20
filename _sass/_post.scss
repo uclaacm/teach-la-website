@@ -3,10 +3,11 @@
     align-items: center;
     border: solid black;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .post-preview-img{
+    margin: 0.5em;
     width: 100%;
     height: auto;
     align-self: center;
@@ -95,6 +96,8 @@
     background: #f9f9f9;
     border-left: 10px solid $teachla-green;
     margin: 1.5em 0;
+    margin-left: 1em;
+    margin-right: 0.5em;
     padding: 0.5em 10px;
 
     .tla-link, a {
