@@ -10,7 +10,7 @@ authors:
 category: dev
 tags:
     - website
-img: /img/posts/welcome/default.png
+img: /welcome/default.png
 alt: The words Hello World! in a terminal
 ---
 

@@ -4,7 +4,7 @@ layout: default
 
 <article class="post-container">
     <h1 class="title page-title">{{page.title}}</h1>
-        <img class="post-main-img" src={{page.img}} alt="{{page.alt}}"/>
+        <img class="post-main-img" src=/img/posts/{{page.img}} alt="{{page.alt}}"/>
     <div>
         <p>
             written by: <a class="tla-link" href="#authors">{{page.author}}</a> •
@@ -91,7 +91,7 @@ layout: default
         
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
-            <a href="{{post.url}}"><img class="post-recommend-img" src={{post.img}} alt = "{{post.alt}}"/></a>
+            <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.img}} alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}

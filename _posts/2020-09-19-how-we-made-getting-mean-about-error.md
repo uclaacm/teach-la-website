@@ -11,7 +11,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /img/posts/mean_about_error/default.png
+img: /mean_about_error/default.png
 alt: A chart showing Moors law alongside a generated model
 ---
 

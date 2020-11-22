@@ -16,7 +16,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /img/posts/cipher_salad/default.png
+img: /cipher_salad/default.png
 alt: An example of a circle cipher decoder
 ---
 
