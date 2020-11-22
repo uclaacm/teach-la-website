@@ -12,6 +12,7 @@ tags:
     - learning labs
     - dev team
 img: /img/posts/mean_about_error/default.png
+alt: A chart showing Moors law alongside a generated model
 ---
 
 *Note: this post was originally finished in June, but went through a few iterations as we implemented the blogs feature. Many thanks to Miles & Michelle for their patience!*
