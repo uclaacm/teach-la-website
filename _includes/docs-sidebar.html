@@ -1,11 +1,17 @@
 <div class = "sidebar">
+  {% if page.url contains 'static-setup'
+     or page.url contains 'dev-setup' %}
+    {% assign category = "Getting-Started" %}
+  {% endif %}
   <label for="gs-button"> Getting Started</label>
-  <input type="checkbox" id="gs-button"/>
+  <input type="checkbox" id="gs-button" {% if category == "Getting-Started" %}checked{% endif %}/>
     <div id="getting-started">
      <ul class="sidebar-items">
        <li><a href="{{site.baseurl}}/docs">Docs Home</a></li>
-       <li><a href="{{site.baseurl}}/docs/dev-setup">Setup</a></li>
-       <li><a href="{{site.baseurl}}/docs/static-setup">Add to Team Page</a></li>
+       <li><a href="{{site.baseurl}}/docs/dev-setup" 
+        {% if page.url contains "dev-setup" %}id="selected"{%endif%}>Setup</a></li>
+       <li><a href="{{site.baseurl}}/docs/static-setup" 
+        {% if page.url contains "static-setup" %}id="selected"{%endif%}>Add to Team Page</a></li>
       </ul>
     </div>
   <label for="test-button">Test</label>
