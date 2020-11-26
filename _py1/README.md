@@ -11,8 +11,9 @@ video_link: "Video link"
 slides_link: "Slides Link"
 worksheet_link: "My worksheet link"
 length: "x"
-agenda: "My Agenda"
+agenda: brief agenda HTML
 assignment: "assignment link"
+next: "Next Lesson Title"
 
 ---
 ```
@@ -23,8 +24,8 @@ assignment: "assignment link"
 - group: the group of the lesson i.e. fundamentals or control flow etc.
 - num: lesson number indicates recommended order of completion
 - length: time required to watch video and complete associated problems
-- agenda_brief: quick description of lesson to show on curriculum page
-- agenda: long description of lesson to show on lesson page
+- agenda: Brief bulleted agenda to display on curriculum page in HTML
 - assignment: only include if the lesson is an assignment; for now a link to the problem, **TODO**: interactive questions
+- next: title of next lesson
 
-Content: Brief bulleted agenda to display on curriculum page
+Content:  long description of lesson to show on lesson page

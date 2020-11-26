@@ -2,9 +2,40 @@
 layout: default
 fw: true
 ---
-<h1> {{ page.title }} </h1>
-<p>
-    {{ content }}
-</p>
-    
+<div class="py1-lesson-page-wrapper">
+    <div class="py1-sidebar">
+        <h1> {{ page.num }}. {{ page.title }} </h1>
+        <p class="py1-lesson-page-description">
+            {{ content }}
+        </p>
 
+        <p class="py1-lesson-page-agenda">
+            <b> agenda </b>
+            {{ page.agenda }}
+        </p>
+
+        <div class="py1-lesson-page-action-bar">
+            {% if page.slides_link %}
+            <a href="{{ page.slides_link }}" target="_blank">slides</a>
+            {% endif %}
+
+            {% if page.worksheet_link %}
+            <a href="{{ page.worksheet_link }}" target="_blank">worksheet</a>
+            {% endif %}
+
+            <span class="py1-lesson-duration">{{ page.length }} min</span>
+        </div>
+
+        {% if page.next %}
+        <div class="py1-lesson-page-next">
+            <a href="#">next lesson:  {{ page.next }}</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="py1-lesson-page-divider"></div>
+
+    <div class="py1-lesson-content"> <!--TODO: make responsive-->
+        <iframe width="960" height="450" src="https://www.youtube.com/embed/eeoSWdtRdbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+</div>

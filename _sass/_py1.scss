@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     padding-left: 0.5em;
+
 }
 
 .py1-list > * { // * instead of li: no specificity override
@@ -187,7 +188,7 @@
     flex-flow: row nowrap;
     align-items: center;
     background: $py-blue;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 5% 8%;
     margin-right: 5%;
     line-height: 1;
@@ -212,4 +213,98 @@
     content: "\1f552";
     margin-right: 0.4em;
 }
+
+// Lesson page styling
+.py1-lesson-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-top: 40px;
+    @media (min-width: $desktop-width) {
+	flex-direction: row;
+    }
+}
+
+.py1-lesson-page-description {
+    // margin-bottom: 50px;
+}
+
+.py1-lesson-page-agenda {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.py1-lesson-brief-agenda {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.py1-lesson-page-action-bar {
+    // border: solid 1px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+    margin-bottom: 200px;
+    padding: 0;
+    list-style: none;
+
+    a {
+        background-color: $py-blue;
+        color: white;
+        padding: 5px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 10px;
+        font-family: $font-display;
+        text-decoration: none;
+    }
+}
+
+.py1-lesson-page-divider {
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.py1-lesson-page-next {
+    display: flex;
+    justify-content: center;
+    border: solid 2px $py-blue;
+    background-color: white;
+    margin-bottom: 24px;
+    border-radius: 10px;
+
+    a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: $py-blue;
+        font-family: $font-display;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+.py1-lesson-page-next:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.py1-lesson-content {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    // border: solid 2px $py-blue;
+
+    iframe {
+        border: solid 2px $teachla-green;
+        width: 100%;
+        margin-bottom: 16px;
+        
+    }
+}
+
+
 
