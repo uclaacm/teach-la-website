@@ -30,6 +30,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "py1"
+    values:
+      layout: "py1-lesson"
+  -
+    scope:
+      path: ""
     values:
       layout: "default"
   -
@@ -51,7 +57,7 @@ collections:
     permalink: /docs/:name
   py1:
     permalink: /classes/py1/:name
-    # output: true
+    output: true
   reports:
     output: true
     permalink: /reports/:name
