@@ -317,14 +317,16 @@
 
 .py1-lesson-content {
     width: 40%;
-    @media (max-width: $desktop-width) {
-        width: 80%;
-    }
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
     margin-left: 50px;
+    @media (max-width: $desktop-width) {
+        width: 100%;
+        margin-left: 0px;
+    }
+    
     // border: solid 2px $py-blue;
 
     h1 {
