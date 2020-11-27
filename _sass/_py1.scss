@@ -338,6 +338,7 @@
         border: solid 2px $py-green;
         width: 100%;
         @media (max-width: $desktop-width) {
+            max-width: 480px;
             height: 300px;
         }
         margin-bottom: 50px;
