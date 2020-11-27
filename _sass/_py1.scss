@@ -298,6 +298,7 @@
     background-color: white;
     margin-bottom: 32px;
     border-radius: 10px;
+    transition: ease-in-out .2s;
 
     a {
         width: 100%;
@@ -316,6 +317,9 @@
 
 .py1-lesson-content {
     width: 40%;
+    @media (max-width: $desktop-width) {
+        width: 80%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -331,6 +335,9 @@
     iframe {
         border: solid 2px $py-green;
         width: 100%;
+        @media (max-width: $desktop-width) {
+            height: 300px;
+        }
         margin-bottom: 50px;
         
     }

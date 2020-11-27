@@ -15,4 +15,4 @@ agenda: <ul class="py1-lesson-brief-agenda">
 ---
 Booleans can be taken to the next level with conditionals. Conditional statements allow us to execute one of several **branches of code**, depending on the value of a boolean. "If" statements are the most basic form of what we call *control flow*. 
 
-In this video, we'll be introducing you to if, elif and, as always, giving you a bunch of practice!
+In this video, we'll be introducing you to if, elif,and else and giving you a bunch of practice along the way!

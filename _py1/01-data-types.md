@@ -18,4 +18,4 @@ Data is at the core of everything we do in Python! Essentially, data is just a *
 
 In this video, we'll be going over 4 basic data types in Python: booleans, integers, floats, and strings. We'll also cover type casting. 
 
-Don't wory if any of that sounds foreign to you! By the end of this video, you'll be an expert!
+Don't worry if any of that sounds foreign to you! By the end of this video, you'll be an expert!
