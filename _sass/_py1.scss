@@ -221,9 +221,25 @@
     justify-content: center;
     margin: 0;
     margin-top: 40px;
+    margin-bottom: 40px;
     @media (min-width: $desktop-width) {
 	flex-direction: row;
     }
+}
+
+.py1-lesson-sidebar {
+    @media (min-width: $desktop-width) {
+	max-width: 25%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.py1-lesson-header {
+    text-decoration: underline 7px $py-blue;
+    text-underline-offset: 22%;
+    margin-bottom: 50px;
 }
 
 .py1-lesson-page-description {
@@ -260,12 +276,19 @@
         border-radius: 10px;
         font-family: $font-display;
         text-decoration: none;
+        font-weight: bold;
+        transition: ease-in-out .2s;
+    }
+    
+    a:hover {
+        background-color: $py-blue-tint;
     }
 }
 
 .py1-lesson-page-divider {
-    margin-right: 70px;
-    margin-left: 70px;
+    margin-left: 50px;
+    width: 1px;
+    background-color: $py-blue;
 }
 
 .py1-lesson-page-next {
@@ -273,7 +296,7 @@
     justify-content: center;
     border: solid 2px $py-blue;
     background-color: white;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     border-radius: 10px;
 
     a {
@@ -294,17 +317,48 @@
 .py1-lesson-content {
     width: 40%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 40px;
+    margin-left: 50px;
     // border: solid 2px $py-blue;
 
-    iframe {
-        border: solid 2px $teachla-green;
+    h1 {
         width: 100%;
-        margin-bottom: 16px;
+        text-align: start;
+    }
+
+    iframe {
+        border: solid 2px $py-green;
+        width: 100%;
+        margin-bottom: 50px;
         
     }
 }
 
+.py1-lesson-practice {
+    margin-bottom: 32px;
+    padding: 24px;
+    border: $py-green solid 2px;
+    border-radius: 10px;
 
+    a {
+        background-color: $py-green;
+        color: white;
+        padding: 5px;
+        margin-bottom: 20px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 10px;
+        font-family: $font-display;
+        text-decoration: none;
+        font-weight: bold;
+        transition: ease-in-out .2s;
+        
+    }
+
+    a:hover {
+        background-color: $py-green-tint;
+    }
+}
 

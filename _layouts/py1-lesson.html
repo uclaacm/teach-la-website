@@ -3,32 +3,34 @@ layout: default
 fw: true
 ---
 <div class="py1-lesson-page-wrapper">
-    <div class="py1-sidebar">
-        <h1> {{ page.num }}. {{ page.title }} </h1>
-        <p class="py1-lesson-page-description">
-            {{ content }}
-        </p>
+    <div class="py1-lesson-sidebar">
+        <div class="py1-section1">
+            <h1 class="py1-lesson-header"> {{ page.num }}. {{ page.title }} </h1>
+            <p class="py1-lesson-page-description">
+                {{ content }}
+            </p>
 
-        <p class="py1-lesson-page-agenda">
-            <b> agenda </b>
-            {{ page.agenda }}
-        </p>
+            <p class="py1-lesson-page-agenda">
+                <b> agenda </b>
+                {{ page.agenda }}
+            </p>
 
-        <div class="py1-lesson-page-action-bar">
-            {% if page.slides_link %}
-            <a href="{{ page.slides_link }}" target="_blank">slides</a>
-            {% endif %}
+            <div class="py1-lesson-page-action-bar">
+                {% if page.slides_link %}
+                <a href="{{ page.slides_link }}" target="_blank">slides</a>
+                {% endif %}
 
-            {% if page.worksheet_link %}
-            <a href="{{ page.worksheet_link }}" target="_blank">worksheet</a>
-            {% endif %}
+                {% if page.worksheet_link %}
+                <a href="{{ page.worksheet_link }}" target="_blank">worksheet</a>
+                {% endif %}
 
-            <span class="py1-lesson-duration">{{ page.length }} min</span>
+                <span class="py1-lesson-duration">{{ page.length }} min</span>
+            </div>
         </div>
 
-        {% if page.next %}
+        {% if page.next_lesson %}
         <div class="py1-lesson-page-next">
-            <a href="#">next lesson:  {{ page.next }}</a>
+            <a href="{{site.baseurl}}/classes/py1/{{page.next_link}}">next lesson: {{ page.next_lesson }}</a>
         </div>
         {% endif %}
 
@@ -36,6 +38,39 @@ fw: true
 
     <div class="py1-lesson-page-divider"></div>
 
-    <div class="py1-lesson-content"> <!--TODO: make responsive-->
-        <iframe width="960" height="450" src="https://www.youtube.com/embed/eeoSWdtRdbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+    <div class="py1-lesson-content">
+        <!--TODO: make responsive-->
+        <iframe width="960" height="450" src={{ page.video_link }} frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        {% if page.p1 or page.p2 or page.p3 %}
+        <h1>more practice</h1>
+        {% endif %}
+
+        {% if page.p1 %}
+        <div class="py1-lesson-practice">
+            <b>question #1</b> <br> <br>
+            {{ page.p1.question }} <br> <br>
+            <a href="{{page.p1.solution}}" target="_blank">solution</a>
+        </div>
+        {% endif %}
+
+        {% if page.p2 %}
+        <div class="py1-lesson-practice">
+            <b>question #2</b> <br> <br>
+            {{ page.p2.question }} <br> <br>
+            <a href="{{page.p2.solution}}" target="_blank">solution</a>
+        </div>
+        {% endif %}
+
+        {% if page.p3 %}
+        <div class="py1-lesson-practice">
+            <b>question #3</b> <br> <br>
+            {{ page.p3.question }} <br> <br>
+            <a href="{{page.p3.solution}}" target="_blank">solution</a>
+        </div>
+        {% endif %}
+
+    </div>
 </div>
