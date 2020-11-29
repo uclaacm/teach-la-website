@@ -14,7 +14,8 @@ layout: default
 
         <div class="col">
             <h1 class="title">{{ page.firstname }} {{ page.lastname }}
-                {% if page.pronouns %}
+                <!-- only outputs pronouns if a person has pronouns listed-->
+                {% if page.pronouns %} 
                     <span class = "pronouns"> ({{page.pronouns}})</span>
                 {% endif %}
             </h1>

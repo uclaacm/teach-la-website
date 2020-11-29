@@ -1,0 +1,24 @@
+---
+title: "Categories Home"
+layout: default
+permalink: /blog/category/
+---
+
+<h1>Blog Categories</h1>
+
+<p>
+    Looking for a specific topic in our blog? Then you've come to the right place! <br>
+    Feel free to click on a topic to see all related posts.
+</p>
+
+<hr class="divider" />
+
+{% for category in site.categories %}
+<section>
+    <h2 class="title">
+        <a class="tla-link" href="{{ site.baseurl }}/blog/category/{{ category | first | url_encode }}">{{ category | first }}</a>
+    </h2>
+</section>
+{% endfor %}
+
+<br>
