@@ -2,44 +2,20 @@
 layout: default
 fw: true
 ---
-<div class="py1-lesson-page-wrapper">
-    <div class="py1-lesson-sidebar">
-        <div class="py1-section1">
-            <h1 class="py1-lesson-header"> 
-                {{ page.num }}. {{ page.title }} 
+<div class="py1-wrapper">
+    <div class="py1-sidebar">
+        <div>
+            <h1 class="py1-lesson-header">
+                {{ page.num }}. {{ page.title }}
             </h1>
-            <p class="py1-lesson-page-description">
+            <p>
                 {{ content }}
             </p>
 
-            <p class="py1-lesson-page-agenda">
-                <b> agenda </b>
-            <ul>
-                {% for item in page.agenda %}
-                    <li>{{ item.text }}</li>
-                {% endfor %}
-            </ul>
+            {% include py1-lesson-card-content.html %}
 
-            </p>
-
-            <div class="py1-lesson-page-action-bar">
-                {% if page.slides_link %}
-                <a href="{{ page.slides_link }}" target="_blank">slides</a>
-                {% endif %}
-
-                {% if page.worksheet_link %}
-                <a href="{{ page.worksheet_link }}" target="_blank">worksheet</a>
-                {% endif %}
-
-                <span class="py1-lesson-duration">{{ page.length }} min</span>
-            </div>
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
         </div>
-        
+
         {% if page.next_lesson %}
         <div class="py1-lesson-page-next">
             <a href="{{site.baseurl}}/classes/py1/{{page.next_link}}">next lesson: {{ page.next_lesson }}</a>
@@ -51,7 +27,7 @@ fw: true
 
     </div>
 
-    <div class="py1-lesson-page-divider"></div>
+    <div class="py1-divider"></div>
 
     <div class="py1-lesson-content">
         <iframe width="960" height="450" src={{ page.video_link }} frameborder="0"
@@ -62,11 +38,11 @@ fw: true
         <h1>more practice</h1>
 
         {% for item in page.practice %}
-            <div class="py1-lesson-practice">
-                <b>question #{{ item.problem.num }}</b> <br> <br>
-                    {{ item.problem.question }} <br> <br>
-                <a href="{{item.problem.solution}}" target="_blank">solution</a>
-            </div>
+        <div class="py1-lesson-practice">
+            <b>question #{{ item.problem.num }}</b> <br>
+            {{ item.problem.question | markdownify }} <br>
+            <a href="{{ item.problem.solution }}" target="_blank">solution</a>
+        </div>
         {% endfor %}
 
         {% endif %}

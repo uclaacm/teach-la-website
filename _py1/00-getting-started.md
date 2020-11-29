@@ -1,6 +1,6 @@
 ---
 title: "getting started"
-next_lesson:  data types
+next_lesson: data types
 next_link: 01-data-types
 group: "fundamentals"
 num: 0
@@ -15,7 +15,7 @@ agenda:
 practice:
     - problem: 
         num: 1
-        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>`print(\"hello, world!\")`<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         solution: base-sol.html
 
     - problem: 

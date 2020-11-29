@@ -1,16 +1,17 @@
 // debug
-.py1-wrapper * {
-    // border: solid 1px red;
-}
+// .py1-wrapper * {
+//     border: solid 1px red;
+// }
 
 .py1-wrapper {
-    // border: solid 1px red;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     @media (min-width: $desktop-width) {
-	flex-direction: row;
+        flex-direction: row;
     }
 }
 
@@ -22,10 +23,10 @@
     margin: 0;
     padding: 0;
     padding-left: 0.5em;
-
 }
 
-.py1-list > * { // * instead of li: no specificity override
+.py1-list > * {
+    // * instead of li: no specificity override
     margin: 0;
     padding: 0;
     padding-left: 0.5em;
@@ -34,8 +35,10 @@
 .py1-sidebar {
     // border: solid 1px red;
     @media (min-width: $desktop-width) {
-	max-width: 25%;
+        max-width: 25%;
     }
+    display: flex;
+    flex-direction: column;
 }
 
 .py1-learned-skills-wrapper > * {
@@ -46,50 +49,67 @@
     list-style-type: "\2013";
 }
 
-.py1-divider-sidebar {
-    visibility: hidden;
+@mixin py1-fancy-title($color) {
+    text-decoration: underline 7px $color;
+    text-underline-offset: 22%;
 }
 
 .py1-fancy-title {
-    line-height: 2em;
-    font-size: 1.6em;
-    font-weight: bold;
+    @include py1-fancy-title($py-blue);
 }
 
-// .py1-divider {
-//     // border: none;
-//     margin: 10px 10px;
-//     border-top: 5px solid $teachla-tint;
-//     color: $teachla-tint;
-//     overflow: visible;
-//     height: 100px;
-//     width: 20px;
-// }
+.py1-lesson-header {
+    @include py1-fancy-title($py-blue);
+    margin-bottom: 50px;
+}
 
 .py1-divider {
-    // border: solid 1px red;
-    height: 10%;
-    width: 100%;
-    @media (min-width: $desktop-width) {
-	height: 100%;
-	width: 5%;
-    }
+    margin-left: 50px;
+    width: 1px;
+    background-color: $py-blue;
 }
 
 .py1-curriculum {
     @media (min-width: $desktop-width) {
-	width: 70%;
+        width: 70%;
+        margin-left: 50px;
+    }
+}
+
+.py1-lesson-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 50px;
+    @media (max-width: $desktop-width) {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: start;
+    }
+
+    iframe {
+        border: solid 2px $py-green;
+        width: 100%;
+        @media (max-width: $desktop-width) {
+            max-width: 480px;
+            height: 300px;
+        }
+        margin-bottom: 50px;
     }
 }
 
 .py1-section {
-    // border: solid 1px red;
     margin: 0;
     margin-bottom: 5%;
 }
 
 .py1-section-header {
-    // border: solid 1px red;
     margin: 2% 0;
 }
 
@@ -98,13 +118,12 @@
 }
 
 .py1-lessons-wrapper {
-    // border: solid 1px red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 1% 0;
     @media (min-width: $desktop-width) {
-	flex-flow: row wrap;
+        flex-flow: row wrap;
     }
 }
 
@@ -112,10 +131,10 @@
     margin: 1% 0%;
     // flex-basis: 1;
     @media (min-width: $desktop-width) {
-	width: 43%;
+        width: 43%;
     }
 }
-    
+
 .py1-lesson {
     border: solid 1px $py-blue;
     border-radius: 10px;
@@ -128,7 +147,6 @@
 }
 
 .py1-lesson-title-bar {
-    // border: solid 1px red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -149,7 +167,6 @@
 }
 
 .py1-lesson-body {
-    // border: solid 1px red;
     margin: 0;
     margin-bottom: 8%;
 }
@@ -159,7 +176,6 @@
 }
 
 .py1-lesson-action-bar {
-    // border: solid 1px red;
     margin: 0;
     margin-top: auto; // makes it fall
     display: flex;
@@ -173,7 +189,6 @@
 }
 
 .py1-lesson-action-list {
-    // border: solid 1px red;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -183,7 +198,6 @@
 }
 
 .py1-lesson-action {
-    // border: solid 1px red;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -195,7 +209,6 @@
 }
 
 .py1-lesson-action > * {
-    // border: solid 1px red;
     color: white;
     text-decoration: none;
     font-family: $font-display;
@@ -203,7 +216,6 @@
 }
 
 .py1-lesson-duration {
-    // border: solid 1px red;
     display: block;
     font-family: $font-display;
     font-size: 0.8em;
@@ -215,160 +227,61 @@
 }
 
 // Lesson page styling
-.py1-lesson-page-wrapper {
+
+@mixin py1-button {
+    padding: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 10px;
+    font-family: $font-display;
+    text-decoration: none;
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
+    text-align: center;
+}
+
+@mixin py1-solid-button($background-color, $hover-color) {
+    @include py1-button;
+    background-color: $background-color;
+    color: white;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+@mixin py1-outline-button($color) {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin: 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    @media (min-width: $desktop-width) {
-	flex-direction: row;
+    border: solid 2px $color;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: ease-in-out 0.2s;
+
+    a {
+        @include py1-button;
+        color: $color;
+        width: 100%;
+        padding: 10px;
     }
-}
-
-.py1-lesson-sidebar {
-    @media (min-width: $desktop-width) {
-	max-width: 25%;
+    &:hover {
+        background-color: rgb(232, 232, 232);
     }
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-}
-
-.py1-lesson-header {
-    text-decoration: underline 7px $py-blue;
-    text-underline-offset: 22%;
-    margin-bottom: 50px;
-
-    .py1-lesson-header > a {
-        // text-decoration: none;
-        color: $py-blue;
-    }
-}
-
-.py1-lesson-page-description {
-    // margin-bottom: 50px;
-}
-
-.py1-lesson-page-agenda {
-    margin-top: 50px;
-    margin-bottom: 0px;
-}
-
-.py1-lesson-brief-agenda {
-    margin-top: 0px;
-    margin-bottom: 50px;
 }
 
 .py1-lesson-page-action-bar {
-    // border: solid 1px red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-right: 5%;
-    margin-bottom: 200px;
+    margin-bottom: 180px;
     margin-top: 50px;
     padding: 0;
     list-style: none;
 
     a {
-        background-color: $py-blue;
-        color: white;
-        padding: 5px;
-        padding-right: 30px;
-        padding-left: 30px;
-        border-radius: 10px;
-        font-family: $font-display;
-        text-decoration: none;
-        font-weight: bold;
-        transition: ease-in-out .2s;
-    }
-    
-    a:hover {
-        background-color: $py-blue-tint;
-    }
-}
-
-.py1-lesson-page-divider {
-    margin-left: 50px;
-    width: 1px;
-    background-color: $py-blue;
-}
-
-.py1-lesson-page-next {
-    display: flex;
-    justify-content: center;
-    border: solid 2px $py-blue;
-    background-color: white;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    transition: ease-in-out .2s;
-
-    a {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        color: $py-blue;
-        font-family: $font-display;
-        text-decoration: none;
-        font-weight: bold;
-    }
-}
-
-.py1-lesson-page-home {
-    display: flex;
-    justify-content: center;
-    border: solid 2px $py-blue;
-    background-color: white;
-    margin-bottom: 32px;
-    border-radius: 10px;
-    transition: ease-in-out .2s;
-
-    a {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        color: $py-blue;
-        font-family: $font-display;
-        text-decoration: none;
-        font-weight: bold;
-    }
-}
-
-.py1-lesson-page-next:hover {
-    background-color: rgb(232, 232, 232);
-}
-
-.py1-lesson-content {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    margin-left: 50px;
-    @media (max-width: $desktop-width) {
-        width: 100%;
-        margin-left: 0px;
-    }
-    
-    // border: solid 2px $py-blue;
-
-    h1 {
-        width: 100%;
-        text-align: start;
-    }
-
-    iframe {
-        border: solid 2px $py-green;
-        width: 100%;
-        @media (max-width: $desktop-width) {
-            max-width: 480px;
-            height: 300px;
-        }
-        margin-bottom: 50px;
-        
+        @include py1-solid-button($py-blue, $py-blue-tint);
     }
 }
 
@@ -378,23 +291,28 @@
     border: $py-green solid 2px;
     border-radius: 10px;
 
-    a {
-        background-color: $py-green;
-        color: white;
-        padding: 5px;
-        margin-bottom: 20px;
-        padding-right: 30px;
-        padding-left: 30px;
-        border-radius: 10px;
-        font-family: $font-display;
-        text-decoration: none;
-        font-weight: bold;
-        transition: ease-in-out .2s;
-        
+    p {
+        margin-bottom: 10px;
+        margin-top: 20px;
     }
 
-    a:hover {
-        background-color: $py-green-tint;
+    a {
+        @include py1-solid-button($py-green, $py-green-tint);
+        margin-bottom: 20px;
     }
 }
 
+.py1-lesson-page-next {
+    @include py1-outline-button($py-blue);
+    margin-bottom: 10px;
+}
+
+.py1-lesson-page-home {
+    @include py1-outline-button($py-blue);
+    margin-bottom: 32px;
+}
+
+.py1-lesson-page-agenda {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}

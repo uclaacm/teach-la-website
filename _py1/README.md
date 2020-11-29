@@ -20,7 +20,7 @@ agenda:
 assignment: "assignment link"
 practice: 
     - problem:
-        num: 1 #number of problem
+        num: 1 
         question: "a question"
         solution: link to html solution
     - problem:
@@ -41,5 +41,8 @@ practice:
 - agenda: an array of agenda items
 - assignment: only include if the lesson is an assignment; for now a link to the problem, **TODO**: interactive questions
 - practice: an array of problems
+    num: problem number
+    question:  written in markdown
+    solution: writen in markdown
 
 Content:  long description of lesson to show on lesson page
