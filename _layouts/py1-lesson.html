@@ -44,16 +44,24 @@ fw: true
     <div class="py1-lesson-page-divider"></div>
 
     <div class="py1-lesson-content">
-        <!--TODO: make responsive-->
         <iframe width="960" height="450" src={{ page.video_link }} frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 
-        {% if page.p1 or page.p2 or page.p3 %}
+        {% if page.practice %}
         <h1>more practice</h1>
+
+        {% for item in page.practice %}
+            <div class="py1-lesson-practice">
+                <b>question #{{ item.problem.num }}</b> <br> <br>
+                    {{ item.problem.question }} <br> <br>
+                <a href="{{item.problem.solution}}" target="_blank">solution</a>
+            </div>
+        {% endfor %}
+
         {% endif %}
 
-        {% if page.p1 %}
+        <!-- {% if page.p1 %}
         <div class="py1-lesson-practice">
             <b>question #1</b> <br> <br>
             {{ page.p1.question }} <br> <br>
@@ -75,7 +83,7 @@ fw: true
             {{ page.p3.question }} <br> <br>
             <a href="{{page.p3.solution}}" target="_blank">solution</a>
         </div>
-        {% endif %}
+        {% endif %} -->
 
     </div>
 </div>

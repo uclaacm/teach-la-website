@@ -18,9 +18,15 @@ agenda:
     - text: "next point"
     - test: "third point" 
 assignment: "assignment link"
-p1: 
-    question: "a question"
-    solution: link to html solution
+practice: 
+    - problem:
+        num: 1 #number of problem
+        question: "a question"
+        solution: link to html solution
+    - problem:
+        num: 2 
+        question: "a question"
+        solution: link to html solution
 ---
 ```
 
@@ -32,8 +38,8 @@ p1:
 - group: the group of the lesson i.e. fundamentals or control flow etc.
 - num: lesson number indicates recommended order of completion
 - length: time required to watch video and complete associated problems
-- agenda: Brief bulleted agenda to display on curriculum page in HTML
+- agenda: an array of agenda items
 - assignment: only include if the lesson is an assignment; for now a link to the problem, **TODO**: interactive questions
-- p1,p2,p3: a set of questions and solutions; up to 3 problems allowed per page
+- practice: an array of problems
 
 Content:  long description of lesson to show on lesson page
