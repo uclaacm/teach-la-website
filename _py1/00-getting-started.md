@@ -16,22 +16,22 @@ practice:
     - problem: 
         num: 1
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>`print(\"hello, world!\")`<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        solution: base-sol.html
+        solution: "Solution!"
 
     - problem: 
         num: 2
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        solution: base-sol.html
+        solution: "Solution!"
 
     - problem: 
         num: 3
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        solution: base-sol.html
+        solution: "Solution!"
 
     - problem: 
         num: 4
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        solution: base-sol.html
+        solution: "Solution!"
 ---
 Hello everyone, welcome to ACM Teach LA’s series on **our favorite coding language**, Python! If this is your first time learning how to code, this series is for you. In this video, we’ll help you write and run your first line of code. 
 

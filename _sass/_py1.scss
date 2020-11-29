@@ -238,14 +238,19 @@
     font-weight: bold;
     transition: ease-in-out 0.2s;
     text-align: center;
+    cursor: pointer;
 }
 
 @mixin py1-solid-button($background-color, $hover-color) {
     @include py1-button;
     background-color: $background-color;
     color: white;
+    border: none;
     &:hover {
         background-color: $hover-color;
+    }
+    &:focus {
+        outline: 0px;
     }
 }
 
@@ -299,6 +304,18 @@
     a {
         @include py1-solid-button($py-green, $py-green-tint);
         margin-bottom: 20px;
+    }
+
+    button {
+        @include py1-solid-button($py-green, $py-green-tint);
+    }
+
+    .py1-lesson-solution {
+        display: none;
+
+        p {
+            margin-bottom: 0px;
+        }
     }
 }
 

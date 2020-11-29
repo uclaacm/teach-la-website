@@ -41,11 +41,26 @@ fw: true
         <div class="py1-lesson-practice">
             <b>question #{{ item.problem.num }}</b> <br>
             {{ item.problem.question | markdownify }} <br>
-            <a href="{{ item.problem.solution }}" target="_blank">solution</a>
+            <button onclick="revealSolution({{ item.problem.num }} - 1)">solution</button> <!-- annoying error >:( -->
+            <div class="py1-lesson-solution">{{ item.problem.solution | markdownify }}</div>
         </div>
         {% endfor %}
 
         {% endif %}
 
+        <script>
+            let hidden = true;
+            function revealSolution(index) {
+                let solutionSection = document.getElementsByClassName("py1-lesson-solution");
+                if (hidden) {
+                    solutionSection[index].style.display = "block";
+                }
+                else {
+                    solutionSection[index].style.display = "none";
+
+                }
+                hidden = !hidden;
+            }
+        </script>
     </div>
 </div>

@@ -22,11 +22,11 @@ practice:
     - problem:
         num: 1 
         question: "a question"
-        solution: link to html solution
+        solution: "a solution"
     - problem:
         num: 2 
         question: "a question"
-        solution: link to html solution
+        solution: "a solution"
 ---
 ```
 
