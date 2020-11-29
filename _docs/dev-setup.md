@@ -1,5 +1,7 @@
 ---
 title: "Dev Setup: In-Depth Walkthrough"
+section: "Getting Started"
+sidebar-title: "Dev Setup"
 ---
 
 # Dev Setup: In-Depth Walkthrough

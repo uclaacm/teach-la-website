@@ -1,5 +1,7 @@
 ---
 title: "Adding yourself to the team page"
+section: "Getting Started"
+sidebar-title: "Add to Team Page"
 ---
 
 ## Table of Contents

@@ -9,6 +9,18 @@
     background-color: #e6e4e4;
 }
 
+#Getting-Started-button:checked + #Getting-Started {
+    ul.sidebar-items li {
+    display: block;
+    }   
+}
+
+#Test-button:checked + #Test {
+   ul.sidebar-items li {
+   display: block;
+    }
+}
+
 input {
     display: none;
 }
@@ -44,19 +56,6 @@ ul.sidebar-items li a{
 
 ul.sidebar-items li a:hover {
     color:black;
-}
-
-
-#gs-button:checked + #getting-started {
-        ul.sidebar-items li {
-        display: block;
-    }
-}
-
-#test-button:checked + #test {
-       ul.sidebar-items li {
-     display: block;
-    }
 }
 
 #docs-pages-content{
