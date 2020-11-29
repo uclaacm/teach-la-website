@@ -7,11 +7,10 @@ num: 0
 video_link: "https://www.youtube.com/embed/eeoSWdtRdbE"
 slides_link: "https://docs.google.com/presentation/d/14gBHUUnuMlXLoHfrBnRulRxCLceZ0Asz9aAaq8rDu0A/edit?usp=sharing"
 length: 14
-agenda: <ul class="py1-lesson-brief-agenda"> 
-            <li> what is python? </li>
-            <li> why is it important? </li> 
-            <li> how is it used? </li> 
-        </ul>
+agenda: 
+    - text: "what is python?"
+    - text: "why is it used?"
+    - text: "how is it used?"
  
 p1: 
     question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

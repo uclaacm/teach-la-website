@@ -6,12 +6,12 @@ group: "fundamentals"
 num: 2
 video_link: "https://www.youtube.com/embed/eeoSWdtRdbE"
 slides_link: "https://docs.google.com/presentation/d/1qgxTc-99Wkn_B4lcM4YYOHKrK_igDNFHkTviFc_VR8E/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/19ymRkXJ6bXDYBJHHWjFr5FJJLI6Lphs4TjGUitYYF8A/edit?usp=sharing"
 length: 16
-agenda: <ul class="py1-lesson-brief-agenda"> 
-            <li> what are operators? </li>
-            <li> practice with operators </li> 
-            <li> addition, subtraction, multiplication, division </li> 
-        </ul>
+agenda: 
+    - text: "what are operators?"
+    - text: "practice with operators"
+    - text: "addition, subtraction, multiplication division"
 
 ---
 You've likely been introduced to operators in your math class, but how can we use them in Python?

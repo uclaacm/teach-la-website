@@ -13,7 +13,10 @@ video_link: "Video link"
 slides_link: "Slides Link"
 worksheet_link: "worksheet link"
 length: "x"
-agenda: brief agenda HTML
+agenda: 
+    - text: "first point"
+    - text: "next point"
+    - test: "third point" 
 assignment: "assignment link"
 p1: 
     question: "a question"

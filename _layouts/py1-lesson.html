@@ -12,7 +12,12 @@ fw: true
 
             <p class="py1-lesson-page-agenda">
                 <b> agenda </b>
-                {{ page.agenda }}
+            <ul>
+                {% for item in page.agenda %}
+                    <li>{{ item.text }}</li>
+                {% endfor %}
+            </ul>
+
             </p>
 
             <div class="py1-lesson-page-action-bar">
