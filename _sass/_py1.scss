@@ -240,6 +240,11 @@
     text-decoration: underline 7px $py-blue;
     text-underline-offset: 22%;
     margin-bottom: 50px;
+
+    .py1-lesson-header > a {
+        // text-decoration: none;
+        color: $py-blue;
+    }
 }
 
 .py1-lesson-page-description {
@@ -293,6 +298,26 @@
 }
 
 .py1-lesson-page-next {
+    display: flex;
+    justify-content: center;
+    border: solid 2px $py-blue;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+
+    a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        color: $py-blue;
+        font-family: $font-display;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+.py1-lesson-page-home {
     display: flex;
     justify-content: center;
     border: solid 2px $py-blue;

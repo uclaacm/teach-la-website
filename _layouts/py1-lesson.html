@@ -5,7 +5,9 @@ fw: true
 <div class="py1-lesson-page-wrapper">
     <div class="py1-lesson-sidebar">
         <div class="py1-section1">
-            <h1 class="py1-lesson-header"> {{ page.num }}. {{ page.title }} </h1>
+            <h1 class="py1-lesson-header"> 
+                {{ page.num }}. {{ page.title }} 
+            </h1>
             <p class="py1-lesson-page-description">
                 {{ content }}
             </p>
@@ -31,13 +33,21 @@ fw: true
 
                 <span class="py1-lesson-duration">{{ page.length }} min</span>
             </div>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
         </div>
-
+        
         {% if page.next_lesson %}
         <div class="py1-lesson-page-next">
             <a href="{{site.baseurl}}/classes/py1/{{page.next_link}}">next lesson: {{ page.next_lesson }}</a>
         </div>
         {% endif %}
+        <div class="py1-lesson-page-home">
+            <a href="{{site.baseurl}}/classes/py1/">back to curriculum home</a>
+        </div>
 
     </div>
 
