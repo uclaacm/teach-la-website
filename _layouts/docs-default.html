@@ -33,8 +33,10 @@
       "id="docs-pages">
         {%- include docs-sidebar.html -%}
         <div id="docs-pages-content">
-         {{ content }}
-         {{page.fw}}
+          <div id="docs-pages-content-width">
+          {{ content }}
+          {{page.fw}}
+          </div>
         </div>
        </div>
     {% endif %}

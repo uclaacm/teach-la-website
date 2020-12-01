@@ -1,26 +1,28 @@
 <div class = "sidebar">
-  <!-- Add new items or sections here -->
-  {% assign order = 
-    "*Getting-Started,
-      Dev-Setup,
-      Add-to-Team-Page,
+  <div class="sidebar-content">
+   <!-- Add new items or sections here -->
+   {% assign order = 
+    "*Getting Started,
+      Dev Setup,
+      Add to Team Page,
       *Test,
       test"
     %}
+    
 
-    {% assign order = order | replace: " ", "" | strip_newlines | split: "," %}
+    {% assign order = order | strip_newlines | split: "," %}
     {% assign arrSize = order | size | minus:1 %}
     {% for i in (0..arrSize) %}
-      {% if order[i] contains "*" %}
-        {% assign section = order[i] | replace: "*", "" %}
-        {% assign withSpaces = section | replace: "-", " " %}
-        <label for="{{section}}-button"> {{withSpaces}}</label>
-        <input type="checkbox" id="{{section}}-button" {% if page.section == withSpaces %}checked{% endif %}/>
-        <div id="{{section}}">
+      {% assign current = order[i] | lstrip %}
+      {% if current contains "*" %}
+        {% assign section = current | replace: "*", "" %}
+        {% assign spaceless = section | replace: " ", "-" %}
+        <label for="{{spaceless}}-button"> {{section}}</label>
+        <input type="checkbox" id="{{spaceless}}-button" {% if page.section == section %}checked{% endif %}/>
+        <div id="{{spaceless}}">
           <ul class="sidebar-items">
       {% else %}
-            {% assign withSpaces = order[i] | replace: "-", " " %}
-            {% assign item = site.docs | where: "sidebar-title", withSpaces | first %}
+            {% assign item = site.docs | where: "sidebar-title", current | first %}
               <li><a href="{{item.url}}" 
               {% if page.url == {{item.url}} %}id="selected"{% endif %}>{{item.sidebar-title}}</a></li>
               {% if forloop.last or order[forloop.index] contains "*" %}
@@ -29,5 +31,6 @@
               {% endif %}
       {% endif %}
    {% endfor %}
+  </div>
 </div>
   

@@ -4,10 +4,23 @@
     left:0;
     width: $sidebar-width; 
     height: 100vh;
-    padding: 30px 0px 20px 20px;
+    flex-grow: 2;
+    padding: 30px 30px 0px 10px;
     position: sticky;
     background-color: #e6e4e4;
+    text-align: right;
+    @media (max-width: $desktop-width) {
+        display: none;
+    }
 }
+
+.sidebar-content {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+}
+
+//New sections for sidebar add CSS here
 
 #Getting-Started-button:checked + #Getting-Started {
     ul.sidebar-items li {
@@ -59,10 +72,17 @@ ul.sidebar-items li a:hover {
 }
 
 #docs-pages-content{
-    padding: 0 1em;
-    max-width: calc(100vw - 3em);
-    margin:auto;
+    padding: 0 3em;
+    flex-grow: 2;
     width:1000px;
+}
+
+#docs-pages-content-width{
+    width:1000px;
+    max-width: calc(100vw - 275px - 4em);
+    @media (max-width: $desktop-width) {
+        max-width: calc(100vw - 7em);
+    }
 }
 
 #docs-pages {
