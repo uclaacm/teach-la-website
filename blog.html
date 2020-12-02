@@ -13,8 +13,7 @@ permalink: /blog/
 </p>
 
 {% for post in site.posts %}
-<hr class="divider" />
-<section>
+<section class="post-card">
   <h2 class="title">
       <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
       <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
@@ -32,9 +31,14 @@ permalink: /blog/
     {% endif %}
     {% endcomment %}
   </p>
-  <blockquote class="post-blockquote">
-    {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
-  </blockquote>
+  <div class="post-preview">
+    <a href={{post.url}}>
+      <img  class="post-preview-img" src=/img/posts/{{post.img}} alt="{{post.alt}}" />
+    </a>
+    <div class="post-quote">
+      <p>{{post.excerpt}}</p>
+    </div>
+  </div>
 </section>
 {% endfor %}
 
