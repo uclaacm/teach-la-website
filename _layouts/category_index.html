@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<br>
+<a class="tla-link" href="{{site.baseurl}}/blog/category/"><span aria-hidden="true">&larr;</span> All Categories</a>
+
+<h1>Posts in category: &ldquo;{{ page.title }}&rdquo;</h1>
+
+{% if page.paginator %}
+
+  <!-- Pagination is active -->
+  {% assign paginator = page.paginator %}
+
+  <section>
+    <!-- Show post excerpts for the current page -->
+
+    {% for post in paginator.posts limit:paginator.per_page %}
+    <hr class="divider" />
+    <section>
+      <h2 class="title">
+        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+        <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
+      </h2>
+      <p>
+        <!-- TODO: IMPLEMENT TAGS! -->
+        {% comment %}
+        {% if post.tags %}
+            tags:
+            {% for tag in post.tags %}
+                {{tag}}{% if forloop.last == false %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endcomment %}
+      </p>
+      <blockquote class="post-blockquote">
+        {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
+      </blockquote>
+    </section>
+    {% endfor %}
+  </section>
+  <!-- Show navigation next/previous page links if applicable -->
+  <nav><p>
+    <h2 class="category-footer title">
+      <div class="category-footer-item">
+        {% if paginator.previous_page %}
+        <a class="tla-link" href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>
+        {% endif %}
+      </div>
+
+      <div class="category-footer-item">
+        {% if paginator.previous_page or paginator.next_page %}
+        <!-- Show page number if we have multiple pages -->
+        <span>Page <br class="mobile-only" aria-hidden="true">{{paginator.page}} of {{paginator.total_pages}} </span>
+        {% endif %}
+      </div>
+
+      <div class="category-footer-item">
+        {% if paginator.next_page %}
+        <a class="tla-link" href="{{ paginator.next_page_path }}">Older <span aria-hidden="true">&rarr;</span></a>
+        {% endif %}
+      </div>
+    </h2>
+  </p></nav>
+
+{% else %}
+
+  <!-- Pagination is not active -->
+  {% for post in page.posts %}
+  <hr class="divider" />
+  <section>
+    <h2 class="title">
+      <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+      <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
+    </h2>
+    <p>
+      <!-- TODO: IMPLEMENT TAGS! -->
+      {% comment %}
+      {% if post.tags %}
+          tags:
+          {% for tag in post.tags %}
+              {{tag}}{% if forloop.last == false %}, {% endif %}
+          {% endfor %}
+      {% endif %}
+      {% endcomment %}
+    </p>
+    <blockquote class="post-blockquote">
+      {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
+    </blockquote>
+  </section>
+  {% endfor %}
+  
+
+{% endif %}
+
