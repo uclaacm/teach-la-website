@@ -2,7 +2,8 @@
 firstname: "Edmond"
 lastname: "Wen"
 group: "member"
-title: "Emerson Instructor, Dev Team Member"
+title: "Developer"
+secondary: "Emerson Instructor"
 pronouns: "he/they"
 graduating_year: 2024
 ---
