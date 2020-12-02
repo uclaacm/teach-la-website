@@ -55,3 +55,20 @@
         align-items: flex-start;
     }
 }
+
+.category-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .category-footer-item {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .mobile-only {
+        @media screen and (min-width: $desktop-width) {
+            display: none;
+        }
+    }
+}

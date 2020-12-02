@@ -37,7 +37,7 @@ defaults:
       path: ""
       type: "team"
     values:
-      layout: "team-page"
+      layout: "team-member"
 
 # collections
 collections:
@@ -56,10 +56,18 @@ collections:
     output: true
     permalink: /team/:name
 
+# Configure category pages plugin here
+permalink: /:year/:month/:day/:title:output_ext #gets rid of index.html from category page links (probably)
+category_path: "/blog/category" # sets folder for category pages to be located
+# category_layout: "category_index.html" # <- default value
+paginate: 3 # <- turn on pagination with 3 posts per page
+
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-category-pages
+  - jekyll-paginate
 sass:
   sass_dir: _sass
 
