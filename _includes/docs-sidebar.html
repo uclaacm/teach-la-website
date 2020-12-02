@@ -1,35 +1,26 @@
 <div class = "sidebar">
   <div class="sidebar-content">
-   <!-- Add new items or sections here -->
+   <!-- Add new sections here -->
    {% assign order = 
-    "*Getting Started,
-      Dev Setup,
-      Add to Team Page,
-      *Test,
-      test"
+      "Dev Setup,
+      Add to Team Page"
     %}
-    
 
     {% assign order = order | strip_newlines | split: "," %}
-    {% assign arrSize = order | size | minus:1 %}
-    {% for i in (0..arrSize) %}
-      {% assign current = order[i] | lstrip %}
-      {% if current contains "*" %}
-        {% assign section = current | replace: "*", "" %}
-        {% assign spaceless = section | replace: " ", "-" %}
-        <label for="{{spaceless}}-button"> {{section}}</label>
-        <input type="checkbox" id="{{spaceless}}-button" {% if page.section == section %}checked{% endif %}/>
+    {% for i in order %}
+      {% assign cur = i | lstrip | rstrip %}
+      {% assign sec = site.docs | where: "sidebar-title", cur | first %}
+      {% assign spaceless = cur | replace: " ", "-" %}
+        <label for="{{spaceless}}-button"> {{sec.sidebar-title}}</label>
+        <input type="checkbox" id="{{spaceless}}-button" {% if page.sidebar-title == sec.sidebar-title %}checked{% endif %}/>
         <div id="{{spaceless}}">
-          <ul class="sidebar-items">
-      {% else %}
-            {% assign item = site.docs | where: "sidebar-title", current | first %}
-              <li><a href="{{item.url}}" 
-              {% if page.url == {{item.url}} %}id="selected"{% endif %}>{{item.sidebar-title}}</a></li>
-              {% if forloop.last or order[forloop.index] contains "*" %}
-               </ul>
-               </div>
-              {% endif %}
-      {% endif %}
+          <ol class="sidebar-items">
+            {% for item in sec.items %}
+              {% assign spacelessDown = item | replace: " ", "-" | downcase | remove: "," | remove: "." | remove: "!" | remove: "'" | remove: "/" | remove: "?" %}
+              <li><a href="{{sec.url}}/#{{spacelessDown}}">{{item}}</a></li>
+            {% endfor %}
+            </ol>
+            </div>
    {% endfor %}
   </div>
 </div>

@@ -4,6 +4,8 @@
     left:0;
     width: $sidebar-width; 
     height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     flex-grow: 2;
     padding: 30px 30px 0px 10px;
     position: sticky;
@@ -17,20 +19,20 @@
 .sidebar-content {
     display: inline-block;
     text-align: left;
-    width: 200px;
+    width: 225px;
 }
 
 //New sections for sidebar add CSS here
 
-#Getting-Started-button:checked + #Getting-Started {
-    ul.sidebar-items li {
-    display: block;
+#Dev-Setup-button:checked + #Dev-Setup {
+    ol.sidebar-items li {
+    display: list-item;
     }   
 }
 
-#Test-button:checked + #Test {
-   ul.sidebar-items li {
-   display: block;
+#Add-to-Team-Page-button:checked + #Add-to-Team-Page {
+   ol.sidebar-items li {
+   display: list-item;
     }
 }
 
@@ -48,16 +50,11 @@ label:hover {
     color: black;
 }
 
-ul.sidebar-items {
-    display: block;
-    list-style: none;
-}
-
-ul.sidebar-items li {
+ol.sidebar-items li {
     display: none;
 }
 
-ul.sidebar-items li a{
+ol.sidebar-items li a{
     background-image: none;
     color: $font-primary-color;
     font-weight: normal;
@@ -67,7 +64,7 @@ ul.sidebar-items li a{
     font-weight: bold;
 }
 
-ul.sidebar-items li a:hover {
+ol.sidebar-items li a:hover {
     color:black;
 }
 

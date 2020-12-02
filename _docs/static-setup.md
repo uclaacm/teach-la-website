@@ -1,18 +1,16 @@
 ---
 title: "Adding yourself to the team page"
-section: "Getting Started"
 sidebar-title: "Add to Team Page"
+items: [
+  "Get ready",
+  "Creating a basic page",
+  "Making the page your own",
+  "Add, Commit, and Push",
+  "Making a Pull Request",
+  "Code Review",
+  "Merging!"
+]
 ---
-
-## Table of Contents
-
-* [Get ready](#get-ready)
-* [Creating a basic page](#creating-a-basic-page)
-* [Making the page your own](#making-the-page-your-own)
-* [Add, Commit, and Push](#add-commit-and-push)
-* [Making a Pull Request](#making-a-pull-request)
-* [Code Review](#code-review)
-* [Merging!](#merging)
 
 ## Get ready
 

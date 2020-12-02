@@ -1,7 +1,28 @@
 ---
 title: "Dev Setup: In-Depth Walkthrough"
-section: "Getting Started"
 sidebar-title: "Dev Setup"
+items: [ 
+  "Navigating your Shell",
+  "GitHub",
+  "Creating a GitHub Account",
+  "Joining our GitHub Organization",
+  "Installing Git",
+  "If you're using WSL or Linux",
+  "If you're using OSX",
+  "One-Time Setup",
+  "Cloning our Repository",
+  "Installing Dependencies",
+  "Development Workflow",
+  "Create a New Branch",
+  "Running Jekyll with Bundle",
+  "Make your Changes",
+  "Add, Commit, and Push",
+  "Next Steps",
+  "Appendix",
+  "GitHub Desktop",
+  "Installing Ruby with RVM",
+  "Installing WSL"
+]
 ---
 
 # Dev Setup: In-Depth Walkthrough
@@ -11,30 +32,6 @@ You want to contribute to the Teach LA Website! Awesome! Before you get started,
 Some of this may already be familiar for you. Feel free to skip around to the parts that are relevant.
 
 You may ask: why is the website so complicated to set up! You may have a point, but it allows us to write features that let you update the website **without writing code**: we've written templates that generate pages, content, and complicated data relationships, so you don't have to! Hopefully, with practice, you'll find this to be not too tricky.
-
-## Table of Contents
-
-* [Table of Contents](#table-of-contents)
-* [Navigating your Shell](#navigating-your-shell)
-* [GitHub](#github)
-  * [Creating a GitHub Account](#creating-a-github-account)
-  * [Joining our GitHub Organization](#joining-our-github-organization)
-* [Installing Git](#installing-git)
-  * [If you're using WSL or Linux](#if-youre-using-wsl-or-linux)
-  * [If you're using OSX](#if-youre-using-osx)
-* [One-Time Setup](#one-time-setup)
-  * [Cloning our Repository](#cloning-our-repository)
-  * [Installing Dependencies](#installing-dependencies)
-* [Development Workflow](#development-workflow)
-  * [Create a New Branch](#create-a-new-branch)
-  * [Running Jekyll with Bundle](#running-jekyll-with-bundle)
-  * [Make your Changes](#make-your-changes)
-  * [Add, Commit, and Push](#add-commit-and-push)
-* [Next Steps](#next-steps)
-* [Appendix](#appendix)
-  * [GitHub Desktop](#github-desktop)
-  * [Installing Ruby with RVM](#installing-ruby-with-rvm)
-  * [Installing WSL](#installing-wsl)
 
 ## Navigating your Shell
 
