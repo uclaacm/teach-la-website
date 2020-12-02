@@ -1,16 +1,37 @@
 .post-preview{
     display: grid;
     align-items: center;
-    border: solid black;
     grid-template-rows: 1fr;
     grid-template-columns: 5fr 8fr;
 }
 
+.post-card{
+    border: solid black 2px;
+    margin-top: 3em;
+    padding: 1em;
+    padding-top: 0em;
+}
+
 .post-preview-img{
     margin: 0.5em;
+    margin-right: 1em;
     width: 100%;
     height: auto;
     align-self: center;
+}
+
+.post-quote {
+    border-left: 10px solid $teachla-green;
+    margin: 1.5em 0;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    padding: 0.5em 10px;
+    padding-left: 1em;
+
+    .tla-link, a {
+        @include tla-link($teachla-green, #f9f9f9);
+    }
+
 }
 
 .post-container {
@@ -18,7 +39,10 @@
 }
 
 .post-main-img{
-    max-width: 50rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
     height: auto;
 }
 
@@ -92,19 +116,7 @@
     font-size: 0.9rem;
 }
 
-.post-blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid $teachla-green;
-    margin: 1.5em 0;
-    margin-left: 1em;
-    margin-right: 0.5em;
-    padding: 0.5em 10px;
 
-    .tla-link, a {
-        @include tla-link($teachla-green, #f9f9f9);
-    }
-
-}
 
 .post-img {
     padding: 2%;

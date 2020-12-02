@@ -13,8 +13,7 @@ permalink: /blog/
 </p>
 
 {% for post in site.posts %}
-<hr class="divider" />
-<section>
+<section class="post-card">
   <h2 class="title">
       <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
       <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
@@ -36,8 +35,8 @@ permalink: /blog/
     <a href={{post.url}}>
       <img  class="post-preview-img" src=/img/posts/{{post.img}} alt="{{post.alt}}" />
     </a>
-    <div class="post-blockquote">
-      {{post.excerpt}}
+    <div class="post-quote">
+      <p>{{post.excerpt}}</p>
     </div>
   </div>
 </section>
