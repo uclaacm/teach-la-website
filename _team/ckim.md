@@ -2,7 +2,7 @@
 firstname: "Charlene"
 lastname: "Kim"
 group: "member"
-title: "Dev Team Member"
+title: "Developer"
 pronouns: "she/her"
 img: "ckim.jpg"
 graduating_year: 2024
