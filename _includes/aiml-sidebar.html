@@ -31,23 +31,16 @@
         {% if x < pNum %}
             <div class = "hamburger-item">
                 <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-                <br>
-                <div class="status-bar"></div>
             </div>
         {% else if x > pNum %}
             <div class = "hamburger-item">
                 <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-                <br>
-                <div class="status-bar" style="background-color: lightgray;"></div>
             </div>
         {% else %}
             <div class="hamburger-item"></div>
                 <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-                <br>
-                <div class="status-bar" style="background-color: lightgray;"></div>
             </div>
         {% endif %}
-            <br>
         {% endfor %}
     </div>
 </div>
