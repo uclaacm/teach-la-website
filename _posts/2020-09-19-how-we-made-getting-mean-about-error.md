@@ -11,6 +11,8 @@ category: dev
 tags:
     - learning labs
     - dev team
+img: /mean_about_error/default.png
+alt: A chart showing Moors law alongside a generated model
 ---
 
 *Note: this post was originally finished in June, but went through a few iterations as we implemented the blogs feature. Many thanks to Miles & Michelle for their patience!*
@@ -25,6 +27,6 @@ Getting into the technical details, this static web lesson is built off of HTML,
 
 Most of the obstacles we faced came from the limitations of the libraries we were using, most notably FunctionPlot, our graphing library. Looking back, we definitely could have considered other graphing libraries; it was an oversight on our part not to spend enough time thinking about what functionalities we would want from our graphing library. For example, having the points on the graph labeled with their coordinates would have been very helpful, but is not possible (as far as we can tell) using FunctionPlot. The big selling point of FunctionPlot is its extreme precision, but for our purposes, it could have been worth sacrificing anyway. We really only needed points and lines, and a nice, big font. Like, look at this. We don’t need this.
 
-![An image of a very complicated chart, that we definitely didn't need!]({{site.baseurl}}/img/blog/function-plot-absurd.png)
+![An image of a very complicated chart, that we definitely didn't need!]({{site.baseurl}}/img/posts/mean_about_error/function-plot-absurd.png)
 
 Thanks for reading our short post! If you have any questions or feedback on our project, we'd love to talk to you. Stay safe!

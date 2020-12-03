@@ -1,7 +1,51 @@
+.post-preview{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 8fr;
+}
+
+.post-card{
+    border: solid black 2px;
+    margin-top: 3em;
+    padding: 1em;
+    padding-top: 0em;
+}
+
+.post-preview-img{
+    margin: 0.5em;
+    margin-right: 1em;
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.post-quote {
+    border-left: 10px solid $teachla-green;
+    margin: 1.5em 0;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    padding: 0.5em 10px;
+    padding-left: 1em;
+
+    .tla-link, a {
+        @include tla-link($teachla-green, #f9f9f9);
+    }
+
+}
+
 .post-container {
     max-width: 40em;
     margin-left: auto;
     margin-right: auto;
+}
+
+.post-main-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
 }
 
 .post-author-grid{
@@ -50,6 +94,8 @@
 }
 
 .post-recommend-card{
+    display: grid;
+    grid-template-columns: auto;
     padding: 1em;
     margin: 1em;
     margin-left: 0.25em;
@@ -59,22 +105,17 @@
 
 }
 
-.post-recommend-info{
+.post-recommend-img{
+    align-self: center;
+    width: 10em;
+    height: auto;
     margin: 1em;
-    font-size: 0.9rem;
-
 }
 
-.post-blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid $teachla-green;
-    margin: 1.5em 0;
-    padding: 0.5em 10px;
-
-    .tla-link, a {
-        @include tla-link($teachla-green, #f9f9f9);
-    }
-
+.post-recommend-info{
+    align-self: flex-end;
+    margin: 1em;
+    font-size: 0.9rem;
 }
 
 .post-img {

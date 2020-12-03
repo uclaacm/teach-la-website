@@ -14,11 +14,12 @@ layout: default
 
         <div class="col">
             <h1 class="title">{{ page.firstname }} {{ page.lastname }}
+                <!-- only outputs pronouns if a person has pronouns listed-->
                 {% if page.pronouns %}
                     <span class = "pronouns"> ({{page.pronouns}})</span>
                 {% endif %}
             </h1>
-            <p class="no-margin text-15x">{{ page.title }}</p>
+            <p class="no-margin text-15x">{{ page.title }} {% if page.secondary %}& {{page.secondary}}{% endif %}</p>
 
             {% if page.content %}
             <div class="team-content">
