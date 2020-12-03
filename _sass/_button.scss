@@ -60,18 +60,18 @@
   }
 }
 .button.button-rnative {
-  color: $rnative-red;
-  border: 2px solid $rnative-red;
+  color: $rnative-blue;
+  border: 2px solid $rnative-blue;
   &:hover {
     color: white;
-    background: $rnative-red;
+    background: $rnative-blue;
     cursor: pointer;
   }
 
   &:active {
-    color: $rnative-red;
+    color: $rnative-blue;
     background-color: white;
-    border: 2px solid $rnative-red;
+    border: 2px solid $rnative-blue;
   }
 }
 
