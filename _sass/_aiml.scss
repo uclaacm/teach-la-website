@@ -97,7 +97,7 @@
     position: sticky;
     top: 80px;
     border-color: $ai-blue;
-    z-index: 0;
+    z-index: 1;
     display:inline-block;
 }
 #mobile-sidebar{
@@ -107,6 +107,7 @@
     box-sizing: border-box;
     width: 50px;
     display: none;
+    z-index: 1;
 }
 
 .hamburger-icon {
