@@ -1,0 +1,88 @@
+<div id="desktop-sidebar">
+    {% for lesson in site.aiml %}
+    {% assign pNum = page.num | plus: 0 %}
+    {% assign x = lesson.num | plus: 0 %}
+    {% if x < pNum %}
+    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+    <br>
+    <div class="status-bar"></div>
+    {% else if x > pNum %}
+    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+    <br>
+    <div class="status-bar" style="background-color: lightgray;"></div>
+    {% else %}
+    <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+    <br>
+    <div class="status-bar" style="background-color: lightgray;"></div>
+    {% endif %}
+    <br>
+    {% endfor %}
+</div>
+<div id="mobile-sidebar">
+    <span class="hamburger-icon">
+        <span class="bar" id="top-bar"></span>
+        <span class="bar" id="middle-bar"></span>
+        <span class="bar" id="bottom-bar"></span>
+    </span>
+    <div id="hamburger-content">
+        {% for lesson in site.aiml %}
+        {% assign pNum = page.num | plus: 0 %}
+        {% assign x = lesson.num | plus: 0 %}
+        {% if x < pNum %}
+            <div class = "hamburger-item">
+                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+                <br>
+                <div class="status-bar"></div>
+            </div>
+        {% else if x > pNum %}
+            <div class = "hamburger-item">
+                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+                <br>
+                <div class="status-bar" style="background-color: lightgray;"></div>
+            </div>
+        {% else %}
+            <div class="hamburger-item"></div>
+                <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+                <br>
+                <div class="status-bar" style="background-color: lightgray;"></div>
+            </div>
+        {% endif %}
+            <br>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    function toggleSidebarDesktopToMobile() {
+        let desktop_sidebar = document.getElementById("desktop-sidebar");
+        let mobile_sidebar = document.getElementById("mobile-sidebar");
+        let window_width = window.innerWidth;
+        let left_margin = desktop_sidebar.offsetLeft;
+
+        left_margin = (window_width / 2.0 - 758) > 26 ? (window_width / 2.0 - 758) : 26;
+        if (window_width < 768) {
+            let hamburger_content = document.getElementById("hamburger-content");
+            if (hamburger_content.style.display != "flex" ){
+                document.getElementById("hamburger-content").style.display = "none";
+            }
+            desktop_sidebar.style.display = "none";
+            mobile_sidebar.style.display = "inline-block";
+        } else {
+            desktop_sidebar.style.display = "inline-block";
+            mobile_sidebar.style.display = "none";
+            desktop_sidebar.style.marginLeft = left_margin + "px";
+        }
+        console.log("left margin is " + left_margin);
+    }
+    window.addEventListener('resize', toggleSidebarDesktopToMobile);
+    toggleSidebarDesktopToMobile();
+
+    document.getElementById("mobile-sidebar").addEventListener("click", displayHamburgerMenu);
+    function displayHamburgerMenu() {
+        let hamburger_content = document.getElementById("hamburger-content");
+        if (hamburger_content.style.display == "flex") {
+            hamburger_content.style.display = "none";
+        } else {
+            hamburger_content.style.display = "flex";
+        }
+    }
+</script>

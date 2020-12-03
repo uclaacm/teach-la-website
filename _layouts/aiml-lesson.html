@@ -2,8 +2,9 @@
 layout: default
 fw: true
 ---
-
-<div class="ai-content-container">
+<div class = "page-container">
+{% include aiml-sidebar.html %}
+<div class="ai-content-container main-content">
     <div>
         <div class="ai-content-card">
             <h1 class="title text-2x no-margin">{{page.title}}</h1>
@@ -51,7 +52,7 @@ fw: true
         <iframe class="ai-slide-iframe" src="{{page.slides_link}}embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
-
+</div>
 <script>
     logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
 </script>
