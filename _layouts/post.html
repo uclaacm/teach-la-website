@@ -49,7 +49,7 @@ layout: default
 
 
 <div class = "social-buttons" style="text-align: center">
- Enjoyed the read? Share on social media!
+Enjoyed the read? Share on social media!<br>
 <a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteachla.uclaacm.com%2Fblog%2Fdev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
 <a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
@@ -84,13 +84,6 @@ layout: default
         {% endcapture %}
 
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
-    {% endfor %}
-</div>
-<hr class="divider" />
-<p class="text-center title post-get-more">
-    want more? <a class="tla-link" href="{{site.baseurl}}/blog">binge read some more posts here</a>
-</p>
-
         {% if author.pronouns %}
             {% capture author_pronouns %}
                     {{author.pronouns}}
@@ -98,11 +91,10 @@ layout: default
         {% else %}
             {% capture author_pronouns %}{% endcapture %}
         {% endif %}
-        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
-
-
+    {% endfor %}
 </div>
 <hr class="divider" />
+
 <div class="text-center title post-want-more">
     want more? here are some related posts:
 
