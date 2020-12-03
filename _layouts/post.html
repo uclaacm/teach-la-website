@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<meta name="twitter:image" content= "https://teachla.uclaacm.com/img/teachLA_logo_light.png">
+<meta name="twitter:image" content= "https://teachla.uclaacm.com/img/posts/{{page.img}}">
 <article class="post-container">
     <h1 class="title page-title">{{page.title}}</h1>
     <!-- required for Facebook "Share" button -->
@@ -39,11 +39,17 @@ layout: default
     <div class="generated-content">
         {{content}}
     </div>
+<hr class="divider" />
 </article>
-<!-- share buttons -->
-<div class="fb-share-button"  data-layout="button" data-size="small"><a target="_blank"
-   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteachla.uclaacm.com%2Fblog%2Fdev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<div class = "social-buttons" style="text-align: center">
+ Enjoyed the read? Share on social media!
+<a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteachla.uclaacm.com%2Fblog%2Fdev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+<a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
 
 <hr class="divider" />
 <div class="post-author-grid">

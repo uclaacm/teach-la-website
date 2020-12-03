@@ -62,7 +62,7 @@
 .post-recommend-info{
     margin: 1em;
     font-size: 0.9rem;
-    
+
 }
 
 .post-blockquote {
@@ -80,4 +80,21 @@
 .post-img {
     padding: 2%;
     max-width: 96%;
+}
+
+.fb-share-button {
+  text-align: center;
+  display: inline-block;
+  top: -7px;
+}
+
+.twitter-share-button {
+  text-align: center;
+  display: inline-block;
+}
+
+.social-buttons{
+  margin: 0 auto;
+  width: 50%;
+  font-family: $font-display;
 }
