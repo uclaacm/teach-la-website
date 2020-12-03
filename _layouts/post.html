@@ -99,7 +99,7 @@ layout: default
             {% capture author_pronouns %}{% endcapture %}
         {% endif %}
         {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
-    {% endfor %}
+
 
 </div>
 <hr class="divider" />
@@ -116,14 +116,14 @@ layout: default
         {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
             {% break %}
         {% endif %}
-        
+
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
             <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.img}} alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}
-    
+
 </div>
 or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
-</div> 
+</div>
