@@ -2,6 +2,7 @@
 layout: default
 ---
 <meta name="twitter:image" content= "https://teachla.uclaacm.com/img/posts/{{page.img}}">
+<meta name="og:image" content= "https://teachla.uclaacm.com/img/posts/{{page.img}}">
 <article class="post-container">
     <h1 class="title page-title">{{page.title}}</h1>
     <!-- required for Facebook "Share" button -->
@@ -49,8 +50,8 @@ layout: default
 
 
 <div class = "social-buttons" style="text-align: center">
-Enjoyed the read? Share on social media!<br>
-<a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteachla.uclaacm.com%2Fblog%2Fdev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+Enjoyed the read? Share on social media! <br>
+<a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | url_encode}}{{ page.url | url_encode}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
 <a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
