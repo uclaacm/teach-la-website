@@ -3,6 +3,8 @@ firstname: "Amanda"
 lastname: "Ung"
 group: "member"
 title: "Developer"
-pronouns: "she/her"
+img: "aung.jpg"
+graduating_year: 2023
+github: "a17ung"
 
 ---
