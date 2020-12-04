@@ -4,6 +4,8 @@ fw: true
 ---
 <!-- ^idk what this does but im just putting it -->
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <div class="rnative-content-container">
     <div>
         <div class="rnative-content-card">
@@ -23,7 +25,7 @@ fw: true
                 {% if page.code_link %}
                     <li>
                         <a class="rnative-link" href="{{page.code_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-code"></span> Link to code (repl.it)
+                            <span class="fa fa-fw fa-code"></span> Link to code
                         </a>
                     </li>
                 {% endif %}
@@ -42,8 +44,8 @@ fw: true
             </div>
         </div>
     </div>
-    <div class="iframe-container">
-        slides or whatever
+    <div class="markdown-container" id="rnative-markdown">
+        
     </div>
     <div>
         {% if page.md_notes %}
@@ -59,15 +61,27 @@ fw: true
 <script>
     logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
 </script>
-<!--
-    <div class="react-native-lesson-container">
-    <div class="text-content-rn-lesson">
-        <h1 class="rn-page-title">{{page.title}}</h1>
-        <p>{{page.desc}}</p>
-    </div>
 
-    <div class="image-rn-lesson">
-        hello
-    </div>
-</div>
--->
+<script>
+    fetch("{{page.raw_github_link}}/README.md")
+    .then(response => response.text())
+    .then(data => {
+        let imgPaths = data.match(/(?<=(!\[.*]\())(.*?)(?=\))/gm);                      // get github local image paths
+        if (imgPaths) {
+            imgPaths.forEach((oldPath) => {                                             // replace each local path with github url
+                let newPath = oldPath.match(/(images)\/(.*)/gm);
+                let newImg = "{{page.raw_github_link}}/" + newPath;
+                data = data.replace(oldPath, newImg);
+            });
+        }
+        
+        document.getElementById('rnative-markdown').innerHTML = marked(data);
+    })
+    .then(() => {
+        // add styling to links
+        const links = document.getElementById('rnative-markdown').getElementsByTagName('a');
+        for (let i = 0; i < links.length; i++) {
+            links[i].classList.add("rnative-link");
+        }
+    });
+  </script>

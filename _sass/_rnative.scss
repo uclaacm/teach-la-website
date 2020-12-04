@@ -1,9 +1,9 @@
 .rnative-link {
-  @include tla-link($rnative-red);
+  @include tla-link($rnative-blue);
 }
 
 .divider-rnative {
-  border-top: 1px solid $rnative-red;
+  border-top: 1px solid $rnative-blue;
 }
 
 .rnative-lessons-grid {
@@ -20,7 +20,7 @@
 .rnative-lesson-card {
   padding: 0.5em;
   margin-top: 1em;
-  border: 2px solid $rnative-red;
+  border: 2px solid $rnative-blue;
   border-radius: 10px;
   width: 90%;
   margin-left: auto;
@@ -47,7 +47,7 @@
   margin-top: 3em;
   padding: 1em;
   border-radius: 10px;
-  border: 1px solid $rnative-red;
+  border: 1px solid $rnative-blue;
 }
 
 .rnative-slide-iframe {
@@ -59,8 +59,25 @@
   }
 }
 
-.iframe-container {
+.markdown-container {
   padding: 3em;
   width: calc(100% - 6em);
   position: relative;
+
+  img {
+    max-width: 100%;
+  }
+
+  pre {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px 0;
+
+    code {
+      line-height: 1.45;
+    }
+  }
 }
+
+
