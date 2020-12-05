@@ -5,6 +5,7 @@ title: "Advisor (ACM)"
 group: "board"
 img: blee.jpg
 graduating_year: 2021
+pronouns: "she/her"
 
 positions:
   - year: 2019-2020

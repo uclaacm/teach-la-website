@@ -206,6 +206,18 @@ ul > li {
     margin: 0;
 }
 
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 // refactor this into a common table component
 .schedule-table {
     border-collapse: collapse;
@@ -255,14 +267,14 @@ ul > li {
     text-decoration: none;
     background-position: left bottom;
     background-image: linear-gradient($off-color 0%, $link-effect-color 0%);
-    background-size: auto 15%;
+    background-size: 100% 15%;
     background-repeat: no-repeat;
 
     @media (min-width: $desktop-width) {
         transition: background 500ms ease;
 
         &:hover{
-            background-size: auto 85%;
+            background-size: 100% 85%;
             color: $effect-text-color;
         }
     }
@@ -285,15 +297,7 @@ ul > li {
 .pronouns {
     font-size: $pronouns-font-size;
 }
+<<<<<<< HEAD
 
-.mb-10 {
-    margin-bottom: 10px;
-}
-
-.mb-32 {
-    margin-bottom: 32px;
-}
-
-.mb-50 {
-    margin-bottom: 50px;
-}
+=======
+>>>>>>> f502998a1d98505970891987bfb1298cd1b5cc48
