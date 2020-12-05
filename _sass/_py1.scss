@@ -54,14 +54,19 @@
     text-underline-offset: 22%;
 }
 
-.py1-fancy-title {
+.py1-fancy-title { 
     @include py1-fancy-title($py-blue);
 }
 
-.py1-lesson-header {
-    @include py1-fancy-title($py-blue);
-    margin-bottom: 50px;
+.py1-subtitle {
+    font-weight: bold;
+    font-family: $font-display;
+    width: 100%;
+    font-size: 2em;
+    margin-top: .67em;
+    margin-bottom: .67em;
 }
+
 
 .py1-divider {
     margin-left: 50px;
@@ -229,9 +234,7 @@
 // Lesson page styling
 
 @mixin py1-button {
-    padding: 5px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 5px 30px 5px 30px;
     border-radius: 10px;
     font-family: $font-display;
     text-decoration: none;
@@ -301,10 +304,10 @@
         margin-top: 20px;
     }
 
-    a {
-        @include py1-solid-button($py-green, $py-green-tint);
-        margin-bottom: 20px;
-    }
+    // a { LEGACY, *should* be safe to remove during refactor
+    //     @include py1-solid-button($py-green, $py-green-tint);
+    //     margin-bottom: 20px;
+    // }
 
     button {
         @include py1-solid-button($py-green, $py-green-tint);
@@ -319,14 +322,8 @@
     }
 }
 
-.py1-lesson-page-next {
+.py1-outline-button {
     @include py1-outline-button($py-blue);
-    margin-bottom: 10px;
-}
-
-.py1-lesson-page-home {
-    @include py1-outline-button($py-blue);
-    margin-bottom: 32px;
 }
 
 .py1-lesson-page-agenda {

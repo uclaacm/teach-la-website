@@ -5,7 +5,7 @@ fw: true
 <div class="py1-wrapper">
     <div class="py1-sidebar">
         <div>
-            <h1 class="py1-lesson-header">
+            <h1 class="py1-fancy-title mb-50">
                 {{ page.num }}. {{ page.title }}
             </h1>
             <p>
@@ -17,11 +17,11 @@ fw: true
         </div>
 
         {% if page.next_lesson %}
-        <div class="py1-lesson-page-next">
+        <div class="py1-outline-button mb-10">
             <a href="{{site.baseurl}}/classes/py1/{{page.next_link}}">next lesson: {{ page.next_lesson }}</a>
         </div>
         {% endif %}
-        <div class="py1-lesson-page-home">
+        <div class="py1-outline-button mb-32">
             <a href="{{site.baseurl}}/classes/py1/">back to curriculum home</a>
         </div>
 
@@ -35,31 +35,29 @@ fw: true
             allowfullscreen></iframe>
 
         {% if page.practice %}
-        <h1>more practice</h1>
+        <span class="py1-subtitle">more practice</span>
 
         {% for item in page.practice %}
         <div class="py1-lesson-practice">
             <b>question #{{ item.problem.num }}</b> <br>
             {{ item.problem.question | markdownify }} <br>
-            <button onclick="revealSolution({{ item.problem.num }} - 1)">solution</button> <!-- annoying error >:( -->
-            <div class="py1-lesson-solution">{{ item.problem.solution | markdownify }}</div>
+            <button onclick="revealSolution({{ item.problem.num }})">solution</button> <!-- annoying error >:( -->
+            <div class="py1-lesson-solution" id="py1-lesson-solution-{{item.problem.num}}">{{ item.problem.solution | markdownify }}</div>
         </div>
         {% endfor %}
 
         {% endif %}
 
         <script>
-            let hidden = true;
-            function revealSolution(index) {
-                let solutionSection = document.getElementsByClassName("py1-lesson-solution");
-                if (hidden) {
-                    solutionSection[index].style.display = "block";
+            function revealSolution(probNum) {
+                let solutionSection = document.getElementById("py1-lesson-solution-" + probNum);
+
+                if (solutionSection.style.display === "none" || solutionSection.style.display === "") {
+                    solutionSection.style.display = "block";
                 }
                 else {
-                    solutionSection[index].style.display = "none";
-
+                    solutionSection.style.display = "none";
                 }
-                hidden = !hidden;
             }
         </script>
     </div>
