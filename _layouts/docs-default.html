@@ -19,18 +19,9 @@
       logTopSecretMessage("You look like somebody who likes web programming and hacking. Why not join our dev team? Check out https://teachla.uclaacm.com/dev");
     </script>
     
-    {% if page.title == 'The Teach LA Docs' %}
-      <div class="container container-fill
-      {% if layout.fw %}{% else %}container-restricted{% endif %}
-      {% if page.name contains '.html' %}{% else %}generated-content{% endif %}
-      ">
-         {{ content }}
-        {{page.fw}}
-       </div>
-    {% else %}
-      <div class="container-fill
-      {% if page.name contains '.html' %}{% else %}generated-content{% endif %}
-      "id="docs-pages">
+    <div class="container-fill
+    {% if page.name contains '.html' %}{% else %}generated-content{% endif %}
+    "id="docs-pages">
         {%- include docs-sidebar.html -%}
         <div id="docs-pages-content">
           <div id="docs-pages-content-width">
@@ -38,9 +29,7 @@
           {{page.fw}}
           </div>
         </div>
-       </div>
-    {% endif %}
-
+      </div>
     {%- include footer.html -%}
   </body>
 

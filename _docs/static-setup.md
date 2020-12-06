@@ -1,16 +1,12 @@
 ---
 title: "Adding yourself to the team page"
 sidebar-title: "Add to Team Page"
-items: [
-  "Get ready",
-  "Creating a basic page",
-  "Making the page your own",
-  "Add, Commit, and Push",
-  "Making a Pull Request",
-  "Code Review",
-  "Merging!"
-]
 ---
+
+## Table of Contents
+{:.no_toc}
+* TOC
+{:toc}
 
 ## Get ready
 

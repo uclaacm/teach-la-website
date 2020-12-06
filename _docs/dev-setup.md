@@ -1,37 +1,21 @@
 ---
 title: "Dev Setup: In-Depth Walkthrough"
 sidebar-title: "Dev Setup"
-items: [ 
-  "Navigating your Shell",
-  "GitHub",
-  "Creating a GitHub Account",
-  "Joining our GitHub Organization",
-  "Installing Git",
-  "If you're using WSL or Linux",
-  "If you're using OSX",
-  "One-Time Setup",
-  "Cloning our Repository",
-  "Installing Dependencies",
-  "Development Workflow",
-  "Create a New Branch",
-  "Running Jekyll with Bundle",
-  "Make your Changes",
-  "Add, Commit, and Push",
-  "Next Steps",
-  "Appendix",
-  "GitHub Desktop",
-  "Installing Ruby with RVM",
-  "Installing WSL"
-]
 ---
 
 # Dev Setup: In-Depth Walkthrough
+{:.no_toc}
 
 You want to contribute to the Teach LA Website! Awesome! Before you get started, you'll need to set up some things. Here, we'll walk you through step-by-step how to set up each component. We'll tell you how to check if you already have each component, how to briefly install it if you don't, and then show you some extra resources where you can learn more (but only if you want)!
 
 Some of this may already be familiar for you. Feel free to skip around to the parts that are relevant.
 
 You may ask: why is the website so complicated to set up! You may have a point, but it allows us to write features that let you update the website **without writing code**: we've written templates that generate pages, content, and complicated data relationships, so you don't have to! Hopefully, with practice, you'll find this to be not too tricky.
+
+## Table of Contents
+{:.no_toc}
+* TOC
+{:toc}
 
 ## Navigating your Shell
 

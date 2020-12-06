@@ -1,26 +1,18 @@
 <div class = "sidebar">
   <div class="sidebar-content">
-   <!-- Add new sections here -->
-   {% assign order = 
-      "Dev Setup,
-      Add to Team Page"
-    %}
-
-    {% assign order = order | strip_newlines | split: "," %}
-    {% for i in order %}
-      {% assign cur = i | lstrip | rstrip %}
-      {% assign sec = site.docs | where: "sidebar-title", cur | first %}
-      {% assign spaceless = cur | replace: " ", "-" %}
-        <label for="{{spaceless}}-button"> {{sec.sidebar-title}}</label>
-        <input type="checkbox" id="{{spaceless}}-button" {% if page.sidebar-title == sec.sidebar-title %}checked{% endif %}/>
-        <div id="{{spaceless}}">
-          <ol class="sidebar-items">
-            {% for item in sec.items %}
-              {% assign spacelessDown = item | replace: " ", "-" | downcase | remove: "," | remove: "." | remove: "!" | remove: "'" | remove: "/" | remove: "?" %}
-              <li><a href="{{sec.url}}/#{{spacelessDown}}">{{item}}</a></li>
-            {% endfor %}
+    {% for i in site.docs %}
+      {% if i.sidebar-title %}
+        {% assign slug = i.sidebar-title | slugify %}
+          <label for="{{slug}}-button"> {{i.sidebar-title}}</label>
+          <input type="checkbox" id="{{slug}}-button" {% if page.sidebar-title == i.sidebar-title %}checked{% endif %}/>
+          <div id="{{slug}}">
+            <ol class="sidebar-items">
+              {% for header in i.headers %}
+                <li><a href="{{i.url}}/{{header.url}}">{{header.title}}</a></li>
+              {% endfor %}
             </ol>
-            </div>
+           </div>
+      {% endif %}
    {% endfor %}
   </div>
 </div>

@@ -3,34 +3,26 @@
     top: 70px;
     left:0;
     width: $sidebar-width; 
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
     flex-grow: 2;
-    padding: 30px 30px 0px 10px;
+    padding-top: 25px;
+    padding-left: 10px;
     position: sticky;
-    background-color: #e6e4e4;
-    text-align: right;
     @media (max-width: $desktop-width) {
         display: none;
     }
 }
-
-.sidebar-content {
-    display: inline-block;
-    text-align: left;
-    width: 225px;
-}
-
 //New sections for sidebar add CSS here
 
-#Dev-Setup-button:checked + #Dev-Setup {
+#dev-setup-button:checked + #dev-setup {
     ol.sidebar-items li {
     display: list-item;
     }   
 }
 
-#Add-to-Team-Page-button:checked + #Add-to-Team-Page {
+#add-to-team-page-button:checked + #add-to-team-page {
    ol.sidebar-items li {
    display: list-item;
     }
