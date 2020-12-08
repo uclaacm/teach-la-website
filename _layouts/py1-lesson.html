@@ -40,9 +40,9 @@ fw: true
         {% for item in page.practice %}
         <div class="py1-lesson-practice">
             <b>question #{{ item.problem.num }}</b> <br>
-            {{ item.problem.question | markdownify }} <br>
+            {{ item.problem.question | newline_to_br | markdownify }} <br>
             <button onclick="revealSolution({{ item.problem.num }})">solution</button> <!-- annoying error >:( -->
-            <div class="py1-lesson-solution" id="py1-lesson-solution-{{item.problem.num}}">{{ item.problem.solution | markdownify }}</div>
+            <div class="py1-lesson-solution" id="py1-lesson-solution-{{item.problem.num}}">{{ item.problem.solution | newline_to_br | markdownify }}</div>
         </div>
         {% endfor %}
 

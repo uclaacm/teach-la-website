@@ -12,6 +12,39 @@ agenda:
     - text: "what are operators?"
     - text: "practice with operators"
     - text: "addition, subtraction, multiplication division"
+practice:
+    - problem: 
+        num: 1
+        question: >
+          What will be the output of the following code?
+
+
+          `print(12 + 6)`
+
+          `print(12 - 6)`
+
+          `print(12 * 6)`
+
+          `print(12 / 6)`
+
+          `print("12" + "6")`
+
+          `print(12 / 8)`
+
+
+
+        solution: >
+          18
+
+          6
+
+          72
+
+          2
+
+          126
+
+          1.5
 
 ---
 You've likely been introduced to operators in your math class, but how can we use them in Python?

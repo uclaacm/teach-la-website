@@ -22,19 +22,19 @@ practice:
           or
             
           `print("Hello, Mercury!")`
-             
+
           `print("Hello, Venus!")`
-            
+
           `print("Hello, Mars!")`
-            
+
           `print("Hello, Jupiter!")`
-              
+
           `print("Hello, Saturn!")`
-              
+
           `print("Hello, Uranus!")`
-              
+
           `print("Hello, Neptune!")`
-            
+
           `print("Goodbye, Pluto!")`
 
 

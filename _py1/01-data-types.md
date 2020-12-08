@@ -12,6 +12,62 @@ agenda:
     - text: "what are data types?"
     - text: "practice with different data types"
     - text: "casting"
+practice:
+    - problem: 
+        num: 1
+        question: >
+          What data types would the following data be?
+
+
+          a) 32
+
+          b) 4.5
+
+          c) "hello!"
+
+          d) True
+
+          e) "9"
+
+          f) str(12.3)
+        solution: >
+          a) int
+
+          b) float
+
+          c) string
+
+          d) boolean
+
+          e) string
+
+          f) string
+    - problem: 
+        num: 2
+        question: >
+          What will be the output of the following code?
+
+
+          `print(bool(1))`
+
+          `print(float(32))`
+
+          `print(int(False))`
+
+          `print(float(int(False)))`
+
+          `print(bool(int(0.5)))`
+
+        solution: >
+          True
+
+          32.0
+
+          0
+
+          2.0
+
+          False
 
 ---
 Data is at the core of everything we do in Python! Essentially, data is just a **collection of information** which may include numbers, words, or phrases. We use it to tell our computer **what** we want and **how** we want it. 

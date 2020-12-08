@@ -298,6 +298,9 @@
     padding: 24px;
     border: $py-green solid 2px;
     border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    
 
     p {
         margin-bottom: 10px;
