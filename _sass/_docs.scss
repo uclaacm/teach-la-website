@@ -7,8 +7,7 @@
     display:flex;
     justify-content: flex-end;
     flex-grow: 2;
-    padding-top: 25px;
-    padding-left: 10px;
+    padding: 25px $sidebar-padding-sides 0px $sidebar-padding-sides;
     position: sticky;
     @media (max-width: $desktop-width) {
         display: none;
@@ -61,16 +60,16 @@ ol.sidebar-items li a:hover {
 }
 
 #docs-pages-content{
-    padding: 0 3em;
+    padding: 0 1em;
     flex-grow: 2;
     width:1000px;
 }
 
 #docs-pages-content-width{
     width:1000px;
-    max-width: calc(100vw - 275px - 4em);
+    max-width: calc(100vw - #{$sidebar-width});
     @media (max-width: $desktop-width) {
-        max-width: calc(100vw - 7em);
+        max-width: calc(100vw - 3em);
     }
 }
 
@@ -87,6 +86,7 @@ ol.sidebar-items li a:hover {
     }
 
     pre {
+        white-space: pre-wrap;
         border-radius: 4px;
         padding: 15px;
         border: 2px solid $teachla-green;
