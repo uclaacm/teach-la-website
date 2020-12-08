@@ -2,7 +2,7 @@
 firstname: "Austin"
 lastname: "Nguyen"
 group: "member"
-title: "Python Developer"
+title: "Python Curriculum Developer"
 secondary: "Translator"
 pronouns: "he/him"
 img: "anguyen2.jpg"
