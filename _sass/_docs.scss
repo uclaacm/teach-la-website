@@ -97,6 +97,11 @@ ol.sidebar-items li a:hover {
         border: 2px solid $teachla-green;
     }
 
+    code {
+        font-family: $font-code;
+        font-size: $code-font-size;
+    }
+
     // syntax-highlighting
     .highlight {
         padding-left: 1em;
@@ -105,6 +110,11 @@ ol.sidebar-items li a:hover {
         pre {
             padding: 2%;
             line-height: 1.2;
+            white-space: pre-wrap; 
+            white-space: -moz-pre-wrap; 
+            white-space: -pre-wrap; 
+            white-space: -o-pre-wrap; 
+            font-family: $font-code;
         }
 
         .highlighter-rouge & {

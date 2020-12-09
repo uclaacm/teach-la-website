@@ -4,7 +4,8 @@ All our wonderful team profiles are stored here, and are used to track your past
 
 ```md
 ---
-name: "My Name"
+firstname: "My First Name"
+lastname: "My Last Name"
 group: "member"
 title: "My Position Title"
 pronouns: "your preferred pronouns (if you're comfortable sharing)"
