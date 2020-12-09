@@ -12,6 +12,11 @@
         display: none;
     }
 }
+
+.sidebar-content {
+    width: 250px;
+}
+
 //New sections for sidebar add CSS here
 
 #dev-setup-button:checked + #dev-setup {
