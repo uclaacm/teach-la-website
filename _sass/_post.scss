@@ -94,12 +94,11 @@
 }
 
 .post-recommend-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     margin-top: 1.5em;
-    padding-top: auto;
-    padding-bottom: auto;
 }
 
 .post-recommend-card{
