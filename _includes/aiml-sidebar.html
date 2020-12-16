@@ -1,21 +1,27 @@
 <div id="desktop-sidebar">
+    {% assign smaller = 1 %}
     {% for lesson in site.aiml %}
-    {% assign pNum = page.num | plus: 0 %}
-    {% assign x = lesson.num | plus: 0 %}
-    {% if x < pNum %}
-    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-    <br>
-    <div class="status-bar"></div>
-    {% else if x > pNum %}
-    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-    <br>
-    <div class="status-bar" style="background-color: lightgray;"></div>
-    {% else %}
-    <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-    <br>
-    <div class="status-bar" style="background-color: lightgray;"></div>
-    {% endif %}
-    <br>
+        {% assign pNum = page.num | plus: 0 %}
+        {% assign x = lesson.num | plus: 0 %}
+        {% if x < pNum %}
+            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+            <br>
+            <div class="status-bar ai-blue-background"></div>
+        {% elsif x == pNum and lesson.num == page.num %}
+            {% assign smaller = 0 %}
+            <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+            <br>
+            <div class="status-bar current-lesson"></div>
+        {% elsif x == pNum and smaller == 1 %}
+            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+            <br>
+            <div class="status-bar ai-blue-background"></div>
+        {% else %}
+            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+            <br>
+            <div class="status-bar lightgray-background"></div>
+        {% endif %}
+        <br>
     {% endfor %}
 </div>
 <div id="mobile-sidebar">
