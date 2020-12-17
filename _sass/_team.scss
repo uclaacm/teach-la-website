@@ -52,6 +52,12 @@
     }
 }
 
+.team-member-button {
+    padding: 1px 8px;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+
 .team-profile {
     @media (max-width: $desktop-width) {
         margin: 50px auto;
