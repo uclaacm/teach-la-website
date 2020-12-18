@@ -15,7 +15,7 @@ GEM
     ffi (1.13.1)
     ffi (1.13.1-x64-mingw32)
     forwardable-extended (2.6.0)
-    html-proofer (3.18.1)
+    html-proofer (3.18.2)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogumbo (~> 2.0)
