@@ -118,7 +118,7 @@
     z-index: 1;
 }
 
-.hamburger-icon {
+#mobile-sidebar .hamburger-icon {
     height: 50px;
     width: 50px;
     margin: 10px 0;
@@ -126,12 +126,16 @@
     justify-content: center;
     flex-direction: column;
 
+    background: white;
+    border-radius: 10px;
+    border: 1px solid $font-secondary-color;
+
     &:hover {
         cursor: pointer;
 
         .bar {
             margin: 3px 0px;
-            background-color: $font-primary-color;
+            background-color: $font-secondary-color;
         }
     }
 
@@ -145,6 +149,7 @@
         background-color: $font-secondary-color;
     }
 }
+
 #hamburger-content{
     display: none;
     flex-direction: column;
