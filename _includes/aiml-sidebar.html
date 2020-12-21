@@ -25,11 +25,14 @@
     {% endfor %}
 </div>
 <div id="mobile-sidebar">
-    <span class="hamburger-icon">
-        <span class="bar" id="top-bar"></span>
-        <span class="bar" id="middle-bar"></span>
-        <span class="bar" id="bottom-bar"></span>
-    </span>
+    <div id="sidebar-btn-container">
+        <span class="hamburger-icon">
+            <span class="bar" id="top-bar"></span>
+            <span class="bar" id="middle-bar"></span>
+            <span class="bar" id="bottom-bar"></span>
+        </span>
+    </div>
+    
     <div id="hamburger-content">
         {% for lesson in site.aiml %}
         {% assign pNum = page.num | plus: 0 %}
@@ -82,6 +85,13 @@
             hamburger_content.style.display = "none";
         } else {
             hamburger_content.style.display = "flex";
+        }
+        
+        let buttons = document.getElementById("sidebar-btn-container");
+        if (buttons.style.justifyContent == "flex-end") {
+            buttons.style.justifyContent = "flex-start";
+        } else {
+            buttons.style.justifyContent = "flex-end";
         }
     }
 </script>

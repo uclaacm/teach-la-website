@@ -159,7 +159,7 @@
     z-index: -20;
     height: calc(100vh - 71px);
     width: 100vw;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 1);
     overflow-y: auto;
     // position: fixed;
     // top: 0;
@@ -181,4 +181,11 @@
     margin: 10px auto;
     flex-direction: column;
     font-size: 1.3em;
+}
+
+#sidebar-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90vw;
 }
