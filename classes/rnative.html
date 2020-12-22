@@ -5,7 +5,7 @@ permalink: /classes/rnative
 ---
 <h1 class="title page-title">Introduction to React Native</h1>
 <p class="title text-2x no-margin">Class & Curriculum Outline</p>
-<hr class="divider-ai" />
+<hr class="divider-rnative" />
 <p>Learn mobile web development with us! </p>
 
 <h2 class="title">
@@ -18,19 +18,19 @@ permalink: /classes/rnative
     Lessons
 </h2>
 
-<div class="rnative-lessons-grid">
+<div class="lessons-grid">
     {% for lesson in site.rnative %}
         <div class="rnative-lesson-card">
-            <div class="rnative-lesson-card-content">
+            <div class="lesson-card-content">
                 <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
                     <a class="rnative-link" href="{{lesson.url}}">{{lesson.title}}</a>
                 </h3>
                 {{lesson.desc}}
             </div>
             <div class="button-container">
-                {% if lesson.github_link %}
-                    <a class="button button-sm button-rnative" href="{{lesson.github_link}}" target="_blank" rel="noopener noreferrer">
-                        <span class="fa fa-chalkboard-teacher"></span> Github
+                {% if lesson.course_id %}
+                    <a class="button button-sm button-rnative" href="{{site.data.classes[3].github}}/{{lesson.course_id}}" target="_blank" rel="noopener noreferrer">
+                        <span class="fab fa-github"></span> GitHub
                     </a>
                 {% endif %}
                 {% if lesson.code_link %}

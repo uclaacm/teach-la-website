@@ -1,83 +1,34 @@
+.button.button-rnative {
+  @include button-classes($rnative-blue);
+}
+
 .rnative-link {
-  @include tla-link($rnative-blue);
+  @include class-link($rnative-blue);
+
 }
 
 .divider-rnative {
-  border-top: 1px solid $rnative-blue;
-}
-
-.rnative-lessons-grid {
-  height: 100%;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  @media (max-width: $desktop-width) {
-    grid-template-columns: 100%;
-  }
-  margin-bottom: 2em;
+  @include divider-class($rnative-blue);
 }
 
 .rnative-lesson-card {
-  padding: 0.5em;
-  margin-top: 1em;
-  border: 2px solid $rnative-blue;
-  border-radius: 10px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.rnative-lesson-card-content {
-  flex: 1 0 auto;
-}
-
-.rnative-content-container {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  min-height: 100vh;
-  @media (max-width: $desktop-width) {
-    grid-template-columns: 100%;
-    min-height: 70vh;
-  }
+  @include lesson-card($rnative-blue);
 }
 
 .rnative-content-card {
-  margin-top: 3em;
-  padding: 1em;
-  border-radius: 10px;
-  border: 1px solid $rnative-blue;
+  @include class-content-card($rnative-blue);
 }
 
-.rnative-slide-iframe {
-  display: block;
-  width: 100%;
-  height: calc(100% * 1469 / 2559);
-  @media (max-width: $desktop-width) {
-    height: 100%;
-  }
-}
-
-.markdown-container {
+#rnative-markdown {
   padding: 3em;
-  width: calc(100% - 6em);
-  position: relative;
 
-  img {
-    max-width: 100%;
+  a {
+    @include class-link($rnative-blue);
   }
 
   pre {
-    width: 100%;
-    max-width: 100%;
     overflow: auto;
-    margin: 10px 0;
-
-    code {
-      line-height: 1.45;
-    }
+    border-color: $rnative-blue;
   }
 }
-
 
