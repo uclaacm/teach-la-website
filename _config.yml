@@ -4,7 +4,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   ACM Teach LA is an non-profit outreach organization at UCLA dedicated to providing equal access to computer science education for all students in Los Angeles.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://teachla.uclaacm.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: uclaacm
+twitter:
+  username: uclaacm
+  image: https://teachla.uclaacm.com/img/teachLA_logo_light.png
 github_username: uclaacm
 
 facebook_username: acmteachla
