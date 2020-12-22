@@ -2,11 +2,11 @@
 layout: default
 fw: true
 ---
-<!-- ^idk what this does but im just putting it -->
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js"></script>
 
-<div class="rnative-content-container">
+<div class="class-content-container">
     <div>
         <div class="rnative-content-card">
             <h1 class="title text-2x no-margin">{{page.title}}</h1>
@@ -15,10 +15,10 @@ fw: true
             </p>
             <hr class="divider-rnative" />
             <ul class="list-unstyled text-15x">
-                {% if page.github_link %}
+                {% if page.course_id %}
                     <li>
-                        <a class="rnative-link" href="{{page.github_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-chalkboard-teacher"></span> Link to Github
+                        <a class="rnative-link" href="{{site.data.classes[3].github}}/{{page.course_id}}" target="_blank" rel="noopener noreferrer">
+                            <span class="fab fa-fw fa-github"></span> Link to GitHub Repository
                         </a>
                     </li>
                 {% endif %}
@@ -44,7 +44,7 @@ fw: true
             </div>
         </div>
     </div>
-    <div class="markdown-container" id="rnative-markdown">
+    <div class="generated-content" id="rnative-markdown">
         
     </div>
     <div>
@@ -59,29 +59,26 @@ fw: true
 </div>
 
 <script>
-    logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
-</script>
-
-<script>
-    fetch("{{page.raw_github_link}}/README.md")
+    fetch("{{site.data.classes[3].raw_github}}/{{page.course_id}}/README.md")
     .then(response => response.text())
     .then(data => {
         let imgPaths = data.match(/(?<=(!\[.*]\())(.*?)(?=\))/gm);                      // get github local image paths
         if (imgPaths) {
             imgPaths.forEach((oldPath) => {                                             // replace each local path with github url
                 let newPath = oldPath.match(/(images)\/(.*)/gm);
-                let newImg = "{{page.raw_github_link}}/" + newPath;
+                let newImg = "{{site.data.classes[3].raw_github}}/{{page.course_id}}/" + newPath;
                 data = data.replace(oldPath, newImg);
             });
         }
-        
-        document.getElementById('rnative-markdown').innerHTML = marked(data);
-    })
-    .then(() => {
-        // add styling to links
-        const links = document.getElementById('rnative-markdown').getElementsByTagName('a');
-        for (let i = 0; i < links.length; i++) {
-            links[i].classList.add("rnative-link");
+
+        let headers = data.match(/^# /);                                               // change h1 to h2 in markdown file
+        if (headers) {
+            headers.forEach((header) => data = data.replace(header, "## "));
         }
+        return marked(data);
+    })
+    .then(convertedHTML => {
+        // sanitize html
+        document.getElementById('rnative-markdown').innerHTML = DOMPurify.sanitize(convertedHTML); 
     });
   </script>
