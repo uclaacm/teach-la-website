@@ -1,28 +1,27 @@
 <div id="desktop-sidebar">
     {% assign smaller = 1 %}
     {% for lesson in site.aiml %}
-        {% assign pNum = page.num | plus: 0 %}
-        {% assign x = lesson.num | plus: 0 %}
-        {% if x < pNum %}
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            <br>
-            <div class="status-bar ai-blue-background"></div>
+    {% assign pNum = page.num | plus: 0 %}
+    {% assign x = lesson.num | plus: 0 %}
+    {% if x < pNum %} <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+        <br>
+        <div class="status-bar ai-blue-background"></div>
         {% elsif x == pNum and lesson.num == page.num %}
-            {% assign smaller = 0 %}
-            <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-            <br>
-            <div class="status-bar current-lesson"></div>
+        {% assign smaller = 0 %}
+        <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+        <br>
+        <div class="status-bar current-lesson"></div>
         {% elsif x == pNum and smaller == 1 %}
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            <br>
-            <div class="status-bar ai-blue-background"></div>
+        <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+        <br>
+        <div class="status-bar ai-blue-background"></div>
         {% else %}
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            <br>
-            <div class="status-bar lightgray-background"></div>
+        <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+        <br>
+        <div class="status-bar lightgray-background"></div>
         {% endif %}
         <br>
-    {% endfor %}
+        {% endfor %}
 </div>
 <div id="mobile-sidebar">
     <div id="sidebar-btn-container">
@@ -32,26 +31,25 @@
             <span class="bar" id="bottom-bar"></span>
         </span>
     </div>
-    
+
     <div id="hamburger-content">
         {% for lesson in site.aiml %}
         {% assign pNum = page.num | plus: 0 %}
         {% assign x = lesson.num | plus: 0 %}
-        {% if x < pNum %}
-            <div class = "hamburger-item">
-                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% else if x > pNum %}
-            <div class = "hamburger-item">
-                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% else %}
-            <div class="hamburger-item"></div>
-                <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% endif %}
-        {% endfor %}
+        {% if x < pNum %} <div class="hamburger-item">
+            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
     </div>
+    {% else if x > pNum %}
+    <div class="hamburger-item">
+        <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+    </div>
+    {% else %}
+    <div class="hamburger-item"></div>
+    <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+</div>
+{% endif %}
+{% endfor %}
+</div>
 </div>
 <script>
     function toggleSidebarDesktopToMobile() {
@@ -63,7 +61,7 @@
         left_margin = (window_width / 2.0 - 758) > 26 ? (window_width / 2.0 - 758) : 26;
         if (window_width < 768) {
             let hamburger_content = document.getElementById("hamburger-content");
-            if (hamburger_content.style.display != "flex" ){
+            if (hamburger_content.style.display != "flex") {
                 document.getElementById("hamburger-content").style.display = "none";
             }
             desktop_sidebar.style.display = "none";
@@ -75,7 +73,7 @@
         }
         console.log("left margin is " + left_margin);
     }
-    window.addEventListener('resize', toggleSidebarDesktopToMobile);
+    window.addEventListener('resize', resizeFunctions);
     toggleSidebarDesktopToMobile();
 
     document.getElementById("mobile-sidebar").addEventListener("click", displayHamburgerMenu);
@@ -86,12 +84,33 @@
         } else {
             hamburger_content.style.display = "flex";
         }
-        
-        let buttons = document.getElementById("sidebar-btn-container");
-        if (buttons.style.justifyContent == "flex-end") {
-            buttons.style.justifyContent = "flex-start";
+
+        let mobileSidebarButton = document.getElementById("sidebar-btn-container");
+        let window_width = window.innerWidth;
+        if (mobileSidebarButton.style.justifyContent == "flex-end") {
+            mobileSidebarButton.style.justifyContent = "flex-start";
+            if (mobileSidebarButton.style.marginTop != "10px"){
+                mobileSidebarButton.style.marginTop = "10px";
+            }
         } else {
-            buttons.style.justifyContent = "flex-end";
+            mobileSidebarButton.style.justifyContent = "flex-end";
+            if (window_width <= 386){
+                mobileSidebarButton.style.marginTop = "60px";
+            }
         }
+    }
+    function adjustMobileButtonHeight() {
+        console.log("window size changed")
+        let mobileSidebarButton = document.getElementById("sidebar-btn-container");
+        let window_width = window.innerWidth;
+        if (window_width <= 386 && mobileSidebarButton.style.justifyContent == "flex-end") {
+            mobileSidebarButton.style.marginTop = "60px";
+        } else {
+            mobileSidebarButton.style.marginTop = "10px";
+        }
+    }
+    function resizeFunctions(){
+        toggleSidebarDesktopToMobile();
+        adjustMobileButtonHeight();
     }
 </script>
