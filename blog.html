@@ -14,14 +14,9 @@ permalink: /blog/
 
 {% for post in site.posts %}
 <section class="post-card">
-  <h2 class="title">
-      <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-      <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
-  </h2>
-  <p>
+
     <!-- TODO: IMPLEMENT TAGS! -->
-    • category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a> •
-    
+
     {% comment %}
     {% if post.tags %}
         tags:
@@ -30,13 +25,19 @@ permalink: /blog/
         {% endfor %}
     {% endif %}
     {% endcomment %}
-  </p>
   <div class="post-preview">
     <a href={{post.url}}>
       <img  class="post-preview-img" src=/img/posts/{{post.img}} alt="{{post.alt}}" />
     </a>
-    <div class="post-quote">
-      <p>{{post.excerpt}}</p>
+    <div class="post-info">
+      <h2 class="title">
+        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+      </h2>
+      <p class="title">
+        by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span> | category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a>
+      </p>
+      <hr class="divider"/>
+      <p class="generated-content">{{post.excerpt}}</p>
     </div>
   </div>
 </section>
