@@ -1,18 +1,16 @@
 ---
 layout: default
-image:
-  path: /img/posts/{{page.img}}"
-  height: 100
-  width: 100
 ---
+<!-- required for Facebook "Share" button -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VotTmBal"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" defer></script>
 
 <article class="post-container">
-  <meta property="twitter:image" content= "/img/posts/{{page.img}}" >
-  <meta property="og:image" content= "https://teachla.uclaacm.com/img/posts/default.png" >
+  <meta property="twitter:image" content= "{{site.baseurl}}/img/posts/{{page.img}}" >
+  <meta property="og:image" content= "{{site.url}}/img/posts/default.png" >
     <h1 class="title page-title">{{page.title}}</h1>
-    <!-- required for Facebook "Share" button -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VotTmBal"></script>
+
 
 
     <img class="post-main-img" src=/img/posts/{{page.img}} alt="{{page.alt}}"/>
@@ -53,12 +51,12 @@ image:
 <hr class="divider" />
 </article>
 
-
-<div class = "social-buttons" style="text-align: center">
-Enjoyed the read? Share on social media! <br>
+<div class = "social">
+Enjoyed the read? Share on social media! <br/>
+<div class = "social-buttons">
 <a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="" class="fb-xfbml-parse-ignore">Share</a>
-<a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a>
+</div></div>
 
 </article>
 
@@ -89,7 +87,7 @@ Enjoyed the read? Share on social media! <br>
             {% endif %}
         {% endcapture %}
 
-        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url %}
+        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
         {% if author.pronouns %}
             {% capture author_pronouns %}
                     {{author.pronouns}}
@@ -97,6 +95,7 @@ Enjoyed the read? Share on social media! <br>
         {% else %}
             {% capture author_pronouns %}{% endcapture %}
         {% endif %}
+
     {% endfor %}
 </div>
 <hr class="divider" />

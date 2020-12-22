@@ -123,19 +123,14 @@
     max-width: 96%;
 }
 
-.fb-share-button {
-  text-align: center;
-  display: inline-block;
-  top: -7px;
-}
-
-.twitter-share-button {
-  text-align: center;
-  display: inline-block;
-}
-
-.social-buttons{
-  margin: 0 auto;
-  width: 50%;
+.social{
   font-family: $font-display;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-buttons{
+  display: flex;
+  flex-direction: row;
 }
