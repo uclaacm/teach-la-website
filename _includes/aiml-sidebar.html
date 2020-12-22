@@ -71,7 +71,6 @@
             mobile_sidebar.style.display = "none";
             desktop_sidebar.style.marginLeft = left_margin + "px";
         }
-        console.log("left margin is " + left_margin);
     }
     window.addEventListener('resize', resizeFunctions);
     toggleSidebarDesktopToMobile();
@@ -100,7 +99,6 @@
         }
     }
     function adjustMobileButtonHeight() {
-        console.log("window size changed")
         let mobileSidebarButton = document.getElementById("sidebar-btn-container");
         let window_width = window.innerWidth;
         if (window_width <= 386 && mobileSidebarButton.style.justifyContent == "flex-end") {
