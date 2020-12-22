@@ -17,14 +17,14 @@ permalink: "/classes"
 <hr class="divider" />
 
 <p>
-    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our internal documentation. We'll have all of the information fully prepared by the end of September.
+    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our internal documentation.
 </p>
 
 {% for class in site.data.classes %}
     <div class="class-card">
         <div class="class-row">
             <div class="img-push-down">
-                <img class="img-responsive" src="{{site.baseurl}}/img/{{class.img}}" />
+                <img class="img-responsive" alt="decorative image for {{class.name}}" src="{{site.baseurl}}/img/{{class.img}}" />
             </div>
             <div class="class-content">
                 <h2 class="title">{{class.name}}</h2>
@@ -57,7 +57,7 @@ permalink: "/classes"
                     {% if class.path %}
                     <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
                         <span class="fa fa-map-signs"></span>
-                        Step-by-Step Learning Path
+                        Class Page
                     </a>
                     {% endif %}
                     {% if class.outline %}
