@@ -18,14 +18,18 @@
       logTopSecretMessage("Don't worry, our site isn't collecting any data about you, or anything, really. Pinky promise.");
       logTopSecretMessage("You look like somebody who likes web programming and hacking. Why not join our dev team? Check out https://teachla.uclaacm.com/dev");
     </script>
-    <div class="container container-fill
-      {% if layout.fw %}{% else %}container-restricted{% endif %}
-      {% if page.name contains '.html' %}{% else %}generated-content{% endif %}
-    ">
-      {{ content }}
-      {{page.fw}}
-    </div>
-
+    
+    <div class="container-fill
+    {% if page.name contains '.html' %}{% else %}generated-content{% endif %}
+    "id="docs-pages">
+        {%- include docs-sidebar.html -%}
+        <div id="docs-pages-content">
+          <div id="docs-pages-content-width">
+          {{ content }}
+          {{page.fw}}
+          </div>
+        </div>
+      </div>
     {%- include footer.html -%}
   </body>
 

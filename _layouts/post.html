@@ -37,44 +37,43 @@ layout: default
     <div class="generated-content">
         {{content}}
     </div>
-</article>
 
-<hr class="divider" />
-<div class="post-author-grid">
+    <hr class="divider" />
     <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
-
-    {% for authorobj in page.authors %}
-        {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
-        {% capture author_name %}
-            {{authorobj.fname}} {{authorobj.lname}}
-        {% endcapture %}
-        {% capture author_url %}
-            {{author.url}}
-        {% endcapture %}
-        {% capture author_role %}
-            {{author.title}}
-            {% if author.secondary %}
-                &amp; {{author.secondary}}
-            {% endif %}
-        {% endcapture %}
-        {% capture author_img %}
-            {% if author.img %}
-                {{site.baseurl}}/img/team/{{author.img}}
-            {% else %}
-                {{site.baseurl}}/img/blank-profile.jpg
-            {% endif %}
-        {% endcapture %}
-        {% if author.pronouns %}
-            {% capture author_pronouns %}
-                    {{author.pronouns}}
+    <div class="post-author-grid">
+        {% for authorobj in page.authors %}
+            {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
+            {% capture author_name %}
+                {{authorobj.fname}} {{authorobj.lname}}
             {% endcapture %}
-        {% else %}
-            {% capture author_pronouns %}{% endcapture %}
-        {% endif %}
-        {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
-    {% endfor %}
+            {% capture author_url %}
+                {{author.url}}
+            {% endcapture %}
+            {% capture author_role %}
+                {{author.title}}
+                {% if author.secondary %}
+                    &amp; {{author.secondary}}
+                {% endif %}
+            {% endcapture %}
+            {% capture author_img %}
+                {% if author.img %}
+                    {{site.baseurl}}/img/team/{{author.img}}
+                {% else %}
+                    {{site.baseurl}}/img/blank-profile.jpg
+                {% endif %}
+            {% endcapture %}
+            {% if author.pronouns %}
+                {% capture author_pronouns %}
+                        {{author.pronouns}}
+                {% endcapture %}
+            {% else %}
+                {% capture author_pronouns %}{% endcapture %}
+            {% endif %}
+            {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
+        {% endfor %}
 
-</div>
+    </div>
+</article>
 <hr class="divider" />
 <div class="text-center title post-want-more">
     want more? here are some related posts:
@@ -89,14 +88,14 @@ layout: default
         {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
             {% break %}
         {% endif %}
-        
+
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
             <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.img}} alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}
-    
+
 </div>
 or <a class="tla-link" href="{{site.baseurl}}/blog">binge read the whole blog here</a>
-</div> 
+</div>
