@@ -1,3 +1,88 @@
+
+.sidebar {
+    top: 70px;
+    left:0;
+    width: $sidebar-width; 
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+    padding: 25px $sidebar-padding-sides 0px $sidebar-padding-sides;
+    position: sticky;
+    @media (max-width: $desktop-width) {
+        display: none;
+    }
+}
+
+.sidebar-content {
+    width: 250px;
+}
+
+//New sections for sidebar add CSS here
+
+#dev-setup-button:checked + #dev-setup {
+    ol.sidebar-items li {
+    display: list-item;
+    }   
+}
+
+#add-to-team-page-button:checked + #add-to-team-page {
+   ol.sidebar-items li {
+   display: list-item;
+    }
+}
+
+input {
+    display: none;
+}
+
+label {
+    color: $font-primary-color;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+label:hover {
+    color: black;
+}
+
+ol.sidebar-items li {
+    display: none;
+}
+
+ol.sidebar-items li a{
+    background-image: none;
+    color: $font-primary-color;
+    font-weight: normal;
+}
+
+#selected {
+    font-weight: bold;
+}
+
+ol.sidebar-items li a:hover {
+    color:black;
+}
+
+#docs-pages-content{
+    padding: 0 1em;
+    width:100%;
+    max-width: 1000px;
+}
+
+#docs-pages-content-width{
+    width:1000px;
+    max-width: calc(100vw - #{$sidebar-width});
+    @media (max-width: $desktop-width) {
+        max-width: calc(100vw - 3em);
+    }
+}
+
+#docs-pages {
+    left:0;
+    display: flex;
+    justify-content: center;
+}
+
 .generated-content {
     img {
         max-height: 25rem;
@@ -6,6 +91,7 @@
     }
 
     pre {
+        white-space: pre-wrap;
         border-radius: 4px;
         padding: 15px;
         border: 2px solid $teachla-green;

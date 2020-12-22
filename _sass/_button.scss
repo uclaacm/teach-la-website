@@ -1,105 +1,108 @@
 .button {
-    display: inline-block;
-    background: white;
-    border-radius: 4px;
-    padding: 10px 20px;
-    color: $teachla-green;
-    border: 2px solid $teachla-green;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    &:hover {
-        color: white;
-        background: $teachla-green;
-        cursor: pointer;
-    }
+  display: inline-block;
+  background: white;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: $teachla-green;
+  border: 2px solid $teachla-green;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    background: $teachla-green;
+    cursor: pointer;
+  }
 
-    &:active {
-        background-color: $acm-black;
-        border: 2px solid $acm-black;
-    }
-    >.fa, .fab, .fas {
-        margin-right: 0.5em;
-    }
+  &:active {
+    background-color: $acm-black;
+    border: 2px solid $acm-black;
+  }
+  > .fa,
+  .fab,
+  .fas {
+    margin-right: 0.5em;
+  }
 }
 
 .button.button-sm {
-    padding: 4px 12px;
+  padding: 4px 12px;
 }
 
-.button-dark{
-    color: $acm-black;
+.button-dark {
+  color: $acm-black;
+  border: 2px solid $acm-black;
+  &:hover {
+    color: $teachla-green;
+    background: $acm-black;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: white;
     border: 2px solid $acm-black;
-    &:hover {
-        color: $teachla-green;
-        background: $acm-black;
-        cursor: pointer;
-    }
-
-    &:active {
-        background-color: white;
-        border: 2px solid $acm-black;
-    }
+  }
 }
 
-.button.button-ai{
-    color: $ai-blue;
-    border: 2px solid $ai-blue;
-    &:hover {
-        color: white;
-        background: $ai-blue;
-        cursor: pointer;
-    }
+@mixin button-classes($class-color) {
+  color: $class-color;
+  border: 2px solid $class-color;
+  
+  &:hover {
+    color: white;
+    background: $class-color;
+    cursor: pointer;
+  }
 
-    &:active {
-        color: $ai-blue;
-        background-color: white;
-        border: 2px solid $ai-blue;
-    }
+  &:active {
+    color: $class-color;
+    background-color: white;
+    border: 2px solid $class-color;
+  }
 }
 
-.button-block{
-    display: block;
-    margin-bottom: 0.5em;
+.button-block {
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-top: 0.5em;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
 
     a {
-        margin-top: .5em;
+      margin-top: 0;
+      margin-right: 0.5em;
     }
-
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
-
-        a {
-            margin-top: 0;
-            margin-right: .5em;
-        }
-    }
+  }
 }
 
 .bottom-button-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-top: 0.5em;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: center;
 
     a {
-        margin-top: .5em;
+      margin-top: 0;
+      margin-left: 0.5em;
     }
 
-    @media (min-width: $desktop-width) {
-        flex-direction: row;
-        justify-content: center;
-
-        a {
-            margin-top: 0;
-            margin-left: .5em;
-        }
-
-        a:nth-child(1) {
-            margin-left: 0;
-        }
+    a:nth-child(1) {
+      margin-left: 0;
     }
+  }
 }
