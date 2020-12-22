@@ -1,7 +1,7 @@
 - name: "Intro to Programming with Python"
   blurb: "Perfect for students with no previous coding experience, this class emphasizes an understanding of basic programming principles that students will use throughout their journey in computer science, while also teaching one of the most popular, powerful, and easy-to-learn languages."
   img: "undraw/dev-focus.svg"
-  tags: 
+  tags:
     - 8 one-hour classes
     - no experience required
   goals:
@@ -9,9 +9,9 @@
     - use different basic data types (integers, floats, strings, booleans)
     - manipulate data using operators (arithmetic and boolean)
     - declare and use variables to write clean and efficient code
-    - use conditional statements to control the flow of code 
+    - use conditional statements to control the flow of code
     - understand how to use loops to iterate over objects
-    - use and manipulate lists to store sets of data 
+    - use and manipulate lists to store sets of data
     - write and use functions to modularize their code
   outline: "https://docs.google.com/document/d/1QwrN7aPDcMhD0MakJxIo3K877_i77NR1xSgEzkv3b6U/"
   lead:
@@ -21,7 +21,7 @@
 - name: "Intro to Web Development"
   blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
   img: "undraw/dev-activity.svg"
-  tags: 
+  tags:
     - 10+ one-hour classes
     - no experience required
   goals:
@@ -41,7 +41,7 @@
 - name: "Intro to Artificial Intelligence and Machine Learning"
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
   img: "undraw/ai.svg"
-  tags: 
+  tags:
     - 20+ one-hour classes
     - precalculus and some coding experience recommended
   goals:
@@ -64,11 +64,14 @@
 - name: "App Development with React Native"
   blurb: "A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native."
   img: "undraw/girl-phone.svg"
-  tags: 
+  tags:
     - 25+ classes
     - no experience required
   goals:
     - "coming soon!"
+  path: rnative
+  github: "https://github.com/uclaacm/react-native-course-20-21/tree/master"
+  raw_github: "https://raw.githubusercontent.com/uclaacm/react-native-course-20-21/master"
   lead:
     name: "Chase"
     hash: ckapler
