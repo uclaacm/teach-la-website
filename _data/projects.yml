@@ -6,7 +6,7 @@
   repo: uclaacm/TeachLAFrontend
   lead:
     - name: Leo
-      hash: krash
+      hash: krashanoff
   description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
   tech:
     - react
@@ -23,7 +23,7 @@
   repo: uclaacm/teach-la-go-backend
   lead:
     - name: Leo
-      hash: krash
+      hash: krashanoff
   description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
   tech:
     - go
@@ -55,7 +55,7 @@
   description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
   lead:
     - name: Matt
-      hash: mwang
+      hash: mattwang
   tech:
     - html
     - sass
@@ -104,26 +104,26 @@
   description: "This mini-app acts as an interactive supplement to our AI/ML course and curriculum on linear regression and gradient descent - visualising what can be a very complex mathematical concept."
   lead:
     - name: Matt
-      hash: mwang
+      hash: mattwang
   tech:
     - function-plot/d3
     - js
     - bulma
 
-- name: Network Tarines
-  lang:
-    full: javascript
-    abbrev: js
-  link: https://trusting-goodall-de8259.netlify.com/
-  repo: uclaacm/network-tarines
-  description: "A cute mini-lesson that looks to demo networking infrastructure for elementary school kids - telling them just how online games and websites are delivered straight to your computer! Features a React Frontend and an Express backend!"
-  lead:
-    - name: Nhi
-      hash: nvan
-  tech:
-    - react
-    - express
-    - sockets
+# - name: Network Tarines
+#   lang:
+#     full: javascript
+#     abbrev: js
+#   link: https://trusting-goodall-de8259.netlify.com/
+#   repo: uclaacm/network-tarines
+#   description: "A cute mini-lesson that looks to demo networking infrastructure for elementary school kids - telling them just how online games and websites are delivered straight to your computer! Features a React Frontend and an Express backend!"
+#   lead:
+#     - name: Nhi
+#       hash: nvan
+#   tech:
+#     - react
+#     - express
+#     - sockets
 
 # - name: How Does The Net Work?
 #   lang:

@@ -23,7 +23,6 @@
 	}
 
 	.nav-section.right {
-		text-align: right;
 		margin-right: 20px;
 		float: right;
 	}
@@ -88,7 +87,7 @@
 	.hamburger-icon {
 		height: 50px;
 		width: 50px;
-		margin: 10px 20px;
+		margin: 10px 0;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;

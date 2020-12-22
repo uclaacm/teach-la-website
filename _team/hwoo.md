@@ -1,6 +1,8 @@
 ---
 firstname: "Helia"
 lastname: "Woo"
-title: "Instructor"
-group: "member"
+title: "JEDI (Advisor)"
+secondary: "Python Video Lead"
+group: "board"
+pronouns: "she/her"
 ---

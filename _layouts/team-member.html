@@ -13,8 +13,19 @@ layout: default
         </div>
 
         <div class="col">
-            <h1 class="title">{{ page.firstname }} {{ page.lastname }}</h1>
-            <p class="no-margin text-15x">{{ page.title }}</p>
+            <h1 class="title">{{ page.firstname }} {{ page.lastname }}
+                <!-- only outputs pronouns if a person has pronouns listed-->
+                {% if page.pronouns %}
+                    <span class = "pronouns"> ({{page.pronouns}})</span>
+                {% endif %}
+            </h1>
+            <p class="no-margin text-15x">{{ page.title }} {% if page.secondary %}& {{page.secondary}}{% endif %}</p>
+
+            {% if page.content %}
+            <div class="team-content">
+                {{ page.content }}
+            </div>
+            {% endif %}
 
             {% if page.links or page.email or page.github %}
             <div class="team-links">
@@ -38,12 +49,6 @@ layout: default
         </div>
     </div>
 </div>
-
-{% if page.content %}
-<div class="team-content">
-    {{ page.content }}
-</div>
-{% endif %}
 
 <div class="cta-container">
     <hr class="divider">

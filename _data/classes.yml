@@ -36,7 +36,7 @@
     - "deploy their projects using GitHub Pages"
   lead:
     name: "Matt"
-    hash: mwang
+    hash: mattwang
 
 - name: "Intro to Artificial Intelligence and Machine Learning"
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
@@ -73,5 +73,5 @@
   github: "https://github.com/uclaacm/react-native-course-20-21/tree/master"
   raw_github: "https://raw.githubusercontent.com/uclaacm/react-native-course-20-21/master"
   lead:
-    name: "Matt"
-    hash: mwang
+    name: "Chase"
+    hash: ckapler
