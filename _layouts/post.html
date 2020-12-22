@@ -3,14 +3,15 @@ layout: default
 image:
   path: /img/posts/{{page.img}}"
 ---
-<meta property="twitter:image" content= "/img/posts/{{page.img}}" >
-<meta property="og:image" content= "{{site.url}}/img/posts/{{page.img}}" >
+
 <!-- required for Facebook "Share" button -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VotTmBal"></script>
 
 
 <article class="post-container">
+  <meta property="twitter:image" content= "/img/posts/{{page.img}}" ></meta>
+  <meta property="og:image" content= "{{site.url}}/img/posts/{{page.img}}" ></meta>
     <h1 class="title page-title">{{page.title}}</h1>
 
 
