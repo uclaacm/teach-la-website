@@ -17,6 +17,8 @@ fw: true
             <ul class="list-unstyled text-15x">
                 {% if page.course_id %}
                     <li>
+                        {% comment %} TODO - change this to a map lookup {% endcomment %}
+
                         <a class="rnative-link" href="{{site.data.classes[3].github}}/{{page.course_id}}" target="_blank" rel="noopener noreferrer">
                             <span class="fab fa-fw fa-github"></span> Link to GitHub Repository
                         </a>
@@ -46,18 +48,10 @@ fw: true
     </div>
     <div class="generated-content" id="rnative-markdown">
     </div>
-    <div>
-        {% if page.md_notes %}
-                    <li>
-                        <a class="rnative-link" href="{{page.homework_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-pencil-alt"></span> Notes
-                        </a>
-                    </li>
-                {% endif %}
-    </div>
 </div>
 
 <script>
+    // TODO - change this to a map lookup
     fetch("{{site.data.classes[3].raw_github}}/{{page.course_id}}/README.md")
     .then(response => response.text())
     .then(data => {
@@ -65,6 +59,8 @@ fw: true
         if (imgPaths) {
             imgPaths.forEach((oldPath) => {                                             // replace each local path with github url
                 let newPath = oldPath.match(/(images)\/(.*)/gm);
+
+                // TODO - change this to a map lookup
                 let newImg = "{{site.data.classes[3].raw_github}}/{{page.course_id}}/" + newPath;
                 data = data.replace(oldPath, newImg);
             });
@@ -81,3 +77,4 @@ fw: true
         document.getElementById('rnative-markdown').innerHTML = DOMPurify.sanitize(convertedHTML); 
     });
 </script>
+
