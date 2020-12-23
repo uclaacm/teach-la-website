@@ -10,7 +10,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-image: /passworks/default.png
+image: img/posts/passworks/default.png
 alt: Showing text on both a phone and computer
 ---
 

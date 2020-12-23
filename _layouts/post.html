@@ -9,7 +9,7 @@ layout: default
 
 <article class="post-container">
     <h1 class="title page-title">{{page.title}}</h1>
-    <img class="post-main-img" src=/img/posts/{{page.image}} alt="{{page.alt}}"/>
+    <img class="post-main-img" src="{{site.baseurl}}/{{page.image}}" alt="{{page.alt}}"/>
 
     <div>
         <p>
@@ -44,9 +44,7 @@ layout: default
         {{content}}
     </div>
 
-
 <hr class="divider" />
-
 <div class = "social">
 Enjoyed the read? Share on social media! <br/>
 <div class = "social-buttons">
@@ -108,7 +106,7 @@ Enjoyed the read? Share on social media! <br/>
 
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
-            <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.image}} alt = "{{post.alt}}"/></a>
+            <a href="{{post.url}}"><img class="post-recommend-img" src="{{site.baseurl}}/{{post.image}}" alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}
