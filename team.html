@@ -90,7 +90,6 @@ permalink: "/team"
     <div class="grid-row" id="{{ member.slug }}">
         <div class="grid-col">
             <div class="profile-img-container">
-                <a href='{{ site.baseurl }}/team/{{ member.slug }}'>
                 {% if member.img %}
                     <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
                     {% else %}
