@@ -40,11 +40,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {% if member.lastname == "Lee" %}
-                    <a class = "tla-link" href ='{{ site.baseurl }}/team/{{ member.slug }}'> {{ member.firstname }} {{ member.lastname }} </a>
-                    {% else %}
                     {{ member.firstname }} {{ member.lastname }}
-                    {% endif %}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -61,21 +57,17 @@ permalink: "/team"
                         <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
                     </li>
                     {% endif %}
-                    {% if member.github %}
+                    {% assign content = member.content | strip %}
+                    {% if member.github and member.links == nil and content == "" %}
                         <li>
                             <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
                         </li>
                     {% endif %}
-                    {% if member.lastname == "Wang" %}
-                    <li>
-                        <a class = "button team-member-button" href='{{ site.baseurl }}/team/{{ member.slug }}'>More Info</a>
-                    </li>
+                    {% if member.links or content != "" %}
+                         <li>
+                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
+                         </li>
                      {% endif %}
-                     {% if member.lastname == "Ghodsian" %}
-                     <li>
-                         <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
-                     </li>
-                 {% endif %}
                 </ul>
             </div>
         </div>
@@ -111,11 +103,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {% if member.lastname == "Carlson" %}
-                    <a class = "tla-link" href ='{{ site.baseurl }}/team/{{ member.slug }}'> {{ member.firstname }} {{ member.lastname }} </a>
-                    {% else %}
                     {{ member.firstname }} {{ member.lastname }}
-                    {% endif %}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -134,21 +122,17 @@ permalink: "/team"
                     </li>
                     {% endif %}
                     {% endcomment %}
-                    {% if member.github %}
+                    {% assign content = member.content | strip %}
+                    {% if member.github and member.links == nil and content == "" %}
                         <li>
                             <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
                         </li>
                     {% endif %}
-                    {% if member.lastname == "Balan" %}
-                    <li>
-                        <a class = "button team-member-button" href='{{ site.baseurl }}/team/{{ member.slug }}'>More Info</a>
-                    </li>
-                {% endif %}
-                {% if member.lastname == "Chen" %}
-                <li>
-                    <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
-                </li>
-                {% endif %}
+                    {% if member.links or content != "" %}
+                         <li>
+                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
+                         </li>
+                     {% endif %}
                 </ul>
             </div>
         </div>
