@@ -8,13 +8,13 @@ layout: default
 
 
 <article class="post-container">
-  <meta property="twitter:image" content= "{{site.url}}/img/posts/{{page.img}}">
+  <meta property="twitter:image" content= "{{site.url}}/img/posts/{{page.image}}">
 
     <h1 class="title page-title">{{page.title}}</h1>
 
 
 
-    <img class="post-main-img" src=/img/posts/{{page.img}} alt="{{page.alt}}"/>
+    <img class="post-main-img" src=/img/posts/{{page.image}} alt="{{page.alt}}"/>
 
     <div>
         <p>
@@ -113,7 +113,7 @@ Enjoyed the read? Share on social media! <br/>
 
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
-            <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.img}} alt = "{{post.alt}}"/></a>
+            <a href="{{post.url}}"><img class="post-recommend-img" src=/img/posts/{{post.image}} alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}

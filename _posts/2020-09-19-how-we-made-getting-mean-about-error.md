@@ -11,7 +11,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /mean_about_error/default.png
+image: /mean_about_error/default.png
 alt: part of Getting Mean About Error - a chart showing Moores's law alongside a generated model
 ---
 

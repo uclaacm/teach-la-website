@@ -16,7 +16,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /cipher_salad/default.png
+image: /cipher_salad/default.png
 alt: Cipher Salad's interactive Caesar cipher!
 ---
 

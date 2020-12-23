@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: post
 title: The Making of "Passworks"
 date: 2020-09-23 04:00:00 UTC
 author: Jamie
@@ -10,7 +10,7 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /passworks/default.png
+image: /passworks/default.png
 alt: Showing text on both a phone and computer
 ---
 
