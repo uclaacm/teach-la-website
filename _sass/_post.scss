@@ -132,3 +132,15 @@
     padding: 2%;
     max-width: 96%;
 }
+
+.social{
+  font-family: $font-display;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-buttons{
+  display: flex;
+  flex-direction: row;
+}

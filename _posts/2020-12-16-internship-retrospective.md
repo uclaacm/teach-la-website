@@ -12,7 +12,7 @@ category: internship
 tags:
     - internal
     - reflection
-img: /internship/intern-social-20.png
+image: img/posts/internship/intern-social-20.png
 alt: Some of our lovely interns and board members!
 ---
 
