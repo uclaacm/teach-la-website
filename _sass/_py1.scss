@@ -40,10 +40,11 @@
 }
 
 @mixin py1-home-button($background-color, $font-size: 0.8rem) {
+    border: solid 1px $background-color;
     border-radius: 10px;
     margin: 0;
-    margin-top: #{$font-size * 0.3};
-    padding: #{$font-size * 0.1} #{$font-size * 0.6};
+    margin-top: #{$font-size * 0.6};
+    padding: #{$font-size * 0.1} #{$font-size * 0.9};
     background: $background-color;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -62,11 +63,11 @@
     text-align: center;
     @media (min-width: calc(#{$desktop-width} + 150px)) {
 	margin-top: 0;
-    margin-right: #{$font-size * 0.3};
+    margin-right: #{$font-size * 0.6};
     }
     @media (max-width: calc(#{$desktop-width} - 1px)) {
 	margin-top: 0;
-    margin-right: #{$font-size * 0.3};
+    margin-right: #{$font-size * 0.6};
     }
 }
 
@@ -198,6 +199,14 @@
 
 .py1-lesson-action {
     @include py1-home-button($py-blue, 0.8em);
+    transition: all 500ms ease;
+}
+
+
+.py1-lesson-action:hover {
+    border: 1px solid $py-blue;
+    background: white;
+    color: $py-blue;
 }
 
 .py1-lesson-duration {
