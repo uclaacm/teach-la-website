@@ -63,12 +63,10 @@
     @media (min-width: calc(#{$desktop-width} + 150px)) {
 	margin-top: 0;
     margin-right: #{$font-size * 0.3};
-/*	padding: 1% 6%;*/
     }
     @media (max-width: calc(#{$desktop-width} - 1px)) {
 	margin-top: 0;
     margin-right: #{$font-size * 0.3};
-/*	padding: 1% 6%;*/
     }
 }
 
