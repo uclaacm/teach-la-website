@@ -2,8 +2,14 @@
 layout: default
 ---
 
+<!-- required for Facebook "Share" button -->
+<div id="fb-root"></div>
+<script async crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VotTmBal"></script>
+
+
 <article class="post-container">
     <h1 class="title page-title">{{page.title}}</h1>
+    <img class="post-main-img" src="{{site.baseurl}}/{{page.image}}" alt="{{page.alt}}"/>
 
     <div>
         <p>
@@ -20,7 +26,6 @@ layout: default
                 {% endfor %}
             {% endif %} •
             {% endcomment %}
-
             {% capture words %}
                 {{ page.content | number_of_words | minus: 250 }}
             {% endcapture %}
@@ -39,10 +44,17 @@ layout: default
         {{content}}
     </div>
 
-    <hr class="divider" />
-    <div class="post-author-grid">
-    <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
+<hr class="divider" />
+<div class = "social">
+Enjoyed the read? Share on social media! <br/>
+<div class = "social-buttons">
+<a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="" class="fb-xfbml-parse-ignore">Share</a>
+<a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></div>
 
+<hr class="divider" />
+<h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
+    <div class="post-author-grid">
         {% for authorobj in page.authors %}
             {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
             {% capture author_name %}
@@ -52,10 +64,10 @@ layout: default
                 {{author.url}}
             {% endcapture %}
             {% capture author_role %}
-               {{author.title}}
-            {% if author.secondary %}
-                &amp; {{author.secondary}}
-            {% endif %}
+                {{author.title}}
+                {% if author.secondary %}
+                    &amp; {{author.secondary}}
+                {% endif %}
             {% endcapture %}
             {% capture author_img %}
                 {% if author.img %}
@@ -66,17 +78,17 @@ layout: default
             {% endcapture %}
             {% if author.pronouns %}
                 {% capture author_pronouns %}
-                    {{author.pronouns}}
+                        {{author.pronouns}}
                 {% endcapture %}
             {% else %}
-            {% capture author_pronouns %}{% endcapture %}
-          {% endif %}
-          {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
-     {% endfor %}
+                {% capture author_pronouns %}{% endcapture %}
+            {% endif %}
+            {% include blog-author-card.html name=author_name role=author_role img=author_img url=author_url pronouns=author_pronouns %}
+        {% endfor %}
 
     </div>
-    <hr class="divider" />
 </article>
+<hr class="divider" />
 
 <div class="text-center title post-want-more">
     want more? here are some related posts:
@@ -94,6 +106,7 @@ layout: default
 
         <div class="post-recommend-card">
             <div><a class="tla-link" href="{{post.url}}">{{post.title}}</a></div>
+            <a href="{{post.url}}"><img class="post-recommend-img" src="{{site.baseurl}}/{{post.image}}" alt = "{{post.alt}}"/></a>
             <div class="post-recommend-info">{{post.author}} on {{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
     {% endfor %}

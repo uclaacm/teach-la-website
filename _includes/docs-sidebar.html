@@ -1,0 +1,19 @@
+<div class = "sidebar">
+  <div class="sidebar-content">
+    {% for i in site.docs %}
+      {% if i.sidebar-title %}
+        {% assign slug = i.sidebar-title | slugify %}
+          <label for="{{slug}}-button"> {{i.sidebar-title}}</label>
+          <input type="checkbox" id="{{slug}}-button" {% if page.sidebar-title == i.sidebar-title %}checked{% endif %}/>
+          <div id="{{slug}}">
+            <ol class="sidebar-items">
+              {% for header in i.headers %}
+                <li><a href="{{header.url}}">{{header.title}}</a></li>
+              {% endfor %}
+            </ol>
+           </div>
+      {% endif %}
+   {% endfor %}
+  </div>
+</div>
+  

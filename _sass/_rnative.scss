@@ -1,0 +1,32 @@
+.button.button-rnative {
+  @include button-classes($rnative-blue);
+}
+
+.rnative-link {
+  @include class-link($rnative-blue);
+}
+
+.divider-rnative {
+  @include divider-class($rnative-blue);
+}
+
+.rnative-lesson-card {
+  @include lesson-card($rnative-blue);
+}
+
+.rnative-content-card {
+  @include class-content-card($rnative-blue);
+}
+
+#rnative-markdown {
+  padding: 3em;
+
+  a {
+    @include class-link($rnative-blue);
+  }
+
+  pre {
+    overflow: auto;
+    border-color: $rnative-blue;
+  }
+}
