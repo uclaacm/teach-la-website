@@ -6,131 +6,70 @@ permalink: /classes/py1
 
 <!-- todo: custom layout? -->
 <div class="py1-wrapper">
-	<div class="py1-sidebar">
-		<p>how to get started in<br />
-			<h1 class="py1-fancy-title">python</h1>
-		</p>
-		<div class="py1-illustration">
-			<!-- <img alt="a filler murray" src="https://www.fillmurray.com/900/600"/> -->
-		</div>
-		<p>
-			confused about how to get started with
-			python? here's a <strong>step-by-step learning plan</strong>
-			that walks you through how to learn to make
-			awesome programs, with no prior experience!
-		</p>
-		<div class="py1-learned-skills-wrapper">
-			<p>
-				learned skills:
-			</p>
-			<!-- this part could be automated with markdown + loop -->
-			<ul class="py1-list py1-learned-skills-list">
-				<li><span>data types and operators</span></li>
-				<li><span>booleans and conditional statements</span></li>
-				<li><span>while loops and for loops</span></li>
-				<li><span>lists</span></li>
-				<li><span>creating functions</span></li>
-			</ul>
-		</div>
-	</div>
-	<!-- needs to materialize as a vertical line on desktop -->
-	<!-- and a horizontal line on mobile? -->
-	<!-- or implement using margin -->
-	<!-- <hr class="py1-divider"/> -->
-	<div class="py1-divider">
-	</div>
-	<div class="py1-curriculum">
-		<!-- types of boxes: -->
-		<!-- section (lessons and assignment), -->
-		<!-- lesson (card with outline, buttons and time estimate), -->
-		<!-- assignment (with button and time estimate), -->
-		<!-- project (layout slightly differs from assignment), -->
-		<!-- illustrations -->
+    <div class="py1-sidebar">
+        <h1>how to get started in<br />
+        <span class="py1-link">python</span>
+        </h1>
+        <p>
+        confused about how to get started with
+        python? here's a <strong>step-by-step learning plan</strong>
+        that walks you through how to learn to make
+        awesome programs, with no prior experience!
+        </p>
+        <div class="py1-learned-skills-wrapper">
+            <p>
+            learned skills:
+            </p>
+            <!-- this part could be automated with markdown + loop -->
+            <ul class="py1-list py1-learned-skills-list">
+                <li><span>data types and operators</span></li>
+                <li><span>booleans and conditional statements</span></li>
+                <span><em>(coming soon!)</em></span>
+                <li><span><em>while loops and for loops</em></span></li>
+                <li><span><em>lists</em></span></li>
+                <li><span><em>creating functions</em></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="py1-divider">
+    </div>
+    <div class="py1-curriculum">
+        <!-- to-dos in the future, if supported: -->
+        <!-- section (lessons and assignment), -->
+        <!-- assignment (with button and time estimate), -->
+        <!-- project (layout slightly differs from assignment), -->
+        <!-- illustrations -->
 
-		<!-- generation of boxes could be automated with markdown + loop -->
-		<section class="py1-section" id="fundamentals">
-			<div class="py1-section-header">
-				<h1>fundamentals</h1>
-				<p>goals: understand what Python is and the building blocks to
-					creating your first working program!</p>
-			</div>
-			<div class="py1-lessons-wrapper">
-				<div class="py1-lesson">
-					<div class="py1-lesson-title-bar">
-						<h2>getting started</h2>
-						<p class="py1-step-number">#1</p>
-					</div>
-					<div class="py1-lesson-body">
-						<ul class="py1-list py1-lesson-goal-list">
-							<li class="py1-lesson-goal"><span>what is Python?</span></li>
-							<li class="py1-lesson-goal"><span>why is it important?</span></li>
-							<li class="py1-lesson-goal"><span>how is it used?</span></li>
-						</ul>
-					</div>
-					<div class="py1-lesson-action-bar">
-						<ul class="py1-list py1-lesson-action-list">
-							<li class="py1-lesson-action"><a href="#">slides</a></li>
-							<li class="py1-lesson-action"><a href="#">video</a></li>
-							<li class="py1-lesson-action"><a href="#">worksheet</a></li>
-						</ul>
-						<p class="py1-lesson-duration">10 min</p>
-					</div>
-				</div>
-				<!-- more lessons -->
-				<!-- <div class="illustration"> -->
-				<!--   <img src="https://www.fillmurray.com/900/600"/> -->
-				<!-- </div> -->
-				<div class="py1-lesson">
-					<div class="py1-lesson-title-bar">
-						<h2>data types & operators</h2>
-						<p class="py1-step-number">#2</p>
-					</div>
-					<div class="py1-lesson-body">
-						<ul class="py1-list py1-lesson-goal-list">
-							<li class="py1-lesson-goal"><span>what is Python? make it long enough for two lines ok
-									good</span></li>
-							<li class="py1-lesson-goal"><span>why is it important? also make it long enough for two
-									lines ok good</span></li>
-							<li class="py1-lesson-goal"><span>how is it used?</span></li>
-						</ul>
-					</div>
-					<div class="py1-lesson-action-bar">
-						<ul class="py1-list py1-lesson-action-list">
-							<li class="py1-lesson-action"><a href="#">slides</a></li>
-							<li class="py1-lesson-action"><a href="#">video</a></li>
-							<li class="py1-lesson-action"><a href="#">worksheet</a></li>
-						</ul>
-						<p class="py1-lesson-duration">10 min</p>
-					</div>
-				</div>
-				<!-- <div class="illustration"> -->
-				<!--   <img src="https://www.fillmurray.com/900/600"/> -->
-				<!-- </div> -->
-			</div>
-			<div class="py1-assignments-wrapper">
-				<!-- <div class="illustration"> -->
-				<!--   <img src="https://www.fillmurray.com/g/900/600"/> -->
-				<!-- </div> -->
-				<div class="py1-assignment">
-					<div class="py1-assignment-title-bar">
-						<!-- should the title be h1 or h2 semantically even though -->
-						<!-- they appear the same? -->
-						<h2>assignment #1</h2>
-						<p class="py1-step-number">#4</p>
-					</div>
-					<div class="py1-assignment-body">
-						<p>Now, it's time to combine everything you've learned and put
-							your knowledge to the test!</p>
-					</div>
-					<div class="py1-assignment-action-bar">
-						<ul class="py1-list py1-assignment-action-list">
-							<li class="py1-assignment-action"><a href="#">let's go!</a></li>
-						</ul>
-						<p class="py1-assignment-duration">30 min</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-	</div>
+        <div class='py1-lessons-wrapper'>
+            {% for lesson in site.py1 %}
+            <div class='py1-lesson'>
+                <div class='py1-lesson-title-bar'>
+                    <h2><a class='py1-link' href="{{ lesson.url }}">{{ lesson.title }}</a></h2>
+                    <p class='py1-step-number'>#{{ lesson.num }}</p>
+                </div>
+                <div class='py1-lesson-body'>
+                    <ul class='py1-list py1-lesson-goal-list'>
+                        {% for brief in lesson.agenda %}
+                        <li class='py1-lesson-goal'><span>{{ brief.text }}</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class='py1-lesson-action-bar'>
+                    <div class='py1-action-group'>
+                        {% if lesson.slides_link %}
+                        <a class='py1-lesson-action' href="{{ lesson.slides_link }}">slides</a>
+                        {% endif %}
+                        {% if lesson.video_link %}
+                        <a class='py1-lesson-action' href="{{ lesson.video_link }}">video</a>
+                        {% endif %}
+                        {% if lesson.worksheet_link %}
+                        <a class='py1-lesson-action' href="{{ lesson.worksheet_link }}">worksheet</a>
+                        {% endif %}
+                    </div>
+                    <p class="py1-lesson-duration">{{ lesson.length }} min</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
