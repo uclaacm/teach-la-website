@@ -13,6 +13,7 @@
     - understand how to use loops to iterate over objects
     - use and manipulate lists to store sets of data
     - write and use functions to modularize their code
+  path: py1
   outline: "https://docs.google.com/document/d/1QwrN7aPDcMhD0MakJxIo3K877_i77NR1xSgEzkv3b6U/"
   lead:
     name: "Nikhil"
