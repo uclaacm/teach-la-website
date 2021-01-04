@@ -71,3 +71,8 @@
     }   
 }
 
+.team-row {
+    @media (max-width: $desktop-width) {
+        flex-flow: column nowrap;
+    }
+}
