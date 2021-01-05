@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: New Year, New Blog
-date: 2021-1-4 04:00:00 UTC
+date: 2021-01-04 04:00:00 UTC
 author: Trevor, Shounak, and Getty V
 authors:
     - fname: Trevor
