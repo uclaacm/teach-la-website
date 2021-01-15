@@ -42,10 +42,25 @@ layout: default
                             {{ link.name }}
                         </a>
                     </li>
-                    {% endfor %}
+                    {% endfor %}    
                 </ul>
             </div>
             {% endif %}
+
+            <!-- blog posts -->
+            <h3 class="title"> Blog posts that {{ page.firstname }} has written: </h3>
+            <div class="team-links">
+                <ul>
+                    {% for post in site.posts %}
+                        {% for author in post.authors %}
+                            {% if author.fname == page.firstname and author.lname == page.lastname %}
+                                <li><a class="tla-link" href="{{post.url}}"> {{ post.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- blog posts -->
         </div>
     </div>
 </div>
