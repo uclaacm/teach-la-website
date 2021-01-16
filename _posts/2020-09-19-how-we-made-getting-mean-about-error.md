@@ -11,11 +11,9 @@ category: dev
 tags:
     - learning labs
     - dev team
-img: /mean_about_error/default.png
-alt: A chart showing Moors law alongside a generated model
+image: img/posts/mean_about_error/default.png
+alt: part of Getting Mean About Error - a chart showing Moores's law alongside a generated model
 ---
-
-*Note: this post was originally finished in June, but went through a few iterations as we implemented the blogs feature. Many thanks to Miles & Michelle for their patience!*
 
 The [“Getting Mean About Error” module](https://uclaacm.github.io/getting-mean-about-error/) was a two-quarter-long project that we dove into with a negligible background in web development. Along the way, we picked up a few skills and upgraded our web-dev background from beginner to slightly-less-beginner.
 
@@ -30,3 +28,5 @@ Most of the obstacles we faced came from the limitations of the libraries we wer
 ![An image of a very complicated chart, that we definitely didn't need!]({{site.baseurl}}/img/posts/mean_about_error/function-plot-absurd.png)
 
 Thanks for reading our short post! If you have any questions or feedback on our project, we'd love to talk to you. Stay safe!
+
+*Note: this post was originally finished in June, but went through a few iterations as we implemented the blogs feature. Many thanks to Miles & Michelle for their patience!*

@@ -1,0 +1,64 @@
+---
+layout: default
+fw: true
+---
+<div class="py1-wrapper">
+    <div class="py1-sidebar">
+        <div>
+            <h1 class="py1-fancy-title mb-50">
+                {{ page.num }}. {{ page.title }}
+            </h1>
+            <p>
+                {{ content }}
+            </p>
+
+            {% include py1-lesson-card-content.html %}
+
+        </div>
+
+        {% if page.next_lesson %}
+        <div class="py1-outline-button mb-10">
+            <a href="{{site.baseurl}}/classes/py1/{{page.next_link}}">next lesson: {{ page.next_lesson }}</a>
+        </div>
+        {% endif %}
+        <div class="py1-outline-button mb-32">
+            <a href="{{site.baseurl}}/classes/py1">back to curriculum home</a>
+        </div>
+
+    </div>
+
+    <div class="py1-divider"></div>
+
+    <div class="py1-lesson-content">
+        <iframe width="960" height="450" src={{ page.video_link }} frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        {% if page.practice %}
+        <span class="py1-subtitle">more practice</span>
+
+        {% for item in page.practice %}
+        <div class="py1-lesson-practice">
+            <b>question #{{ item.problem.num }}</b> <br>
+            {{ item.problem.question | newline_to_br | markdownify }} <br>
+            <button onclick="revealSolution({{ item.problem.num }})">solution</button> <!-- annoying error >:( -->
+            <div class="py1-lesson-solution" id="py1-lesson-solution-{{item.problem.num}}">{{ item.problem.solution | newline_to_br | markdownify }}</div>
+        </div>
+        {% endfor %}
+
+        {% endif %}
+
+        <script>
+            function revealSolution(probNum) {
+                let solutionSection = document.getElementById("py1-lesson-solution-" + probNum);
+
+                if (solutionSection.style.display === "none" || solutionSection.style.display === "") {
+                    solutionSection.style.display = "block";
+                }
+                else {
+                    solutionSection.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+</div>

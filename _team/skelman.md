@@ -4,7 +4,7 @@ lastname: "Kelman"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "he/him"
-img: "skelman.png"
+img: "skelman.jpg"
 graduating_year: 2024
 github: "stephenkaliman"
 links:

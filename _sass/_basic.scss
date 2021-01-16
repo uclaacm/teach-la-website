@@ -209,6 +209,18 @@ ul > li {
     margin: 0;
 }
 
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 // refactor this into a common table component
 .schedule-table {
     border-collapse: collapse;
@@ -262,7 +274,7 @@ ul > li {
     background-repeat: no-repeat;
 
     @media (min-width: $desktop-width) {
-        transition: background 500ms ease;
+        transition: all 500ms ease;
 
         &:hover{
             background-size: 100% 85%;
@@ -288,3 +300,4 @@ ul > li {
 .pronouns {
     font-size: $pronouns-font-size;
 }
+

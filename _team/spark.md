@@ -2,7 +2,7 @@
 firstname: "Seongbin"
 lastname: "Park"
 group: "member"
-title: "Developer"
+title: "Video Producer"
 secondary: "Instructor"
 graduating_year: "2024"
 img: "spark.jpg"

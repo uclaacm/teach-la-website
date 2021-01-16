@@ -1,8 +1,10 @@
-.post-preview{
-    display: grid;
-    align-items: center;
-    grid-template-rows: 1fr;
-    grid-template-columns: 5fr 8fr;
+@media (min-width: $desktop-width) {
+    .post-preview{
+        display: grid;
+        align-items: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: 5fr 8fr;
+    }
 }
 
 .post-card{
@@ -20,16 +22,21 @@
     align-self: center;
 }
 
-.post-quote {
-    border-left: 10px solid $teachla-green;
+.post-info {
     margin: 1.5em 0;
-    margin-left: 1em;
-    margin-right: 0.5em;
     padding: 0.5em 10px;
     padding-left: 1em;
 
-    .tla-link, a {
-        @include tla-link($teachla-green, #f9f9f9);
+    @media (min-width: $desktop-width) {
+        // this is the green bar on the left of the info;
+        // we hide it on mobile
+        border-left: 10px solid $teachla-green;
+        margin-left: 1em;
+        margin-right: 0.5em;
+    }
+
+    a {
+        @include tla-link();
     }
 
 }
@@ -52,14 +59,16 @@
     height: 100%;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin-top: 2em;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 2em;
+    > div {
+        margin-bottom: 1em;
+    }
 
     @media (max-width: $desktop-width) {
         grid-template-columns: 100%;
         > div {
-            margin-top: 2em;
+            margin-bottom: 2em;
         }
     }
 }
@@ -72,7 +81,7 @@
 }
 
 .post-author-info{
-    padding-left: 2em;
+    padding-left: 1.5em;
 }
 
 .post-want-more {
@@ -85,12 +94,11 @@
 }
 
 .post-recommend-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     margin-top: 1.5em;
-    padding-top: auto;
-    padding-bottom: auto;
 }
 
 .post-recommend-card{
@@ -123,4 +131,16 @@
 .post-img {
     padding: 2%;
     max-width: 96%;
+}
+
+.social{
+  font-family: $font-display;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-buttons{
+  display: flex;
+  flex-direction: row;
 }

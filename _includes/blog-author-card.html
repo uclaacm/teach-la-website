@@ -14,7 +14,7 @@
                 </a>
                 <span class = "pronouns">
                     {% if include.pronouns and include.pronouns != ""%}
-                        ({{include.pronouns}})
+                        ({{include.pronouns | strip}})
                     {% endif %}
                 </span>
             </h3>
