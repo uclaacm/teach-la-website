@@ -2,7 +2,7 @@
   height: 100%;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 33% 67%;
+  grid-template-columns: 1fr 2fr;
   column-gap: 2rem;
   margin-top: 3em;
   margin-bottom: 2em;
@@ -10,8 +10,17 @@
     grid-template-columns: 100%;
   }
 }
+@media (min-width: $desktop-width) {
+  .event-section-reverse{
+    grid-template-columns: 2fr 1fr;
 
-.event-section-reverse {
-  direction: rtl;
-  > * { direction: ltr}
+  }
+
+  .event-section-reverse div:nth-child(2){
+    grid-row: 1;
+  }
+}
+
+.img-decorated {
+  border: 5px solid $teachla-green;
 }

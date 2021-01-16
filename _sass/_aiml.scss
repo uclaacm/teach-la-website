@@ -6,6 +6,10 @@
     border-top: 1px solid $ai-blue;
 }
 
+.border-ai {
+    border-color: $ai-blue !important; // needed to override the border shorthand
+}
+
 .ai-lessons-grid {
     height: 100%;
     max-width: 100%;

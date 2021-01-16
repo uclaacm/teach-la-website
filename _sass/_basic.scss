@@ -1,4 +1,7 @@
  // possibly move these to a minireset file
+ *{
+    box-sizing: border-box;
+ }
  html{
     box-sizing: border-box;
     padding: 0;
