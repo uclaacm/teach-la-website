@@ -25,11 +25,12 @@
 </div>
 <div id="mobile-sidebar">
     <div id="sidebar-btn-container">
-        <span class="hamburger-icon">
+        <div id="alternate-mobile-icon">Lessons</div>
+        <!-- <span class="hamburger-icon">
             <span class="bar" id="top-bar"></span>
             <span class="bar" id="middle-bar"></span>
             <span class="bar" id="bottom-bar"></span>
-        </span>
+        </span> -->
     </div>
 
     <div id="hamburger-content">
@@ -75,14 +76,24 @@
     window.addEventListener('resize', resizeFunctions);
     toggleSidebarDesktopToMobile();
 
-    document.getElementById("mobile-sidebar").addEventListener("click", displayHamburgerMenu);
+    document.getElementById("alternate-mobile-icon").addEventListener("click", displayHamburgerMenu);
     function displayHamburgerMenu() {
         let hamburger_content = document.getElementById("hamburger-content");
+        let wordsDisplayed = document.getElementById("alternate-mobile-icon");
         if (hamburger_content.style.display == "flex") {
             hamburger_content.style.display = "none";
+            wordsDisplayed.innerText = "Lessons";
         } else {
             hamburger_content.style.display = "flex";
+            wordsDisplayed.innerText = "Close";
         }
+
+        // let wordsDisplayed = document.getElementById("alternate-mobile-icon");
+        // if (wordsDisplayed.innerText == "Lessons"){
+        //     wordsDisplayed.innerText = "Close";
+        // } else {
+        //     wordsDisplayed.innerText = "Lessons";
+        // }
 
         let mobileSidebarButton = document.getElementById("sidebar-btn-container");
         let window_width = window.innerWidth;
