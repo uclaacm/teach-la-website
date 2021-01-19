@@ -47,6 +47,7 @@ Here's an example team page for Josie Bruin:
 ---
 firstname: Josie
 lastname: Bruin
+pronouns: "they/them"
 group: alum+
 graduating_year: 1923
 img: josiebruin.png
