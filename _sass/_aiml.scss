@@ -34,11 +34,16 @@
 }
 
 .ai-content-container{
-    display: grid;
-    grid-template-columns: 30% 70%;
+    //replace grid with flex box
+    // display: grid;
+    // grid-template-columns: 30% 70%;
+    display: inline-flex;
     min-height: 100vh;
+
     @media (max-width: $desktop-width) {
-        grid-template-columns: 100%;
+        // grid-template-columns: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
         min-height: 70vh;
     }
 }
@@ -63,6 +68,7 @@
     padding: 3em;
     width: calc(100% - 6em);
     position: relative;
+    flex-shrink: 0.35;
 }
 .page-container{
     display: flex;
