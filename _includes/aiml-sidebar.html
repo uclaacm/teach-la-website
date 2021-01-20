@@ -1,9 +1,10 @@
 <div id="desktop-sidebar">
     {% assign smaller = 1 %}
     {% for lesson in site.aiml %}
-    {% assign pNum = page.num | plus: 0 %}
-    {% assign x = lesson.num | plus: 0 %}
-    {% if x < pNum %} <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+        {% assign pNum = page.num | plus: 0 %}
+        {% assign x = lesson.num | plus: 0 %}
+        {% if x < pNum %} 
+        <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
         <br>
         <div class="status-bar ai-blue-background"></div>
         {% elsif x == pNum and lesson.num == page.num %}
@@ -20,10 +21,11 @@
         <br>
         <div class="status-bar lightgray-background"></div>
         {% endif %}
-        <br>
-        {% endfor %}
+    {% endfor %}
 </div>
+
 <div id="mobile-sidebar">
+
     <div id="sidebar-btn-container">
         <div id="alternate-mobile-icon">Lessons</div>
         <!-- <span class="hamburger-icon">
@@ -37,21 +39,23 @@
         {% for lesson in site.aiml %}
         {% assign pNum = page.num | plus: 0 %}
         {% assign x = lesson.num | plus: 0 %}
-        {% if x < pNum %} <div class="hamburger-item">
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-    </div>
-    {% else if x > pNum %}
-    <div class="hamburger-item">
-        <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-    </div>
-    {% else %}
-    <div class="hamburger-item"></div>
-    <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+        {% if x < pNum %} 
+            <div class="hamburger-item">
+                    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+            </div>
+            {% else if x > pNum %}
+            <div class="hamburger-item">
+                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+            </div>
+            {% else %}
+                <div class="hamburger-item"></div>
+                <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+            </div>
+            {% endif %}
+        {% endfor %}
 </div>
-{% endif %}
-{% endfor %}
 </div>
-</div>
+
 <script>
     function toggleSidebarDesktopToMobile() {
         let desktop_sidebar = document.getElementById("desktop-sidebar");
