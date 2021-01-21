@@ -6,6 +6,10 @@
     @include class-link($ai-blue);
 }
 
+.border-ai {
+    border-color: $ai-blue !important; // needed to override the border shorthand
+}
+
 .divider-ai {
     @include divider-class($ai-blue);
 }
