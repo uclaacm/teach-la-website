@@ -69,7 +69,8 @@ permalink: "/dev"
 
 <h2 class="title page-title text-center" id="projects">Our Projects</h2>
 <div class="dev-projects-grid">
-    {% for proj in site.data.projects %}
+    {% assign finished = site.data.projects | where:"wip", "false" %}
+    {% for proj in finished %}
     <div class="dev-project-card">
         <div class="dev-project-card-content">
             <h3 class="title dev-project-title">
@@ -106,5 +107,49 @@ permalink: "/dev"
     </div>
     {% endfor %}
 </div>
+
+<h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
+<div class="dev-projects-grid">
+    {% assign inProgress = site.data.projects | where:"wip", "true"%}
+    {% for proj in inProgress %}
+    <div class="dev-project-card">
+        <div class="dev-project-card-content">
+            <h3 class="title dev-project-title">
+                {{ proj.name }}
+            </h3>
+            <div class="dev-project-info-row">
+                <span class="dev-project-badge lang-{{proj.lang.abbrev}}"></span> {{proj.lang.full}} •
+                {% if proj.link contains "uclaacm" %}
+                    <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
+                    •
+                {% endif %}
+                <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
+            </div>
+            <p>
+                {{proj.description}}
+            </p>
+            {% if proj.lead %}
+            <p>
+                Lead(s):
+                {% for lead in proj.lead %}
+                    <a class="tla-link" href="{{site.baseurl}}/team/{{lead.hash}}">
+                        {{lead.name}}
+                    </a>{% if forloop.last != true %},{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="dev-project-tech-container">
+            {% for tech in proj.tech %}
+            <span class="dev-project-tech-tag">
+                {{tech}}
+            </span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 
 {% include contact-cta.html %}
