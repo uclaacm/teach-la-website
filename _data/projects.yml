@@ -119,11 +119,11 @@
 
 - name: Playnet
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   repo: uclaacm/Playnet
-  description: "Exploring how the web works through activities."
+  description: "Exploring how the web works, and what kinds of problems people solve with software!"
   lead:
     - name: Regina
       hash: rwang
@@ -132,11 +132,11 @@
 
 - name: Bias By Us
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   repo: uclaacm/bias-by-us
-  description: "Bias in Machine Learning."
+  description: "An interactive explanation of bias in machine learning."
   lead:
     - name: Jiin
       hash: jiinkim
@@ -146,11 +146,11 @@
 
 - name: Cookie Jar
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   repo: uclaacm/cookie-jar
-  description: "A lesson to teach kids about web cookies."
+  description: "Exploring web cookies by playing with them!"
   lead:
     - name: Rachel
       hash: rli
@@ -162,26 +162,26 @@
 
 - name: Digression on Regression
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   repo: uclaacm/digression-on-regression
   description: "A digression on linear and logistic regression."
   lead:
-    - name: Miles
-      hash: mkang
+    - name: Chloe
+      hash: cuy
   tech:
     - js
     - react
 
 - name: No Filter
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   link: https://nofilter.uclaacm.com/
   repo: uclaacm/no-filter
-  description: "Learning about CNNs, neural networks, and filters."
+  description: "Deconstructing a CNN, convolution by convolution."
   lead:
     - name: Maya
       hash: mayaraman
@@ -195,11 +195,11 @@
 
 - name: Selector Safari
   wip: true
-  lang: 
+  lang:
     full: javascript
     abbrev: js
   repo: uclaacm/selector-safari
-  description: "A game designed to teach about CSS selectors."
+  description: "A game that teaches you all about CSS selectors, with animal friends!"
   lead:
     - name: Lisha
       hash: lmohan
