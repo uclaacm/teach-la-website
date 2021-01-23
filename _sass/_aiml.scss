@@ -7,7 +7,6 @@
 }
 
 .ai-lessons-grid {
-    // height: 100%;
     max-width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -81,6 +80,7 @@
     background-color: $ai-blue;
     border-radius: 50%;
     display: inline-block;
+    box-shadow: 1px 1px 3px grey;
 }
 
 #desktop-sidebar{
@@ -104,6 +104,9 @@
     display:inline-block;
     @media (max-width: $desktop-width) {
         display: none;
+    }
+    @media (max-width: 1516px){
+        margin-left: 10px;
     }
 }
 #desktop-sidebar .sidebar-item{
@@ -133,19 +136,6 @@
     width: 100vw;
     background: rgba(255, 255, 255, 1);
     overflow-y: auto;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // bottom: 0;
-    // height: 100%;
-    // width: 100%;
-    // z-index: -20;
-    // transform: translate3d(0, -100%, 0);
-    // background: rgba(255, 255, 255, 0.95);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 .hamburger-item{
     width: 350px;
@@ -160,18 +150,21 @@
     flex-direction: row;
     justify-content: flex-start;
     width: 90vw;
-    margin-top: 10px;
 }
-#alternate-mobile-icon{
+#close-mobile-icon{
+    display: none;
+    @media (max-width: 386px) {
+        margin-top: 60px;
+    }
+}
+.mobile-toggle-btn{
     background: white;
     opacity: 90%;
     border-radius: 10px;
     padding: 3px 3px;
+    margin-top: 10px;
     border: 2px solid $font-secondary-color;
-    // transition: transform .3s;
 }
-#alternate-mobile-icon:hover{
+.mobile-toggle-btn:hover{
     cursor: pointer;
-    // background-color: $ai-blue;
-    // transform: scale( 1.08 );
 }

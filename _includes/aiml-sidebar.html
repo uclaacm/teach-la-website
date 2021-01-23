@@ -20,105 +20,55 @@
 </div>
 
 <div id="mobile-sidebar">
-
     <div id="sidebar-btn-container">
-        <div id="alternate-mobile-icon">Lessons</div>
-        <!-- <span class="hamburger-icon">
-            <span class="bar" id="top-bar"></span>
-            <span class="bar" id="middle-bar"></span>
-            <span class="bar" id="bottom-bar"></span>
-        </span> -->
+        <div id="open-mobile-icon" class="mobile-toggle-btn">Lessons</div>
+        <div id="close-mobile-icon" class="mobile-toggle-btn">Close</div>
     </div>
-
     <div id="hamburger-content">
         {% for lesson in site.aiml %}
-        {% assign pNum = page.num | plus: 0 %}
-        {% assign x = lesson.num | plus: 0 %}
-        {% if x < pNum %} 
-            <div class="hamburger-item">
+            {% assign pNum = page.num | plus: 0 %}
+            {% assign x = lesson.num | plus: 0 %}
+            {% if x < pNum %} 
+                <div class="hamburger-item">
                     <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
+                </div>
             {% else if x > pNum %}
-            <div class="hamburger-item">
-                <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
+                <div class="hamburger-item">
+                    <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
+                </div>
             {% else %}
-            <div class="hamburger-item">
-                <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
+                <div class="hamburger-item">
+                    <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
 
 <script>
-    function toggleSidebarDesktopToMobile() {
-        let desktop_sidebar = document.getElementById("desktop-sidebar");
-        let mobile_sidebar = document.getElementById("mobile-sidebar");
-        let window_width = window.innerWidth;
-        let left_margin = desktop_sidebar.offsetLeft;
-
-        left_margin = (window_width / 2.0 - 758) > 26 ? (window_width / 2.0 - 758) : 26;
-        if (window_width < 768) {
-            let hamburger_content = document.getElementById("hamburger-content");
-            if (hamburger_content.style.display != "flex") {
-                document.getElementById("hamburger-content").style.display = "none";
-            }
-            desktop_sidebar.style.display = "none";
-            mobile_sidebar.style.display = "inline-block";
-        } else {
-            desktop_sidebar.style.display = "inline-block";
-            mobile_sidebar.style.display = "none";
-            desktop_sidebar.style.marginLeft = left_margin + "px";
-        }
-    }
-    window.addEventListener('resize', resizeFunctions);
-    toggleSidebarDesktopToMobile();
-
-    document.getElementById("alternate-mobile-icon").addEventListener("click", displayHamburgerMenu);
     function displayHamburgerMenu() {
         let hamburger_content = document.getElementById("hamburger-content");
-        let wordsDisplayed = document.getElementById("alternate-mobile-icon");
-        if (hamburger_content.style.display == "flex") {
-            hamburger_content.style.display = "none";
-            wordsDisplayed.innerText = "Lessons";
-        } else {
-            hamburger_content.style.display = "flex";
-            wordsDisplayed.innerText = "Close";
-        }
+        hamburger_content.style.display = "flex";
 
-        // let wordsDisplayed = document.getElementById("alternate-mobile-icon");
-        // if (wordsDisplayed.innerText == "Lessons"){
-        //     wordsDisplayed.innerText = "Close";
-        // } else {
-        //     wordsDisplayed.innerText = "Lessons";
-        // }
+        document.getElementById("open-mobile-icon").style.display = "none";
+        
+        let closeButton = document.getElementById("close-mobile-icon");
+        closeButton.style.display = "inline-block";
+        closeButton.style.width = "fit-content";
 
-        let mobileSidebarButton = document.getElementById("sidebar-btn-container");
-        let window_width = window.innerWidth;
-        if (mobileSidebarButton.style.justifyContent == "flex-end") {
-            mobileSidebarButton.style.justifyContent = "flex-start";
-            if (mobileSidebarButton.style.marginTop != "10px"){
-                mobileSidebarButton.style.marginTop = "10px";
-            }
-        } else {
-            mobileSidebarButton.style.justifyContent = "flex-end";
-            if (window_width <= 386){
-                mobileSidebarButton.style.marginTop = "60px";
-            }
-        }
+        document.getElementById('sidebar-btn-container').style.justifyContent = "flex-end";
     }
-    function adjustMobileButtonHeight() {
-        let mobileSidebarButton = document.getElementById("sidebar-btn-container");
-        let window_width = window.innerWidth;
-        if (window_width <= 386 && mobileSidebarButton.style.justifyContent == "flex-end") {
-            mobileSidebarButton.style.marginTop = "60px";
-        } else {
-            mobileSidebarButton.style.marginTop = "10px";
-        }
+    function closeHamburgerMenu(){
+        let hamburger_content = document.getElementById("hamburger-content");
+        hamburger_content.style.display = "none";
+
+        document.getElementById("open-mobile-icon").style.display = "flex";
+        let closeButton = document.getElementById("close-mobile-icon");
+        closeButton.style.display = "none";
+
+        document.getElementById('sidebar-btn-container').style.justifyContent = "flex-start";
     }
-    function resizeFunctions(){
-        toggleSidebarDesktopToMobile();
-        adjustMobileButtonHeight();
-    }
+
+    document.getElementById("open-mobile-icon").addEventListener("click", displayHamburgerMenu);
+    document.getElementById("close-mobile-icon").addEventListener("click", closeHamburgerMenu);
 </script>
