@@ -39,7 +39,7 @@
     display: inline-flex;
     min-height: 100vh;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width + 200px) {
         // grid-template-columns: 100%;
         flex-wrap: wrap;
         justify-content: center;
@@ -102,6 +102,9 @@
     border-color: $ai-blue;
     z-index: 1;
     display:inline-block;
+    @media (min-height: 864px){
+        height: 680px;
+    }
     @media (max-width: $desktop-width) {
         display: none;
     }
