@@ -1,5 +1,4 @@
 <div id="desktop-sidebar">
-    {% assign smaller = 1 %}
     {% for lesson in site.aiml %}
         {% assign pNum = page.num | plus: 0 %}
         {% assign x = lesson.num | plus: 0 %}
@@ -8,14 +7,9 @@
             <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
             </div>
         {% elsif x == pNum and lesson.num == page.num %}
-            {% assign smaller = 0 %}
             <div class="sidebar-item">
             <span class="current-dot"></span>
             <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% elsif x == pNum and smaller == 1 %}
-            <div class="sidebar-item">
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
             </div>
         {% else %}
             <div class="sidebar-item">
