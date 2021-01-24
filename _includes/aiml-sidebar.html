@@ -1,21 +1,14 @@
 <div id="desktop-sidebar">
     {% for lesson in site.aiml %}
-        {% assign pNum = page.num | plus: 0 %}
-        {% assign x = lesson.num | plus: 0 %}
-        {% if x < pNum %} 
-            <div class="sidebar-item">
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% elsif x == pNum and lesson.num == page.num %}
-            <div class="sidebar-item">
-            <span class="current-dot"></span>
-            <a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-        {% else %}
-            <div class="sidebar-item">
-            <a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-            </div>
-       {% endif %}
+        <div class="sidebar-item">
+            {% assign lessonUrl = lesson.url%}
+            {% if lesson.num == page.num %}
+                {% assign lessonUrl = "javascript:void(0)" %}
+                <span class="current-dot"></span>
+            {% endif %}
+
+            <a class="ai-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
+        </div>
     {% endfor %}
 </div>
 
