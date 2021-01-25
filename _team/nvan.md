@@ -1,8 +1,7 @@
 ---
 firstname: "Nhi"
 lastname: "Van"
-title: "Lead Developer"
-secondary: "Instructor"
+title: "Developer Liaison"
 group: "member"
 img: "nvan.jpg"
 github: "vohndernet"

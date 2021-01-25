@@ -1,7 +1,7 @@
 ---
 firstname: "Lisha"
 lastname: "Mohan"
-title: "Developer"
+title: "Lead Developer"
 secondary: "Instructor"
 group: "member"
 img: "lmohan.jpeg"

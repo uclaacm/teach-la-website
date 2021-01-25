@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: post
 title: The Making of "Passworks"
 date: 2020-09-23 04:00:00 UTC
 author: Jamie
@@ -10,6 +10,8 @@ category: dev
 tags:
     - learning labs
     - dev team
+image: img/posts/passworks/default.png
+alt: Showing text on both a phone and computer
 ---
 
 In this post, I'll discuss the process of building [Passworks](https://passworks.uclaacm.com), an educational module consisting of several activities designed to teach password security concepts.

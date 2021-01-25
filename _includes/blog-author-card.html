@@ -12,6 +12,11 @@
                 <a class="tla-link" href="{{include.url}}">
                     {{include.name}}
                 </a>
+                <span class = "pronouns">
+                    {% if include.pronouns and include.pronouns != ""%}
+                        ({{include.pronouns | strip}})
+                    {% endif %}
+                </span>
             </h3>
             <p class="no-margin">
                 {{include.role}}

@@ -1,16 +1,12 @@
 ---
 title: "Adding yourself to the team page"
+sidebar-title: "Add to Team Page"
 ---
 
 ## Table of Contents
-
-* [Get ready](#get-ready)
-* [Creating a basic page](#creating-a-basic-page)
-* [Making the page your own](#making-the-page-your-own)
-* [Add, Commit, and Push](#add-commit-and-push)
-* [Making a Pull Request](#making-a-pull-request)
-* [Code Review](#code-review)
-* [Merging!](#merging)
+{:.no_toc}
+* TOC
+{:toc}
 
 ## Get ready
 
@@ -51,6 +47,7 @@ Here's an example team page for Josie Bruin:
 ---
 firstname: Josie
 lastname: Bruin
+pronouns: "they/them"
 group: alum+
 graduating_year: 1923
 img: josiebruin.png

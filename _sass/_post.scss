@@ -1,19 +1,74 @@
+@media (min-width: $desktop-width) {
+    .post-preview{
+        display: grid;
+        align-items: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: 5fr 8fr;
+    }
+}
+
+.post-card{
+    border: solid black 2px;
+    margin-top: 3em;
+    padding: 1em;
+    padding-top: 0em;
+}
+
+.post-preview-img{
+    margin: 0.5em;
+    margin-right: 1em;
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.post-info {
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+    padding-left: 1em;
+
+    @media (min-width: $desktop-width) {
+        // this is the green bar on the left of the info;
+        // we hide it on mobile
+        border-left: 10px solid $teachla-green;
+        margin-left: 1em;
+        margin-right: 0.5em;
+    }
+
+    a {
+        @include tla-link();
+    }
+
+}
+
 .post-container {
-    max-width: 50rem;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-main-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
 }
 
 .post-author-grid{
     height: 100%;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin-top: 2em;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 2em;
+    > div {
+        margin-bottom: 1em;
+    }
 
     @media (max-width: $desktop-width) {
         grid-template-columns: 100%;
         > div {
-            margin-top: 2em;
+            margin-bottom: 2em;
         }
     }
 }
@@ -26,7 +81,7 @@
 }
 
 .post-author-info{
-    padding-left: 2em;
+    padding-left: 1.5em;
 }
 
 .post-want-more {
@@ -39,15 +94,16 @@
 }
 
 .post-recommend-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     margin-top: 1.5em;
-    padding-top: auto;
-    padding-bottom: auto;
 }
 
 .post-recommend-card{
+    display: grid;
+    grid-template-columns: auto;
     padding: 1em;
     margin: 1em;
     margin-left: 0.25em;
@@ -57,25 +113,34 @@
 
 }
 
+.post-recommend-img{
+    align-self: center;
+    width: 10em;
+    height: auto;
+    margin: 1em;
+}
+
 .post-recommend-info{
+    align-self: flex-end;
     margin: 1em;
     font-size: 0.9rem;
-    
 }
 
-.post-blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid $teachla-green;
-    margin: 1.5em 0;
-    padding: 0.5em 10px;
 
-    .tla-link, a {
-        @include tla-link($teachla-green, #f9f9f9);
-    }
-
-}
 
 .post-img {
     padding: 2%;
     max-width: 96%;
+}
+
+.social{
+  font-family: $font-display;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-buttons{
+  display: flex;
+  flex-direction: row;
 }

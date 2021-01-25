@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.1.1"
+gem "jekyll", "~> 4.2.0"
 gem 'jekyll-seo-tag' # check out this https://jekyll.github.io/jekyll-seo-tag/usage/
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -12,9 +12,16 @@ group :test do
   gem 'html-proofer'
 end
 
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-category-pages"
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
+# Adding webrick since jekyll requires it
+gem 'webrick'

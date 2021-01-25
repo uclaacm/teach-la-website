@@ -8,13 +8,13 @@ permalink: "/dev"
 
 <div class="dev-hero">
     <div class="grid-col">
-        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/pair-programming.svg" />
+        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/pair-programming.svg" alt="Man and Woman pair programming at one computer."/>
     </div>
     <div class="dev-content">
         <h2 class="title">About the Dev Team</h2>
         <p>
             ACM Teach LA has a vibrant development team focused on using software to democratize access to education. We develop a range of web applications, from tools like <a class="tla-link" href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">our online code editor</a>, to our interactive and narrative-focused learning labs, to this very website!
-        </p>      
+        </p>
         <p>
             We're also an organization committed to open-source. Everything we do, from all of our projects to developer training, is available on ACM @ UCLA <a class="tla-link" href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener noreferrer">GitHub organization</a>. You can even view <a class="tla-link" href="https://github.com/uclaacm/teach-la-website/blob/master/dev.html" target="_blank" rel="noopener noreferrer">this page on GitHub</a>.
         </p>
@@ -63,13 +63,14 @@ permalink: "/dev"
         </p>
     </div>
     <div class="grid-col">
-        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" />
+        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" alt="clip art showing diverse group of profile images on webpage" />
     </div>
 </div>
 
 <h2 class="title page-title text-center" id="projects">Our Projects</h2>
 <div class="dev-projects-grid">
-    {% for proj in site.data.projects %}
+    {% assign finished = site.data.projects | where:"wip", "false" %}
+    {% for proj in finished %}
     <div class="dev-project-card">
         <div class="dev-project-card-content">
             <h3 class="title dev-project-title">
@@ -86,9 +87,9 @@ permalink: "/dev"
             </p>
             {% if proj.lead %}
             <p>
-                Lead(s): 
+                Lead(s):
                 {% for lead in proj.lead %}
-                    <a class="tla-link" href="{{site.baseurl}}/team#{{lead.hash}}">
+                    <a class="tla-link" href="{{site.baseurl}}/team/{{lead.hash}}">
                         {{lead.name}}
                     </a>{% if forloop.last != true %},{% endif %}
                 {% endfor %}
@@ -106,5 +107,49 @@ permalink: "/dev"
     </div>
     {% endfor %}
 </div>
+
+<h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
+<div class="dev-projects-grid">
+    {% assign inProgress = site.data.projects | where:"wip", "true"%}
+    {% for proj in inProgress %}
+    <div class="dev-project-card">
+        <div class="dev-project-card-content">
+            <h3 class="title dev-project-title">
+                {{ proj.name }}
+            </h3>
+            <div class="dev-project-info-row">
+                <span class="dev-project-badge lang-{{proj.lang.abbrev}}"></span> {{proj.lang.full}} •
+                {% if proj.link contains "uclaacm" %}
+                    <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
+                    •
+                {% endif %}
+                <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
+            </div>
+            <p>
+                {{proj.description}}
+            </p>
+            {% if proj.lead %}
+            <p>
+                Lead(s):
+                {% for lead in proj.lead %}
+                    <a class="tla-link" href="{{site.baseurl}}/team/{{lead.hash}}">
+                        {{lead.name}}
+                    </a>{% if forloop.last != true %},{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="dev-project-tech-container">
+            {% for tech in proj.tech %}
+            <span class="dev-project-tech-tag">
+                {{tech}}
+            </span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 
 {% include contact-cta.html %}

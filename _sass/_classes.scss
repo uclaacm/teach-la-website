@@ -19,3 +19,57 @@
     padding-left: 2em;
     padding-right: 2em;
 }
+
+@mixin class-content-card($color) {
+    margin-top: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid $color;
+}
+
+.class-content-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 100%;
+        min-height: 70vh;
+    }
+}
+
+@mixin class-link($color) {
+    @include tla-link($color);
+}
+
+@mixin divider-class($color) {
+  border-top: 1px solid $color;
+}
+
+@mixin lesson-card($color) {
+    padding: 0.5em;
+    margin-top: 1em;
+    border: 2px solid $color;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-card-content {
+    flex: 1 0 auto;
+}
+
+.lessons-grid {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    @media (max-width: $desktop-width) {
+      grid-template-columns: 100%;
+    }
+    margin-bottom: 2em;
+}
+
+

@@ -1,4 +1,5 @@
 - name: Editor Frontend
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -6,7 +7,7 @@
   repo: uclaacm/TeachLAFrontend
   lead:
     - name: Leo
-      hash: krash
+      hash: krashanoff
   description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
   tech:
     - react
@@ -16,6 +17,7 @@
     - jest & enzyme
 
 - name: Editor Backend
+  wip: false
   lang:
     full: go
     abbrev: go
@@ -23,13 +25,14 @@
   repo: uclaacm/teach-la-go-backend
   lead:
     - name: Leo
-      hash: krash
+      hash: krashanoff
   description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
   tech:
     - go
     - firebase
 
 - name: Passworks
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -47,6 +50,7 @@
     - material
 
 - name: Static Website
+  wip: false
   lang:
     full: HTML
     abbrev: html
@@ -55,13 +59,14 @@
   description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
   lead:
     - name: Matt
-      hash: mwang
+      hash: mattwang
   tech:
     - html
     - sass
     - jekyll
 
 - name: Getting Mean About Error
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -79,6 +84,7 @@
     - bulma
 
 - name: Cipher Salad
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -96,6 +102,7 @@
     - bulma
 
 - name: Gradient Descent Visualiser
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -104,26 +111,116 @@
   description: "This mini-app acts as an interactive supplement to our AI/ML course and curriculum on linear regression and gradient descent - visualising what can be a very complex mathematical concept."
   lead:
     - name: Matt
-      hash: mwang
+      hash: mattwang
   tech:
     - function-plot/d3
     - js
     - bulma
 
-- name: Network Tarines
+- name: Playnet
+  wip: true
   lang:
     full: javascript
     abbrev: js
-  link: https://trusting-goodall-de8259.netlify.com/
-  repo: uclaacm/network-tarines
-  description: "A cute mini-lesson that looks to demo networking infrastructure for elementary school kids - telling them just how online games and websites are delivered straight to your computer! Features a React Frontend and an Express backend!"
+  repo: uclaacm/Playnet
+  description: "Exploring how the web works, and what kinds of problems people solve with software!"
   lead:
-    - name: Nhi
-      hash: nvan
+    - name: Regina
+      hash: rwang
   tech:
+    - js
+
+- name: Bias By Us
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  repo: uclaacm/bias-by-us
+  description: "An interactive explanation of bias in machine learning."
+  lead:
+    - name: Jiin
+      hash: jiinkim
+  tech:
+    - js
     - react
-    - express
-    - sockets
+
+- name: Cookie Jar
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  repo: uclaacm/cookie-jar
+  description: "Exploring web cookies by playing with them!"
+  lead:
+    - name: Rachel
+      hash: rli
+    - name: Alyssa
+      hash: awang
+  tech:
+    - js
+    - react
+
+- name: Digression on Regression
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  repo: uclaacm/digression-on-regression
+  description: "A digression on linear and logistic regression."
+  lead:
+    - name: Chloe
+      hash: cuy
+  tech:
+    - js
+    - react
+
+- name: No Filter
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  link: https://nofilter.uclaacm.com/
+  repo: uclaacm/no-filter
+  description: "Deconstructing a CNN, convolution by convolution."
+  lead:
+    - name: Maya
+      hash: mayaraman
+    - name: Aman
+      hash: amanoberoi
+    - name: Nisha
+      hash: nishamcnealis
+  tech:
+    - js
+    - react
+
+- name: Selector Safari
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  repo: uclaacm/selector-safari
+  description: "A game that teaches you all about CSS selectors, with animal friends!"
+  lead:
+    - name: Lisha
+      hash: lmohan
+  tech:
+    - js
+    - react
+
+# - name: Network Tarines
+#   lang:
+#     full: javascript
+#     abbrev: js
+#   link: https://trusting-goodall-de8259.netlify.com/
+#   repo: uclaacm/network-tarines
+#   description: "A cute mini-lesson that looks to demo networking infrastructure for elementary school kids - telling them just how online games and websites are delivered straight to your computer! Features a React Frontend and an Express backend!"
+#   lead:
+#     - name: Nhi
+#       hash: nvan
+#   tech:
+#     - react
+#     - express
+#     - sockets
 
 # - name: How Does The Net Work?
 #   lang:

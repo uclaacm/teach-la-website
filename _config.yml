@@ -4,8 +4,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   ACM Teach LA is an non-profit outreach organization at UCLA dedicated to providing equal access to computer science education for all students in Los Angeles.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://teachla.uclaacm.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: uclaacm
-github_username:  uclaacm
+twitter:
+  username: uclaacm
+  image: https://teachla.uclaacm.com/img/teachLA_logo_light.png
+github_username: uclaacm
+
 facebook_username: acmteachla
 linkedin_url: https://www.linkedin.com/company/acm-teach-la-acm-ucla
 editor_link: https://editor.uclaacm.com
@@ -15,29 +18,36 @@ dev_team_interest: https://forms.gle/Yu49uA374S6caAmu9
 
 # defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "docs"
     values:
       layout: "docs-default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "aiml"
     values:
       layout: "aiml-lesson"
+  - scope:
+      path: ""
+      type: "rnative"
+    values:
+      layout: "rnative-lesson"
+  - scope:
+      path: ""
+      type: "py1"
+    values:
+      layout: "py1-lesson"
   -
     scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "team"
     values:
-      layout: "team-page"
+      layout: "team-member"
 
 # collections
 collections:
@@ -46,9 +56,15 @@ collections:
   aiml:
     permalink: /classes/ml/:name
     output: true
+  rnative:
+    permalink: /classes/rnative/:name
+    output: true
   docs:
     output: true
     permalink: /docs/:name
+  py1:
+    permalink: /classes/py1/:name
+    output: true
   reports:
     output: true
     permalink: /reports/:name
@@ -56,10 +72,18 @@ collections:
     output: true
     permalink: /team/:name
 
+# Configure category pages plugin here
+permalink: /:year/:month/:day/:title:output_ext #gets rid of index.html from category page links (probably)
+category_path: "/blog/category" # sets folder for category pages to be located
+# category_layout: "category_index.html" # <- default value
+paginate: 3 # <- turn on pagination with 3 posts per page
+
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-category-pages
+  - jekyll-paginate
 sass:
   sass_dir: _sass
 
@@ -67,6 +91,7 @@ sass:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - CODE_OF_CONDUCT.md
   - Gemfile
   - Gemfile.lock
   - node_modules

@@ -1,8 +1,8 @@
 ---
 firstname: "Alyssa"
 lastname: "Wang"
-title: "Developer"
-secondary: "Cyber Lead"
+title: "Cyber Lead"
+secondary: "Developer"
 group: "member"
 github: "alyssamw"
 img: "awang.jpg"
