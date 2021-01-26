@@ -14,10 +14,12 @@
 
 <div id="mobile-sidebar">
     <div id="sidebar-btn-container">
-        <div id="open-mobile-icon" class="mobile-toggle-btn">Lessons</div>
-        <div id="close-mobile-icon" class="mobile-toggle-btn">Close</div>
+        <button id="open-mobile-icon"  onclick="toggleHamburgerContent()" class="d-flex">Lessons</button>
+        <button id="close-mobile-icon" onclick="toggleHamburgerContent()" class="d-none">Close</button>
+        <!-- <div id="open-mobile-icon" class="mobile-toggle-btn">Lessons</div>
+        <div id="close-mobile-icon" class="mobile-toggle-btn">Close</div> -->
     </div>
-    <div id="hamburger-content">
+    <div id="hamburger-content" class="d-none">
         {% for lesson in site.aiml %}
             {% assign pNum = page.num | plus: 0 %}
             {% assign x = lesson.num | plus: 0 %}
@@ -39,29 +41,26 @@
 </div>
 
 <script>
-    function displayHamburgerMenu() {
+    function toggleHamburgerContent() {
         let hamburger_content = document.getElementById("hamburger-content");
-        hamburger_content.style.display = "flex";
-
-        document.getElementById("open-mobile-icon").style.display = "none";
-        
-        let closeButton = document.getElementById("close-mobile-icon");
-        closeButton.style.display = "inline-block";
-        closeButton.style.width = "fit-content";
-
-        document.getElementById('sidebar-btn-container').style.justifyContent = "flex-end";
+        if (hamburger_content.classList.contains("d-none")){
+            hide("open-mobile-icon");
+            show("hamburger-content");
+            show("close-mobile-icon");
+        }else{
+            hide("hamburger-content");
+            hide("close-mobile-icon");
+            show("open-mobile-icon");
+        }
     }
-    function closeHamburgerMenu(){
-        let hamburger_content = document.getElementById("hamburger-content");
-        hamburger_content.style.display = "none";
-
-        document.getElementById("open-mobile-icon").style.display = "flex";
-        let closeButton = document.getElementById("close-mobile-icon");
-        closeButton.style.display = "none";
-
-        document.getElementById('sidebar-btn-container').style.justifyContent = "flex-start";
+    function show(elementID){
+        let lessons_btn = document.getElementById(elementID);
+        lessons_btn.classList.remove("d-none");
+        lessons_btn.classList.add("d-flex");
     }
-
-    document.getElementById("open-mobile-icon").addEventListener("click", displayHamburgerMenu);
-    document.getElementById("close-mobile-icon").addEventListener("click", closeHamburgerMenu);
+    function hide(elementID){
+        let lessons_btn = document.getElementById(elementID);
+        lessons_btn.classList.remove("d-flex");
+        lessons_btn.classList.add("d-none");
+    }
 </script>
