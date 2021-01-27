@@ -1,78 +1,66 @@
 .button.button-ai {
-    @include button-classes($ai-blue);
+	@include button-classes($ai-blue);
 }
 
 .ai-link {
-    @include class-link($ai-blue);
+	@include class-link($ai-blue);
 }
 
 .border-ai {
-    border-color: $ai-blue !important; // needed to override the border shorthand
+	border-color: $ai-blue !important; // needed to override the border shorthand
 }
 
 .divider-ai {
-    @include divider-class($ai-blue);
+	@include divider-class($ai-blue);
 }
 
-.ai-content-container{      
-    // TODO: this needs to fixed (overlaps with class-content-container in classes)
-    
-    display: inline-flex;
-    min-height: 100vh;
-
-    @media (max-width: $desktop-width + 200px) {
-        // grid-template-columns: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        min-height: 70vh;
-    }
-}
 .ai-lesson-card {
-    @include lesson-card($ai-blue);
+	@include lesson-card($ai-blue);
 }
 
 .ai-content-card {
-    @include class-content-card($ai-blue);
+	@include class-content-card($ai-blue);
+	@media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+		grid-column: 2 / span 2;
+		grid-row: 1 /2;
+	}
 }
 
 .ai-slide-iframe{
-    display: block;
-    width: 100%;
-    height: calc(100% * 1469/2559);
-    @media (max-width: $desktop-width) {
-        height: 100%;
-    }
+	display: block;
+	width: 100%;
+	height: calc(100% * 1469/2559);
+	@media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+		grid-column: 2 / span 2;
+		grid-row: 2 / 3;
+		height: 100%;
+	}
+	@media (max-width: $desktop-width) {
+			height: 100%;
+	}
 }
 
 .iframe-container {
-    padding: 3em;
-    width: calc(100% - 6em);
-    position: relative;
-    flex-shrink: 0.35;
-}
-.page-container{
-    display: flex;
-    justify-content: flex-start;
+	padding: 3em;
+	width: calc(100% - 6em);
+	position: relative;
 }
 
 .current-dot{
-    height:10px;
-    width:10px;
-    background-color: $ai-blue;
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: 1px 1px 3px grey;
+	height:10px;
+	width:10px;
+	background-color: $ai-blue;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 1px 1px 3px grey;
 }
 
 #desktop-sidebar{
     width:200px;
     margin:48px 10px;
-    margin-left: calc(50vw - 758px);
     padding:10px 10px;
     padding-bottom: 0px;
     height: calc(100vh - 186px);
-    flex-grow: 0;
-    flex-shrink: 0;
     border: solid;
     border-radius: 10px;
     overflow-y: auto;
@@ -83,14 +71,14 @@
     border-color: $ai-blue;
     z-index: 1;
     display:inline-block;
+    @media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+        grid-row: 1 / span 2;
+    }
     @media (min-height: 864px){
         height: 680px;
     }
     @media (max-width: $desktop-width) {
         display: none;
-    }
-    @media (max-width: 1516px){
-        margin-left: 10px;
     }
 }
 #desktop-sidebar .sidebar-item{
@@ -112,9 +100,9 @@
 #hamburger-content{
     flex-direction: column;
     position: fixed;
-    top: 71px;
+    top: 71px;          //71px is the height of the header bar
     left: 0px;
-    z-index: -20;
+    z-index: 10;
     height: calc(100vh - 71px);
     width: 100vw;
     background: rgba(255, 255, 255, 1);
@@ -136,6 +124,7 @@
     width: 90vw;
 
     button {
+        z-index: 15;
         background: white;
         opacity: 90%;
         border-radius: 10px;
