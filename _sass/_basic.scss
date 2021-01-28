@@ -237,7 +237,8 @@ ul > li {
         }
 
         &:nth-child(even) {
-            background-color: $teachla-tint;
+            border-style: double;
+            border-width: 4px;
         }
     }
 }
