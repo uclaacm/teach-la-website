@@ -6,7 +6,7 @@
     height: 100%;
     display:flex;
     justify-content: flex-end;
-    padding: 25px $sidebar-padding-sides 0px $sidebar-padding-sides;
+    padding: 25px 10px 0px 10px;
     position: sticky;
     @media (max-width: $desktop-width) {
         display: none;
@@ -64,9 +64,9 @@ ol.sidebar-items li a:hover {
 }
 
 #docs-pages-content{
-    padding: 0 1em;
+    padding: 0 7.5px 0 7.5px;
     width:100%;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 #docs-pages-content-width{
