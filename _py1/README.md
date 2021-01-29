@@ -5,11 +5,11 @@ Lesson pages may use the following data:
 ```md
 ---
 title: "Lesson Title"
-next_lesson: "Next Lesson Title" #note: for some reason just calling this next doesn't work? Was going out of my mind trying to solve for an hour, thanks Jekyll!
+next_lesson: "Next Lesson Title" 
 next_link: next lesson link
 group: "Lesson Group"
 num: "Lesson Number"
-video_link: "Video link"
+video_link: "Video link" #note: must be a youtube embed link
 slides_link: "Slides Link"
 worksheet_link: "worksheet link"
 length: "x"
