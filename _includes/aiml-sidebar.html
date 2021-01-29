@@ -62,6 +62,6 @@
 		lessons_btn.classList.remove("d-flex");
 		lessons_btn.classList.add("d-none");
 	}
-	document.getElementById("open-mobile-icon").addEventListener("click", toggleHamburgerContent);
-	document.getElementById("close-mobile-icon").addEventListener("click", toggleHamburgerContent);
+	document.getElementById("open-mobile-icon").onclick = toggleHamburgerContent;
+	document.getElementById("close-mobile-icon").onclick = toggleHamburgerContent;
 </script>
