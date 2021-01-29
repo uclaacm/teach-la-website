@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="team-profile">
-    <div class="row">
+    <div class="row team-row">
         <div class="col">
             {% if page.img %}
             <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.firstname }} {{ page.lastname }}">
@@ -16,7 +16,7 @@ layout: default
             <h1 class="title">{{ page.firstname }} {{ page.lastname }}
                 <!-- only outputs pronouns if a person has pronouns listed-->
                 {% if page.pronouns %}
-                    <span class = "pronouns"> ({{page.pronouns}})</span>
+                    <span class="pronouns">({{page.pronouns}})</span>
                 {% endif %}
             </h1>
             <p class="no-margin text-15x">{{ page.title }} {% if page.secondary %}& {{page.secondary}}{% endif %}</p>

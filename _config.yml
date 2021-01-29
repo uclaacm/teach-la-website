@@ -91,6 +91,7 @@ sass:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - CODE_OF_CONDUCT.md
   - Gemfile
   - Gemfile.lock
   - node_modules
