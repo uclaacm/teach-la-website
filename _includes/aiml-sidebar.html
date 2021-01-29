@@ -14,8 +14,8 @@
 
 <div id="mobile-sidebar">
 	<div id="sidebar-btn-container">
-		<button id="open-mobile-icon" onclick="toggleHamburgerContent()" class="d-flex">Lessons</button>
-		<button id="close-mobile-icon" onclick="toggleHamburgerContent()" class="d-none">Close</button>
+		<button id="open-mobile-icon" class="d-flex">Lessons</button>
+		<button id="close-mobile-icon" class="d-none">Close</button>
 		<!-- <div id="open-mobile-icon" class="mobile-toggle-btn">Lessons</div>
         <div id="close-mobile-icon" class="mobile-toggle-btn">Close</div> -->
 	</div>
@@ -62,4 +62,6 @@
 		lessons_btn.classList.remove("d-flex");
 		lessons_btn.classList.add("d-none");
 	}
+	document.getElementById("open-mobile-icon").addEventListener("click", toggleHamburgerContent);
+	document.getElementById("close-mobile-icon").addEventListener("click", toggleHamburgerContent);
 </script>
