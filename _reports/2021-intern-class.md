@@ -1,9 +1,9 @@
 ---
 layout: report
-title: "Intern Application Report"
+title: "'20-21 Intern Application Cycle Stats"
 author: Matthew Wang
 date: 2021-01-26 10:21:42 UTC
-blurb: "A quick summary of statistics surrounding our '21 intern application cycle."
+blurb: "A quick summary of statistics surrounding our '20-21 intern application cycle."
 ---
 
 It's the end of Week 4 in Winter Quarter, and our interns are working hard away at their projects! We also want to make transparent the statistics that [ACM at UCLA](https://uclaacm.com) gathered about our intern application process, and how they compare to our specific committee specifics.
