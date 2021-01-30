@@ -50,7 +50,7 @@ layout: default
     </div>
 
     <!-- blog posts -->
-    <h3 class="title"> Blog posts that {{ page.firstname }} has written: </h3>
+    <h2 class="title"> Blog posts that {{ page.firstname }} has written: </h3>
     
     <div class="team-links">
 
@@ -66,9 +66,9 @@ layout: default
                         <img  class="post-preview-img" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
                     </a>
                     <div class="post-info">
-                        <h2 class="title">
+                        <h3 class="title">
                         <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-                        </h2>
+                        </h3>
                         <p class="title">
                         by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span> | category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a>
                         </p>
