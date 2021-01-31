@@ -240,7 +240,7 @@ ul > li {
         }
 
         &:nth-child(even) {
-            background-color: $teachla-tint;
+            border-style: solid black;
         }
     }
 }
