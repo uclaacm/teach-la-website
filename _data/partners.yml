@@ -1,61 +1,61 @@
 - name: Blizzard
-  type: affilliate
+  type: affiliate
   path: blizzard.jpg
 
 - name: Citadel
-  type: affilliate
+  type: affiliate
   path: citadel.jpg
 
 - name: Deloitte
-  type: affilliate
+  type: affiliate
   path: deloitte.jpg
 
 - name: Facebook
-  type: affilliate
+  type: affiliate
   path: facebook.jpg
 
 - name: Google
-  type: affilliate
+  type: affiliate
   path: google.jpg
 
 - name: Green Hills
-  type: affilliate
+  type: affiliate
   path: greenhills.jpg
 
 - name: Honey
-  type: affilliate
+  type: affiliate
   path: honey.jpg
 
 - name: Human Capital
-  type: affilliate
+  type: affiliate
   path: humancapital.jpg
 
 - name: Northrop Ghumman
-  type: affilliate
+  type: affiliate
   path: northrop.jpg
 
 - name: Samsung
-  type: affilliate
+  type: affiliate
   path: samsung.jpg
 
 - name: Sandia
-  type: affilliate
+  type: affiliate
   path: sandia.jpg
 
 - name: Symantec
-  type: affilliate
+  type: affiliate
   path: symantec.jpg
 
 - name: Taboola
-  type: affilliate
+  type: affiliate
   path: taboola.jpg
 
 - name: Teradata
-  type: affilliate
+  type: affiliate
   path: teradata.jpg
 
 - name: Viasat
-  type: affilliate
+  type: affiliate
   path: viasat.jpg
 
 
