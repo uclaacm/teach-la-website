@@ -9,7 +9,7 @@ permalink: "/partners"
 <p> We'd like to give thanks to some of the amazing organizations that work with us!</p>
 
 
-{% assign affilliates = site.data.partners | where_exp:"item", "item.type == 'affilliate'" | sort:"name" %}
+{% assign affiliates = site.data.partners | where_exp:"item", "item.type == 'affiliate'" | sort:"name" %}
 {% assign partners = site.data.partners | where_exp:"item", "item.type == 'partner'" | sort:"name" %}
 
 
@@ -57,7 +57,7 @@ sponsors
 </p>
 
 <div class="team-member-grid">
-    {% for affilliate in affilliates %}
+    {% for affiliate in affiliates %}
     <div class="grid-row">
 
         <div class="profile-img-container">
