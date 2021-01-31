@@ -1,0 +1,75 @@
+- name: Blizzard
+  type: affilliate
+  path: blizzard.jpg
+
+- name: Citadel
+  type: affilliate
+  path: citadel.jpg
+
+- name: Deloitte
+  type: affilliate
+  path: deloitte.jpg
+
+- name: Facebook
+  type: affilliate
+  path: facebook.jpg
+
+- name: Google
+  type: affilliate
+  path: google.jpg
+
+- name: Green Hills
+  type: affilliate
+  path: greenhills.jpg
+
+- name: Honey
+  type: affilliate
+  path: honey.jpg
+
+- name: Human Capital
+  type: affilliate
+  path: humancapital.jpg
+
+- name: Northrop Ghumman
+  type: affilliate
+  path: northrop.jpg
+
+- name: Samsung
+  type: affilliate
+  path: samsung.jpg
+
+- name: Sandia
+  type: affilliate
+  path: sandia.jpg
+
+- name: Symantec
+  type: affilliate
+  path: symantec.jpg
+
+- name: Taboola
+  type: affilliate
+  path: taboola.jpg
+
+- name: Teradata
+  type: affilliate
+  path: teradata.jpg
+
+- name: Viasat
+  type: affilliate
+  path: viasat.jpg
+
+
+
+#partners
+
+- name: ACM AI
+  type: partner
+  path: acmai.jpg
+
+- name: Bruin Engineers and Mentors
+  type: partner
+  path: beam.jpg
+
+- name: CityLab
+  type: partner
+  path: citylab.jpg
