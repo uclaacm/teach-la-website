@@ -55,7 +55,7 @@ permalink: "/partners"
     <div class="grid-row center-row-vertical fill-screen-row">
         <div class="grid-col justify-center">
             <div class="profile-img-container">
-                <img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="profile-img">
+                <img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="profile-img" alt="{{ partner.name }} logo" />
             </div>
         </div>
         <div class="grid-col justify-center">
@@ -79,7 +79,7 @@ permalink: "/partners"
     {% for affiliate in affiliates %}
     <div class="grid-row center-row-vertical">
         <div class="sponsor-container">
-            <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}" alt="{{ partner.name }} logo"/>
+            <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}" alt="{{ affiliate.name }} logo" />
         </div>
     </div>
     {% endfor %}
