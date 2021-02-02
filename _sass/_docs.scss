@@ -6,7 +6,7 @@
     height: 100%;
     display:flex;
     justify-content: flex-end;
-    padding: 25px 10px 0px 10px;
+    padding: 25px $sidebar-padding-sides 0px $sidebar-padding-sides;
     position: sticky;
     @media (max-width: $desktop-width) {
         display: none;
