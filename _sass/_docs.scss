@@ -66,7 +66,7 @@ ol.sidebar-items li a:hover {
 #docs-pages-content{
     padding: 0 7.5px 0 7.5px;
     width:100%;
-    max-width: 1100px;
+    max-width: 1100px; /* This will get rid some of the extra white space on the sidebar*/
 }
 
 #docs-pages-content-width{
