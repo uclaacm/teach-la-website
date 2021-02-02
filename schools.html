@@ -67,12 +67,6 @@ permalink: "/partners"
     {% endfor %}
 </div>
 
-<!--
-schools
-partners that support us non financially
-sponsors
--->
-
 <h2>
     Affiliates
 </h2>
@@ -85,7 +79,7 @@ sponsors
     {% for affiliate in affiliates %}
     <div class="grid-row center-row-vertical">
         <div class="sponsor-container">
-            <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}">
+            <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}" alt="{{ partner.name }} logo"/>
         </div>
     </div>
     {% endfor %}
@@ -93,10 +87,13 @@ sponsors
 
 <p>
     We're always looking to make new relationships or to renew old ones! If you're interested in working with us,
-    please send us an email at <a class="tla-link" href="mailtp:{{site.email}}">{{site.email}}</a>.
+    please send us an email at <a class="tla-link" href="mailto:{{site.email}}">{{site.email}}</a>.
 </p>
 
 <p>
     Teach LA is a member committee of <a class="tla-link" href="https://acm.cs.ucla.edu/">ACM at UCLA</a>, the
     Association for Computing Machinery UCLA Chapter.
 </p>
+
+
+
