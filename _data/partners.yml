@@ -22,10 +22,6 @@
   type: affiliate
   path: greenhills.jpg
 
-- name: Honey
-  type: affiliate
-  path: honey.jpg
-
 - name: Human Capital
   type: affiliate
   path: humancapital.jpg
@@ -41,18 +37,6 @@
 - name: Sandia
   type: affiliate
   path: sandia.jpg
-
-- name: Symantec
-  type: affiliate
-  path: symantec.jpg
-
-- name: Taboola
-  type: affiliate
-  path: taboola.jpg
-
-- name: Teradata
-  type: affiliate
-  path: teradata.jpg
 
 - name: Viasat
   type: affiliate

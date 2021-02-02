@@ -4,15 +4,43 @@ title: "Schools, Sponsors, and Partners"
 permalink: "/partners"
 ---
 
-<h1 class="title page-title">Sponsors and Partners</h1>
+<h1 class="title page-title">Schools, Sponsors, and Partners</h1>
 
 <p> We'd like to give thanks to some of the amazing organizations that work with us!</p>
-
 
 {% assign affiliates = site.data.partners | where_exp:"item", "item.type == 'affiliate'" | sort:"name" %}
 {% assign partners = site.data.partners | where_exp:"item", "item.type == 'partner'" | sort:"name" %}
 
+<h2 class="title">Partnered Schools</h2>
+<p>
+    Currently, we are teaching <a href="{{basesite.url}}/classes" class="tla-link">classes</a> and working with the following schools:
+<ul>
+    <li>
+        <a class="tla-link" href="https://baes-lausd-ca.schoolloop.com/">Brockton Avenue Elementary School</a>
+    </li>
+    <li>
+        <a class="tla-link" href="https://rwees-compton-ca.schoolloop.com/">Ralph Waldo Emerson Elementary School</a>
+    </li>
+    <li>
+        <a class="tla-link" href="https://www.nhhs.net/">North Hollywood High School</a>
+    </li>
+    <li>
+        <a class="tla-link" href="https://www.sepulvedams.org/">Sepulveda Middle School</a>
+    </li>
+    <li>
+        <a class="tla-link" href="https://www.shortavenue.org/">Short Avenue Elementary School</a>
+    </li>
+</ul>
+</p>
 
+<p>
+    In the past, we have worked with:
+<ul>
+    <li> Mark Twain Middle School </li>
+    <li> Archer School for Girls </li>
+    <li> Marlborough School </li>
+</ul>
+</p>
 
 <h2>
     Partners
@@ -24,23 +52,20 @@ permalink: "/partners"
 
 <div class="team-member-grid">
     {% for partner in partners %}
-    <div class="grid-row">
-        <div class="grid-col">
+    <div class="grid-row center-row-vertical fill-screen-row">
+        <div class="grid-col justify-center">
             <div class="profile-img-container">
                 <img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="profile-img">
             </div>
         </div>
-        <div class="grid-col">
-            <h3 class="title" style="margin-right: 50px;">
-                {{partner.name}}
+        <div class="grid-col justify-center">
+            <h3 class="center-text partner-name">
+                {{partner.name}}    
             </h3>
         </div>
     </div>
     {% endfor %}
 </div>
-
-
-
 
 <!--
 schools
@@ -58,49 +83,13 @@ sponsors
 
 <div class="team-member-grid">
     {% for affiliate in affiliates %}
-    <div class="grid-row">
-
-        <div class="profile-img-container">
+    <div class="grid-row center-row-vertical">
+        <div class="sponsor-container">
             <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}">
-        </div>
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    {{affiliate.name}}
-                </h3>
-            </div>
         </div>
     </div>
     {% endfor %}
 </div>
-
-<h2 class="title">Partnered Schools</h2>
-<p>
-    Currently, we are teaching <a href="/classes" class="tla-link">classes</a> and working with the following schools:
-<ul>
-    <li>
-        <a class="tla-link" href="https://baes-lausd-ca.schoolloop.com/">Brockton Avenue Elementary School</a>
-    </li>
-    <li>
-        <a class="tla-link" href="https://rwees-compton-ca.schoolloop.com/">Ralph Waldo Emerson Elementary School</a>
-    </li>
-    <li>
-        <a class="tla-link" href="https://www.nhhs.net/">North Hollywood High School</a>
-    </li>
-    <li>
-        <a class="tla-link" href="https://www.sepulvedams.org/">Sepulveda Middle School</a>
-    </li>
-</ul>
-</p>
-
-<p>
-    In the past, we have worked with:
-<ul>
-    <li> Mark Twain Middle School </li>
-    <li> Archer School for Girls </li>
-    <li> Marlborough School </li>
-</ul>
-</p>
 
 <p>
     We're always looking to make new relationships or to renew old ones! If you're interested in working with us,
@@ -108,6 +97,6 @@ sponsors
 </p>
 
 <p>
-    TeachLA is a member committee of <a class="tla-link" href="https://acm.cs.ucla.edu/">ACM at UCLA</a>, the
+    Teach LA is a member committee of <a class="tla-link" href="https://acm.cs.ucla.edu/">ACM at UCLA</a>, the
     Association for Computing Machinery UCLA Chapter.
 </p>
