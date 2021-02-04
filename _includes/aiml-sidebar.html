@@ -1,14 +1,14 @@
 <div id="desktop-sidebar">
 	{% for lesson in site.aiml %}
-	<div class="sidebar-item">
-		{% assign lessonUrl = lesson.url%}
-		{% if lesson.num == page.num %}
-		{% assign lessonUrl = "javascript:void(0)" %}
-		<span class="current-dot"></span>
-		{% endif %}
+		<div class="sidebar-item">
+			{% assign lessonUrl = lesson.url%}
+			{% if lesson.num == page.num %}
+				{% assign lessonUrl = "javascript:void(0)" %}
+				<span class="current-dot"></span>
+			{% endif %}
 
-		<a class="ai-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
-	</div>
+			<a class="ai-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
+		</div>
 	{% endfor %}
 </div>
 
@@ -16,26 +16,18 @@
 	<div id="sidebar-btn-container">
 		<button id="open-mobile-icon" class="d-flex">Lessons</button>
 		<button id="close-mobile-icon" class="d-none">Close</button>
-		<!-- <div id="open-mobile-icon" class="mobile-toggle-btn">Lessons</div>
-        <div id="close-mobile-icon" class="mobile-toggle-btn">Close</div> -->
 	</div>
 	<div id="hamburger-content" class="d-none">
 		{% for lesson in site.aiml %}
-		{% assign pNum = page.num | plus: 0 %}
-		{% assign x = lesson.num | plus: 0 %}
-		{% if x < pNum %} <div class="hamburger-item">
-			<a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-	</div>
-	{% else if x > pNum %}
-	<div class="hamburger-item">
-		<a class="ai-link" href="{{lesson.url}}">#{{lesson.num}} {{lesson.title}}</a>
-	</div>
-	{% else %}
-	<div class="hamburger-item">
-		<a class="ai-link" href="javascript:void(0)">#{{lesson.num}} {{lesson.title}}</a>
-	</div>
-	{% endif %}
-	{% endfor %}
+			{% assign lessonUrl = lesson.url%}
+			{% if lesson.num == page.num %}
+				{% assign lessonUrl = "javascript:void(0)" %}
+			{% endif %}
+			
+			<div class="hamburger-item">
+				<a class="ai-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
+			</div>
+		{% endfor %}
 </div>
 </div>
 
