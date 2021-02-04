@@ -30,6 +30,6 @@ $sidebar-width: 300px;
 $sidebar-padding-sides: 15px;
 
 $width-when-desktop-gets-crowded: 300px;
-$desktop-width-xl: $desktop-width + $width-when-desktop; //or $desktop-width + 300px and delete previous line
+$desktop-width-xl: $desktop-width + $width-when-desktop-gets-crowded; //or $desktop-width + 300px and delete previous line
 $ai-desktop-sidebar-content-height: 759px;
 $sidebar-padding-sides: 10px;
