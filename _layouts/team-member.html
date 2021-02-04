@@ -42,12 +42,51 @@ layout: default
                             {{ link.name }}
                         </a>
                     </li>
-                    {% endfor %}
+                    {% endfor %}    
                 </ul>
             </div>
             {% endif %}
         </div>
     </div>
+
+    <!-- blog posts -->
+    <div class="team-posts">
+    {% assign has-title = false %}
+
+    {% for post in site.posts %}
+        {% for author in post.authors %}
+        {% if author.fname == page.firstname and author.lname == page.lastname %}
+
+        {% unless has-title %}
+        <h2 class="title"> Blog posts that {{ page.firstname }} has written: </h2>
+        {% assign has-title = true %}
+        {% endunless %}
+
+            <section class="post-card">
+
+                <!-- TODO: IMPLEMENT TAGS! -->
+            
+                <div class="post-preview">
+                <a href={{post.url}}>
+                    <img  class="post-preview-img" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
+                </a>
+                <div class="post-info">
+                    <h3 class="title">
+                    <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
+                    </h3>
+                    <p class="title">
+                    by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span> | category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a>
+                    </p>
+                    <hr class="divider"/>
+                    <p class="generated-content">{{post.excerpt}}</p>
+                </div>
+                </div>
+            </section>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </div>
+    <!-- blog posts -->
 </div>
 
 <div class="cta-container">
