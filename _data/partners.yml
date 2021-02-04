@@ -1,0 +1,59 @@
+- name: Blizzard
+  type: affiliate
+  path: blizzard.jpg
+
+- name: Citadel
+  type: affiliate
+  path: citadel.jpg
+
+- name: Deloitte
+  type: affiliate
+  path: deloitte.jpg
+
+- name: Facebook
+  type: affiliate
+  path: facebook.jpg
+
+- name: Google
+  type: affiliate
+  path: google.jpg
+
+- name: Green Hills
+  type: affiliate
+  path: greenhills.jpg
+
+- name: Human Capital
+  type: affiliate
+  path: humancapital.jpg
+
+- name: Northrop Ghumman
+  type: affiliate
+  path: northrop.jpg
+
+- name: Samsung
+  type: affiliate
+  path: samsung.jpg
+
+- name: Sandia
+  type: affiliate
+  path: sandia.jpg
+
+- name: Viasat
+  type: affiliate
+  path: viasat.jpg
+
+
+
+#partners
+
+- name: ACM AI
+  type: partner
+  path: acmai.jpg
+
+- name: Bruin Engineers and Mentors
+  type: partner
+  path: beam.jpg
+
+- name: CityLab
+  type: partner
+  path: citylab.jpg
