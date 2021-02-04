@@ -6,6 +6,9 @@ task :build do
   sh "bundle exec jekyll build"
 end
 
-task :test do
+task :test => :build do
+  options = {
+    :assume_extension => true,
+  }
   HTMLProofer.check_directory("./_site").run
 end
