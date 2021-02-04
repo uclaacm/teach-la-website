@@ -33,7 +33,6 @@
     min-height: 100vh;
     @media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
         grid-template-columns: 230px auto;      
-        grid-template-rows: $average-ai-content-card-height auto;     //400px is approximately the height of the ai-content-card
     }
     @media (max-width: $desktop-width) {
         grid-template-columns: 100%;
