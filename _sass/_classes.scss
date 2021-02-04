@@ -31,7 +31,7 @@
     display: grid;
     grid-template-columns: 230px auto 70%;      //230px is the width of the desktop sidebar +10 px for padding since the ai-content card has no horizontal padding
     min-height: 100vh;
-    @media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+    @media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
         grid-template-columns: 230px auto;      
     }
     @media (max-width: $desktop-width) {

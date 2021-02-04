@@ -20,7 +20,7 @@
 
 .ai-content-card {
 	@include class-content-card($ai-blue);
-	@media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+	@media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
 		grid-column: 2 / span 2;
 		grid-row: 1 /2;
 	}
@@ -30,7 +30,7 @@
 	display: block;
 	width: 100%;
 	height: calc(100% * 1469/2559);
-	@media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+	@media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
 		grid-column: 2 / span 2;
 		grid-row: 2 / 3;
 		height: 100%;
@@ -56,26 +56,24 @@
 }
 
 #desktop-sidebar{
+    top: 80px;
     width:200px;
     margin:48px 10px;
     padding:10px 10px;
     padding-bottom: 0px;
-    height: calc(100vh - 186px);
+    height: calc(100vh - 176px);    //176px is the top position(80px) + the total margin on the top and bottom (48px *2)
+    max-height: $ai-desktop-sidebar-content-height;
     border: solid;
     border-radius: 10px;
     overflow-y: auto;
     overflow-x: hidden;
     position: -webkit-sticky;
     position: sticky;
-    top: 80px;
     border-color: $ai-blue;
     z-index: 1;
     display:inline-block;
-    @media (max-width: $desktop-width + $width-when-desktop-gets-crowded) and (min-width: $desktop-width) {
+    @media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
         grid-row: 1 / span 2;
-    }
-    @media (min-height: 864px){
-        height: 680px;
     }
     @media (max-width: $desktop-width) {
         display: none;
@@ -134,6 +132,7 @@
         outline: 0;
         width: fit-content;
         font-family: inherit;
+        font-size: inherit;
 
         &:hover{
             cursor: pointer;
