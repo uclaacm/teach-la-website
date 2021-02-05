@@ -13,7 +13,6 @@ jobs:
     # https://github.com/ruby/setup-ruby#caching-bundle-install-automatically
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
 
     # Standard usage
