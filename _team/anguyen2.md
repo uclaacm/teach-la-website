@@ -1,6 +1,5 @@
 ---
-firstname: "Austin"
-lastname: "Nguyen"
+name: "Austin Nguyen"
 group: "member"
 title: "Python Curriculum Developer"
 secondary: "Translator"

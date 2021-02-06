@@ -1,6 +1,5 @@
 ---
-firstname: "Lauren"
-lastname: "Nemeh"
+name: "Lauren Nemeh"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "she/her"

@@ -1,6 +1,5 @@
 ---
-firstname: Jiin
-lastname: Kim
+name: Jiin Kim
 group: member
 title: Developer
 graduating_year: 2024

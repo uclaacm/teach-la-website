@@ -1,6 +1,5 @@
 ---
-firstname: Connor
-lastname: Borden
+name: Connor Borden
 group: alum+
 graduating_year: 2019
 

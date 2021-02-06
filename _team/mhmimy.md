@@ -1,6 +1,5 @@
 ---
-firstname: "Malak"
-lastname: "Hmimy"
+name: "Malak Hmimy"
 title: "Sepulveda School Lead"
 group: "board"
 img: mhmimy.jpg

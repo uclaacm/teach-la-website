@@ -1,6 +1,5 @@
 ---
-firstname: Shane
-lastname: Cho
+name: Shane Cho
 graduating_year: 2021
 
 positions:

@@ -1,6 +1,5 @@
 ---
-firstname: "Ashley"
-lastname: "Ghodsian"
+name: "Ashley Ghodsian"
 title: "Advisor (JEDI)"
 secondary: "Python Instructor, Translator"
 group: "board"

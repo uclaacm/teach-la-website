@@ -1,6 +1,5 @@
 ---
-firstname: Michael
-lastname: Grieve
+name: Michael Grieve
 group: alum+
 graduating_year: 2019
 

@@ -1,6 +1,5 @@
 ---
-firstname: "Dominic"
-lastname: "Olson"
+name: "Dominic Olson"
 group: "member"
 title: "Emerson Instructor"
 secondary: "Curriculum Developer"

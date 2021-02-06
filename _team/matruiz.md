@@ -1,6 +1,5 @@
 ---
-firstname: "Mat"
-lastname: "Ruiz"
+name: "Mat Ruiz"
 title: "AI Outreach Officer"
 group: "member"
 graduating_year: 2024

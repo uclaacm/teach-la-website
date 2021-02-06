@@ -1,6 +1,5 @@
 ---
-firstname: "Getty"
-lastname: "George V"
+name: "Getty George V"
 title: "Developer"
 group: "member"
 img: "ggeorge.jpg"

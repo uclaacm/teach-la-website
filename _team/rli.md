@@ -1,6 +1,5 @@
 ---
-firstname: "Rachel"
-lastname: "Li"
+name: "Rachel Li"
 title: "Developer"
 secondary: "Instructor"
 group: "member"

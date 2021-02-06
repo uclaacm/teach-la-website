@@ -1,6 +1,5 @@
 ---
-firstname: "Jamie"
-lastname: "Liu"
+name: "Jamie Liu"
 title: "Lead Developer"
 group: "member"
 img: "jliu.jpg"

@@ -1,6 +1,5 @@
 ---
-firstname: "Alvin"
-lastname: "Duong"
+name: "Alvin Duong"
 title: "Instructor"
 group: "member"
 inactive: true

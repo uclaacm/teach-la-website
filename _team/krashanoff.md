@@ -1,6 +1,5 @@
 ---
-firstname: "Leo"
-lastname: "Krashanoff"
+name: "Leo Krashanoff"
 title: "Dev Team Director"
 group: "board"
 img: "krash.jpg"

@@ -1,6 +1,5 @@
 ---
-firstname: "Pragathi"
-lastname: "Venkatesh"
+name: "Pragathi Venkatesh"
 title: "Advisor"
 group: "member"
 img: pragathi.jpg

@@ -1,6 +1,5 @@
 ---
-firstname: Connor
-lastname: Daly
+name: Connor Daly
 group: member
 title: developer
 graduating_year: 2023

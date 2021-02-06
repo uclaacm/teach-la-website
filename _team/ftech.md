@@ -1,6 +1,5 @@
 ---
-firstname: Furn
-lastname: Techalertumpai
+name: Furn Techalertumpai
 graduating_year: 2020
 group: alum
 

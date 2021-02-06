@@ -1,6 +1,5 @@
 ---
-firstname: "Bonnie"
-lastname: "Lee"
+name: "Bonnie Lee"
 title: "Advisor (ACM)"
 group: "board"
 img: blee.jpg

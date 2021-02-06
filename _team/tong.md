@@ -1,6 +1,5 @@
 ---
-firstname: "Trevor"
-lastname: "Ong"
+name: "Trevor Ong"
 title: "Developer"
 group: "member"
 graduating_year: 2024

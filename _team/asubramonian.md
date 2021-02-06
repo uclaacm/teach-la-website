@@ -1,6 +1,5 @@
 ---
-firstname: "Arjun"
-lastname: "Subramonian"
+name: "Arjun Subramonian"
 title: "Advisor (JEDI)"
 secondary: "AI/ML Lead"
 group: "board"

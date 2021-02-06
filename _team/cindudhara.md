@@ -1,6 +1,5 @@
 ---
-firstname: "Christina"
-lastname: "Indudhara"
+name: "Christina Indudhara"
 group: "alum+"
 graduating_year: 2020
 

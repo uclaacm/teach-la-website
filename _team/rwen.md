@@ -1,6 +1,5 @@
 ---
-firstname: Richard
-lastname: Wen
+name: Richard Wen
 group: alum+
 graduating_year: 2019
 

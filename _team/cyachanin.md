@@ -1,6 +1,5 @@
 ---
-firstname: "Chloe"
-lastname: "Yachanin"
+name: "Chloe Yachanin"
 title: "Instructor"
 group: "member"
 inactive: true

@@ -1,6 +1,5 @@
 ---
-firstname: "Janis"
-lastname: "Chen"
+name: "Janis Chen"
 title: "Developer"
 secondary: "Instructor"
 group: "member"

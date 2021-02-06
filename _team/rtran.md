@@ -1,6 +1,5 @@
 ---
-firstname: "Robert"
-lastname: "Tran"
+name: "Robert Tran"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "he/him"

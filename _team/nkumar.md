@@ -1,6 +1,5 @@
 ---
-firstname: "Nikhil"
-lastname: "Kumar"
+name: "Nikhil Kumar"
 title: "Curriculum Director"
 secondary: "Python Lead"
 group: "board"

@@ -1,6 +1,5 @@
 ---
-firstname: "Maya"
-lastname: "Raman"
+name: "Maya Raman"
 title: "AI Outreach Officer"
 group: "member"
 graduating_year: 2024

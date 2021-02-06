@@ -1,6 +1,5 @@
 ---
-firstname: "Chase"
-lastname: "Kapler"
+name: "Chase Kapler"
 title: "React Native Lead"
 email: "chasekap@gmail.com"
 group: "board"

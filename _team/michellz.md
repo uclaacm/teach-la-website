@@ -1,6 +1,5 @@
 ---
-firstname: "Michelle"
-lastname: "Zhuang"
+name: "Michelle Zhuang"
 title: "Developer"
 group: "member"
 img: "michellz.jpg"

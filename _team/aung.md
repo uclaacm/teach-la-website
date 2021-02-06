@@ -1,6 +1,5 @@
 ---
-firstname: "Amanda"
-lastname: "Ung"
+name: "Amanda Ung"
 group: "member"
 graduating_year: 2023
 github: "a17ung"

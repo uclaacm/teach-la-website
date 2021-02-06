@@ -1,6 +1,5 @@
 ---
-firstname: "Helia"
-lastname: "Woo"
+name: "Helia Woo"
 title: "Advisor (JEDI)"
 secondary: "Python Video Lead"
 img: "hwoo.jpg"
