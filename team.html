@@ -29,9 +29,9 @@ permalink: "/team"
         <div class="grid-col">
             <div class="profile-img-container">
                 {% if member.img %}
-                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
+                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
                 {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
                 {% endif %}
                 </a>
             </div>
@@ -40,7 +40,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {{ member.firstname }} {{ member.lastname }}
+                    {{ member.name }}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -91,9 +91,9 @@ permalink: "/team"
         <div class="grid-col">
             <div class="profile-img-container">
                 {% if member.img %}
-                    <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
                     {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
                 {% endif %}
                 </a>
             </div>
@@ -102,7 +102,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {{ member.firstname }} {{ member.lastname }}
+                    {{ member.name }}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -157,7 +157,7 @@ permalink: "/team"
 {% for member in boards %}
     {% for position in member.positions %}
         {% if position.year == boardYear %}
-        <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
+        <li><b>{{ member.name }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
         {% endif %}
     {% endfor %}
 {% endfor %}
@@ -170,7 +170,7 @@ permalink: "/team"
 <ul>
 {% for year in alumsplus %}
 {% for member in year.items %}
-    <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }})</li>
+    <li><b>{{ member.name }}</b> ({{ member.graduating_year }})</li>
 {% endfor %}
 {% endfor %}
 </ul>
