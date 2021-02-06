@@ -6,14 +6,14 @@ layout: default
     <div class="row team-row">
         <div class="col">
             {% if page.img %}
-            <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.firstname }} {{ page.lastname }}">
+            <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ page.img }}" alt="picture of {{ page.name }}">
             {% else %}
-            <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="picture of {{ page.firstname }} {{ page.lastname }}"/>
+            <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="picture of {{ page.name }}"/>
             {% endif %}
         </div>
 
         <div class="col">
-            <h1 class="title">{{ page.firstname }} {{ page.lastname }}
+            <h1 class="title">{{ page.name }}
                 <!-- only outputs pronouns if a person has pronouns listed-->
                 {% if page.pronouns %}
                     <span class="pronouns">({{page.pronouns}})</span>
@@ -51,17 +51,16 @@ layout: default
 
     <!-- blog posts -->
     <div class="team-posts">
-    {% assign has-title = false %}
-
-    {% for post in site.posts %}
-        {% for author in post.authors %}
-        {% if author.fname == page.firstname and author.lname == page.lastname %}
-
-        {% unless has-title %}
-        <h2 class="title"> Blog posts that {{ page.firstname }} has written: </h2>
-        {% assign has-title = true %}
-        {% endunless %}
-
+    {% assign authors_posts = site.posts | where_exp:"post", "post.authors contains page.name" | sort_by:"date" %}
+    {% if authors_posts.size > 0 %}
+        {% assign firstname = page.name | split: " " | first %}
+        {% if page.pronouns and page.pronouns contains "they" %}
+            {% assign have_has = "have" %}
+        {% else %}
+            {% assign have_has = "has" %}
+        {% endif %}
+        <h2 class="title"> Blog posts that {{ firstname }} {{ have_has }} written: </h2>
+        {% for post in authors_posts %}
             <section class="post-card">
 
                 <!-- TODO: IMPLEMENT TAGS! -->
@@ -82,9 +81,8 @@ layout: default
                 </div>
                 </div>
             </section>
-        {% endif %}
         {% endfor %}
-    {% endfor %}
+    {% endif %}
     </div>
     <!-- blog posts -->
 </div>
