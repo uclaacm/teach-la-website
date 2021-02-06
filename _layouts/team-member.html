@@ -48,9 +48,10 @@ layout: default
             {% endif %}
         </div>
     </div>
+</div>
 
-    <!-- blog posts -->
-    <div class="team-posts">
+<!-- blog posts -->
+<div class="team-posts">
     {% assign authors_posts = site.posts | where_exp:"post", "post.authors contains page.name" | sort_by:"date" %}
     {% if authors_posts.size > 0 %}
         {% assign firstname = page.name | split: " " | first %}
@@ -83,9 +84,8 @@ layout: default
             </section>
         {% endfor %}
     {% endif %}
-    </div>
-    <!-- blog posts -->
 </div>
+<!-- blog posts -->
 
 <div class="cta-container">
     <hr class="divider">
