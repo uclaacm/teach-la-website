@@ -14,6 +14,10 @@
 	@include divider-class($ai-blue);
 }
 
+.page-container {
+    display: flex;
+}
+
 .ai-lesson-card {
 	@include lesson-card($ai-blue);
 }
@@ -69,6 +73,7 @@
     overflow-x: hidden;
     position: -webkit-sticky;
     position: sticky;
+    flex-shrink: 0;
     border-color: $ai-blue;
     z-index: 1;
     display:inline-block;
@@ -86,7 +91,6 @@
     position: fixed;
     top: 70px;
     left: 16px;
-    box-sizing: border-box;
     width: 50px;
     display: none;
     z-index: 1;
