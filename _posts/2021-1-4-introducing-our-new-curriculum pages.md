@@ -4,14 +4,10 @@ title: Introducing Our New Curriculum Pages!
 date: 2021-01-03 17:00:00 PST
 author: Einar, Jun, Alex, and Prateek
 authors:
-    - fname: Einar
-      lname: Balan
-    - fname: Jun
-      lname: Ma
-    - fname: Alex
-      lname: Pun
-    - fname: Prateek
-      lname: Sane
+    - Einar Balan
+    - Jun Ma
+    - Alex Pun
+    - Prateek Sane
 category: dev
 tags:
     - curriculum

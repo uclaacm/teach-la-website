@@ -3,10 +3,8 @@ layout: post
 title: How We Made "Getting Mean About Error"
 author: Miles and Michelle # this is just what's used for SEO
 authors:
-    - fname: Miles
-      lname: Kang
-    - fname: Michelle
-      lname: Zhuang
+    - Miles Kang
+    - Michelle Zhuang
 category: dev
 tags:
     - learning labs
