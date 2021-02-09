@@ -137,7 +137,7 @@ Almost all computers have ruby installed. To double-check, you can run the follo
 
 ```sh
 $ ruby -v
-ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-darwin19]
+ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]
 ```
 
 If you don't have Ruby on your system, you can check the [appendix entry: installing ruby with rvm](#appendix-installing-ruby-with-rvm).
@@ -374,8 +374,8 @@ source ${HOME}/.rvm/scripts/rvm
 Now, log out and back in to your terminal (close and reopen it, if using a GUI), and choose a version of Ruby to install and use:
 
 ```sh
-rvm install 2.7.0
-rvm use 2.7.0
+rvm install 3.0.0
+rvm use 3.0.0
 ```
 
 If either of these commands output any kind of error, then you should retry our installation guide.
