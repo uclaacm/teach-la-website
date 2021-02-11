@@ -6,12 +6,15 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    min-height: 100%;
  }
  body {
     margin: 0;
     padding: 0;
     padding-top: 70px;
     min-height: calc(100vh - 70px);
+    //unclicking this element will either fix it or not, depends on the page
+    height: 100%;
     min-width: 100%;
     font-family: $font-body;
     color: $font-primary-color;
