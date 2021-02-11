@@ -29,7 +29,8 @@ $code-font-size: 0.8em;
 $sidebar-width: 300px;
 $sidebar-padding-sides: 15px;
 
-$width-when-desktop-gets-crowded: 300px;
-$desktop-width-xl: $desktop-width + $width-when-desktop-gets-crowded; //or $desktop-width + 300px and delete previous line
+$desktop-width-xl: $desktop-width + 300px;
 $ai-desktop-sidebar-content-height: 759px;
+$ai-desktop-sidebar-total-width: 220px;
+$container-restricted-width: 1000px;
 $sidebar-padding-sides: 10px;
