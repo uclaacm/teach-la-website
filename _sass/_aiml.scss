@@ -15,7 +15,27 @@
 }
 
 .page-container {
-    display: flex;
+    display: grid;
+    #desktop-sidebar {
+        margin-left: calc(50vw - (0.5 * #{$container-restricted-width} + #{$ai-desktop-sidebar-total-width} + 16px));   //(this is bad, but em and px are incompatible) 16px=1em is padding in container 
+    }
+    @media (max-width: $container-restricted-width + 2*$ai-desktop-sidebar-total-width + 32px) { //(this is bad, but em and px are incompatible) 2em=32px is left and right padding in container
+        #desktop-sidebar{
+            margin-left: 10px;
+        }
+        display: flex;
+    }
+}
+
+.main-content {
+    @media (max-width: $container-restricted-width + 2*$ai-desktop-sidebar-total-width + 32px) { //(this is bad, but em and px are incompatible) 2em=32px is left and right padding in container
+        margin-left: 0px;
+    }
+}
+
+.top-left-grid-position {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .ai-lesson-card {
@@ -61,7 +81,7 @@
 
 #desktop-sidebar{
     top: 80px;
-    width:200px;
+    width: $ai-desktop-sidebar-total-width - 20px;
     margin:48px 10px;
     padding:10px 10px;
     padding-bottom: 0px;
