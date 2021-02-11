@@ -240,7 +240,7 @@ ul > li {
         }
 
         &:nth-child(even) {
-            background-color: $teachla-tint;
+            border-style: solid black;
         }
     }
 }
@@ -301,7 +301,27 @@ ul > li {
     font-size: $pronouns-font-size;
 }
 
+<<<<<<< HEAD
 .alert{
     font-size: 25px;
     font-weight: bold;
 }
+=======
+.partner-name {
+    margin-right: 20px;
+}
+
+.sponsor-container {
+    max-width: 200px;
+    height: auto;
+    margin:10px;
+}
+
+.center-row-vertical {
+    align-items: center;
+}
+
+.fill-screen-row {
+    width: 100%;
+}
+>>>>>>> master
