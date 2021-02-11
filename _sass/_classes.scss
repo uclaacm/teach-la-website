@@ -29,8 +29,11 @@
 
 .class-content-container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 230px auto 70%;      //230px is the width of the desktop sidebar +10 px for padding since the ai-content card has no horizontal padding
     min-height: 100vh;
+    @media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
+        grid-template-columns: 230px auto;      
+    }
     @media (max-width: $desktop-width) {
         grid-template-columns: 100%;
         min-height: 70vh;
@@ -62,7 +65,7 @@
 }
 
 .lessons-grid {
-    height: 100%;
+    // height: 100%;
     max-width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;

@@ -2,75 +2,90 @@
 layout: default
 title: "Introduction to AI & ML"
 permalink: /classes/ml
+fw: true
 ---
+<div class="page-container">
+	{% include aiml-sidebar.html %}
+	<div class="main-content container-restricted top-left-grid-position">
+		<h1 class="title page-title">Introduction to AI & ML</h1>
+		<p class="title text-2x no-margin">Class & Curriculum Outline</p>
+		<hr class="divider-ai" />
+		<p>Learn machine learning, with us! A joint collaboration with <a class="ai-link" href="https://uclaacmai.github.io"
+				target="_blank" rel="noopener noreferrer">ACM AI Outreach</a>.</p>
 
-<h1 class="title page-title">Introduction to AI & ML</h1>
-<p class="title text-2x no-margin">Class & Curriculum Outline</p>
-<hr class="divider-ai" />
-<p>Learn machine learning, with us! A joint collaboration with <a class="ai-link" href="https://uclaacmai.github.io" target="_blank" rel="noopener noreferrer">ACM AI Outreach</a>.</p>
+		<h2 class="title">
+			Brief Overview
+		</h2>
 
-<h2 class="title">
-    Brief Overview
-</h2>
+		<p>
+			We present a year-long, modern machine learning class led by UCLA students! Students will discover and
+			explore the computational and mathematical tools behind artificial intelligence and machine learning! In a
+			single year, they will advance from understanding simple AI models that predict weather to analyzing the
+			complex AI systems that power self-driving cars.
+		</p>
+		<p>
+			Throughout the year, students will have numerous opportunities to learn and code with Python. Python is one
+			of the most popular programming languages in use today, with wide-ranging applications in data processing,
+			web development, and machine learning. Last year, our students used Python to train AI models that predict
+			stock market prices, guess the popularity of a song on Spotify, and detect handwritten digits.
+		</p>
+		<p>
+			Learning machine learning does not occur in a vacuum! We encourage our students to think critically about
+			the applications and ethics of AI. In the past, we’ve brainstormed which types of AI are best-suited to
+			tackle facial recognition and estimate house prices. Furthermore, we’ve held in-depth discussions on the
+			ethics of AI-powered self-driving cars and what it actually means for AI to be racist.
+		</p>
 
-<p>
-    We present a year-long, modern machine learning class led by UCLA students! Students will discover and explore the computational and mathematical tools behind artificial intelligence and machine learning! In a single year, they will advance from understanding simple AI models that predict weather to analyzing the complex AI systems that power self-driving cars.
-</p>
-<p>
-    Throughout the year, students will have numerous opportunities to learn and code with Python. Python is one of the most popular programming languages in use today, with wide-ranging applications in data processing, web development, and machine learning. Last year, our students used Python to train AI models that predict stock market prices, guess the popularity of a song on Spotify, and detect handwritten digits.
-</p>
-<p>
-    Learning machine learning does not occur in a vacuum! We encourage our students to think critically about the applications and ethics of AI. In the past, we’ve brainstormed which types of AI are best-suited to tackle facial recognition and estimate house prices. Furthermore, we’ve held in-depth discussions on the ethics of AI-powered self-driving cars and what it actually means for AI to be racist.
-</p>
+		<h2 class="title" id="lessons">
+			Lessons
+		</h2>
 
-<h2 class="title" id="lessons">
-    Lessons
-</h2>
+		<div class="lessons-grid">
+			{% for lesson in site.aiml %}
+			<div class="ai-lesson-card">
+				<div class="lesson-card-content">
+					<h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
+						<a class="ai-link" href="{{lesson.url}}">{{lesson.title}}</a>
+					</h3>
+					{{lesson.excerpt}}
+				</div>
+				<div class="button-container">
+					{% if lesson.slides_link %}
+					<a class="button button-sm button-ai" href="{{lesson.slides_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-chalkboard-teacher"></span> slides
+					</a>
+					{% endif %}
+					{% if lesson.colab_link %}
+					<a class="button button-sm button-ai" href="{{lesson.colab_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-code"></span> code
+					</a>
+					{% endif %}
+					{% if lesson.homework_link %}
+					<a class="button button-sm button-ai" href="{{lesson.homework_link}}" target="_blank"
+						rel="noopener noreferrer">
+						<span class="fa fa-pencil-alt"></span> hw
+					</a>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 
-<div class="lessons-grid">
-    {% for lesson in site.aiml %}
-        <div class="ai-lesson-card">
-            <div class="lesson-card-content">
-                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
-                    <a class="ai-link" href="{{lesson.url}}">{{lesson.title}}</a>
-                </h3>
-                {{lesson.excerpt}}
-            </div>
-            <div class="button-container">
-                {% if lesson.slides_link %}
-                    <a class="button button-sm button-ai" href="{{lesson.slides_link}}" target="_blank" rel="noopener noreferrer">
-                        <span class="fa fa-chalkboard-teacher"></span> slides
-                    </a>
-                {% endif %}
-                {% if lesson.colab_link %}
-                    <a class="button button-sm button-ai" href="{{lesson.colab_link}}" target="_blank" rel="noopener noreferrer">
-                        <span class="fa fa-code"></span> code
-                    </a>
-                {% endif %}
-                {% if lesson.homework_link %}
-                    <a class="button button-sm button-ai" href="{{lesson.homework_link}}" target="_blank" rel="noopener noreferrer">
-                        <span class="fa fa-pencil-alt"></span> hw
-                    </a>
-                {% endif %}
-            </div>
-        </div>
-    {% endfor %}
+		<h2 class="title">More Resources</h2>
+		<p>
+			These are our favorite AI/ML resources - they're all awesome!
+		</p>
+		{% for subcategory in site.data.curriculum_resources.aiml %}
+		<h3 class="title">{{subcategory.title}}</h3>
+		<ul>
+			{% for item in subcategory.items %}
+			<li>
+				<a class="ai-link" target="_blank" rel="noopener noreferrer" href="{{item.link}}">
+					{{item.name}}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</div>
 </div>
-
-<h2 class="title">More Resources</h2>
-<p>
-    These are our favorite AI/ML resources - they're all awesome!
-</p>
-{% for subcategory in site.data.curriculum_resources.aiml %}
-        <h3 class="title">{{subcategory.title}}</h3>
-        <ul>
-                {% for item in subcategory.items %}
-                <li>
-                        <a class="ai-link" target="_blank" rel="noopener noreferrer"
-                                href="{{item.link}}">
-                                {{item.name}}
-                        </a>
-                </li>
-                {% endfor %}
-        </ul>
-{% endfor %}
