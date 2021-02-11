@@ -2,56 +2,56 @@
 layout: default
 fw: true
 ---
-
 <div class="class-content-container">
-    <div>
-        <div class="ai-content-card">
-            <h1 class="title text-2x no-margin">{{page.title}}</h1>
-            <p>
-                {{content}}
-            </p>
-            <hr class="divider-ai" />
-            <ul class="list-unstyled text-15x">
-                {% if page.slides_link %}
-                    <li>
-                        <a class="ai-link" href="{{page.slides_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-chalkboard-teacher"></span> Link to slides
-                        </a>
-                    </li>
-                {% endif %}
-                {% if page.colab_link %}
-                    <li>
-                        <a class="ai-link" href="{{page.colab_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-code"></span> Link to code (Google Colab)
-                        </a>
-                    </li>
-                {% endif %}
-                {% if page.homework_link %}
-                    <li>
-                        <a class="ai-link" href="{{page.homework_link}}" target="_blank" rel="noopener noreferrer">
-                            <span class="fa fa-fw fa-pencil-alt"></span> Link to homework
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
-            <hr class="divider-ai" />
-            <div>
-                {% if page.next %}
-                    <a class="button button-ai button-block" href="{{page.next.slug}}">
-                        <span class="fa fa-arrow-right"></span> next lesson{% if page.next_text %}: {{page.next_text}}{% endif %}
-                    </a>
-                {% endif %}
-                <a class="button button-ai button-block" href="{{site.baseurl}}/classes/ml">
-                    <span class="fa fa-arrow-left"></span> back to lessons
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="iframe-container">
-        <iframe class="ai-slide-iframe" src="{{page.slides_link}}embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
+	{% include aiml-sidebar.html %}
+	<div>
+		<div class="ai-content-card">
+			<h1 class="title text-2x no-margin">{{page.title}}</h1>
+			<p>
+				{{content}}
+			</p>
+			<hr class="divider-ai" />
+			<ul class="list-unstyled text-15x">
+				{% if page.slides_link %}
+				<li>
+					<a class="ai-link" href="{{page.slides_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-fw fa-chalkboard-teacher"></span> Link to slides
+					</a>
+				</li>
+				{% endif %}
+				{% if page.colab_link %}
+				<li>
+					<a class="ai-link" href="{{page.colab_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-fw fa-code"></span> Link to code (Google Colab)
+					</a>
+				</li>
+				{% endif %}
+				{% if page.homework_link %}
+				<li>
+					<a class="ai-link" href="{{page.homework_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-fw fa-pencil-alt"></span> Link to homework
+					</a>
+				</li>
+				{% endif %}
+			</ul>
+			<hr class="divider-ai" />
+			<div>
+				{% if page.next %}
+				<a class="button button-ai button-block" href="{{page.next.slug}}">
+					<span class="fa fa-arrow-right"></span> next lesson{% if page.next_text %}: {{page.next_text}}{% endif %}
+				</a>
+				{% endif %}
+				<a class="button button-ai button-block" href="{{site.baseurl}}/classes/ml">
+					<span class="fa fa-arrow-left"></span> back to lessons
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="iframe-container">
+		<iframe class="ai-slide-iframe" src="{{page.slides_link}}embed?start=false&loop=false&delayms=3000" frameborder="0"
+			allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	</div>
 </div>
-
 <script>
-    logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
+	logTopSecretMessage("Note from the devs: there's a CORS error, we know. This is upstream with Google, unfortunately nothing we can do :(");
 </script>
