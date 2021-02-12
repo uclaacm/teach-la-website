@@ -1,6 +1,5 @@
 ---
-firstname: "Edmond"
-lastname: "Wen"
+name: "Edmond Wen"
 group: "member"
 title: "Developer"
 secondary: "Emerson Instructor"

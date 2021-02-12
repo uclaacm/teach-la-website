@@ -1,6 +1,5 @@
 ---
-firstname: "Tomoki"
-lastname: "T. Fukazawa"
+name: "Tomoki T. Fukazawa"
 title: "Developer"
 group: "member"
 img: "tomokif.jpg"

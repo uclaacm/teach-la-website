@@ -1,6 +1,5 @@
 ---
-firstname: "Shounak"
-lastname: "Kuiry"
+name: "Shounak Kuiry"
 title: "Developer"
 group: "member"
 graduating_year: "2024"

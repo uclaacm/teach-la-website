@@ -1,6 +1,5 @@
 ---
-firstname: "Alyssa"
-lastname: "Wang"
+name: "Alyssa Wang"
 title: "Cyber Lead"
 secondary: "Developer"
 group: "member"

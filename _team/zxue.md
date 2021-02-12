@@ -1,6 +1,5 @@
 ---
-firstname: "Zihan"
-lastname: "Xue"
+name: "Zihan Xue"
 group: "member"
 title: "Developer"
 graduating_year: 2024

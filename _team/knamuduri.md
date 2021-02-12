@@ -1,6 +1,5 @@
 ---
-firstname: "Keertana"
-lastname: "Namuduri"
+name: "Keertana Namuduri"
 title: "Special Events Director"
 group: "board"
 img: knamuduri.jpeg

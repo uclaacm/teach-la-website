@@ -1,6 +1,5 @@
 ---
-firstname: "Nhi"
-lastname: "Van"
+name: "Nhi Van"
 title: "Developer Liaison"
 group: "member"
 img: "nvan.jpg"

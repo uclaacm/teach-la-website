@@ -1,6 +1,5 @@
 ---
-firstname: "Matthew"
-lastname: "Wang"
+name: "Matthew Wang"
 title: "President"
 group: "board"
 img: "mwang.jpg"

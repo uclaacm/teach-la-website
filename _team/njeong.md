@@ -1,6 +1,5 @@
 ---
-firstname: "Nicolas"
-lastname: "Jeong"
+name: "Nicolas Jeong"
 title: "Developer"
 pronouns: "he/him"
 group: "member"

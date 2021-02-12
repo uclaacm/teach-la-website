@@ -1,6 +1,5 @@
 ---
-firstname: "Sophie"
-lastname: "Schoenmeyer"
+name: "Sophie Schoenmeyer"
 title: "Logistics Director"
 group: "board"
 img: "sschoenmeyer.jpg"

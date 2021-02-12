@@ -1,6 +1,5 @@
 ---
-firstname: "Nisha"
-lastname: "McNealis"
+name: "Nisha McNealis"
 title: "AI Outreach Officer"
 group: "member"
 graduating_year: 2024

@@ -1,6 +1,5 @@
 ---
-firstname: Krishna
-lastname: Babu
+name: Krishna Babu
 group: alum+
 graduating_year: 2018
 

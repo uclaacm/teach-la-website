@@ -4,8 +4,7 @@ All our wonderful team profiles are stored here, and are used to track your past
 
 ```md
 ---
-firstname: "My First Name"
-lastname: "My Last Name"
+name: "My First Name + My Last Name"
 group: "member"
 title: "My Position Title"
 pronouns: "your preferred pronouns (if you're comfortable sharing)"
@@ -32,8 +31,7 @@ text **to be bold**, *italicized*, or make lists:
 
 | Field Key | Value | Required? |
 |-|-|-|
-| `firstname` | Your preferred first name! | ✅ |
-| `lastname` | Your last name! | ✅ |
+| `name` | Your name! (first + last)| ✅ |
 | `group` | Exactly one of the following: "member" (standard) \| "board" (serving the **current** board) \| "alum" (graduated) \| "alum+" (graduated in club, a.k.a. one of our "Graduated Greats") | ✅ |
 | `title` | What you do in club | ✅ |
 | `graduating_year` | What year you plan to graduate in. If you graduate as a Teach LA member, you will be added to our list of "Graduating Greats!" | ✅ |
@@ -57,8 +55,7 @@ A proliferating pedagogy professional. Just getting started, they have added an 
 
 ```md
 ---
-firstname: Joe
-lastname: Bruin
+name: Joe Bruin
 group: member
 title: Instructor
 graduating_year: 1923
@@ -77,8 +74,7 @@ The fully-evolved Teach LA member: served on multiple boards, is a "Graduating G
 
 ```md
 ---
-firstname: Josie
-lastname: Bruin
+name: Josie Bruin
 group: alum+
 graduating_year: 1923
 

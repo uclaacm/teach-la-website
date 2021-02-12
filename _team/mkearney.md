@@ -1,6 +1,5 @@
 ---
-firstname: "Milo"
-lastname: "Kearney"
+name: "Milo Kearney"
 title: "Scratch Curriculum Developer"
 group: "member"
 pronouns: "he/him"

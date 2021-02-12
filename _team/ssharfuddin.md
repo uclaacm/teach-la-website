@@ -1,6 +1,5 @@
 ---
-firstname: "Saba"
-lastname: "Sharfuddin"
+name: "Saba Sharfuddin"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "she/her"

@@ -4,14 +4,10 @@ title: Ingredients of "Cipher Salad"
 date: 2020-10-13 04:00:00 UTC
 author: Rachel, Leo, Janis, and Lisha
 authors:
-    - fname: Rachel
-      lname: Li
-    - fname: Leo
-      lname: Krashanoff
-    - fname: Janis
-      lname: Chen
-    - fname: Lisha
-      lname: Mohan
+    - Rachel Li
+    - Leo Krashanoff
+    - Janis Chen
+    - Lisha Mohan
 category: dev
 tags:
     - learning labs

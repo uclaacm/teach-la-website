@@ -1,6 +1,5 @@
 ---
-firstname: John
-lastname: Stucky
+name: John Stucky
 group: alum+
 graduating_year: 2019
 

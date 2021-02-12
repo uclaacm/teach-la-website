@@ -1,6 +1,5 @@
 ---
-firstname: "Einar"
-lastname: "Balan"
+name: "Einar Balan"
 group: "member"
 graduating_year: 2024
 img: ebalan.png

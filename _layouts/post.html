@@ -55,10 +55,10 @@ Enjoyed the read? Share on social media! <br/>
 <hr class="divider" />
 <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
     <div class="post-author-grid">
-        {% for authorobj in page.authors %}
-            {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
+        {% for authorname in page.authors %}
+            {% assign author = site.team | where_exp:"item", "item.name == authorname" | first %}
             {% capture author_name %}
-                {{authorobj.fname}} {{authorobj.lname}}
+                {{author.name}}
             {% endcapture %}
             {% capture author_url %}
                 {{author.url}}

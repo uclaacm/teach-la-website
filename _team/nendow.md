@@ -1,6 +1,5 @@
 ---
-firstname: "Nathan"
-lastname: "Endow"
+name: "Nathan Endow"
 group: "member"
 title: "Developer"
 graduating_year: 2024

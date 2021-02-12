@@ -1,6 +1,5 @@
 ---
-firstname: "Sharvani"
-lastname: "Jha"
+name: "Sharvani Jha"
 title: "Advisor (Moonshots)"
 group: "board"
 img: sharvani.png

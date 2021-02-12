@@ -1,6 +1,5 @@
 ---
-firstname: "Regina"
-lastname: "Wang"
+name: "Regina Wang"
 title: "Special Events Director"
 secondary: "Developer"
 group: "board"

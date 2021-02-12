@@ -1,6 +1,5 @@
 ---
-firstname: "Will"
-lastname: "O'Brien"
+name: "Will O'Brien"
 title: "Lead Developer"
 group: "member"
 img: "willob.jpg"

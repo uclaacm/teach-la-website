@@ -1,6 +1,5 @@
 ---
-firstname: "Chloe"
-lastname: "Uy"
+name: "Chloe Uy"
 title: "Outreach Director"
 secondary: "Emerson Lead"
 group: "board"
