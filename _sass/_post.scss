@@ -23,7 +23,7 @@
 }
 
 .post-info {
-    margin: 1.5em 0;
+    margin: 1.5em 0; //1.5em
     padding: 0.5em 10px;
     padding-left: 1em;
 
@@ -90,7 +90,10 @@
 }
 
 .post-recommendations{
-    font-size: 1.25rem;
+    @media (max-width: 330px) { // for smaller devices, adjust title font size to fit into card
+        font-size: 1rem;
+    }
+    font-size: 1.5rem;
 }
 
 .post-recommend-container{
