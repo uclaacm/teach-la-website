@@ -14,13 +14,13 @@ permalink: "/team"
 </p>
 
 {% assign president = site.team | where_exp:"person", "person.group contains 'board' and person.title == 'President'" | group_by:"title" %}
-{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"lastname" | group_by:"title" | sort:"name" %}
+{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"name" | group_by:"title" | sort:"name" %}
 {% assign leadership = president | concat: board %}
 
-{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"lastname" %}
+{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
 
-{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"lastname" %}
-{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"lastname" | group_by:"graduating_year" | sort:"name" %}
+{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"name" %}
+{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"name" | group_by:"graduating_year" | sort:"name" %}
 
 <div class="team-member-grid board-member-grid">
     {% for group in leadership %}
