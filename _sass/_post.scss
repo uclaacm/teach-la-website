@@ -90,6 +90,9 @@
 }
 
 .post-recommendations{
+    @media (max-width: 330px) { // for smaller devices, adjust title font size to fit into card
+        font-size: 1rem;
+    }
     font-size: 1.25rem;
 }
 
@@ -115,9 +118,11 @@
 
 .post-recommend-img{
     align-self: center;
-    width: 10em;
+    width: 90%;
     height: auto;
     margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post-recommend-info{
