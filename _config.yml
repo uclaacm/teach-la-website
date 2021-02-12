@@ -84,6 +84,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-category-pages
   - jekyll-paginate
+  - jekyll-feed
 sass:
   sass_dir: _sass
 
