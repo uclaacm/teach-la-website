@@ -55,12 +55,7 @@ layout: default
     {% assign authors_posts = site.posts | where_exp:"post", "post.authors contains page.name" | sort_by:"date" %}
     {% if authors_posts.size > 0 %}
         {% assign firstname = page.name | split: " " | first %}
-        {% if page.pronouns and page.pronouns contains "they" %}
-            {% assign have_has = "have" %}
-        {% else %}
-            {% assign have_has = "has" %}
-        {% endif %}
-        <h2 class="title"> Blog posts that {{ firstname }} {{ have_has }} written: </h2>
+        <h2 class="title"> Blog posts that {{ firstname }} has written: </h2>
         {% for post in authors_posts %}
             <section class="post-card">
 
