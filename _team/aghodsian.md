@@ -9,4 +9,8 @@ graduating_year: 2022
 links:
   - name: "LinkedIn"
     href: "https://linkedin.com/in/ashleyghodsian"
+
+positions:
+  - year: 2020-2021
+    title: JEDI, Python Instructor, Translator
 ---
