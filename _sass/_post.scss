@@ -86,7 +86,12 @@
 
 .post-want-more {
     font-size: 1.5rem;
-    margin: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    @media (min-width: $desktop-width) {
+        // pads out l/r on desktop only
+        margin: 2em;
+    }
 }
 
 .post-recommendations{
