@@ -4,7 +4,7 @@ group: member
 title: Developer
 graduating_year: 2024
 pronouns: she/they
-img: christinekim.png
+img: christinekim.jpg
 github: c-m-kim
 email: mintine@g.ucla.edu
 
