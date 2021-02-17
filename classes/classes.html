@@ -22,7 +22,7 @@ permalink: "/classes"
 
 {% for class in site.data.classes %}
     <div class="class-card">
-        <div class="class-row">
+        <div class="row-desktop-ratio-1-2">
             <div class="img-push-down">
                 <img class="img-responsive" alt="decorative image for {{class.name}}" src="{{site.baseurl}}/img/{{class.img}}" />
             </div>
@@ -67,17 +67,6 @@ permalink: "/classes"
                     </a>
                     {% endif %}
                 </div>
-
-                <!-- <div class="button-container">
-                    {% for link in class.links %}
-                        <a class="button" href="{{link.link}}">
-                            {% if link.icon %}
-                            <span class="fa fa-{{link.icon}}"></span>
-                            {% endif %}
-                            {{link.text}}
-                        </a>
-                    {% endfor %}
-                </div> -->
             </div>
         </div>
     </div>

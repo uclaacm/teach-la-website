@@ -6,8 +6,8 @@ permalink: "/dev"
 
 <h1 class="title page-title">Dev & Software</h1>
 
-<div class="dev-hero">
-    <div class="grid-col">
+<div class="row-desktop-ratio-1-2">
+    <div class="v-center-children">
         <img class="img-responsive" src="{{site.baseurl}}/img/undraw/pair-programming.svg" alt="Man and Woman pair programming at one computer."/>
     </div>
     <div class="dev-content">
@@ -29,7 +29,10 @@ permalink: "/dev"
     </div>
 </div>
 
-<div class="dev-join">
+<div class="row-desktop-ratio-1-2 row-desktop-reverse">
+    <div class="v-center-children">
+        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" alt="clip art showing diverse group of profile images on webpage" />
+    </div>
     <div class="dev-content">
         <h2 class="title" id="join">Join us!</h2>
         <p>
@@ -62,13 +65,10 @@ permalink: "/dev"
             Sound like something you want to do? <a class="tla-link" href="{{site.dev_team_interest}}">Fill out our interest form!</a> Or, if you want more information, you can email our <a class="tla-link" href="{{site.baseurl}}/team#krash">our dev team director, Leo</a>. We're excited to see you soon!
         </p>
     </div>
-    <div class="grid-col">
-        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" alt="clip art showing diverse group of profile images on webpage" />
-    </div>
 </div>
 
 <h2 class="title page-title text-center" id="projects">Our Projects</h2>
-<div class="dev-projects-grid">
+<div class="row-desktop-ratio-1-1-1">
     {% assign finished = site.data.projects | where:"wip", "false" %}
     {% for proj in finished %}
     <div class="dev-project-card">
@@ -109,7 +109,7 @@ permalink: "/dev"
 </div>
 
 <h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
-<div class="dev-projects-grid">
+<div class="row-desktop-ratio-1-1-1">
     {% assign inProgress = site.data.projects | where:"wip", "true"%}
     {% for proj in inProgress %}
     <div class="dev-project-card">
