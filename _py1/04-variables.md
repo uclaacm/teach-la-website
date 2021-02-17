@@ -6,7 +6,7 @@ group: "fundamentals"
 num: 4
 video_link: "https://www.youtube.com/embed/82B4FlzezOw"
 slides_link: "https://docs.google.com/presentation/d/1amSjsogdPZKVkqHyqpPcOhmnnvUlbLk9h2dETUkuUDo/edit?usp=sharing"
-worksheet_link: "https://docs.google.com/document/d/1nbjgG5YuJe5nC1MYelWMPbyo4v0yepxyKAJ6zjyrYzs/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1iWm3QS38NrW0BSycJmqw63aH2Z4SrQF6Qj2Lky1DALc/edit?usp=sharing"
 length: 12
 agenda: 
     - text: "what are variables"

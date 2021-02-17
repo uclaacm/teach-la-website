@@ -6,6 +6,7 @@ group: "fundamentals"
 num: 3
 video_link: "https://www.youtube.com/embed/tu6oPKEN5Ew"
 slides_link: "https://docs.google.com/presentation/d/1EGuHXjYuxY5JIMh53pGIvtZOfah6UqEOfTafSMYseMc/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1RKMqOM8otbtxxU4GAD7P1fXVdlyqoDrHzHltIZg4wSE/edit?usp=sharing"
 length: 16
 agenda: 
     - text: "review operators"
