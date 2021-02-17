@@ -1,7 +1,13 @@
  // possibly move these to a minireset file
- *{
+ * {
     box-sizing: border-box;
  }
+
+ *:target {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
  html{
     box-sizing: border-box;
     padding: 0;
@@ -103,6 +109,10 @@ ul > li {
     font-size: 2em;
 }
 
+.text-12x{
+    font-size: 1.2em;
+}
+
 .text-15x{
     font-size: 1.5em;
 }
@@ -136,30 +146,6 @@ ul > li {
     border-top: 1px solid $teachla-green;
 }
 
-// re-evaluate role of row/col and grid-row/grid-col
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.col{
-    max-width: 100%;
-    height: 100%;
-    @media (min-width: $desktop-width) {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-}
-
 .justify-center {
     justify-content: center;
 }
@@ -168,18 +154,9 @@ ul > li {
     height: auto;
 }
 
-.no-gutter {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .flex-center {
     align-self: center;
     justify-self: center;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
 }
 
 .img-responsive{
@@ -211,6 +188,10 @@ ul > li {
     }
 }
 
+.img-decorated {
+    border: 5px solid $teachla-green;
+}
+
 .no-margin{
     margin: 0;
 }
@@ -225,6 +206,10 @@ ul > li {
 
 .mb-50 {
     margin-bottom: 50px;
+}
+
+.my-3 {
+    margin: 3em 0;
 }
 
 // refactor this into a common table component
@@ -249,19 +234,6 @@ ul > li {
             border-style: solid black;
         }
     }
-}
-
-.grid-row {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-}
-
-.grid-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 // this should be refactored
@@ -293,34 +265,16 @@ ul > li {
     @include tla-link();
 }
 
-*:target {
-    padding-top: 70px;
-    margin-top: -70px;
-}
-
-.cta-container {
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
 .pronouns {
     font-size: $pronouns-font-size;
 }
 
-.partner-name {
-    margin-right: 20px;
+.img-sponsor {
+    max-width: 80%;
 }
 
-.sponsor-container {
-    max-width: 200px;
-    height: auto;
-    margin:10px;
-}
-
-.center-row-vertical {
-    align-items: center;
-}
-
-.fill-screen-row {
-    width: 100%;
+.v-center-children {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
