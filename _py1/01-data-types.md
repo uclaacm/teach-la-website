@@ -6,7 +6,7 @@ group: "fundamentals"
 num: 1
 video_link: "https://www.youtube.com/embed/sYh-1uwhxeE"
 slides_link: "https://docs.google.com/presentation/d/179oCvb_tWnnJ4tVHHW7HvRDsYbhSyxhuKSBvVVW2Q5s/edit?usp=sharing"
-worksheet_link: "https://docs.google.com/document/d/19ymRkXJ6bXDYBJHHWjFr5FJJLI6Lphs4TjGUitYYF8A/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1CjxUuifCrpQXfzFgsNsiwFoAJ9S57tnUvfIsIRQPgG0/edit?usp=sharing"
 length: 14
 agenda: 
     - text: "what are data types?"
