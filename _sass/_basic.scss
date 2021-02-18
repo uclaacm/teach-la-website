@@ -278,3 +278,9 @@ ul > li {
     flex-direction: column;
     justify-content: center;
 }
+
+.alert {
+    border: 2px solid $teachla-green;
+    border-radius: 4px;
+    padding: 0.5em;
+}
