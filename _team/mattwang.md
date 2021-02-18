@@ -4,7 +4,7 @@ title: "President"
 group: "board"
 img: "mwang.jpg"
 email: "matt@matthewwang.me"
-github: "malsf21"
+github: "mattxwang"
 graduating_year: 2022
 pronouns: "he/him"
 
