@@ -1,7 +1,7 @@
 const sizeOf = require('image-size');
 const sharp = require('sharp');
 const fs = require('fs');
-// Change the code so that the width and height are equal
+// Change the code so that the width and height are equal - if not throw error
 // Check width and height separately >=512   <=1024
 // Then add and commit code
 
@@ -24,13 +24,21 @@ const fs = require('fs');
 let dimensions = sizeOf('./img/team/njeong.jpg');
 width = dimensions.width;
 height = dimensions.height;
+let imageStats = fs.statSync('./img/team/njeong.jpg');
+let imageFileSizeMB = (imageStats.size) / (1024*1024);
 if (width != height){
-    console.log("Not a pixel-perfect square aspect ratio")
+    console.log("Not a pixel-perfect square aspect ratio") //Throw an error
 }
 else{
-    console.log("Good aspect ratio")
+    if((imageFileSizeMB > 1) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
+        //sharp('./img/team/njeong.jpg')  - Use sharp
+        console.log("We need to fix this image")
+    }
+    else{
+        console.log("Image looks great")
+    }
 }
-
+/*
 if((width <512 || width > 1024) && (height <512 || height > 1024 )){
     console.log("Image is too small or too big")
 }
@@ -40,16 +48,16 @@ else{
 
 let imageStats = fs.statSync('./img/team/njeong.jpg');
 let imageFileSizeMB = (imageStats.size) / (1024*1024);
-
 console.log("File is " + imageFileSizeMB + " megabytes");
+*/
 
 /*
-if((width!=height) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
+if((imageFileSizeMB > 1) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
     //sharp('./img/team/njeong.jpg')
     console.log("We need to fix this image")
 }
-
 else{
     console.log("Image looks great")
 }
 */
+
