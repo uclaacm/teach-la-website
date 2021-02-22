@@ -31,7 +31,7 @@ $breakpoint-widths: (
         padding-right: 1em;
       }
 
-      .col-padded:nth-child(#{$column-size}n - 1) {
+      .col-padded:nth-child(#{$column-size}n) {
         padding-left: 1em;
         padding-right: 0;
       }
