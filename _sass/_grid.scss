@@ -42,70 +42,36 @@ $breakpoint-widths: (
       }
     }
 
-    // reverses grid direction w/ multiple selectors, reversed list
+    // reverses grid direction w/ sibling selector, reversed list
     .row-desktop-ratio-#{$grid-name}.row-desktop-reverse {
       grid-template-columns: reverse($grid-ratio);
     }
   }
+}
 
-  @media (min-width: $desktop-width) {
-    .row-desktop-reverse {
-      // reverses grid direction - also requires above template column switch
+@media (min-width: $desktop-width) {
+  .row-desktop-reverse {
+    // reverses grid direction - also requires above template column switch
 
-      // // if I can save all .col-padded elements to $cells, but I can't:
-      // $cells: ; // grab all .col-padded elements
-      // $n: 0;
+    // TODO - refactor this to allow for 3+ column reversal
+    div:nth-child(2){
+      grid-row: 1;
+    }
 
-      // @use "sass:math";
+    // overrides above padding rules
+    .col-padded:first-child {
+      padding-right: 0;
+      padding-left: 1em;
+    }
 
-      // @each $cell in $cells {
-      // 	$n: #{$n + 1};
-      // 	$i: math.floor($n / $column-size);
-      // 	$r: $n % $column-size;
-      // 	$j: if($r == 0, $column-size, $r);
-      // 	grid-row: #{$i + 1} / #{$i + 2};
-      // 	grid-column: #{-$j} / #{(-$j) - 1};
-      // }
-
-      @for $j from 1 through $column-size {
-	.col-padded:nth-child(#{$column-size}n + #{$j}) {
-	  grid-row: 1; // assume grid only has 1 row
-	  grid-column: #{-$j} / #{(-$j) - 1};
-	}
-      }
-
-      .col-padded:nth-child(#{$column-size}n) {
-        padding-left: 0;
-        padding-right: 1em;
-      }
-
-      .col-padded:nth-child(#{$column-size}n + 1) {
-        padding-left: 1em;
-        padding-right: 0;
-      }
-      
-      // // TODO - refactor this to allow for 3+ column reversal
-      // .col-padded:nth-child(2){
-      // 	grid-row: 1;
-      // }
-
-      // // overrides above padding rules
-      // .col-padded:first-child {
-      // 	padding-right: 0;
-      // 	padding-left: 1em;
-      // }
-
-      // .col-padded:last-child {
-      // 	padding-left: 0;
-      // 	padding-right: 1em;
-      // }
+    .col-padded:last-child {
+      padding-left: 0;
+      padding-right: 1em;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    .grid-column-gap-2 {
-      column-gap: 2rem;
-    }
+  .grid-column-gap-2 {
+    column-gap: 2rem;
   }
 }
 
