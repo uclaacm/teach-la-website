@@ -1,0 +1,92 @@
+$grids: (
+  ("1-1", (1fr 1fr), "-desktop"),
+  ("1-2", (1fr 2fr), "-desktop"),
+  ("2-1", (2fr 1fr), "-desktop"),
+  ("1-1-1", (1fr 1fr 1fr), "-desktop"),
+  ("1-1-1-1", (1fr 1fr 1fr 1fr), "-desktop"),
+  ("1-3", (1fr 3fr), ""),
+);
+
+$breakpoint-widths: (
+  "-desktop": $desktop-width,
+  "": 0
+);
+
+
+@each $grid in $grids {
+  // unpacking
+  $grid-name: nth($grid, 1);
+  $grid-ratio: nth($grid, 2);
+  $grid-prefix: nth($grid, 3);
+  $column-size: length($grid-ratio);
+  $breakpoint-width: map-get($breakpoint-widths, $grid-prefix);
+
+  @media (min-width: $breakpoint-width) {
+    .row#{$grid-prefix}-ratio-#{$grid-name} {
+      display: grid;
+      grid-template-columns: $grid-ratio;
+
+      .col-padded {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+
+      .col-padded:nth-child(#{$column-size}n) {
+        padding-left: 1em;
+        padding-right: 0;
+      }
+
+      .col-padded:nth-child(#{$column-size}n + 1) {
+        padding-left: 0;
+        padding-right: 1em;
+      }
+    }
+
+    // reverses grid direction w/ sibling selector, reversed list
+    .row-desktop-ratio-#{$grid-name}.row-desktop-reverse {
+      grid-template-columns: reverse($grid-ratio);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .row-desktop-reverse {
+    // reverses grid direction - also requires above template column switch
+
+    // TODO - refactor this to allow for 3+ column reversal
+    div:nth-child(2){
+      grid-row: 1;
+    }
+
+    // overrides above padding rules
+    .col-padded:first-child {
+      padding-right: 0;
+      padding-left: 1em;
+    }
+
+    .col-padded:last-child {
+      padding-left: 0;
+      padding-right: 1em;
+    }
+  }
+
+  .grid-column-gap-2 {
+    column-gap: 2rem;
+  }
+}
+
+// TODO - TEMPORARY STOP GAP, REMOVE LATER:
+.TEAM-SPECIAL{
+  .grid-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
