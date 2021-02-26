@@ -53,7 +53,7 @@ permalink: "/partners"
 <div class="row-desktop-ratio-1-1-1">
     {% for partner in partners %}
     <div class="col-padded v-center-children">
-        <img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="img-responsive img-sponsor" alt="{{ partner.name }} logo" />
+        <a href="{{ partner.link }}"><img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="img-responsive img-sponsor" alt="{{ partner.name }} logo" /></a>
     </div>
     {% endfor %}
 </div>

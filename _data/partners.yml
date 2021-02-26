@@ -60,14 +60,14 @@
 - name: ACM AI
   type: partner
   path: acmai.png
-  link: # ask matt for these 3 links
+  link: https://uclaacmai.github.io/
 
 - name: Bruin Engineers and Mentors
   type: partner
   path: beam.jpg
-  link: 
+  link: https://beam.ucla.edu/
 
 - name: CityLab
   type: partner
   path: citylab.jpg
-  link: 
+  link: https://www.facebook.com/citylabatucla/
