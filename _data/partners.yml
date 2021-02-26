@@ -1,46 +1,57 @@
 - name: Blizzard
   type: affiliate
   path: blizzard.jpg
+  link: https://www.blizzard.com/en-us/
 
 - name: Citadel
   type: affiliate
   path: citadel.jpg
+  link: https://www.citadel.com/
 
 - name: Deloitte
   type: affiliate
   path: deloitte.jpg
+  link: https://www2.deloitte.com/us/en.html
 
 - name: Facebook
   type: affiliate
   path: facebook.jpg
+  link: https://www.facebook.com/
 
 - name: Google
   type: affiliate
   path: google.jpg
+  link: https://www.google.com/
 
 - name: Green Hills
   type: affiliate
   path: greenhills.jpg
+  link: https://www.ghs.com/
 
 - name: Human Capital
   type: affiliate
   path: humancapital.jpg
+  link: https://human.capital/
 
-- name: Northrop Ghumman
+- name: Northrop Grumman
   type: affiliate
   path: northrop.jpg
+  link: https://www.northropgrumman.com/
 
 - name: Samsung
   type: affiliate
   path: samsung.jpg
+  link: https://www.samsung.com/us/
 
 - name: Sandia
   type: affiliate
   path: sandia.jpg
+  link: https://www.sandia.gov/
 
 - name: Viasat
   type: affiliate
   path: viasat.jpg
+  link: https://www.viasat.com/lp/
 
 
 
@@ -49,11 +60,14 @@
 - name: ACM AI
   type: partner
   path: acmai.png
+  link: # ask matt for these 3 links
 
 - name: Bruin Engineers and Mentors
   type: partner
   path: beam.jpg
+  link: 
 
 - name: CityLab
   type: partner
   path: citylab.jpg
+  link: 
