@@ -14,24 +14,24 @@ permalink: "/team"
 </p>
 
 {% assign president = site.team | where_exp:"person", "person.group contains 'board' and person.title == 'President'" | group_by:"title" %}
-{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"lastname" | group_by:"title" | sort:"name" %}
+{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"name" | group_by:"title" | sort:"name" %}
 {% assign leadership = president | concat: board %}
 
-{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"lastname" %}
+{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
 
-{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"lastname" %}
-{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"lastname" | group_by:"graduating_year" | sort:"name" %}
+{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"name" %}
+{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"name" | group_by:"graduating_year" | sort:"name" %}
 
-<div class="team-member-grid board-member-grid">
+<div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
     {% for group in leadership %}
     {% for member in group.items %}
     <div class="grid-row" id="{{ member.slug }}">
         <div class="grid-col">
             <div class="profile-img-container">
                 {% if member.img %}
-                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
+                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
                 {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
                 {% endif %}
                 </a>
             </div>
@@ -40,7 +40,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {{ member.firstname }} {{ member.lastname }}
+                    {{ member.name }}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -81,7 +81,7 @@ permalink: "/team"
     Our team of instructors and developers teach in person at schools all throughout the Los Angeles Unified School District while developing new, interactive ways of making an education in computer science possible for everyone.
 </p>
 
-<div class="team-member-grid">
+<div class="row-desktop-ratio-1-1-1 TEAM-SPECIAL">
     {% for member in members %}
 
     {% if member.inactive %}
@@ -91,9 +91,9 @@ permalink: "/team"
         <div class="grid-col">
             <div class="profile-img-container">
                 {% if member.img %}
-                    <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
                     {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.firstname }} {{ member.lastname }}"/>
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
                 {% endif %}
                 </a>
             </div>
@@ -102,7 +102,7 @@ permalink: "/team"
         <div class="grid-col">
             <div class="team-member-content">
                 <h3 class="no-margin title">
-                    {{ member.firstname }} {{ member.lastname }}
+                    {{ member.name }}
                     {% if member.pronouns %}
                         <span class = "pronouns"> ({{member.pronouns}})</span>
                     {% endif %}
@@ -157,7 +157,7 @@ permalink: "/team"
 {% for member in boards %}
     {% for position in member.positions %}
         {% if position.year == boardYear %}
-        <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
+        <li><b>{{ member.name }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
         {% endif %}
     {% endfor %}
 {% endfor %}
@@ -170,7 +170,7 @@ permalink: "/team"
 <ul>
 {% for year in alumsplus %}
 {% for member in year.items %}
-    <li><b>{{ member.firstname }} {{ member.lastname }}</b> ({{ member.graduating_year }})</li>
+    <li><b>{{ member.name }}</b> ({{ member.graduating_year }})</li>
 {% endfor %}
 {% endfor %}
 </ul>

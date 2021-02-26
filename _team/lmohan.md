@@ -1,6 +1,5 @@
 ---
-firstname: "Lisha"
-lastname: "Mohan"
+name: "Lisha Mohan"
 title: "Lead Developer"
 secondary: "Instructor"
 group: "member"

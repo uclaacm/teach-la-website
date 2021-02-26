@@ -1,6 +1,5 @@
 ---
-firstname: "Bryan"
-lastname: "Luo"
+name: "Bryan Luo"
 title: "Developer & Instructor"
 group: "member"
 img: "bluo.jpg"

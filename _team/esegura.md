@@ -1,6 +1,5 @@
 ---
-firstname: Enrique
-lastname: Segura
+name: Enrique Segura
 group: alum+
 graduating_year: 2017
 

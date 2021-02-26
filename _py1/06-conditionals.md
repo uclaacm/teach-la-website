@@ -4,7 +4,7 @@ group: "flow"
 num: 6
 video_link: "https://www.youtube.com/embed/7D0mAR9P8k8"
 slides_link: "https://docs.google.com/presentation/d/16Hk_ylE5Jnud5GDZge6l1zo_jgYfLAKc15fHcRF49Po/edit?usp=sharing"
-worksheet_link: "https://docs.google.com/document/d/13qYHo08Lv5x8izJ8CZCE-b3isDEo7OxgPB1ZxmOEASM/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1DfvdexH2Qh7aHaueFI1qcCVCuIC1i423qzf9WUG9na0/edit?usp=sharing"
 length: 14
 agenda: 
     - text: "why are conditionals necessary?"

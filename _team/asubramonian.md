@@ -1,6 +1,5 @@
 ---
-firstname: "Arjun"
-lastname: "Subramonian"
+name: "Arjun Subramonian"
 title: "Advisor (JEDI)"
 secondary: "AI/ML Lead"
 group: "board"
@@ -11,6 +10,8 @@ graduating_year: 2021
 pronouns: "they/any"
 
 positions:
+  - year: 2020-2021
+    title: Advisor,  AI/ML Lead
   - year: 2019-2020
     title: Logistics Director, NHHS Lead
 ---

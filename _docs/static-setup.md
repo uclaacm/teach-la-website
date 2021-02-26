@@ -27,8 +27,7 @@ The contents of the file are important. To start, we add what is called **head m
 
 ```md
 ---
-firstname: "Joe"
-lastname: "Bruin"
+name: "Joe Bruin"
 group: "member"
 ---
 ```
@@ -45,8 +44,7 @@ Here's an example team page for Josie Bruin:
 
 ```md
 ---
-firstname: Josie
-lastname: Bruin
+name: Josie  Bruin
 pronouns: "they/them"
 group: alum+
 graduating_year: 1923

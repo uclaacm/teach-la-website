@@ -1,6 +1,5 @@
 ---
-firstname: "Ashley"
-lastname: "Ghodsian"
+name: "Ashley Ghodsian"
 title: "Advisor (JEDI)"
 secondary: "Python Instructor, Translator"
 group: "board"
@@ -10,4 +9,8 @@ graduating_year: 2022
 links:
   - name: "LinkedIn"
     href: "https://linkedin.com/in/ashleyghodsian"
+
+positions:
+  - year: 2020-2021
+    title: JEDI, Python Instructor, Translator
 ---

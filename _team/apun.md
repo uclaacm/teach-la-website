@@ -1,6 +1,5 @@
 ---
-firstname: "Alex"
-lastname: "Pun"
+name: "Alex Pun"
 group: "member"
 title: "Developer"
 graduating_year: 2023

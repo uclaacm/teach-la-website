@@ -1,6 +1,5 @@
 ---
-firstname: "Varsha"
-lastname: "Hunter"
+name: "Varsha Hunter"
 group: "member"
 title: "Developer"
 graduating_year: "2022"

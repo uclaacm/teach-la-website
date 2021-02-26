@@ -1,6 +1,5 @@
 ---
-firstname: "Eden"
-lastname: "Yu"
+name: "Eden Yu"
 group: "member"
 title: "Scratch Curriculum Developer"
 pronouns: "she/her"

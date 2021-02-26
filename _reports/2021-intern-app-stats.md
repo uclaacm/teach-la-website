@@ -21,7 +21,7 @@ This year Teach LA had **71 total applications** for our interns. While we did n
 
 Our of our 71 total applicants, we had just one transfer (1.41%). This is an area of improvement that we are actively investigating.
 
-Split up by graduation year, our applicants were:
+Here is the split of our applicants by graduation year:
 
 * 2.82% are graduating in 2021
 * 9.86% are graduating in 2022
@@ -45,7 +45,7 @@ Breaking down the three collected statistics:
 
 7.06% of our applicants were transfer students.
 
-Split up by graduation year,
+Here is the split of our applicants by graduation year:
 
 * 3.92% are graduating in 2021
 * 18.43% are graduating in 2022
@@ -56,7 +56,7 @@ Split up by graduation year,
 
 ## Remarks and Closing Thoughts
 
-We took these statistics into account to identify weak points in our recruiting and application pipeline. In particular, we had very little transfer student engagement. Using this into account, we've started to increase communication with UCLA's Transfer Center, and are looking into more ways to actively support and include the transfer student community.
+We took these statistics into account to identify weak points in our recruiting and application pipeline. In particular, we had very little transfer student engagement. Taking this into account, we've started to increase communication with UCLA's Transfer Center, and are looking into more ways to actively support and include the transfer student community.
 
 Both Teach LA and ACM as a whole have more equitable gender splits than the UCLA Computer Science program as a whole, which tends to average 20-25% female over the past five years (see the [UCEE reports](https://www.seasoasa.ucla.edu/enrollment-degree-statistics-new/) for more information).
 
@@ -65,6 +65,8 @@ Our committee skews harder towards first and second-years than the rest of ACM, 
 We are committed to making our internship application process -  and more broadly, our club - as transparent and inclusive as possible. We plan to continue to survey aggregate statistics surrounding our organization, and use these to identify weaknesses in our organizational structure and plan.
 
 If you have any questions, concerns, or would like to discuss this data, please feel free to reach out! Our organization is generally available via email at [acmteachla@gmail.com](mailto:acmteachla@gmail.com), and our individual officers can be contacted via the [team page]({{site.baseurl}}/team).
+
+*Note: this report was edited on 02/12/2021 to resolve minor grammatical errors.*
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>

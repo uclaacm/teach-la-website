@@ -1,6 +1,5 @@
 ---
-firstname: "Kai"
-lastname: "Tota"
+name: "Kai Tota"
 title: "AI Outreach Officer"
 group: "member"
 graduating_year: 2024

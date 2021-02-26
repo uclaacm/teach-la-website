@@ -6,7 +6,7 @@ group: "fundamentals"
 num: 2
 video_link: "https://www.youtube.com/embed/cML5vhZ8i24"
 slides_link: "https://docs.google.com/presentation/d/1qgxTc-99Wkn_B4lcM4YYOHKrK_igDNFHkTviFc_VR8E/edit?usp=sharing"
-worksheet_link: "https://docs.google.com/document/d/19ymRkXJ6bXDYBJHHWjFr5FJJLI6Lphs4TjGUitYYF8A/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1WttiIPio4lZQjagFpXKZAuv-cbmYwbGoLCI3c4e_28c/edit?usp=sharing"
 length: 16
 agenda: 
     - text: "what are operators?"

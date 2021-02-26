@@ -1,6 +1,5 @@
 ---
-firstname: "William"
-lastname: "Huang"
+name: "William Huang"
 group: "member"
 title: "Python Instructor"
 pronouns: "he/him"

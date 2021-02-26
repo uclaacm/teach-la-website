@@ -1,6 +1,5 @@
 ---
-firstname: "Charlene"
-lastname: "Kim"
+name: "Charlene Kim"
 group: "member"
 title: "Developer"
 pronouns: "she/her"

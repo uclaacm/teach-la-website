@@ -1,6 +1,5 @@
 ---
-firstname: "Oscar"
-lastname: "O'Brien"
+name: "Oscar O'Brien"
 group: "member"
 title: "Python Curriculum Developer"
 pronouns: "he/him"

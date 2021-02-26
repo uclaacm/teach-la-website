@@ -1,6 +1,5 @@
 ---
-firstname: "Jonah"
-lastname: "Glickstein"
+name: "Jonah Glickstein"
 title: "Scratch Curriculum Developer"
 group: "member"
 graduating_year: 2024

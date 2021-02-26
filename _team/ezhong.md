@@ -1,6 +1,5 @@
 ---
-firstname: "Evan"
-lastname: "Zhong"
+name: "Evan Zhong"
 title: "Developer"
 secondary: "Instructor"
 group: "member"
