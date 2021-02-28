@@ -2,7 +2,7 @@
 name: "Farrah Au-Yeung"
 group: "member"
 title: "Dev & Design Lead Intern"
-pronouns: "your preferred pronouns (if you're comfortable sharing)"
+pronouns: "she/her"
 img: "farrah.png"
 graduating_year: 2021
 github: "ayfarrah"
