@@ -50,19 +50,10 @@ permalink: "/partners"
     The following organizations have directly partnered with us to further expand our organization.
 </p>
 
-<div class="team-member-grid">
+<div class="row-desktop-ratio-1-1-1">
     {% for partner in partners %}
-    <div class="grid-row center-row-vertical fill-screen-row">
-        <div class="grid-col justify-center">
-            <div class="profile-img-container">
-                <img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="profile-img" alt="{{ partner.name }} logo" />
-            </div>
-        </div>
-        <div class="grid-col justify-center">
-            <h3 class="center-text partner-name">
-                {{partner.name}}    
-            </h3>
-        </div>
+    <div class="col-padded v-center-children">
+        <a href="{{ partner.link }}" target="_blank" rel="noopener noreferrer"><img src="{{site.baseurl}}/img/partners/{{partner.path}}" class="img-responsive img-sponsor" alt="{{ partner.name }} logo" /></a>
     </div>
     {% endfor %}
 </div>
@@ -71,16 +62,14 @@ permalink: "/partners"
     Affiliates
 </h2>
 
-<p> The following organizations support our efforts through their affiliation with the UCLA computer science
-    department.
+<p>
+    The following organizations support our efforts through their affiliation with the UCLA computer science department.
 </p>
 
-<div class="team-member-grid">
+<div class="row-desktop-ratio-1-1-1">
     {% for affiliate in affiliates %}
-    <div class="grid-row center-row-vertical">
-        <div class="sponsor-container">
-            <img class="profile-img" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}" alt="{{ affiliate.name }} logo" />
-        </div>
+    <div class="col-padded v-center-children">
+        <a href="{{ affiliate.link }} " target="_blank" rel="noopener noreferrer"><img class="img-responsive img-sponsor" src="{{ site.baseurl }}/img/partners/{{ affiliate.path }}" alt="{{ affiliate.name }} logo" /></a>
     </div>
     {% endfor %}
 </div>
@@ -94,6 +83,3 @@ permalink: "/partners"
     Teach LA is a member committee of <a class="tla-link" href="https://acm.cs.ucla.edu/">ACM at UCLA</a>, the
     Association for Computing Machinery UCLA Chapter.
 </p>
-
-
-
