@@ -49,7 +49,20 @@ permalink: "/classes"
                 </details>
                 {% if class.lead %}
                 <p>
-                    have questions? <a class="tla-link" href="{{site.baseurl}}/team/{{class.lead.hash}}">contact our curriculum lead {{class.lead.name}}!</a>
+                    have questions? <a class="tla-link" href="{{site.baseurl}}/team/{{class.lead.hash}}">contact our
+                        curriculum lead {{class.lead.name}}!</a>
+                </p>
+                {% endif %}
+                {% if class.leads %}
+                <p>
+                    have questions? contact one of our curriculum leads:
+                <ul>
+                    {% for object in class.leads %}
+                    <li>
+                        <a class="tla-link" href="{{site.baseurl}}/team/{{object.hash}}"> {{object.name}} </a>
+                    </li>
+                    {% endfor %}
+                </ul>
                 </p>
                 {% endif %}
                 <br />
