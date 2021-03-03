@@ -3,7 +3,7 @@ name: "Farrah Au-Yeung"
 group: "member"
 title: "Dev & Design Lead Intern"
 pronouns: "she/her"
-img: "farrah.png"
+img: "farrah.jpg"
 graduating_year: 2021
 github: "ayfarrah"
 links:
