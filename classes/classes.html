@@ -7,82 +7,92 @@ permalink: "/classes"
 <h1 class="title page-title">Classes &amp; Curriculum</h1>
 
 <p>
-    Here is a comprehensive list of all of the classes that ACM Teach LA provides! You can find more information about what the class is about, its learning goals, and its curriculum. Part of our mission is making our education truly accessible, and that involves open-sourcing as much information as possible: <b>everything our instructors have, you'll find here.</b>
+    Here is a comprehensive list of all of the classes that ACM Teach LA provides! You can find more information about
+    what the class is about, its learning goals, and its curriculum. Part of our mission is making our education truly
+    accessible, and that involves open-sourcing as much information as possible: <b>everything our instructors have,
+        you'll find here.</b>
 </p>
 
 <p>
-    We're still hashing out renewing existing partnerships and seeking new ones - if you're interested in working with us, please shoot us an email at <a class="tla-link" href="mailto:{{site.email}}">{{site.email}}</a>!
+    We're still hashing out renewing existing partnerships and seeking new ones - if you're interested in working with
+    us, please shoot us an email at <a class="tla-link" href="mailto:{{site.email}}">{{site.email}}</a>!
 </p>
 
 <hr class="divider" />
 
 <p>
-    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our internal documentation.
+    This page is a current work in progress, bear with us! We're currently digitizing and standardizing all of our
+    internal documentation.
 </p>
 
 {% for class in site.data.classes %}
-    <div class="class-card">
-        <div class="row-desktop-ratio-1-2">
-            <div class="img-push-down">
-                <img class="img-responsive" alt="decorative image for {{class.name}}" src="{{site.baseurl}}/img/{{class.img}}" />
-            </div>
-            <div class="class-content">
-                <h2 class="title">{{class.name}}</h2>
-                <p class="no-margin">
-                    {% if class.tags %}
-                        {% for tag in class.tags %}
-                            {{tag}} •
-                        {% endfor %}
-                    {% endif %}
-                    <a class="tla-link" href="{{site.baseurl}}/partners">our partnered schools</a>
-                </p>
-                <p>{{class.blurb}}</p>
-                <details>
-                    <summary>Learning Goals (click to expand)</summary>
-                    <br />
-                    students will:
-                    <ul>
-                        {% for goal in class.goals %}
-                            <li>{{goal}}</li>
-                        {% endfor %}
-                    </ul>
-                </details>
-                {% if class.lead %}
-                <p>
-                    have questions? <a class="tla-link" href="{{site.baseurl}}/team/{{class.lead.hash}}">contact our
-                        curriculum lead {{class.lead.name}}!</a>
-                </p>
+<div class="class-card">
+    <div class="row-desktop-ratio-1-2">
+        <div class="img-push-down">
+            <img class="img-responsive" alt="decorative image for {{class.name}}"
+                src="{{site.baseurl}}/img/{{class.img}}" />
+        </div>
+        <div class="class-content">
+            <h2 class="title">{{class.name}}</h2>
+            <p class="no-margin">
+                {% if class.tags %}
+                {% for tag in class.tags %}
+                {{tag}} •
+                {% endfor %}
                 {% endif %}
-                {% if class.leads %}
-                <p>
-                    have questions? contact one of our curriculum leads:
+                <a class="tla-link" href="{{site.baseurl}}/partners">our partnered schools</a>
+            </p>
+            <p>{{class.blurb}}</p>
+            <details>
+                <summary>Learning Goals (click to expand)</summary>
+                <br />
+                students will:
                 <ul>
-                    {% for object in class.leads %}
-                    <li>
-                        <a class="tla-link" href="{{site.baseurl}}/team/{{object.hash}}"> {{object.name}} </a>
-                    </li>
+                    {% for goal in class.goals %}
+                    <li>{{goal}}</li>
                     {% endfor %}
                 </ul>
-                </p>
+            </details>
+            {% if class.lead %}
+            <p>
+                have questions? <a class="tla-link" href="{{site.baseurl}}/team/{{class.lead.hash}}">contact our
+                    curriculum lead {{class.lead.name}}!</a>
+            </p>
+            {% endif %}
+            {% if class.leads %}
+            <p>
+                have questions? contact one of our curriculum leads:
+                {% for object in class.leads %}
+                {% if forloop.last %}
+                or
                 {% endif %}
-                <br />
-                <div class="button-container">
-                    {% if class.path %}
-                    <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
-                        <span class="fa fa-map-signs"></span>
-                        Class Page
-                    </a>
-                    {% endif %}
-                    {% if class.outline %}
-                    <a class="button button-dark" href="{{class.outline}}">
-                        <span class="fa fa-file-alt"></span>
-                        Curriculum Outline
-                    </a>
-                    {% endif %}
-                </div>
+                <a class="tla-link" href="{{site.baseurl}}/team/{{object.hash}}">{{object.name}}</a>
+                {% if class.leads.size > 2 %}
+                    {% unless forloop.last %}
+                    ,
+                    {% endunless %}
+                {% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+            <br />
+            <div class="button-container">
+                {% if class.path %}
+                <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
+                    <span class="fa fa-map-signs"></span>
+                    Class Page
+                </a>
+                {% endif %}
+                {% if class.outline %}
+                <a class="button button-dark" href="{{class.outline}}">
+                    <span class="fa fa-file-alt"></span>
+                    Curriculum Outline
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
 {% endfor %}
 
 {% include contact-cta.html %}
