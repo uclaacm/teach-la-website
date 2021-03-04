@@ -62,17 +62,14 @@ permalink: "/classes"
             {% if class.leads %}
             <p>
                 have questions? contact one of our curriculum leads:
+                <span>
                 {% for object in class.leads %}
                 {% if forloop.last %}
                 or
                 {% endif %}
-                <a class="tla-link" href="{{site.baseurl}}/team/{{object.hash}}">{{object.name}}</a>
-                {% if class.leads.size > 2 %}
-                    {% unless forloop.last %}
-                    ,
-                    {% endunless %}
-                {% endif %}
-                {% endfor %}
+                <a class="tla-link" href="{{site.baseurl}}/team/{{object.hash}}">{{object.name}}</a>{% if class.leads.size > 2 and forloop.last != true %},{% endif %}
+                {% endfor %}    
+                </span>
             </p>
             {% endif %}
             <br />
