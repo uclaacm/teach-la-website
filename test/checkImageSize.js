@@ -21,43 +21,66 @@ const fs = require('fs');
 
 //bytesize pieces
 //Try to not copy code --> read through the code
-let dimensions = sizeOf('./img/team/njeong.jpg');
+
+imageFileName = './img/team/njeong.jpg';
+let dimensions = sizeOf(imageFileName);
 width = dimensions.width;
 height = dimensions.height;
-let imageStats = fs.statSync('./img/team/njeong.jpg');
+let imageStats = fs.statSync(imageFileName);
 let imageFileSizeMB = (imageStats.size) / (1024*1024);
 if (width != height){
-    console.log("Not a pixel-perfect square aspect ratio") //Throw an error
+    throw Error("Not a pixel-perfect square aspect ratio. We can't auto-fix non-square aspect ratio") //Throw an error
 }
 else{
     if((imageFileSizeMB > 1) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
-        //sharp('./img/team/njeong.jpg')  - Use sharp
-        console.log("We need to fix this image")
+        //We need to resize this image
+        sharp(imageFileName)
+            .resize({width: 512, height: 512})
+            .toFile('./img/team/newimage.jpg'); 
+        /*
+        fs.rename('./img/team/newimage.jpg', imageFileName, (err) => {
+            if (err) throw err;
+            console.log('Rename complete!');
+            });
+        */
+
+        /*
+        fs.unlink(imageFileName, (err) => {
+            if (err) throw err;
+            console.log('File was deleted')});
+        */
+        console.log("Changes have been made")
     }
     else{
         console.log("Image looks great")
     }
 }
-/*
-if((width <512 || width > 1024) && (height <512 || height > 1024 )){
-    console.log("Image is too small or too big")
-}
-else{
-    console.log("Image size is good")
-}
-
-let imageStats = fs.statSync('./img/team/njeong.jpg');
-let imageFileSizeMB = (imageStats.size) / (1024*1024);
-console.log("File is " + imageFileSizeMB + " megabytes");
-*/
+fs.rename('./img/team/newimage.jpg', imageFileName, (err) => {
+    if (err) throw err;
+    console.log('Rename complete!');
+    });
 
 /*
-if((imageFileSizeMB > 1) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
-    //sharp('./img/team/njeong.jpg')
-    console.log("We need to fix this image")
-}
-else{
-    console.log("Image looks great")
-}
+Function:
+function imageSizeChecker(input){  //input here is the image file
+
+    let dimensions = sizeOf(input);
+    width = dimensions.width;
+    height = dimensions.height;
+    let imageStats = fs.statSync(input);
+    let imageFileSizeMB = (imageStats.size) / (1024*1024);
+    if (width != height){
+        console.log("Not a pixel-perfect square aspect ratio") //Throw an error
+    }
+    else{
+        if((imageFileSizeMB > 1) || ((width <512 || width > 1024) && (height <512 || height > 1024 ))){
+            //sharp(input)  - Use sharp
+            console.log("We need to fix this image")
+        }
+        else{
+            console.log("Image looks great")
+        }
+    }
+};
 */
 
