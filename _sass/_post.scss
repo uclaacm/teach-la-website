@@ -150,7 +150,20 @@
   justify-content: center;
   align-items: center;
 }
+
 .social-buttons{
   display: flex;
   flex-direction: row;
+}
+
+[hidden] {    //for older IDEs to display correct label(acessibility) for icon
+    display: none;
+}
+
+.fa-rss-square {
+    color: orange;
+}
+
+.social-RSS-icon {
+    font-size: 2rem;
 }
