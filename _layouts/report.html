@@ -8,8 +8,8 @@ layout: default
     </p>
     <p>
         Date published: {{ page.date | date: "%b %-d, %Y" }}.
-        <a href="https://teachla.uclaacm.com/feed.reports.xml" aria-labelledby="icon-label"> 
-            <span class="icon-label" hidden>Subscribe to RSS feed for reports</span>
+        <a href="https://teachla.uclaacm.com/feed.reports.xml" aria-labelledby="report-icon-top"> 
+            <span id="report-icon-top" hidden>Subscribe to RSS feed for reports</span>
             <span class="fas fa-rss-square" aria-hidden="true"></span> 
         </a>
     </p>
@@ -20,11 +20,13 @@ layout: default
     <hr class="divider" />
     <p>
         Thank you for reading this report, <b>{{page.title}}</b>. It was authored by the Teach LA community, with significant contributions from {{page.author}}.
-        </br></br>Subscribe to our RSS feed - 
-        <a href="https://teachla.uclaacm.com/feed.reports.xml" aria-labelledby="icon-label"> 
-            <span class="icon-label" hidden>Subscribe to RSS feed for reports</span>
-            <span class="fas fa-rss-square" aria-hidden="true"></span> 
-        </a>
+    </p>
+    <p>
+    Subscribe to our RSS feed - 
+    <a href="https://teachla.uclaacm.com/feed.reports.xml" aria-labelledby="report-icon-bottom"> 
+        <span id="report-icon-bottom" hidden>Subscribe to RSS feed for reports</span>
+        <span class="fas fa-rss-square" aria-hidden="true"></span> 
+    </a>
     </p>
 </article>
 <p>
