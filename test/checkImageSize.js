@@ -36,29 +36,19 @@ else{
         //We need to resize this image
         sharp(imageFileName)
             .resize({width: 512, height: 512})
-            .toFile('./img/team/newimage.jpg'); 
-        /*
-        fs.rename('./img/team/newimage.jpg', imageFileName, (err) => {
-            if (err) throw err;
-            console.log('Rename complete!');
-            });
-        */
+            .toFile('./img/team/newimage.jpg').then(()=>{
+                fs.rename('./img/team/newimage.jpg',imageFileName, (err) => {
+                    if (err) throw err;
+                    console.log('Rename complete!');
+                     });
+            }); 
 
-        /*
-        fs.unlink(imageFileName, (err) => {
-            if (err) throw err;
-            console.log('File was deleted')});
-        */
         console.log("Changes have been made")
     }
     else{
         console.log("Image looks great")
     }
 }
-fs.rename('./img/team/newimage.jpg', imageFileName, (err) => {
-    if (err) throw err;
-    console.log('Rename complete!');
-    });
 
 /*
 Function:
