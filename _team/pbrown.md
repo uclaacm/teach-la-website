@@ -1,6 +1,5 @@
 ---
-firstname: "Paige"
-lastname: "Brown"
+name: "Paige Brown"
 group: "member"
 title: "Developer"
 pronouns: "she/her"
