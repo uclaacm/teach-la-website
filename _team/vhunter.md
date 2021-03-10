@@ -6,6 +6,7 @@ graduating_year: "2022"
 
 github: "varshah2000"
 img: "vhunter.jpg"
+inactive: true
 ---
 
 ## Hello!
