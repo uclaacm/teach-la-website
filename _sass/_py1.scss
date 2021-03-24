@@ -6,7 +6,7 @@
 // Home page styling
 
 .py1-link {
-    @include tla-link($py-blue, white, white);
+    @include tla-link($py-gold, white, white);
 }
 
 @mixin py1-home-card($outline-color) {
@@ -96,6 +96,15 @@
     padding-left: 0.5em;
 }
 
+.py1-smaller-margin-p {
+    margin: 0;
+}
+
+.py1-smaller-margin-heading {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
 .py1-sidebar {
     @media (min-width: $desktop-width) {
         max-width: 25%;
@@ -113,9 +122,11 @@
 }
 
 .py1-divider {
-    margin-left: 30px;
+    margin-left: 60px;
+    margin-right: 40px;
     width: 1px;
     background-color: $py-blue;
+    color: $py-blue;
 }
 
 .py1-curriculum {
@@ -138,12 +149,16 @@
 .py1-lessons-wrapper > * {
     margin: 1% 0%;
     @media (min-width: $desktop-width) {
-        width: 43%;
+        width: 45%;
     }
 }
 
 .py1-lesson {
     @include py1-home-card($py-blue);
+}
+
+.py1-lesson-link {
+    @include tla-link($py-blue white, white);
 }
 
 .py1-lesson-title-bar {
@@ -163,7 +178,7 @@
     font-family: $font-display;
     font-weight: bold;
     font-size: 1rem;
-    margin: 0;
+    margin-right: 0.3em;
 }
 
 .py1-lesson-body {
