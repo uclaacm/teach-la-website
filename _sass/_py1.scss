@@ -96,15 +96,6 @@
     padding-left: 0.5em;
 }
 
-.py1-smaller-margin-p {
-    margin: 0;
-}
-
-.py1-smaller-margin-heading {
-    font-size: 2em;
-    padding-bottom: 20px;
-}
-
 .py1-sidebar {
     @media (min-width: $desktop-width) {
         max-width: 25%;
@@ -213,7 +204,7 @@
 }
 
 .py1-lesson-action {
-    @include py1-home-button($py-blue, 0.8em);
+    @include py1-home-button($py-blue, 0.7em);
     transition: all 500ms ease;
 }
 

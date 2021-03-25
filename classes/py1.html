@@ -6,8 +6,8 @@ permalink: /classes/py1
 
 <div class="py1-wrapper">
     <div class="py1-sidebar">
-        <span class = "py1-smaller-margin-p">how to get started in</span>
-        <span class= "py1-smaller-margin-heading"><span class = "py1-link">python</span></span>
+       <p class="no-margin">how to get started in</p>
+       <h1 class="no-margin">python</h1>
         <img src="{{site.baseurl}}/img/undraw/proud_coder.svg" alt="female coder with open window of code">
         <p>
         confused about how to get started with
@@ -33,76 +33,7 @@ permalink: /classes/py1
     <div class="py1-divider">
     </div>
     <div class="py1-curriculum">
-        <!-- fundamentals lesson cards-->
-        <h2 class = "title">fundamentals</h2>
-        <div class='py1-lessons-wrapper'>
-            {% for lesson in site.py1 %}
-            {% if lesson.group == "fundamentals" %}
-            <div class='py1-lesson'>
-                <div class='py1-lesson-title-bar'>
-                    <h2><a class='py1-lesson-link' href="{{ lesson.url }}">{{ lesson.title }}</a></h2>
-                    <p class='py1-step-number'>#{{ lesson.num }}</p>
-                </div>
-                <div class='py1-lesson-body'>
-                    <ul class='py1-list py1-lesson-goal-list'>
-                        {% for brief in lesson.agenda %}
-                        <li class='py1-lesson-goal'><span>{{ brief.text }}</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class='py1-lesson-action-bar'>
-                    <div class='py1-action-group'>
-                        {% if lesson.slides_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.slides_link }}">slides</a>
-                        {% endif %}
-                        {% if lesson.video_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.video_link }}">video</a>
-                        {% endif %}
-                        {% if lesson.worksheet_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.worksheet_link }}">worksheet</a>
-                        {% endif %}
-                    </div>
-                    <p class="py1-lesson-duration">{{ lesson.length }} min</p>
-                </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-
-        <!-- flow lesson cards -->
-        <h2 class = "title">flow</h2>
-        <div class='py1-lessons-wrapper'>
-            {% for lesson in site.py1 %}
-            {% if lesson.group == "flow" %}
-            <div class='py1-lesson'>
-                <div class='py1-lesson-title-bar'>
-                    <h2><a class='py1-lesson-link' href="{{ lesson.url }}">{{ lesson.title }}</a></h2>
-                    <p class='py1-step-number'>#{{ lesson.num }}</p>
-                </div>
-                <div class='py1-lesson-body'>
-                    <ul class='py1-list py1-lesson-goal-list'>
-                        {% for brief in lesson.agenda %}
-                        <li class='py1-lesson-goal'><span>{{ brief.text }}</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class='py1-lesson-action-bar'>
-                    <div class='py1-action-group'>
-                        {% if lesson.slides_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.slides_link }}">slides</a>
-                        {% endif %}
-                        {% if lesson.video_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.video_link }}">video</a>
-                        {% endif %}
-                        {% if lesson.worksheet_link %}
-                        <a class='py1-lesson-action' href="{{ lesson.worksheet_link }}">worksheet</a>
-                        {% endif %}
-                    </div>
-                    <p class="py1-lesson-duration">{{ lesson.length }} min</p>
-                </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+        {% include py1-lesson-card.html group="fundamentals"%}
+        {% include py1-lesson-card.html group="flow"%}
     </div>
 </div>
