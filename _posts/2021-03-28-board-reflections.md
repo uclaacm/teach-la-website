@@ -2,12 +2,14 @@
 layout: post
 title: "'20-'21 Board Reflections"
 date: 2021-03-28 04:00:00 UTC
-author: Chase, Helia, Leo, Nina, Robert, Sophie, and Matt
+author: Chase, Helia, Kaitlyn, Leo, Nina, Regina, Robert, Sophie, and Matt
 authors:
     - Chase Kapler
     - Helia Woo
+    - Kaitlyn Wang
     - Leo Krashanoff
     - Nina Lu
+    - Regina Wang
     - Robert Tran
     - Sophie Schoenmeyer
     - Matthew Wang
@@ -16,18 +18,20 @@ tags:
     - blog
     - reflection
 image: img/posts/20-21-reflections/cover.png
-alt: A picture with Chase, Helia, Leo, Nina, Robert, Sophie, and Matt
+alt: A picture with Chase, Helia, Leo, Nina, Regina, Robert, Sophie, and Matt
 ---
 
 We're just in the process of transitioning to our new board, and we wanted to take some time to reflect on this past year! It's been an unexpected set of challenges in some unprecedented time, but we're also so proud of all the work that we've done. Here are some thoughts from our wonderful board members!
 
-* [Chase](#chase)
-* [Helia](#helia)
-* [Leo](#leo)
-* [Nina](#nina)
-* [Robert](#robert)
-* [Sophie](#sophie)
-* [Matt](#matt)
+* [Chase](#chase) - React Native Lead
+* [Helia](#helia) - Python Videos Lead, JEDI
+* [Kaitlyn](#kaitlyn) - Special Events Director
+* [Leo](#leo) - Dev Team Director
+* [Nina](#nina) - Special Events Director
+* [Regina](#regina) - Special Events Director
+* [Robert](#robert) - Emerson Lead
+* [Sophie](#sophie) - Logistics Director, JEDI
+* [Matt](#matt) - President
 
 ## Chase
 
@@ -50,6 +54,10 @@ We’re entering our third quarter teaching this class, and honestly I’m still
 I joined Teach LA winter quarter of my freshman year. As a then-CS student, I realized I probably should be involved in some kind of CS extracurricular by that time, and I chose Teach LA specifically because it worked with kids. Not because I liked kids, but because when I was a kid I always thought college students were so cool, and now that I was a college student myself I wanted to fan my ego and bask in the admiration of today’s children. I still wasn’t super involved then, though, and was even less involved the following quarter. It was the beginning of the pandemic and I was having a hard time doing anything other than gaining weight and reading my favorite childhood novels until 4 AM. But also, I hate having responsibilities. I usually either psych myself out of taking them, or force myself to take them and then flake out. This is why I live in constant fear of the looming inevitability of succumbing to capitalism and finding a job, and why I didn’t get that involved, and didn’t plan to ever join Teach LA’s board or lead an entire team to make videos on Python. But then there was this shiny new thing called JEDI as we neared fall, and I was very interested in it. Justice, equity, diversity, inclusion. There was a visible lack of it within ACM and the CS community at UCLA, and people wanted to change that. It aligned nicely with my interests; the reason I wanted to study CS in the first place, after the job security and pressure to pursue a STEM degree, was to fight the culture of prejudice and exclusion that permeates the field. So I said I wanted to become a JEDI. And they put me on the board. I had a really valuable time as a JEDI. The other JEDIs of Teach LA—Ashley, Chloe, and Sophie—and I, with help from Arjun and Matt, worked on things like accessibility in teaching, impostor syndrome, and community building within our committee.
 
 As for the Python videos, I got asked to manage the breakout room for videos and I was like, I don’t know Python but yeah okay. I ended up taking on more responsibility than I expected—they made this new position for me, the “Python Video Lead”—but I knew things were going to be okay because in our first meeting, one guy made an active effort to talk to me and another laughed at everything I said. In the following weeks, we grew to eight members total, and we’ve had a really good time since. In addition to creating an entire series of videos about basic Python concepts for kids, we’ve had lengthy discussions on important topics like the legendary Harry Potter fanfiction My Immortal and whether haircut syncing with boys is anything like period syncing. Not to get emo in a blog post for a computer science organization, but personally, the past few months— especially fall quarter—have been a very uncool time. The Python video team is special to me not only because we had so much fun together, but also because it was pretty much the one place where I was never sad during the fall. It’s also where I learned I wasn’t all that bad at being a leader, after sitting on the sidelines for most of my life. So, thanks to everyone on the team: Props King Advaith for consistently being on top of everything, Ashley for being everyone’s biggest supporter, Austin for educating us on Armie Hammer, Drew for bringing Bike-short-for-Bichael to life, Einar for selling his soul to Final Cut, Seongbin for juggling video work with intern work and a weird neck rash and food poisoning and a different timezone, and Stephen for shaving his head like Avatar—among many, many other things. Each person brought an amazing energy to the group and I’m really proud of how much we bonded. Also thanks to Jun for randomly popping into the breakout room or joining us after 8:30 when we’re the only ones left in the meeting (thanks Sophie and Matt for that too, and occasionally other people), and thanks to Arjun for being such a great and supportive and cool JEDI lead. Lastly, thanks to Matt for running this year’s Teach LA and for his tireless work on everything from the icebreakers at every board meeting to the socials. It’s probably the first time I’ve ever felt so supported and comfortable at school, and that had a big influence on how well I was able to carry out my JEDI and Python video responsibilities. Every area of Teach LA this year has a bit of Matt in it, I think—not only because he was actually involved in everything and talked to everyone, but also because how he interacted with us as leads carried on to how we interacted with the members of our respective teams. So I’m really grateful for that, and I know everyone else is too.
+
+## Kaitlyn
+
+*Position: Special Events Director.*
 
 ## Leo
 
@@ -80,6 +88,22 @@ Teaching was certainly an interesting and rewarding experience. I was mostly inv
 This was when the cybersecurity-themed collaboration with science educational outreach organization CityLab was just starting, and Regina, Kaitlyn, and I were invited to observe one of their event days to see how they operated. I really liked seeing how another organization approached teaching, how they incorporated a fun storyline into the day’s activities and pop culture themes into their workshops, all of which we could potentially take inspiration from for our own activities and events. After we became Special Events Directors, we planned to move forward with the collaboration, but then the pandemic hit and everyone had to transition to working remotely. Although the CityLab collaboration transitioned to a virtual platform, it still managed to go on in the end, which was in no small part due to the enthusiasm and dedication of everyone involved in the project. Major props to Alyssa, Leo, and the rest of the dev team for creating the amazing technical modules while we researched and designed the nontechnical module, and to our president Matt for providing the overall guidance for working together with CityLab. Getting to see the collaboration through to the end was very rewarding, especially since it was the first event I’d coordinated as Special Events Director.
 
 It’s honestly been inspiring and humbling to see Teach LA making it through the transition to virtual learning and working remotely through the year so smoothly. The collaboration with BEAM and working with ACM-W on the upcoming Day of Code have all taken place in the middle of the pandemic. This year has not been easy, and I commend everyone for their dedication and passion. I have no doubt that Teach LA will accomplish even greater things moving forward, and I look forward to seeing it happen.
+
+## Regina
+
+*Position: Special Events Director.*
+
+When I applied to be a special events director, I just wanted to expose underprivileged students to computer science and give them the opportunity to find their interest in it. As for roles, I didn’t know much of what to expect, and looking back it’s been a very rewarding experience. It was also a lot of fun collabing with other clubs and making curriculum with Kaitlyn and Nina, my special events co-directors.
+
+Starting off, we collabed with CityLab to put together a curriculum for a Cyber Day. To be honest, this was the first time I’ve ever worked to set up something with another group, so I was quite lost on how to approach it and how to really get the collab going. S/o to Matt for providing guidance with that and being a great role model for how it should be done, in addition to Leo and the rest of the dev team for creating the super cute modules which we provided to CityLab. It was a great opportunity to teach the kids about cybersecurity and a great training ground for learning how to collab on a shared goal!
+
+After that, in fall, Nina, Kaitlyn, and I coordinated a collab with BEAM for teaching the kids robotics. Though there were a lot of technical difficulties because it was online and it was robotics, it was a great experience. The kids were bound to have some sort of technical difficulties like how some of the kids’ cords didn’t work, or the code just wouldn’t upload to the robot, or just logistical difficulties with delivering robots. While there were a lot of issues involved and last minute changes in curriculum plans, I think at the end of the day, it went really well! The kids were really excited and happy, the collab went well, and even though the documents might’ve been a bit confusing, we laid a really great groundwork for a reusable curriculum for BEAM in the future. We also met Laurel and all the other BEAM people and are probably going to continue working with them, standardizing the curriculum for use in the future.
+
+Continuing on, close to winter break, when ESUC reached out to our organization, I wanted to lead a booth for eWeek Kid’s Day by creating a learning lab website for it. It was rather last minute and Matt was able to help me quickly put together a solid team of 3 TLA dev members, s/o to Darren, Getty, and Trevor for doing some great work, and set up a collab with Creative Labs, in addition to pulling in Karen, our amazing designer who literally designed the whole website. In terms of Creative Labs, special s/o to Bryan and Arjun for being amazing and guiding the dev side of things, and Maggie for giving us great UI/UX feedback. We couldn’t have done it without Karen or Creative Labs, and I really appreciate all their help. Also in terms of brainstorming and curriculum, s/o to Nina and Kaitlyn for always being down to bounce ideas and having my back when I needed anything.
+
+Going into leading this learning lab as a PM, it was challenging and scary and, looking back, I definitely could’ve been better at communicating, among a lot of other things. I helped the new devs out, even though I wasn’t necessarily qualified, and learned about design and accessibility with Figma. It’s been a very rewarding experience, and even though it was quite stressful at times, with everything planned out finally—the beta test being next week, the event a day after, and the second event in a couple weeks after that—I’m really proud of us for making such a polished Learning Lab. Most of all, I’m excited for the kids to learn how the web works and be amazed by it!
+
+Overall, it’s been a great year with TeachLA. Surprisingly, even with this remote setting, the kids were all super excited to learn more, and I also learned so much about tons of different things. Even though I joined TeachLA two years ago to just have an opportunity to expose students to computer science, TeachLA has really grown to be more than that. It’s definitely been a good time and I’m excited to see what TeachLA will become in the future!
 
 ## Robert
 
