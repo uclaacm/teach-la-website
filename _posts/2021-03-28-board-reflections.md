@@ -59,6 +59,14 @@ As for the Python videos, I got asked to manage the breakout room for videos and
 
 *Position: Special Events Director.*
 
+To kick off the year, over the summer, our special events and dev teams collaborated with CityLab and ACM Cyber to organize Cyber Day - our first virtual event! Although the transition to online instruction was challenging, the two gorgeous learning labs (Passworks and Cipher Salad) created by our dev team really pulled the event together. Overall, the collaboration was a great introduction to not only what goes into planning an event, but also to the types of roadblocks we would have to anticipate when approaching remote teaching later in the year.
+
+In late fall and winter quarter, we collaborated with BEAM to create a programming/robotics course using Makeblock’s mBots. This collab definitely had its own unique set of difficulties, even with the experience with remote instruction we had gained at this point. Sadly, physical, real-life equipment rarely performs exactly in the way you’d expect, and the issues that cropped up were even harder to diagnose and debug over video call. On the bright side, I’m still amazed that the robots were distributed to our students so smoothly! Massive props to Laurel and the BEAM logistics team, and especially to Matt for assembling like 30+ robots by himself in one night (whew).
+
+As with all of Teach LA’s projects this year, conducting this class virtually required a lot of flexibility, whether it be in communicating with our school, handling surprise changes to our timeline, or working out issues with our robots. Thankfully our instructors and students were all very accommodating as we ironed out the wrinkles in our curriculum. Luckily for us, a class like this is honestly pretty fun by nature. Just having a robot to play with in person made things pretty exciting for the kids! (Even if the robots weren't always working 100% of the time) Given what we’ve learned from the first iteration of this course, there’ll be plenty to consider as we begin restructuring and streamlining the curriculum for its next run in the spring.
+
+This year has been uniquely challenging for everyone - for us, the instructors, for the teachers that so kindly give us time with their classes each week, and especially for our students. Not all of our plans worked out perfectly, and not all of our lessons were as clearly understood as we hoped. However, ultimately what was most important is whether our students felt comfortable and welcomed in our classes - and hopefully that our time together was enjoyable to them. CS is absolutely an intimidating and confusing field to begin to explore. It doesn’t take much to feel discouraged in the face of such a monolith. But on the other hand, a single fond memory may help spark a lifelong interest in the end.
+
 ## Leo
 
 *Position: Dev Team Director, Editor Team Lead.*
