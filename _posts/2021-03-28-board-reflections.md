@@ -19,8 +19,6 @@ image: img/posts/20-21-reflections/cover.png
 alt: A picture with Chase, Helia, Leo, Nina, Robert, Sophie, and Matt
 ---
 
-## Intro
-
 We're just in the process of transitioning to our new board, and we wanted to take some time to reflect on this past year! It's been an unexpected set of challenges in some unprecedented time, but we're also so proud of all the work that we've done. Here are some thoughts from our wonderful board members!
 
 * [Chase](#chase)
