@@ -1,54 +1,96 @@
 .footer{
-    padding-top: 2em;
-    padding-bottom: 2em;
+    flex-shrink: 0; // this is to make it a sticky footer
+
     width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    font-family: $font-display;
+
     background-color: $teachla-green;
     color: white;
-    font-family: $font-display;
-    flex-shrink: 0; // this is to make it a sticky footer
+
+    .footer-content {
+        display: grid;
+
+        @media (min-width: $desktop-width) {
+            grid-template-columns: 2fr 4fr;
+            column-gap: 2rem;
+        }
+    }
+
+    .footer-main {
+        display: grid;
+
+        @media (min-width: $desktop-width) {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1rem;
+        }
+    }
+
+    .footer-col {
+        padding-bottom: 1rem;
+
+        &.no-title {
+            padding-top: 3rem;
+        }
+    }
 
     .footer-title{
         margin-top: 0;
-        margin-bottom: 1.5em;
-        font-size: 12vw;
+        margin-bottom: 0.5rem;
+
+        font-size: 8vw;
 
         @media (min-width: $desktop-width) {
-            font-size: 2.5em;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
         }
     }
 
     .footer-subtitle {
-        margin-top: 0;
-        margin-bottom: 0.5em;
-        font-size: 1.6em;
+        margin: 0;
+
+        font-size: 1.5rem;
+        line-height: 2;
     }
 
-    .footer-link{
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+
+        padding-left: 0;
+        margin: 0;
+
+        list-style-type: none;
+
+        li {
+            padding-right: 1rem;
+        }
+
+        li:last-child {
+            padding-left: 1rem;
+            padding-right: 0;
+            border-left: 2px solid white;
+        }
+    }
+
+    .footer-link {
         color:white;
         text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    .footer-row {
-        display: grid;
-        @media (min-width: $desktop-width) {
-            grid-template-columns: 2fr repeat(4, 1fr);
-            column-gap: 1em;
-        }
     }
 
     .footer-nav {
-        list-style: none;
         margin: 0;
         padding: 0;
-        font-size: 1em;
+
+        font-size: 1rem;
+        list-style: none;
 
         a {
-            color: white;
+            line-height: 2rem;
             text-decoration: none;
-            line-height: 2em;
+            color: white;
         }
     }
 }

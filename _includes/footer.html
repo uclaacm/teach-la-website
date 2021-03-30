@@ -1,78 +1,177 @@
 <footer class="footer">
     <div class="container container-restricted">
-        <div class="footer-row">
-            <div class="footer-col">
+        <div class="footer-content">
+            <div class="footer-aside">
                 <h2 class="footer-title">ACM Teach LA</h2>
-                <p>
-                    made with
-                    <span class="fa fa-heart animated-heartbeat" style="color:tomato" aria-label="animated heartbeat"></span>
-                    and
-                    <a class="footer-link" href="https://github.com/uclaacm/teach-la-website" target="_blank" rel="noopener noreferrer">
-                        <span class="fab fa-github" aria-label="GitHub Logo & Repository"></span>
-                    </a>
-                </p>
+                <ul class="footer-links">
+                    <li>
+                        <a class="footer-link" href="https://www.facebook.com/acmteachla" target="_blank" rel="noopener noreferrer">
+                            <span class="fab fa-facebook" aria-label="Facebook Logo & Link"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-link" href="https://github.com/uclaacm/teach-la-website" target="_blank" rel="noopener noreferrer">
+                            <span class="fab fa-github" aria-label="GitHub Logo & Repository"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-link" href="mailto: acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <span class="fas fa-envelope" aria-label="Email Logo & Link"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-link" href="mailto:acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
+                            acmteachla@gmail.com
+                        </a>
+                    </li>
+                </ul>
                 <p>
                     &copy; ACM @ UCLA 2019
                 </p>
             </div>
-            <div class="footer-col">
-                <h3 class="footer-subtitle">Our Work</h3>
-                <ul class="footer-nav">
-                    <li>
-                        <a href="{{site.baseurl}}/classes">Classes</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/dev">Dev</a>
-                    </li>
-                    <li>
-                        <a href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">Editor</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/resources">Resources</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 class="footer-subtitle">Our Team</h3>
-                <ul class="footer-nav">
-                    <li>
-                        <a href="{{site.baseurl}}/about">About</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/blog">Blog</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/reports">Reports</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/team">Team</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/partners">Partners</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 class="footer-subtitle">Events</h3>
-                <ul class="footer-nav">
-                    <li>
-                        <a href="{{site.baseurl}}/ai-ethics">AI Ethics Speaker Series</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/careers-cs">Careers in CS</a>
-                    </li>
-                    <li>
-                        <a href="{{site.baseurl}}/citylab-cyber">Cyber Day with CityLab</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 class="footer-subtitle">Internal</h3>
-                <ul class="footer-nav">
-                    <li>
-                        <a href="{{site.baseurl}}/docs">Docs</a>
-                    </li>
-                </ul>
+            <div class="footer-main">
+                <div class="footer-col">
+                    <h3 class="footer-subtitle">Our Work</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="{{site.baseurl}}/classes">Classes</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/dev">Dev</a>
+                        </li>
+                        <li>
+                            <a href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">Editor</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/resources">Resources</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-subtitle">Our Team</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="{{site.baseurl}}/about">About</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/reports">Reports</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/team">Team</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/partners">Partners</a>
+                        </li>
+                    </ul>
+                </div>
+
+                {% for class in site.data.classes %}
+                    {% assign loopindex = forloop.index | modulo: 5 %}
+                    {% if forloop.first %}
+                    <div class="footer-col">
+                        <h3 class="footer-subtitle">Classes</h3>
+                            <ul class="footer-nav">
+                                <li>
+                                    <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                                </li>
+                    {% elsif loopindex == 1 %}
+                    <div class="footer-col no-title">
+                        <ul class="footer-nav">
+                            <li>
+                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                            </li>
+                    {% elsif loopindex == 0 or forloop.last %}
+                            <li>
+                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% else %}
+                        <li>
+                            <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="footer-col">
+                    <h3 class="footer-subtitle">Events</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="{{site.baseurl}}/ai-ethics">AI Ethics</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/careers-cs">Careers in CS</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/citylab-cyber">Cyber Day</a>
+                        </li>
+                    </ul>
+                </div>
+
+                {% for project in site.data.projects %}
+                    {% assign loopindex = forloop.index | modulo: 5 %}
+                    {% if forloop.first %}
+                    <div class="footer-col">
+                        <h3 class="footer-subtitle">Projects</h3>
+                            <ul class="footer-nav">
+                                <li>
+                                    {% if project.link %}
+                                    <a href="{{ project.link }}">{{ project.name }}</a>
+                                    {% else %}
+                                    <a>{{ project.name }}</a>
+                                    {% endif %}
+                                </li>
+                    {% elsif loopindex == 1 %}
+                    <div class="footer-col no-title">
+                        <ul class="footer-nav">
+                            <li>
+                                {% if project.link %}
+                                <a href="{{ project.link }}">{{ project.name }}</a>
+                                {% else %}
+                                <a>{{ project.name }}</a>
+                                {% endif %}
+                            </li>
+                    {% elsif loopindex == 0 or forloop.last %}
+                            <li>
+                                {% if project.link %}
+                                <a href="{{ project.link }}">{{ project.name }}</a>
+                                {% else %}
+                                <a>{{ project.name }}</a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                    {% else %}
+                        <li>
+                            {% if project.link %}
+                            <a href="{{ project.link }}">{{ project.name }}</a>
+                            {% else %}
+                            <a>{{ project.name }}</a>
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="footer-col">
+                    <h3 class="footer-subtitle">Members</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="{{site.baseurl}}/dev-setup">Dev Setup</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/static-setup">Add Yourself to the Team Page</a>
+                        </li>
+                        <li>
+                            <a href="{{site.dev_team_interest}}">Join Us</a>
+                        </li>
+                        <li>
+                            <a href="{{site.baseurl}}/resources">Dev Resrouces</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
