@@ -1,26 +1,28 @@
-<div class="grid-row">
-    <div class="grid-col">
-        <img
-            class="post-author-img"
-            src="{{include.img}}"
-            alt="photo of {{include.name}}"
-        />
-    </div>
-    <div class="grid-col">
-        <div class="post-author-info">
-            <h3 class="no-margin title">
-                <a class="tla-link" href="{{include.url}}">
-                    {{include.name}}
-                </a>
-                <span class = "pronouns">
-                    {% if include.pronouns and include.pronouns != ""%}
-                        ({{include.pronouns | strip}})
-                    {% endif %}
-                </span>
-            </h3>
-            <p class="no-margin">
-                {{include.role}}
-            </p>
+<div class="TEAM-SPECIAL">
+    <div class="grid-row">
+        <div class="grid-col">
+            <img
+                class="post-author-img"
+                src="{{include.img}}"
+                alt="photo of {{include.name}}"
+            />
+        </div>
+        <div class="grid-col">
+            <div class="post-author-info">
+                <h3 class="no-margin title">
+                    <a class="tla-link" href="{{include.url}}">
+                        {{include.name}}
+                    </a>
+                    <span class = "pronouns">
+                        {% if include.pronouns and include.pronouns != ""%}
+                            ({{include.pronouns | strip}})
+                        {% endif %}
+                    </span>
+                </h3>
+                <p class="no-margin">
+                    {{include.role}}
+                </p>
+            </div>
         </div>
     </div>
 </div>

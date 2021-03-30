@@ -9,4 +9,6 @@ github: "kimcharlene"
 links:
   - name: "LinkedIn"
     href: "https://www.linkedin.com/in/charlene-kim-551a3418b/"
+
+inactive: true
 ---
