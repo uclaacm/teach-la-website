@@ -72,23 +72,23 @@
                         <h3 class="footer-subtitle">Classes</h3>
                             <ul class="footer-nav">
                                 <li>
-                                    <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                                    <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
                                 </li>
                     {% elsif loopindex == 1 %}
                     <div class="footer-col no-title">
                         <ul class="footer-nav">
                             <li>
-                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
                             </li>
                     {% elsif loopindex == 0 or forloop.last %}
                             <li>
-                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
                             </li>
                         </ul>
                     </div>
                     {% else %}
                         <li>
-                            <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.name }}</a>
+                            <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
