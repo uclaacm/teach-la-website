@@ -10,6 +10,11 @@
     background-color: $teachla-green;
     color: white;
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
     .footer-content {
         display: grid;
 
@@ -44,7 +49,7 @@
 
         @media (min-width: $desktop-width) {
             font-size: 2.2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -69,15 +74,30 @@
         }
 
         li:last-child {
-            padding-left: 1rem;
             padding-right: 0;
-            border-left: 2px solid white;
         }
     }
 
     .footer-link {
-        color:white;
-        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            font-size: 1.3rem;
+        }
+
+        &.email {
+            margin: 0;
+            margin-top: 0.5rem;
+
+            .icon {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    .footer-copyright {
+        margin-top: 2rem;
     }
 
     .footer-nav {
@@ -89,8 +109,6 @@
 
         a {
             line-height: 2rem;
-            text-decoration: none;
-            color: white;
         }
     }
 }
