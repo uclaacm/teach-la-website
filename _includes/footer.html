@@ -108,50 +108,6 @@
                     </ul>
                 </div>
 
-                {% for project in site.data.projects %}
-                    {% assign loopindex = forloop.index | modulo: 5 %}
-                    {% if forloop.first %}
-                    <div class="footer-col">
-                        <h3 class="footer-subtitle">Projects</h3>
-                            <ul class="footer-nav">
-                                <li>
-                                    {% if project.link %}
-                                    <a href="{{ project.link }}">{{ project.name }}</a>
-                                    {% else %}
-                                    <a>{{ project.name }}</a>
-                                    {% endif %}
-                                </li>
-                    {% elsif loopindex == 1 %}
-                    <div class="footer-col no-title">
-                        <ul class="footer-nav">
-                            <li>
-                                {% if project.link %}
-                                <a href="{{ project.link }}">{{ project.name }}</a>
-                                {% else %}
-                                <a>{{ project.name }}</a>
-                                {% endif %}
-                            </li>
-                    {% elsif loopindex == 0 or forloop.last %}
-                            <li>
-                                {% if project.link %}
-                                <a href="{{ project.link }}">{{ project.name }}</a>
-                                {% else %}
-                                <a>{{ project.name }}</a>
-                                {% endif %}
-                            </li>
-                        </ul>
-                    </div>
-                    {% else %}
-                        <li>
-                            {% if project.link %}
-                            <a href="{{ project.link }}">{{ project.name }}</a>
-                            {% else %}
-                            <a>{{ project.name }}</a>
-                            {% endif %}
-                        </li>
-                    {% endif %}
-                {% endfor %}
-
                 <div class="footer-col">
                     <h3 class="footer-subtitle">Members</h3>
                     <ul class="footer-nav">
