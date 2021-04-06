@@ -1,7 +1,7 @@
 ---
 name: "Keertana Namuduri"
-title: "Special Events Director"
-group: "board"
+title: "Special Events Member"
+group: "member"
 img: knamuduri.jpeg
 pronouns: "she/her"
 graduating_year: 2022

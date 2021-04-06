@@ -14,8 +14,10 @@ permalink: "/team"
 </p>
 
 {% assign president = site.team | where_exp:"person", "person.group contains 'board' and person.title == 'President'" | group_by:"title" %}
-{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President'" | sort:"name" | group_by:"title" | sort:"name" %}
-{% assign leadership = president | concat: board %}
+{% assign vpres = site.team | where_exp: "person", "person.group contains 'board' and person.title == 'Vice President'" | group_by:"title" %}
+
+{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President' and item.title != 'Vice President'" | sort:"name" | group_by:"title" | sort:"name" %}
+{% assign leadership = president | concat: vpres | concat: board %}
 
 {% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
 
@@ -49,6 +51,9 @@ permalink: "/team"
                     {{ member.title }}
                     {% if member.secondary %}
                         &amp; {{ member.secondary }}
+                    {% endif %}
+                    {% if member.third %}
+                        &amp; {{ member.third }}
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">

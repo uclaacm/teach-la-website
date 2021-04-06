@@ -9,4 +9,6 @@ graduating_year: 2022
 positions:
   - year: 2020-2021
     title: Special Events Director
+  - year: 2020-2021
+    title: Special Events Director
 ---

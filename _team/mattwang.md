@@ -1,6 +1,6 @@
 ---
 name: "Matthew Wang"
-title: "President"
+title: "Advisor"
 group: "board"
 img: "mwang.jpg"
 email: "matt@matthewwang.me"
@@ -9,6 +9,8 @@ graduating_year: 2022
 pronouns: "he/him"
 
 positions:
+  - year: 2021-2022
+    title: Advisor
   - year: 2020-2021
     title: President, Interim Dev Team Director
   - year: 2019-2020
