@@ -1,7 +1,7 @@
 ---
 name: "Sharvani Jha"
 title: "Advisor (Moonshots)"
-group: "board"
+group: "alum+"
 img: sharvani.png
 graduating_year: 2021
 

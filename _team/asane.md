@@ -1,7 +1,7 @@
 ---
 name: "Aseem Sane"
 title: "Developer"
-group: "member"
+group: "alum+"
 img: "asane.jpg"
 github: "aseem191"
 ---
