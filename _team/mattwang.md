@@ -1,12 +1,13 @@
 ---
 name: "Matthew Wang"
-title: "Advisor"
-group: "board"
+title: "Developer"
+group: "member"
 img: "mwang.jpg"
 email: "matt@matthewwang.me"
 github: "mattxwang"
 graduating_year: 2022
 pronouns: "he/him"
+inactive: true
 
 positions:
   - year: 2021-2022

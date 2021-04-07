@@ -1,9 +1,10 @@
 ---
 name: "Sophie Schoenmeyer"
 title: "President"
-group: "board"
-img: "sschoenmeyer.jpg"
+group: "general board"
+img: "sschoenmeyer.jpeg"
 pronouns: "she/her"
+email: sschoenmeyer27@g.ucla.edu
 graduating_year: 2023
 
 positions:

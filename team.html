@@ -7,17 +7,22 @@ permalink: "/team"
 <p>
     Here are all of the awesome people that make Teach LA happen! We're UCLA students who have dedicated themselves to empowering students through computer science.
 </p>
-<h2 class="title">Board</h2>
+<h2 class="title">General Board</h2>
 
 <p>
     Our directors, school leads, and curriculum leads. Feel free to reach out to any of our board for more information about what we do!
 </p>
 
-{% assign president = site.team | where_exp:"person", "person.group contains 'board' and person.title == 'President'" | group_by:"title" %}
-{% assign vpres = site.team | where_exp: "person", "person.group contains 'board' and person.title == 'Vice President'" | group_by:"title" %}
+<!-- For general board -->
+{% assign president = site.team | where_exp:"person", "person.group contains 'general board' and person.title == 'President'" | group_by:"title" %}
+{% assign vpres = site.team | where_exp: "person", "person.group contains 'general board' and person.title == 'Vice President'" | group_by:"title" %}
+{% assign genBoard = site.team | where_exp:"item", "item.group contains 'general board' and item.title != 'President' and item.title != 'Vice President'" | sort:"name" | group_by:"title" | sort:"name" %}
+{% assign genLeadership = president | concat: vpres | concat: genBoard %}
 
-{% assign board = site.team | where_exp:"item", "item.group contains 'board' and item.title != 'President' and item.title != 'Vice President'" | sort:"name" | group_by:"title" | sort:"name" %}
-{% assign leadership = president | concat: vpres | concat: board %}
+<!-- For dev board -->
+{% assign devDirector = site.team | where_exp:"person", "person.group contains 'dev board' and person.title == 'Dev Team Director'" | group_by:"title" %}
+{% assign devBoard = site.team | where_exp:"item", "item.group contains 'dev board' and item.title != 'Dev Team Director'" | sort:"name" | group_by:"title" | sort:"name" %}
+{% assign devLeadership = devDirector | concat: devBoard %}
 
 {% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
 
@@ -25,7 +30,69 @@ permalink: "/team"
 {% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"name" | group_by:"graduating_year" | sort:"name" %}
 
 <div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
-    {% for group in leadership %}
+    {% for group in genLeadership %}
+    {% for member in group.items %}
+    <div class="grid-row" id="{{ member.slug }}">
+        <div class="grid-col">
+            <div class="profile-img-container">
+                {% if member.img %}
+                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
+                {% else %}
+                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
+                {% endif %}
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-col">
+            <div class="team-member-content">
+                <h3 class="no-margin title">
+                    {{ member.name }}
+                    {% if member.pronouns %}
+                        <span class = "pronouns"> ({{member.pronouns}})</span>
+                    {% endif %}
+                    </h3>
+                <p class="team-member-position">
+                    {{ member.title }}
+                    {% if member.secondary %}
+                        &amp; {{ member.secondary }}
+                    {% endif %}
+                    {% if member.third %}
+                        &amp; {{ member.third }}
+                    {% endif %}
+                </p>
+                <ul class="list-unstyled">
+                    {% if member.email %}
+                    <li>
+                        <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
+                    </li>
+                    {% endif %}
+                    {% assign content = member.content | strip %}
+                    {% if member.github and member.links == nil and content == "" %}
+                        <li>
+                            <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
+                        </li>
+                    {% endif %}
+                    {% if member.links or content != "" %}
+                         <li>
+                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
+                         </li>
+                     {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+
+<h2>Dev Board</h2>
+<p>
+    Our dev consists of our team, training, learning lab, editor, design, and static site directors. Feel free to reach out to any of our board for more information about what we do!
+</p>
+
+<div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
+    {% for group in devLeadership %}
     {% for member in group.items %}
     <div class="grid-row" id="{{ member.slug }}">
         <div class="grid-col">
@@ -83,7 +150,11 @@ permalink: "/team"
 
 <h2 class="title">Instructors and Developers</h2>
 <p>
-    Our team of instructors and developers teach in person at schools all throughout the Los Angeles Unified School District while developing new, interactive ways of making an education in computer science possible for everyone.
+    Our team of instructors and developers teach in person at schools all throughout the Los Angeles Unified School District while developing new, interactive ways of making an education in computer science possible for everyone. 
+    Want to join our team? Find out more about how you can join us on our 
+    <a class="tla-link" href="{{site.baseurl}}/join">join us page</a>!
+</p>
+    page!
 </p>
 
 <div class="row-desktop-ratio-1-1-1 TEAM-SPECIAL">

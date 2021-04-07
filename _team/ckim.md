@@ -3,6 +3,7 @@ name: "Charlene Kim"
 group: "member"
 title: "Developer"
 pronouns: "she/her"
+email: "ckim.minjeong@gmail.com"
 img: "ckim.jpg"
 graduating_year: 2024
 github: "kimcharlene"

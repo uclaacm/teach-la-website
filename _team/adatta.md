@@ -1,9 +1,10 @@
 ---
 name: Archie Datta
-group: board
+group: dev board
 title: Design Director
 graduating_year: 2024
 pronouns: she/they
+email: "archisha.datta@gmail.com"
 
 img: archie.jpeg
 

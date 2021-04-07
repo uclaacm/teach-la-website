@@ -1,10 +1,10 @@
 ---
 name: "Helia Woo"
-title: "Advisor (JEDI)"
-secondary: "Python Video Lead"
+title: "Python Video Lead"
 img: "hwoo.jpg"
-group: "board"
+group: "general board"
 pronouns: "she/her"
+emaill: "helia.woo@ucla.edu"
 graduating_year: 2023
 
 positions:

@@ -1,7 +1,7 @@
 ---
 name: Ava Asmani
-group: board
-title: AI/ML Lead
+group: general board
+title: AI/ML School Lead
 img: aasmani.png
 graduating_year: 2024
 pronouns: she/her
@@ -12,5 +12,5 @@ links:
 
 positions:
   - year: 2021-2022
-    title: AI/ML Lead
+    title: AI/ML School Lead
 ---

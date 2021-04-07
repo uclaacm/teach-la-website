@@ -1,10 +1,12 @@
 ---
 name: "Regina Wang"
 title: "Dev Team Training Director"
-group: "board"
+group: "dev board"
 github: reginawang99
-img: regina.jpg
+img: rwang.jpg
 graduating_year: 2022
+email: "rwang3495@gmail.com"
+pronouns: "she/her"
 
 positions:
   - year: 2021-2022

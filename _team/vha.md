@@ -1,10 +1,11 @@
 ---
 name: Vivian Ha
-group: board
+group: dev board
 title: Static Site Director
 graduating_year: 2023
 img: vha.png
 github: vivianha534
+email: vivianha33@gmail.com
 pronouns: "she/her"
 links: 
   - name: "Personal Website"

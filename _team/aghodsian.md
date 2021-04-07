@@ -1,8 +1,7 @@
 ---
 name: "Ashley Ghodsian"
-title: "Advisor (JEDI)"
-secondary: "Python Instructor, Translator"
-group: "board"
+title: "Python Instructor, Translator"
+group: "member"
 img: "aghodsian.jpg"
 pronouns: "she/her"
 graduating_year: 2022

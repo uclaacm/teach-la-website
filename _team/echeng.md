@@ -1,6 +1,6 @@
 ---
 name: Ellie Cheng
-group: board
+group: dev board
 title: Dev Team Training Director
 img: echeng.jpeg
 graduating_year: 2022
