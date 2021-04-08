@@ -1,7 +1,7 @@
 ---
 name: "Leo Krashanoff"
-title: "Dev Team Director"
-group: "board"
+title: "Advisor"
+group: "dev board"
 img: "krash.jpg"
 email: "leo@krashanoff.com"
 github: "krashanoff"

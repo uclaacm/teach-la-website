@@ -1,7 +1,7 @@
 ---
 name: "Malak Hmimy"
 title: "Sepulveda School Lead"
-group: "board"
+group: "alum+"
 img: mhmimy.jpg
 graduating_year: 2021
 pronouns: "she/her"

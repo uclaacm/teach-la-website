@@ -2,7 +2,7 @@
 name: "Arjun Subramonian"
 title: "Advisor (JEDI)"
 secondary: "AI/ML Lead"
-group: "board"
+group: "alum+"
 img: "asubramonian.jpg"
 github: "ArjunSubramonian"
 email: "arjun.subramonian@gmail.com"

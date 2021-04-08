@@ -1,7 +1,7 @@
 ---
 name: "Bonnie Lee"
 title: "Advisor (ACM)"
-group: "board"
+group: "alum+"
 img: blee.jpg
 graduating_year: 2021
 pronouns: "she/her"

@@ -1,7 +1,7 @@
 ---
 name: Christine Kim
-group: member
-title: Developer
+group: general board
+title: Jedi Director
 graduating_year: 2024
 pronouns: she/they
 img: christinekim.jpg
@@ -11,4 +11,8 @@ email: mintine@g.ucla.edu
 links:
   - name: LinkedIn
     href: https://www.linkedin.com/in/minjeong-christine-kim/
+
+positions:
+  - year: 2021-2022
+    title: Jedi Director
 ---
