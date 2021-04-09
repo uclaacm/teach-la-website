@@ -3,7 +3,7 @@ name: "Regina Wang"
 title: "Dev Team Training Director"
 group: "dev board"
 github: reginawang99
-img: rwang.jpg
+img: rwang.png
 graduating_year: 2022
 email: "rwang3495@gmail.com"
 pronouns: "she/her"

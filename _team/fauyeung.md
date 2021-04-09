@@ -1,6 +1,6 @@
 ---
 name: "Farrah Au-Yeung"
-group: "member"
+group: "alum+"
 title: "Dev & Design Lead Intern"
 pronouns: "she/her"
 img: "farrah.jpg"

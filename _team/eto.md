@@ -1,6 +1,6 @@
 ---
 name: "Ethan To"
-group: "member"
+group: "alum+"
 title: "Developer"
 img: "eto.jpg"
 email: "etoe64@gmail.com"

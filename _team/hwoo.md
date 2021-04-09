@@ -1,7 +1,7 @@
 ---
 name: "Helia Woo"
 title: "Python Video Lead"
-img: "hwoo.jpg"
+img: "hwoo.png"
 group: "general board"
 pronouns: "she/her"
 emaill: "helia.woo@ucla.edu"
