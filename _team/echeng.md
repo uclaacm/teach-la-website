@@ -2,7 +2,7 @@
 name: Ellie Cheng
 group: dev board
 title: Dev Team Training Director
-img: echeng.jpeg
+img: echeng.png
 graduating_year: 2022
 github: ellieyhcheng
 pronouns: she/her
