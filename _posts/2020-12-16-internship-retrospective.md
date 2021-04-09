@@ -4,10 +4,8 @@ title: Teach LA’s Intern Search Experience
 date: 2020-12-16 04:00:00 UTC
 author: Bonnie and Sophie
 authors:
-    - fname: Bonnie
-      lname: Lee
-    - fname: Sophie
-      lname: Schoenmeyer
+    - Bonnie Lee
+    - Sophie Schoenmeyer
 category: internship
 tags:
     - internal

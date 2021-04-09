@@ -4,12 +4,9 @@ title: New Year, New Blog
 date: 2021-01-04 04:00:00 UTC
 author: Trevor, Shounak, and Getty V
 authors:
-    - fname: Trevor
-      lname: Ong
-    - fname: Shounak
-      lname: Kuiry
-    - fname: Getty
-      lname: George V
+    - Trevor Ong
+    - Shounak Kuiry
+    - Getty George V
 category: dev
 tags:
     - blog

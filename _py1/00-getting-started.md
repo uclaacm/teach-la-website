@@ -6,6 +6,7 @@ group: "fundamentals"
 num: 0
 video_link: "https://www.youtube.com/embed/_7JuGdrUhkA"
 slides_link: "https://docs.google.com/presentation/d/14gBHUUnuMlXLoHfrBnRulRxCLceZ0Asz9aAaq8rDu0A/edit?usp=sharing"
+worksheet_link: "https://docs.google.com/document/d/1M4kdzE0PhsOdwVT8E-GolLqk9Q7JgUtm6kt87kj5JTo/edit?usp=sharing"
 length: 14
 agenda: 
     - text: "what is python?"

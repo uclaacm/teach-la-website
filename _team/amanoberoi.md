@@ -1,6 +1,5 @@
 ---
-firstname: "Aman"
-lastname: "Oberoi"
+name: "Aman Oberoi"
 title: "AI Outreach Officer"
 group: "member"
 graduating_year: 2024

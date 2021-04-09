@@ -170,6 +170,8 @@
   lead:
     - name: Chloe
       hash: cuy
+    - name: Vivian
+      hash: vha
   tech:
     - js
     - react

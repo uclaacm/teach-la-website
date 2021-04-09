@@ -15,25 +15,6 @@
     border-radius: 4px;
 }
 
-.team-member-grid {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    @media (max-width: $desktop-width) {
-        grid-template-columns: 100%;
-    }
-}
-
-.board-member-grid{
-    grid-template-columns: 50% 50%;
-    font-size: 1.2em;
-    @media (max-width: $desktop-width) {
-        grid-template-columns: 100%;
-    }
-}
-
 .team-member-content{
     word-wrap: break-word;
     @media (max-width: $desktop-width) {
@@ -53,9 +34,11 @@
 }
 
 .team-profile {
-    @media (max-width: $desktop-width) {
-        margin: 50px auto;
-    }
+    margin-top: 2em;
+}
+
+.team-posts {
+    margin-top: 3em;
 }
 
 .grid-col{
@@ -68,7 +51,7 @@
             width: 1vw;
             font-size: .75em;
         }
-    }   
+    }
 }
 
 .team-row {

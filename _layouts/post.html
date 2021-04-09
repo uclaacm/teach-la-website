@@ -35,7 +35,11 @@ layout: default
             a quick read
             {% else %}
             ~ {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
-            {% endif %}
+            {% endif %} •
+            <a href="https://teachla.uclaacm.com/feed.xml" aria-labelledby="post-icon-top"> 
+                <span id="post-icon-top" hidden>Subscribe to RSS feed for blogs</span>
+                <span class="fas fa-rss-square" aria-hidden="true"></span> 
+            </a>
         </p>
     </div>
 
@@ -43,22 +47,32 @@ layout: default
     <div class="generated-content">
         {{content}}
     </div>
+   
 
 <hr class="divider" />
-<div class = "social">
+<div class = "social mb-10">
 Enjoyed the read? Share on social media! <br/>
 <div class = "social-buttons">
 <a class="fb-share-button"  data-layout="button" data-size="large" target="_blank" href="" class="fb-xfbml-parse-ignore">Share</a>
 <a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div></div>
+</div>
+
+</div>
+<div class = "social">
+Subscribe to our RSS feed!
+<a href="https://teachla.uclaacm.com/feed.xml" aria-labelledby="post-icon-bottom"> 
+    <span id="post-icon-bottom" hidden>Subscribe to RSS feed for blogs</span>
+    <span class="fas fa-rss-square social-RSS-icon" aria-hidden="true"></span> 
+</a>
+</div>
 
 <hr class="divider" />
 <h2 class="title" id="authors">Author{% if page.authors.size > 1 %}s{% endif %}</h2>
     <div class="post-author-grid">
-        {% for authorobj in page.authors %}
-            {% assign author = site.team | where_exp:"item", "item.firstname == authorobj.fname and item.lastname == authorobj.lname" | first %}
+        {% for authorname in page.authors %}
+            {% assign author = site.team | where_exp:"item", "item.name == authorname" | first %}
             {% capture author_name %}
-                {{authorobj.fname}} {{authorobj.lname}}
+                {{author.name}}
             {% endcapture %}
             {% capture author_url %}
                 {{author.url}}

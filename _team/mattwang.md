@@ -1,15 +1,19 @@
 ---
-firstname: "Matthew"
-lastname: "Wang"
-title: "President"
-group: "board"
+name: "Matthew Wang"
+title: "Developer"
+group: "member"
 img: "mwang.jpg"
 email: "matt@matthewwang.me"
-github: "malsf21"
+github: "mattxwang"
 graduating_year: 2022
 pronouns: "he/him"
+inactive: true
 
 positions:
+  - year: 2021-2022
+    title: Advisor
+  - year: 2020-2021
+    title: President, Interim Dev Team Director
   - year: 2019-2020
     title: Dev Team Director
 ---

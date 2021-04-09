@@ -1,6 +1,5 @@
 ---
-firstname: "Matthew"
-lastname: "Yoshida"
+name: "Matthew Yoshida"
 group: "member"
 title: Developer
 img: myoshida.jpeg

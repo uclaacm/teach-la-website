@@ -1,6 +1,5 @@
 ---
-firstname: "Alvin"
-lastname: "Nguyen"
+name: "Alvin Nguyen"
 title: "Developer"
 group: "member"
 img: "anguyen.jpg"

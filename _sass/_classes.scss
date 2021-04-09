@@ -5,16 +5,6 @@
     border-radius: 10px;
 }
 
-.class-row {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 67%;
-    @media (max-width: $desktop-width) {
-        grid-template-columns: 100%;
-    }
-}
-
 .class-content{
     padding-left: 2em;
     padding-right: 2em;
@@ -29,8 +19,11 @@
 
 .class-content-container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 230px auto 70%;      //230px is the width of the desktop sidebar +10 px for padding since the ai-content card has no horizontal padding
     min-height: 100vh;
+    @media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
+        grid-template-columns: 230px auto;
+    }
     @media (max-width: $desktop-width) {
         grid-template-columns: 100%;
         min-height: 70vh;
@@ -61,15 +54,13 @@
     flex: 1 0 auto;
 }
 
-.lessons-grid {
-    height: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    @media (max-width: $desktop-width) {
-      grid-template-columns: 100%;
-    }
-    margin-bottom: 2em;
-}
-
-
+// .lessons-grid {
+//     // height: 100%;
+//     max-width: 100%;
+//     display: grid;
+//     grid-template-columns: 33% 33% 33%;
+//     @media (max-width: $desktop-width) {
+//       grid-template-columns: 100%;
+//     }
+//     margin-bottom: 2em;
+// }

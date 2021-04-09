@@ -1,7 +1,6 @@
 ---
-firstname: "Ethan"
-lastname: "To"
-group: "member"
+name: "Ethan To"
+group: "alum+"
 title: "Developer"
 img: "eto.jpg"
 email: "etoe64@gmail.com"

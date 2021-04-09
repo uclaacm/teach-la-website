@@ -3,10 +3,8 @@ layout: post
 title: Welcome to Our Blog!
 author: Matt and Leo # this is just what's used for SEO
 authors:
-    - fname: Matthew
-      lname: Wang
-    - fname: Leo
-      lname: Krashanoff
+    - Matthew Wang
+    - Leo Krashanoff
 category: dev
 tags:
     - website

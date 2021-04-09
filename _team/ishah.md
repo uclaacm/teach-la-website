@@ -1,6 +1,5 @@
 ---
-firstname: "Isha"
-lastname: "Shah"
+name: "Isha Shah"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "she/her"

@@ -3,17 +3,23 @@
 
 // Derives all of the code from the _sass folder, and just pieces it together!
 
+// variables and utils
 @import "variables";
+@import "functions";
 @import "basic";
-@import "accountability";
+@import "grid";
+
+// components
 @import "animations";
 @import "button";
-@import "classes";
-@import "dev";
-@import "event";
 @import "footer";
 @import "generated-content";
 @import "navbar";
+
+// pages
+@import "accountability";
+@import "classes";
+@import "dev";
 @import "post";
 @import "team";
 @import "docs";

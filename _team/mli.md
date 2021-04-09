@@ -1,6 +1,5 @@
 ---
-firstname: "Maggie"
-lastname: "Li"
+name: "Maggie Li"
 pronouns: "she/her"
 group: "member"
 title: Developer

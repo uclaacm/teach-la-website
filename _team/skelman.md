@@ -1,6 +1,5 @@
 ---
-firstname: "Stephen"
-lastname: "Kelman"
+name: "Stephen Kelman"
 group: "member"
 title: "Emerson Instructor"
 pronouns: "he/him"

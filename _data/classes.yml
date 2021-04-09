@@ -1,4 +1,5 @@
 - name: "Intro to Programming with Python"
+  short-title: "Python"
   blurb: "Perfect for students with no previous coding experience, this class emphasizes an understanding of basic programming principles that students will use throughout their journey in computer science, while also teaching one of the most popular, powerful, and easy-to-learn languages."
   img: "undraw/dev-focus.svg"
   tags:
@@ -20,6 +21,7 @@
     hash: nkumar
 
 - name: "Computing Principles with Scratch"
+  short-title: "Scratch"
   blurb: "Perfect for young students with minimal computing or coding experience, this curriculum uses Scratch to expose our students to basic computer science principles in a way that is engaging and allows them to exercise maximum creativity."
   img: "undraw/dev-activity.svg"
   tags:
@@ -32,11 +34,14 @@
     - "use conditional statements to listen for user input"
     - "create complicated patterns with sensor blocks"
     - "design and develop their own Scratch story"
-  lead:
-    name: "Nikhil"
-    hash: nkumar
-
+  leads:
+  - name: "Eden"
+    hash: eyu
+  - name: "Milo"
+    hash: mkearney
+ 
 - name: "Intro to Artificial Intelligence and Machine Learning"
+  short-title: "AL & ML"
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
   img: "undraw/ai.svg"
   tags:
@@ -59,7 +64,9 @@
   lead:
     name: "Arjun"
     hash: asubramonian
+
 - name: "App Development with React Native"
+  short-title: "React Native"
   blurb: "A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native."
   img: "undraw/girl-phone.svg"
   tags:
@@ -75,6 +82,7 @@
     hash: ckapler
 
 - name: "Intro to Web Development"
+  short-title: "Web Dev"
   blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
   img: "undraw/dev-activity.svg"
   tags:

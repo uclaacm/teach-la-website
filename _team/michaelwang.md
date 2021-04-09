@@ -1,6 +1,5 @@
 ---
-firstname: Michael
-lastname: Wang
+name: Michael Wang
 graduating_year: 2018
 group: alum
 

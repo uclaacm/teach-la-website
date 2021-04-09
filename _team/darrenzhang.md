@@ -1,6 +1,5 @@
 ---
-firstname: "Darren"
-lastname: "Zhang"
+name: "Darren Zhang"
 title: "Developer"
 group: "member"
 graduating_year: 2024

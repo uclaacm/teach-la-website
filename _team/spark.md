@@ -1,6 +1,5 @@
 ---
-firstname: "Seongbin"
-lastname: "Park"
+name: "Seongbin Park"
 group: "member"
 title: "Video Producer"
 secondary: "Instructor"

@@ -1,9 +1,16 @@
 ---
-firstname: "Regina"
-lastname: "Wang"
-title: "Special Events Director"
-secondary: "Developer"
-group: "board"
+name: "Regina Wang"
+title: "Dev Team Training Director"
+group: "dev board"
 github: reginawang99
-img: regina.jpg
+img: rwang.png
+graduating_year: 2022
+email: "rwang3495@gmail.com"
+pronouns: "she/her"
+
+positions:
+  - year: 2021-2022
+    title: Dev Team Training Director
+  - year: 2020-2021
+    title: Special Events Director, Dev Project Lead
 ---

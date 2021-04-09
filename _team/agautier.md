@@ -1,6 +1,5 @@
 ---
-firstname: "Andrew"
-lastname: "Gautier"
+name: "Andrew Gautier"
 title: "Graphic Designer"
 group: "member"
 img: "agautier.jpg"
