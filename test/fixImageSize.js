@@ -2,7 +2,6 @@ const sizeOf = require('image-size');
 const sharp = require('sharp');
 const fs = require('fs');
 
-
 imageFileName = './img/team/njeong.jpg';
 let dimensions = sizeOf(imageFileName);
 width = dimensions.width;
@@ -30,3 +29,16 @@ else{
         console.log("Image looks great")
     }
 }
+
+
+
+
+
+// sharp(imageFileName)
+//     .resize({width: 512, height: 512})
+//     .toFile('./img/team/newimage.jpg').then(()=>{
+//         fs.rename('./img/team/newimage.jpg',imageFileName, (err) => {
+//             if (err) throw err;
+//             console.log('Rename complete!');
+//              });
+// });
