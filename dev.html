@@ -119,7 +119,7 @@ permalink: "/dev"
             </h3>
             <div class="dev-project-info-row">
                 <span class="dev-project-badge lang-{{proj.lang.abbrev}}"></span> {{proj.lang.full}} •
-                {% if proj.link contains "uclaacm" %}
+                {% if proj.link %}
                     <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
                     •
                 {% endif %}
