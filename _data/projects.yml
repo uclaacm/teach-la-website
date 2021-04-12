@@ -214,8 +214,9 @@
   lang:
     full: javascript
     abbrev: js
+  link: https://github.com/uclaacm/dev-pathways
   repo: uclaacm/dev-pathways
-  description: "A centralized source of learning resources for new devs to learn more about popular technologies!"
+  description: "A centralized source of ACM dev team learning resources for new devs to learn more about popular technologies!"
   lead:
     - name: Einar
       hash: ebalan
