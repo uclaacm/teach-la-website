@@ -209,6 +209,20 @@
     - js
     - react
 
+- name: DevPathways
+  wip: true
+  lang:
+    full: javascript
+    abbrev: js
+  repo: uclaacm/dev-pathways
+  description: "A centralized source of learning resources for new devs to learn more about popular technologies!"
+  lead:
+    - name: Einar
+      hash: ebalan
+  tech:
+    - js
+    - react
+
 # - name: Network Tarines
 #   lang:
 #     full: javascript
