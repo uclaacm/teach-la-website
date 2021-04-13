@@ -1,3 +1,4 @@
+//import fixImage from "./fixImageSize";
 const sizeOf = require('image-size');
 const fs = require('fs');
 
@@ -70,18 +71,25 @@ function getAllFiles(files, newFileArray, directoryName){
     }
 }
 
-const directoryName =  "./img" //This is the name of the image directory
-let files = fs.readdirSync(directoryName); //Create an array of files inside "./img"
-files.shift() //Removes the .DS_store file from the array
+const directoryName =  "./img/team" //This is the name of the image directory
+// let files = fs.readdirSync(directoryName); //Create an array of files inside "./img"
+// files.shift() //Removes the .DS_store file from the array
 let finalFilesArray = []
-getAllFiles(files, finalFilesArray, directoryName)
+let teamFiles = fs.readdirSync("./img/team")
+getAllFiles(teamFiles, finalFilesArray, directoryName)
 
 for (file of finalFilesArray){ //Check the image size of all image files
     try {
         imageSizeChecker(file);
       }
     catch(err) { //If there is an error, tell me what file has the error and what that error is
-        console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
+        //console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
+        let imageSize = sizeOf(file);
+        let width = imageSize.width;
+        let height = imageSize.height;
+        if (width == height){
+            fixImage(file);
+        }
       } 
-    
 }
+
