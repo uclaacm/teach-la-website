@@ -1,6 +1,7 @@
-//import fixImage from "./fixImageSize";
+var fixImage = require("./fixImageSize.js");
 const sizeOf = require('image-size');
 const fs = require('fs');
+const { exit } = require("process");
 
 //Can we run this in parallel -- asynchronous
 //Are the libraries that do this already
@@ -81,15 +82,16 @@ getAllFiles(teamFiles, finalFilesArray, directoryName)
 for (file of finalFilesArray){ //Check the image size of all image files
     try {
         imageSizeChecker(file);
-      }
-    catch(err) { //If there is an error, tell me what file has the error and what that error is
-        //console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
         let imageSize = sizeOf(file);
         let width = imageSize.width;
         let height = imageSize.height;
         if (width == height){
-            fixImage(file);
+            fixImage.fixImage(file);
         }
+      }
+    catch(err) { //If there is an error, tell me what file has the error and what that error is
+        //console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
+        process.exit(1)
       } 
 }
 
