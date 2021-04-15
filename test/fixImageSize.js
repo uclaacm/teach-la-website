@@ -1,7 +1,6 @@
 const sharp = require('sharp');
 const fs = require('fs');
-
-//export default 
+ 
 exports.fixImage = function fixImage(imageFileName){
     sharp(imageFileName)
         .resize({width: 512, height: 512})

@@ -3,11 +3,6 @@ const sizeOf = require('image-size');
 const fs = require('fs');
 const { exit } = require("process");
 
-//Can we run this in parallel -- asynchronous
-//Are the libraries that do this already
-
-//bytesize pieces
-
 function getFileSizeMB(fileStats){
     return (fileStats.size) / (1024*1024);
 }
@@ -47,9 +42,6 @@ function imageSizeChecker(input){  //input here is the image file
         else if(isImageWidthUnreasonable(imageSize)){
             throw Error("Your image size is " + getImageWidth(imageSize) +"px by " +getImageHeight(imageSize)+"px");
         }
-        // else{
-        //     console.log("Image looks great\n")
-        // }
     }
 };
 
@@ -73,8 +65,6 @@ function getAllFiles(files, newFileArray, directoryName){
 }
 
 const directoryName =  "./img/team" //This is the name of the image directory
-// let files = fs.readdirSync(directoryName); //Create an array of files inside "./img"
-// files.shift() //Removes the .DS_store file from the array
 let finalFilesArray = []
 let teamFiles = fs.readdirSync("./img/team")
 getAllFiles(teamFiles, finalFilesArray, directoryName)
