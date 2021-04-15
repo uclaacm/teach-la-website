@@ -33,7 +33,7 @@ permalink: /blog/
         {% endfor %}
     {% endif %}
     {% endcomment %}
-  <div class="post-preview">
+  <!-- <div class="post-preview">
     <a href={{post.url}}>
       <img  class="post-preview-img" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
     </a>
@@ -48,7 +48,8 @@ permalink: /blog/
       <p class="generated-content">{{post.excerpt}}</p>
     </div>
   </div>
-</section>
+</section> -->
+{% include blog-preview-card.html %}
 {% endfor %}
 
 {% include contact-cta.html %}
