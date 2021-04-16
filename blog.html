@@ -33,22 +33,6 @@ permalink: /blog/
         {% endfor %}
     {% endif %}
     {% endcomment %}
-  <!-- <div class="post-preview">
-    <a href={{post.url}}>
-      <img  class="post-preview-img" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
-    </a>
-    <div class="post-info">
-      <h2 class="title">
-        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-      </h2>
-      <p class="title">
-        by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span> | category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a>
-      </p>
-      <hr class="divider"/>
-      <p class="generated-content">{{post.excerpt}}</p>
-    </div>
-  </div>
-</section> -->
 {% include blog-preview-card.html %}
 {% endfor %}
 
