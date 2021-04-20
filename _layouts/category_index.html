@@ -16,26 +16,33 @@ layout: default
     <!-- Show post excerpts for the current page -->
 
     {% for post in paginator.posts limit:paginator.per_page %}
-    <hr class="divider" />
-    <section>
-      <h2 class="title">
-        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-        <small>by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span></small>
-      </h2>
-      <p>
-        <!-- TODO: IMPLEMENT TAGS! -->
-        {% comment %}
-        {% if post.tags %}
-            tags:
-            {% for tag in post.tags %}
-                {{tag}}{% if forloop.last == false %}, {% endif %}
-            {% endfor %}
-        {% endif %}
-        {% endcomment %}
-      </p>
-      <blockquote class="post-blockquote">
-        {{post.excerpt}} <a class="tla-link" href={{post.url}}>... read more!</a>
-      </blockquote>
+      <section class="post-card">
+        {% capture post_url %}
+            {{post.url}}
+        {% endcapture %}
+        {% capture preview_img %}
+            {{site.baseurl}}/{{post.image}}
+        {% endcapture %}
+        {% capture post_title %}
+            {{post.title}}
+        {% endcapture %}
+        {% capture post_alt %}
+            {{post.alt}}
+        {% endcapture %}
+        {% capture author_name %}
+          {{authorobj.fname}} {{authorobj.lname}}
+        {% endcapture %}
+        {% capture blog_date %}
+          {{post.date}}
+        {% endcapture %}
+        {% capture post_category %}
+          {{post.category}}
+        {% endcapture %}
+        {% capture excerpt_blog %}
+          {{post.excerpt}}
+        {% endcapture %}
+  
+        {% include blog-preview-card.html url=post_url image=preview_img alt=post_alt title=post_title author=author_name date=blog_date category=post_category excerpt=excerpt_blog %}
     </section>
     {% endfor %}
   </section>
