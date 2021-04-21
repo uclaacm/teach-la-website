@@ -69,6 +69,7 @@ let finalFilesArray = []
 let teamFiles = fs.readdirSync("./img/team")
 getAllFiles(teamFiles, finalFilesArray, directoryName)
 
+let incorrectFiles = 0;
 for (file of finalFilesArray){ //Check the image size of all image files
     try {
         imageSizeChecker(file);
@@ -81,7 +82,9 @@ for (file of finalFilesArray){ //Check the image size of all image files
       }
     catch(err) { //If there is an error, tell me what file has the error and what that error is
         console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
-        //process.exit(1)
+        incorrectFiles++;
       } 
 }
-
+if (incorrectFiles != 0){
+    process.exit(1)
+}
