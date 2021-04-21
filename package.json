@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node ./test/checkImageSize.js"
+    "test": "npm run test:team-image",
+    "test:team-image": "node ./test/checkImageSize.js"
   },
   "repository": {
     "type": "git",

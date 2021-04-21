@@ -1,0 +1,22 @@
+name: Check Team Image Size
+
+on: [push]
+
+jobs:
+  teamImageSize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out git repository
+        uses: actions/checkout@v2
+
+      - name: install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      
+      - name: install dependencies
+        run: npm ci
+      
+      - name: check team image size
+        run: npm run test:team-image

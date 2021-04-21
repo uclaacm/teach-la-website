@@ -72,16 +72,16 @@ getAllFiles(teamFiles, finalFilesArray, directoryName)
 for (file of finalFilesArray){ //Check the image size of all image files
     try {
         imageSizeChecker(file);
-        let imageSize = sizeOf(file);
-        let width = imageSize.width;
-        let height = imageSize.height;
-        if (width == height){
-            fixImage.fixImage(file);
-        }
+        // let imageSize = sizeOf(file);
+        // let width = imageSize.width;
+        // let height = imageSize.height;
+        // if (width == height){
+        //     fixImage.fixImage(file);
+        // }
       }
     catch(err) { //If there is an error, tell me what file has the error and what that error is
-        //console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
-        process.exit(1)
+        console.error("File with error: " + file + " ----- Error message: " + err.message+ "\n");
+        //process.exit(1)
       } 
 }
 
