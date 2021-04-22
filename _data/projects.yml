@@ -120,15 +120,21 @@
 - name: Playnet
   wip: true
   lang:
-    full: javascript
-    abbrev: js
+    full: typescript
+    abbrev: ts
+  link: https://playnet.uclaacm.com/
   repo: uclaacm/Playnet
-  description: "Exploring how the web works, and what kinds of problems people solve with software!"
+  description: "Exploring how the web works, and different problems in computer science! 
+  <br/><br/>A collab with <a href='https://www.creativelabsucla.com/'>Creative Labs</a> :)"
   lead:
     - name: Regina
       hash: rwang
   tech:
-    - js
+    - ts
+    - react
+    - animejs
+    - lottie
+    - sass
 
 - name: Bias By Us
   wip: true
