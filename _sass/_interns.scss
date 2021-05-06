@@ -1,0 +1,10 @@
+.what-is-intern-container{
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.intern-img{
+    width: 40vw
+}
