@@ -10,11 +10,6 @@ function getFileSizeMB(fileStats){
 function isFileSizeBig(fileStats){ 
     return getFileSizeMB(fileStats) > 1;
 }
-//Check if the width of image is larger than 1024px or lower than 512px
-function isImageWidthUnreasonable(imageSize){
-    let width = imageSize.width;
-    return (width > 1024 | width < 512);
-}
 
 function isImageWidthLarge(imageSize){
     let width = imageSize.width;
@@ -27,7 +22,39 @@ function isImageWidthSmall(imageSize){
 }
 
 function isAValidExtension(imageFileName){
-    return (imageFileName.includes(".jpg") | imageFileName.includes(".png") | imageFileName.includes(".jpeg"))
+    return (imageFileName.includes(".jpg") | imageFileName.includes(".png") | imageFileName.includes(".jpeg"));
+}
+
+const errorType =  {
+    ASPECT_RATIO_ERROR: {
+        error: true,
+        message: "Not a square aspect ratio",
+        fixable: false
+    },
+    SMALL_IMAGE_ERROR: {
+        error: true,
+        message: "Your image is too small and should be 512px by 512px",
+        fixable: false
+    },
+    LARGE_IMAGE_ERROR: {
+        error: true,
+        message: "Your image is too large and should be 512px by 512px",
+        fixable: true
+    },
+    EXTENSION_ERROR: {
+        error: true,
+        message: "Image File Name does not have lower case extension",
+        fixable: true
+    },
+    FILE_SIZE_ERROR: {
+        error: true,
+        message: "Your file should be below 1MB",
+        fixable: true
+    },
+    NO_ERROR: {
+        error: false,
+        message: "No Error"
+    }
 }
 
 function imageSizeChecker(input){  //input here is the image file
@@ -37,50 +64,55 @@ function imageSizeChecker(input){  //input here is the image file
     let height = imageSize.height;
     let imageStats = fs.statSync(input);
     if (width != height){
-        throw Error("Not a pixel-perfect square aspect ratio");
+        return errorType.ASPECT_RATIO_ERROR;
     }
-    else if (!isAValidExtension(input)){
-        throw Error("Image File Name does not have lower case extension");
+    else if (isImageWidthSmall(imageSize)){
+        return errorType.SMALL_IMAGE_ERROR;
     }
     else if (isFileSizeBig(imageStats)){
-            throw Error("Your file is " + getFileSizeMB(imageStats).toFixed(2) + "MB. Your file should be below 1MB.");
-        } 
-    else if (isImageWidthUnreasonable(imageSize)){
-        if(isImageWidthSmall(imageSize)){
-            throw Error("Your image size is " + width +"px by " +height+"px. Your image is too small and should be 512px by 512px.");
-        }
-        else if(isImageWidthLarge(imageSize)){
-            throw Error("Your image size is " + width +"px by " +height+"px. Your image is too large and should be 512px by 512px.");
-            }
-        }
+        return errorType.FILE_SIZE_ERROR;
+    } 
+    else if(isImageWidthLarge(imageSize)){
+        return errorType.LARGE_IMAGE_ERROR;
+    }
+    else if (!isAValidExtension(input)){
+        return errorType.EXTENSION_ERROR;
+    }
+    else {
+        return errorType.NO_ERROR;
+    }
 };
 
-function getAllFiles(files, newFileArray, directoryName){ 
-    for (file of files){
-        if (file.includes(".jpg") | file.includes(".png") | file.includes(".jpeg") | file.includes(".JPG") | file.includes(".PNG") | file.includes(".JPEG")){
-            newFileArray.push(directoryName + "/" + file);
+function getAllFiles(directoryName){ 
+    let teamFiles = fs.readdirSync(directoryName);
+    const finalFilesArray = [];
+    for (const file of teamFiles){
+        if (isAValidExtension(file.toLowerCase())){
+            finalFilesArray.push(directoryName + "/" + file);
         }
         else{
            continue;
         }
     }
+    return finalFilesArray;
 }
 
-const directoryName =  "./img/team"; //This is the name of the image directory
-let finalFilesArray = [];
-let teamFiles = fs.readdirSync("./img/team");
-getAllFiles(teamFiles, finalFilesArray, directoryName);
-
+const finalFilesArray =  getAllFiles("./img/team");
 let incorrectFiles = 0;
-for (file of finalFilesArray){ //Check the image size of all image files
-    try {
-        imageSizeChecker(file);
-      }
-    catch(err) { //If there is an error, tell me what file has the error and what that error is
-        console.error("Error: " + file + " -- " + err.message+ "\n");
+let fixableFiles = 0;
+for (const file of finalFilesArray){ //Check the image size of all image files
+    const imageStatus = imageSizeChecker(file);
+    if (imageStatus.error){
+        console.error("Error: " + file + " -- " + imageStatus.message+ "\n");
         incorrectFiles++;
-      } 
+    }
+    if (imageStatus.fixable){
+        fixableFiles++;
+    }
 }
+
 if (incorrectFiles != 0){
-    process.exit(1)
+    console.log(incorrectFiles + " files have errors");
+    console.log(fixableFiles +" files are fixable")
+    process.exit(1);
 }
