@@ -103,11 +103,13 @@ let fixableFiles = 0;
 for (const file of finalFilesArray){ //Check the image size of all image files
     const imageStatus = imageSizeChecker(file);
     if (imageStatus.error){
-        console.error("Error: " + file + " -- " + imageStatus.message+ "\n");
+        console.error("Error: " + file + " -- " + imageStatus.message);
         incorrectFiles++;
-    }
-    if (imageStatus.fixable){
-        fixableFiles++;
+        if (imageStatus.fixable){
+            fixableFiles++;
+            console.log("Image is fixable")
+        }
+    console.log("\n")
     }
 }
 
@@ -116,3 +118,5 @@ if (incorrectFiles != 0){
     console.log(fixableFiles +" files are fixable")
     process.exit(1);
 }
+
+module.exports.getAllFiles = getAllFiles;

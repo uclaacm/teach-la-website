@@ -1,7 +1,9 @@
 const sharp = require('sharp');
 const sizeOf = require('image-size');
 const fs = require('fs');
- 
+//const imageSizeChecker = require("./checkImageSize");
+const checkImageSize = require("./checkImageSize");
+
 function getFileSizeMB(fileStats){
     return (fileStats.size) / (1024*1024);
 }
@@ -21,3 +23,17 @@ function fixImage(imageFileName){
             });
  });
 }
+console.log("checkImageSize" + checkImageSize);
+const finalFilesArray =  checkImageSize.getAllFiles("./img/team");
+for (const file of finalFilesArray){
+    console.log(file);
+}
+    /*
+    const imageStatus = imageSizeChecker(file);
+    if (imageStatus.error){
+        if (imageStatus.fixable){
+           fixImage(file);
+        }
+    }
+} 
+*/
