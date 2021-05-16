@@ -10,6 +10,6 @@ graduating_year: 2023
 positions:
   - year: 2020-2021
     title: React Native School Lead
-  - year: 2020-2021
-    title: React Native School Lead
+ # - year: 2020-2021
+  #  title: React Native School Lead
 ---
