@@ -2,6 +2,7 @@
   "name": "teach-la-website",
   "version": "1.0.0",
   "description": "Tests for the TeachLA Website",
+  "type": "module",
   "directories": {
     "test": "test"
   },

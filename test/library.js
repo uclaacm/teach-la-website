@@ -1,11 +1,13 @@
 //const sizeOf = require('image-size');
-//const fs = require('fs');
-//const { exit } = require("process");
-import "process";
-import {imageSizeChecker} from './library.js';
-import {getAllFiles} from './library.js';
 
-/*
+import { readdirSync } from 'fs';
+import { statSync } from 'fs';
+import { rename } from 'fs';
+import * as sizeOf from 'image-size';
+//const fs = require('fs');
+//const sharp = require('sharp');
+import "sharp";
+
 function getFileSizeMB(fileStats){
     return (fileStats.size) / (1024*1024);
 }
@@ -66,7 +68,7 @@ function imageSizeChecker(input){  //input here is the image file
     let imageSize = sizeOf(input);
     let width = imageSize.width;
     let height = imageSize.height;
-    let imageStats = fs.statSync(input);
+    let imageStats = statSync(input);
     if (width != height){
         return errorType.ASPECT_RATIO_ERROR;
     }
@@ -88,7 +90,7 @@ function imageSizeChecker(input){  //input here is the image file
 };
 
 function getAllFiles(directoryName){ 
-    let teamFiles = fs.readdirSync(directoryName);
+    let teamFiles = readdirSync(directoryName);
     const finalFilesArray = [];
     for (const file of teamFiles){
         if (isAValidExtension(file.toLowerCase())){
@@ -100,27 +102,23 @@ function getAllFiles(directoryName){
     }
     return finalFilesArray;
 }
-*/
 
-const finalFilesArray =  getAllFiles("./img/team");
-let incorrectFiles = 0;
-let fixableFiles = 0;
-for (const file of finalFilesArray){ //Check the image size of all image files
-    const imageStatus = imageSizeChecker(file);
-    if (imageStatus.error){
-        console.error("Error: " + file + " -- " + imageStatus.message);
-        incorrectFiles++;
-        if (imageStatus.fixable){
-            fixableFiles++;
-            console.log("Image is fixable")
-        }
-    console.log("\n")
-    }
+function fixImage(imageFileName){
+    sharp(imageFileName)
+        .resize({width: 512, height: 512})
+        .toFile(imageFileName+ "1").then(()=>{
+        fs.rename(imageFileName+ "1",imageFileName, (err) => {
+            if (err) throw err;
+             let imageSize = sizeOf(input);
+             let width = imageSize.width;
+             let height = imageSize.height;
+             let imageStats = statSync(input);
+             console.log(imageFileName + "has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
+             console.log(imageFileName + "has dimensions "+width +"px by " +height+"px");
+            });
+ });
 }
 
-if (incorrectFiles != 0){
-    console.log(incorrectFiles + " files have errors");
-    console.log(fixableFiles +" files are fixable")
-    process.exit(1);
-}
-
+export {imageSizeChecker};
+export {getAllFiles};
+export {fixImage};
