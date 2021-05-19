@@ -113,7 +113,6 @@ function fixImage(imageFileName){
              console.log(imageFileName + " has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
              console.log(imageFileName + " has dimensions "+width +"px by " +height+"px");
             });
-        console.log("\n");
  });
 }
 
