@@ -111,7 +111,7 @@ function fixImage(imageFileName){
              let imageStats = statSync(imageFileName);
              console.log("Your image has been fixed")
              console.log(imageFileName + " has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
-             console.log(imageFileName + " has dimensions "+width +"px by " +height+"px");
+             console.log(imageFileName + " has dimensions "+width +"px by " +height+"px'\n");
             });
  });
 }

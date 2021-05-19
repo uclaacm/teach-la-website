@@ -11,5 +11,4 @@ for (const file of finalFilesArray){
             fixImage(file);
         }
     }
-    console.log('\n');
 }
