@@ -1,6 +1,4 @@
-import {imageSizeChecker} from './library.js';
-import {getAllFiles} from './library.js';
-import {fixImage} from './library.js';
+import { fixImage, getAllFiles, imageSizeChecker} from './library.js';
 
 
 const finalFilesArray =  getAllFiles("./img/team");
