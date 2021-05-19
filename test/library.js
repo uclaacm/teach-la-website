@@ -1,12 +1,8 @@
-//const sizeOf = require('image-size');
-
 import { readdirSync } from 'fs';
 import { statSync } from 'fs';
 import { rename } from 'fs';
-import * as sizeOf from 'image-size';
-//const fs = require('fs');
-//const sharp = require('sharp');
-import "sharp";
+import sizeOf from 'image-size';
+import sharp from "sharp";
 
 function getFileSizeMB(fileStats){
     return (fileStats.size) / (1024*1024);
@@ -107,15 +103,17 @@ function fixImage(imageFileName){
     sharp(imageFileName)
         .resize({width: 512, height: 512})
         .toFile(imageFileName+ "1").then(()=>{
-        fs.rename(imageFileName+ "1",imageFileName, (err) => {
+        rename(imageFileName+ "1",imageFileName, (err) => {
             if (err) throw err;
-             let imageSize = sizeOf(input);
+             let imageSize = sizeOf(imageFileName);
              let width = imageSize.width;
              let height = imageSize.height;
-             let imageStats = statSync(input);
-             console.log(imageFileName + "has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
-             console.log(imageFileName + "has dimensions "+width +"px by " +height+"px");
+             let imageStats = statSync(imageFileName);
+             console.log("Your image has been fixed")
+             console.log(imageFileName + " has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
+             console.log(imageFileName + " has dimensions "+width +"px by " +height+"px");
             });
+        console.log("\n");
  });
 }
 
