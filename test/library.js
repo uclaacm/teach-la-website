@@ -1,11 +1,13 @@
-import { readdirSync } from 'fs';
-import { statSync } from 'fs';
-import { rename } from 'fs';
+import { readdirSync, statSync, rename } from 'fs';
 import sizeOf from 'image-size';
 import sharp from "sharp";
 
 function getFileSizeMB(fileStats){
     return (fileStats.size) / (1024*1024);
+}
+
+function getFileSizeKB(fileStats){
+    return (fileStats.size) / 1024;
 }
 
 //Check if image is larger than 1MB
@@ -105,17 +107,15 @@ function fixImage(imageFileName){
         .toFile(imageFileName+ "1").then(()=>{
         rename(imageFileName+ "1",imageFileName, (err) => {
             if (err) throw err;
-             let imageSize = sizeOf(imageFileName);
-             let width = imageSize.width;
-             let height = imageSize.height;
-             let imageStats = statSync(imageFileName);
-             console.log("Your image has been fixed")
-             console.log(imageFileName + " has size " + getFileSizeMB(imageStats).toFixed(2)+"MB");
-             console.log(imageFileName + " has dimensions "+width +"px by " +height+"px'\n");
-            });
- });
+            let imageSize = sizeOf(imageFileName);
+            let width = imageSize.width;
+            let height = imageSize.height;
+            let imageStats = statSync(imageFileName);
+            console.log(imageFileName + " has been fixed\n" 
+            + imageFileName + " has size " + getFileSizeKB(imageStats).toFixed(2)+"MB\n" 
+            + imageFileName + " has dimensions "+width +"px by " +height+"px'\n");
+        });
+    });
 }
 
-export {imageSizeChecker};
-export {getAllFiles};
-export {fixImage};
+export { imageSizeChecker, getAllFiles, fixImage };
