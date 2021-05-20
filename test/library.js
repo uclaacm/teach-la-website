@@ -63,10 +63,10 @@ const errorType =  {
 
 function imageSizeChecker(input){  //input here is the image file
     //let inputName = "./img/" + input;
-    let imageSize = sizeOf(input);
-    let width = imageSize.width;
-    let height = imageSize.height;
-    let imageStats = statSync(input);
+    const imageSize = sizeOf(input);
+    const width = imageSize.width;
+    const height = imageSize.height;
+    const imageStats = statSync(input);
     if (width != height){
         return errorType.ASPECT_RATIO_ERROR;
     }
@@ -88,7 +88,7 @@ function imageSizeChecker(input){  //input here is the image file
 };
 
 function getAllFiles(directoryName){ 
-    let teamFiles = readdirSync(directoryName);
+    const teamFiles = readdirSync(directoryName);
     const finalFilesArray = [];
     for (const file of teamFiles){
         if (isAValidExtension(file.toLowerCase())){
@@ -107,12 +107,12 @@ function fixImage(imageFileName){
         .toFile(imageFileName+ "1").then(()=>{
         rename(imageFileName+ "1",imageFileName, (err) => {
             if (err) throw err;
-            let imageSize = sizeOf(imageFileName);
-            let width = imageSize.width;
-            let height = imageSize.height;
-            let imageStats = statSync(imageFileName);
+            const imageSize = sizeOf(imageFileName);
+            const width = imageSize.width;
+            const height = imageSize.height;
+            const imageStats = statSync(imageFileName);
             console.log(imageFileName + " has been fixed\n" 
-            + imageFileName + " has size " + getFileSizeKB(imageStats).toFixed(2)+"MB\n" 
+            + imageFileName + " has size " + getFileSizeKB(imageStats).toFixed(2)+"KB\n" 
             + imageFileName + " has dimensions "+width +"px by " +height+"px'\n");
         });
     });
