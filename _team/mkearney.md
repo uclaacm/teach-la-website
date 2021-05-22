@@ -6,6 +6,7 @@ group: "general board"
 pronouns: "he/him"
 graduating_year: 2023
 email: "milok23@ucla.edu"
+img: mkearney.png
 
 positions:
   - year: 2021-2022
