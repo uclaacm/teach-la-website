@@ -1,6 +1,6 @@
 ---
-title: "Adding yourself to the team page"
-sidebar-title: "Add to Team Page"
+title: "Website Setup"
+sidebar-title: "Website Setup"
 ---
 
 ## Table of Contents
@@ -17,7 +17,7 @@ $ git checkout -b my-branch-name    # create a new branch and check it out
 $ jekyll serve                      # set up our dev server
 ```
 
-## Creating a basic page
+## Adding To The Team Page
 
 Now to add yourself to our [team page]({{ site.basurl }}/team)! When you add yourself to our team, you are not only adding your name to the team page, but you are also creating your own webpage on the website, and associating yourself to any future blog posts that you might write!
 

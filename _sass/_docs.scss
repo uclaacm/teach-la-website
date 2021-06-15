@@ -25,10 +25,16 @@
     }   
 }
 
-#add-to-team-page-button:checked + #add-to-team-page {
+#website-setup-button:checked + #website-setup {
    ol.sidebar-items li {
    display: list-item;
     }
+}
+
+#project-setup-button:checked + #project-setup {
+    ol.sidebar-items li {
+        display: list-item;
+        }     
 }
 
 input {
