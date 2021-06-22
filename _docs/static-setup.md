@@ -105,6 +105,8 @@ In your browser, visit what follows the "Server address" line, which is almost a
 
 Now to add yourself to our [team page]({{ site.basurl }}/team)! When you add yourself to our team, you are not only adding your name to the team page, but you are also creating your own webpage on the website, and associating yourself to any future blog posts that you might write!
 
+### Checking out a new branch
+
 First, checkout a new branch from the repository:
 
 ```sh
@@ -163,7 +165,7 @@ This renders into a clean page:
 
 ![josie bruin's team page]({{ site.baseurl }}/img/docs/sample_team.png)
 
-## Add, Commit, Push, Pull Request, Code Review, Merge
+### Add, Commit, Push, Pull Request, Code Review, Merge
 
 Now, you are ready to add your files to the stage, commit, push, make a pull request, request a code review, and merge your changes as discussed in [our setup guide]({{ site.baseurl }}/docs/dev-setup).
 
