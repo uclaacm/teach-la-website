@@ -6,6 +6,8 @@
   link: https://editor.uclaacm.com
   repo: uclaacm/TeachLAFrontend
   lead:
+    - name: Timothy
+      hash: tpoon
     - name: Leo
       hash: krashanoff
   description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
@@ -24,6 +26,8 @@
   link: https://editor.uclaacm.com
   repo: uclaacm/teach-la-go-backend
   lead:
+    - name: Timothy
+      hash: tpoon
     - name: Leo
       hash: krashanoff
   description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
@@ -58,6 +62,8 @@
   repo: uclaacm/teach-la-website
   description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
   lead:
+    - name: Vivian
+      hash: vha
     - name: Matt
       hash: mattwang
   tech:
@@ -118,7 +124,7 @@
     - bulma
 
 - name: Playnet
-  wip: true
+  wip: false
   lang:
     full: typescript
     abbrev: ts

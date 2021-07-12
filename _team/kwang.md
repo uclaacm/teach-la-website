@@ -10,6 +10,4 @@ email: "wang.kaitlyn.j@gmail.com"
 positions:
   - year: 2020-2021
     title: Special Events Director
-  - year: 2020-2021
-    title: Special Events Director
 ---
