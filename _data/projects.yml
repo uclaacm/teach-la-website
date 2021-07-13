@@ -8,8 +8,6 @@
   lead:
     - name: Timothy
       hash: tpoon
-    - name: Leo
-      hash: krashanoff
   description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
   tech:
     - react
@@ -28,8 +26,6 @@
   lead:
     - name: Timothy
       hash: tpoon
-    - name: Leo
-      hash: krashanoff
   description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
   tech:
     - go
@@ -64,8 +60,6 @@
   lead:
     - name: Vivian
       hash: vha
-    - name: Matt
-      hash: mattwang
   tech:
     - html
     - sass
