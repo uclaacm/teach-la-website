@@ -148,7 +148,9 @@
       hash: jiinkim
   tech:
     - js
+    - python
     - react
+    - aws
 
 - name: Cookie Jar
   wip: true
