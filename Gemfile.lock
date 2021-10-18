@@ -41,7 +41,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 2.0)
-    jekyll-category-pages (1.1.1)
+    jekyll-category-pages (1.1.2)
       jekyll (~> 4.0)
       jekyll-paginate (~> 1.1, >= 1.0.0)
     jekyll-feed (0.15.1)
