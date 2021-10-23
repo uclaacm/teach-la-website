@@ -238,7 +238,8 @@
     full: typescript
     abbrev: ts
   repo: https://github.com/uclaacm/color-lab
-  description: ""
+  description: "Color Lab is an interactive color-by-number page that teaches students about how colors are represented 
+                with hex codes. For each question they answer, another piece of the picture is colored in!"
   lead:
     - name: Archie
       hash: adatta
