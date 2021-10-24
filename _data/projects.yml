@@ -168,24 +168,9 @@
     - js
     - react
 
-- name: Digression on Regression
-  wip: true
-  lang:
-    full: javascript
-    abbrev: js
-  repo: uclaacm/digression-on-regression
-  description: "A digression on linear and logistic regression."
-  lead:
-    - name: Chloe
-      hash: cuy
-    - name: Vivian
-      hash: vha
-  tech:
-    - js
-    - react
 
 - name: No Filter
-  wip: true
+  wip: false
   lang:
     full: javascript
     abbrev: js
@@ -230,6 +215,36 @@
       hash: ebalan
   tech:
     - js
+    - react
+
+- name: BoolBots
+  wip: false
+  lang:
+    full: typescript
+    abbrev: ts
+  link: https://boolbots.uclaacm.com/
+  repo: https://github.com/uclaacm/boolbots
+  description: "A game used to help supplement Teach LA's python courses and help students learn more about booleans!"
+  lead:
+    - name: Nathan
+      hash: nendow
+  tech:
+    - ts
+    - react
+
+- name: Color Lab
+  wip: true
+  lang:
+    full: typescript
+    abbrev: ts
+  repo: https://github.com/uclaacm/color-lab
+  description: "Color Lab is an interactive color-by-number page that teaches students about how colors are represented 
+                with hex codes. For each question they answer, another piece of the picture is colored in!"
+  lead:
+    - name: Archie
+      hash: adatta
+  tech:
+    - ts
     - react
 
 # - name: Network Tarines
