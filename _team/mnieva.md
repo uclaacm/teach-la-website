@@ -1,6 +1,7 @@
 ---
 name: "Matthew Nieva"
 title: "Dev Team Training Director"
+secondary: "React Native School Lead"
 group: "dev board"
 img: "mnieva.jpeg"
 github: "matthewcn56"
