@@ -98,6 +98,8 @@
     - "finish two practical projects: a personal website and a quiz"
     - "use git and GitHub to keep track of their code"
     - "deploy their projects using GitHub Pages"
-  lead:
-    name: "Matt"
-    hash: mattwang
+  leads:
+    - name: "Milo"
+      hash: mkearney
+    - name: "Nikhil"
+      hash: nkumar
