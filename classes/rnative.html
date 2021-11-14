@@ -2,57 +2,79 @@
 layout: default
 title: "App Development with React Native"
 permalink: /classes/rnative
+fw: true
 ---
-<h1 class="title page-title">App Development with React Native</h1>
+<div class="page-container">
+    {% include rnative-sidebar.html %}
+    <div class="main-content container-restricted top-left-grid-position">
+        <h1 class="title page-title">App Development with React Native</h1>
 
-<p class="title text-2x no-margin">Class & Curriculum Outline</p>
-<hr class="divider-rnative" />
-<p>Learn mobile web development with us! </p>
+        <p class="title text-2x no-margin">Class & Curriculum Outline</p>
+        <hr class="divider-rnative" />
+        <p>Learn mobile web development with us! </p>
 
-<h2 class="title">
-    Brief Overview
-</h2>
+        <h2 class="title">
+            Brief Overview
+        </h2>
 
-<p>
-    A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native.
-</p>
-<p>
-    All of our course materials are open-source! You can click into each lesson to see the notes that we use to teach the class. On top of that, we've put all of our code examples on GitHub; you can see them in the <a class="rnative-link" href="{{site.data.classes[3].github}}">repository.</a>
-</p>
-<p>
-    {% comment %} TODO - change this to a map lookup {% endcomment %}
-    Have any questions? Feel free to reach out to <a class="rnative-link" href="{{site.baseurl}}/team/{{site.data.classes[3].lead.hash}}">Matt</a>, our school lead, or anybody else on the Teach LA team!
-</p>
+        <p>
+            A year-long course that aims to give students a wide set of practical skills and project experience:
+            students
+            learn
+            how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform
+            mobile
+            apps
+            with React Native.
+        </p>
+        <p>
+            All of our course materials are open-source! You can click into each lesson to see the notes that we use to
+            teach
+            the class. On top of that, we've put all of our code examples on GitHub; you can see them in the <a
+                class="rnative-link" href="{{site.data.classes[3].github}}">repository.</a>
+        </p>
+        <p>
+            {% comment %} TODO - change this to a map lookup {% endcomment %}
+            Have any questions? Feel free to reach out to <a class="rnative-link"
+                href="{{site.baseurl}}/team/{{site.data.classes[3].lead.hash}}">Matt</a>, our school lead, or anybody
+            else
+            on
+            the Teach LA team!
+        </p>
 
 
-<h2 class="title" id="lessons">
-    Lessons
-</h2>
+        <h2 class="title" id="lessons">
+            Lessons
+        </h2>
 
-<div class="row-desktop-ratio-1-1-1 mb-32">
-    {% for lesson in site.rnative %}
-        <div class="rnative-lesson-card">
-            <div class="lesson-card-content">
-                <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
-                    <a class="rnative-link" href="{{lesson.url}}">{{lesson.title}}</a>
-                </h3>
-                {{lesson.desc}}
-            </div>
-            <div class="button-container">
-                {% if lesson.course_id %}
+        <div class="row-desktop-ratio-1-1-1 mb-32">
+            {% for lesson in site.rnative %}
+            <div class="rnative-lesson-card">
+                <div class="lesson-card-content">
+                    <h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
+                        <a class="rnative-link" href="{{lesson.url}}">{{lesson.title}}</a>
+                    </h3>
+                    {{lesson.desc}}
+                </div>
+                <div class="button-container">
+                    {% if lesson.course_id %}
                     {% comment %} TODO - change this to a map lookup {% endcomment %}
 
-                    <a class="button button-sm button-rnative" href="{{site.data.classes[3].github}}/{{lesson.course_id}}" target="_blank" rel="noopener noreferrer">
+                    <a class="button button-sm button-rnative"
+                        href="{{site.data.classes[3].github}}/{{lesson.course_id}}" target="_blank"
+                        rel="noopener noreferrer">
                         <span class="fab fa-github"></span> GitHub
                     </a>
-                {% endif %}
-                {% if lesson.code_link %}
-                    <a class="button button-sm button-rnative" href="{{lesson.code_link}}" target="_blank" rel="noopener noreferrer">
+                    {% endif %}
+                    {% if lesson.code_link %}
+                    <a class="button button-sm button-rnative" href="{{lesson.code_link}}" target="_blank"
+                        rel="noopener noreferrer">
                         <span class="fa fa-code"></span> code
                     </a>
-                {% endif %}
+                    {% endif %}
 
+                </div>
             </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 </div>
