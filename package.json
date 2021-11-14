@@ -1,0 +1,28 @@
+{
+  "name": "teach-la-website",
+  "version": "1.0.0",
+  "description": "Tests for the TeachLA Website",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test:team-image",
+    "test:team-image": "node ./test/checkImageSize.js",
+    "test:fix-team-image": "node ./test/fixImageSize.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uclaacm/teach-la-website.git"
+  },
+  "author": "acm teach la",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uclaacm/teach-la-website/issues"
+  },
+  "homepage": "https://github.com/uclaacm/teach-la-website#readme",
+  "dependencies": {
+    "image-size": "^0.9.3",
+    "sharp": "^0.27.1"
+  }
+}
