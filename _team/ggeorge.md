@@ -2,7 +2,7 @@
 name: "Getty George V"
 title: "Developer"
 group: "member"
-img: "ggeorge.jpg"
+img: "ggeorge.jpeg"
 github: "phreakester"
 ---
 
