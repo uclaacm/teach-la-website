@@ -2,7 +2,7 @@
 name: "Matthew Nieva"
 title: "Dev Team Training Director"
 group: "dev board"
-img: "mnieva.jpeg"
+img: "mnieva.jpg"
 github: "matthewcn56"
 email: "matthewcn56@gmail.com"
 pronouns: "he/him"
