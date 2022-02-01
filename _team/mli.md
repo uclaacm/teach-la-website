@@ -4,7 +4,7 @@ pronouns: "she/her"
 group: "member"
 title: Developer
 graduating_year: 2024
-img: "mli.JPG"
+img: "mli.png"
 
 github: "maggieelli"
 email: maggieelli@g.ucla.edu
