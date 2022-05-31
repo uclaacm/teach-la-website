@@ -58,7 +58,7 @@ ul > li {
 
 .container-restricted {
     margin: auto;
-    width: 1000px;
+    width: 1213px;
     // enforces a not-too-wide text viewport
     max-width: 100vw;
     @media (min-width: $desktop-width) {
@@ -215,15 +215,6 @@ ul > li {
     margin: 3em 0;
 }
 
-// refactor this into a common table component
-.schedule-table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-
-
 
     // HEADER OF THE TABLE
     // tr:first-child{
@@ -237,14 +228,23 @@ ul > li {
     //     th {
     //         border-bottom: 2px solid transparent;
     //     }
-    // }   
+    // }  
 
+// refactor this into a common table component
+.schedule-table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
+
+    // removes last border line in table
     tr:last-child {
         border-bottom: 2px solid transparent;
     }
 
     tr {
-
         .middle-column {
             color: $teachla-green;
             font-weight: 600;
@@ -258,12 +258,14 @@ ul > li {
         th, td {
             border-bottom: 1px solid $teachla-green;
             text-align: left;
+            
             padding: 3vw;
             padding-top: 15px;
             padding-bottom: 15px;
 
             @media (min-width: $desktop-width) {
-                padding: 15px;
+                // padding: 15px;
+                padding: 28px 30px;
             }
         }
 
