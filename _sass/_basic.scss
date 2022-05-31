@@ -212,12 +212,29 @@ ul > li {
     margin: 3em 0;
 }
 
+.schedule-table {
+    tr:first-child{
+        border-bottom: 2px solid transparent;
+        background-image: linear-gradient(90deg,#5EDA12,#BCF223);
+        background-origin: border-box;
+        background-size: 100% 2px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+
+        th {
+            border-bottom: 2px solid transparent;
+        }
+    }   
+}
+
+
 // refactor this into a common table component
 .schedule-table {
     border-collapse: collapse;
     width: 100%;
 
     tr {
+
         th, td {
             border-bottom: 2px solid black;
             text-align: center;
