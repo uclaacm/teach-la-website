@@ -213,22 +213,33 @@ ul > li {
 
 .my-3 {
     margin: 3em 0;
+} 
+
+.schedule-table-header {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+
+    border-bottom: 2px solid transparent;
+    background-image: linear-gradient(90deg,#5EDA12,#BCF223);
+    background-origin: border-box;
+    background-size: 100% 4px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+
+    td {
+        text-align: left;
+        padding: 3vw;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (min-width: $desktop-width) {
+            padding: 60px 0 17px 65px;
+        }
+    }
 }
-
-
-    // HEADER OF THE TABLE
-    // tr:first-child{
-    //     border-bottom: 2px solid transparent;
-    //     background-image: linear-gradient(90deg,#5EDA12,#BCF223);
-    //     background-origin: border-box;
-    //     background-size: 100% 2px;
-    //     background-position: bottom;
-    //     background-repeat: no-repeat;
-
-    //     th {
-    //         border-bottom: 2px solid transparent;
-    //     }
-    // }  
 
 // refactor this into a common table component
 .schedule-table {
@@ -237,7 +248,9 @@ ul > li {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 50px 0;
+    margin: 38px 0;
+    table-layout: fixed;
+
 
     // removes last border line in table
     tr:last-child {
@@ -255,7 +268,7 @@ ul > li {
             }
         }
 
-        th, td {
+        td {
             border-bottom: 1px solid $teachla-green;
             text-align: left;
             
@@ -264,8 +277,7 @@ ul > li {
             padding-bottom: 15px;
 
             @media (min-width: $desktop-width) {
-                // padding: 15px;
-                padding: 28px 30px;
+                padding: 28px 0 28px 65px;
             }
         }
 
