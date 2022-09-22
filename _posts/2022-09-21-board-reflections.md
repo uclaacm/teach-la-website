@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "'21-'22 Dev Board Reflections"
-date: 2022-09-21 05:00:00 UTC
+date: 2022-09-22 05:00:00 UTC
 author: Archie, Jiin, Matt, Tim, and Regina
 authors:
     - Archie Datta
     - Jiin Kim
-    - Matt Nieva
+    - Matthew Nieva
     - Timothy Poon
     - Regina Wang
 category: reflection
@@ -14,25 +14,27 @@ tags:
     - blog
     - reflection
 image: img/posts/21-22-reflections/cover.JPG
-alt: A picture with Teach La Dev Team
+alt: A picture of Winter '22 Dev Demo Day!
 ---
 
-**Top Links for the Year!**
+It’s been a hectic board cycle this year, going from a singular dev team president to eight different board members and restructuring midway through the term. These major changes, compounded with our growing number of members (90 members*, and 15+ projects over the year), made for a challenge as we navigated defining our roles together. With that, let’s see what our board thinks about their year!
+
+* [Top Links](#top-links-for-the-year)
+* [Archie](#archie) - Design Director
+* [Jiin](#jiin) - Learning Labs Director
+* [Matt](#matt) - Dev Team Training Director
+* [Tim](#tim) - Editor Director
+* [Regina](#regina) - Internal Dev President
+* [Pictures](#pictures)
+
+<sub><sup>_`*` - defined as attending 1+ meetings outside of the intro meeting, or contributing to our development_</sup></sub>
+
+# Top Links for the Year!
 
 - [Our Website!](https://www.google.com/url?q=https://teachla.uclaacm.com/&sa=D&source=editors&ust=1663828915566951&usg=AOvVaw0jRSQI_D1nkGGLcoQviawJ)
 - [Our Github](https://www.google.com/url?q=https://github.com/uclaacm&sa=D&source=editors&ust=1663828915567813&usg=AOvVaw3uDcClkhhWrHyNs74Js81r)!
 - [Our Training Repository!](https://www.google.com/url?q=https://github.com/uclaacm/teach-la-dev-training&sa=D&source=editors&ust=1663828915568264&usg=AOvVaw39dImIeIn9EQvto3Uo-LGT)
 - [Our Goals for the year!](https://www.google.com/url?q=https://docs.google.com/document/d/1N3GIkuhAfvubtdkt8KkNLHttMsohORV8vEqqw3u-wAQ/edit%23&sa=D&source=editors&ust=1663828915568636&usg=AOvVaw0j20HUdLMfZGBbz1qz7OJC)
-
-**Intro**
-
-It’s been a hectic board cycle this year, going from a singular dev team president to eight different board members and restructuring midway through the term. These major changes, compounded with our growing number of members, made for a challenge as we navigated defining our individual roles together. With that, let’s take a look at what our board members have to say about their year!
-
-* [Archie](#archie) - Design Director
-* [Jiin](#jiin) - Learning Labs Director
-* [Matt](#matt) - Dev Team Training Director
-* [Tim](#tim) - Editor Director
-* [Regina](#regina) - Internal Dev President, Dev Team Training Director
 
 ## Archie
 
@@ -77,7 +79,7 @@ As the quarter passed, I came to notice some common issues found within the Lear
 
 I unfortunately wasn’t able to really resolve these issues within the quarter which led to most of the teams eventually falling through. Although this situation was pretty demoralizing, being able to recognize these problems helped me kickstart one of the dev team’s most successful projects: BoolBots.
 
-        BoolBots is a Python Boolean learning lab that was requested by Teach LA’s Python curriculum team. This is the first learning lab that was created during my time as the Learning Lab Director, so I really wanted to make sure that it would go well. The PM for the project was Nathan Endow, and he and I spent spring quarter preparing for the project to be built over the summer. I made sure that Nathan would get to communicate with Robert and Nikhil, the leaders of the Python class, and gather enough information from them about what they wanted from the Learning Lab. I also tried my best to relay quality advice to Nathan based on what I had learned from leading Bias by Us and being the Learning Labs Director. Throughout this process I ended up communicating a lot with Nathan and checking on his ideation work. Once Nathan got his team, it was smooth sailing from there – I checked in every once in a while to make sure things were going okay, but Nathan was such a natural at PMing that I really didn’t need to help much at all! The dev team is really lucky to have him :)
+BoolBots is a Python Boolean learning lab that was requested by Teach LA’s Python curriculum team. This is the first learning lab that was created during my time as the Learning Lab Director, so I really wanted to make sure that it would go well. The PM for the project was Nathan Endow, and he and I spent spring quarter preparing for the project to be built over the summer. I made sure that Nathan would get to communicate with Robert and Nikhil, the leaders of the Python class, and gather enough information from them about what they wanted from the Learning Lab. I also tried my best to relay quality advice to Nathan based on what I had learned from leading Bias by Us and being the Learning Labs Director. Throughout this process I ended up communicating a lot with Nathan and checking on his ideation work. Once Nathan got his team, it was smooth sailing from there – I checked in every once in a while to make sure things were going okay, but Nathan was such a natural at PMing that I really didn’t need to help much at all! The dev team is really lucky to have him :)
 
 I also channeled what I had learned into the Learning Lab PM workshop, which was the first workshop I had ever hosted! I was pretty nervous but was happy to hear that many people appreciated it. I eventually ended up making a second, more improved version later on, which I’ll talk about later.
 
@@ -93,8 +95,6 @@ I spent the spring quarter mainly settling in the new team and keeping the dev t
 
 And that’s a wrap! It’s truly been an eventful year and I’ve learned a ton from it. I truly hope that to engrain everything that we learned into the dev team’s operations, and I’m confident that the 2022-23 dev board will be able to have the Teach LA dev team flourish even more :)
 
-
-
 ## Matt
 
 *Position: Dev Team Training Director.*
@@ -107,7 +107,7 @@ As a training director, working together with the other lovely training director
 2. Introduction to React and Dynamic Websites
 3. Introduction to Backend Principles
 4. (A bunch of miscellaneous topics like advanced React, deployment, etc)
-5. 
+
 I’d like to say that this was a great tool that helped us standardize our training curriculum from year to year and that it’ll help lighten the burden for next year’s training directors as well. Something that we’ve been discussing ACM-wide is a way for us to push one of our many training resources as one to push as the de-facto ACM-backed guide to web development. I take great pride in the fact that we’re going to keep pushing the TeachLA dev-training repository and that I was able to be a part of the great team that helped make it a reality!
 
 However, creating the training tools like the repository and actually teaching them to peeps in-person were two completely different beasts. So many things to keep in mind like:
@@ -132,28 +132,61 @@ Over my past few years at UCLA, I have been working on the TeachLA Editor in var
 
 ## Regina
 
-*Position: Special Events Director.*
+*Position: Internal Dev President, Dev Team Training Director.*
 
-I joined Teach LA last year because of its mission to provide something that I consider myself quite lucky to have before coming to college as a CS major: prior exposure to and experience with CS. Computer science can be hard to grasp at first; from my own experiences in high school at least, there’s a certain intuitive leap needed for things to click, and it doesn’t really start making sense until that point. College is an entirely different beast from high school, with professors providing less direct guidance to students. As such, learning CS without any prior experience can be a much more frustrating and daunting endeavor. I wanted to help connect with other students so that should they wish to pursue CS in college and as a future career path, they would have a foundation to build upon.
+  All in all, it’s been a great year. We’ve had a lot of work cut out for us as we navigated supporting around 90 members over the course of the year, and over 15 projects. In addition to that, we trailblazed going from one dev team president to coordinating with eight board members. I really couldn’t have asked for a better board to do it with. Before I start on the rundown of the year, I’ll get a bit sentimental. :’)
 
-Teaching was certainly an interesting and rewarding experience. I was mostly involved with the Python class at Emerson, and it was an enjoyable challenge to develop lessons every week and adjust our methods and the material we were going over based on how the students were responding and what was and wasn’t working. After all, isn’t it said that the best way to attain mastery of a subject is to be able to teach it to others? In the end, though, it was the flexibility, both for instructors and for students, and the variety of the speaker series and similar one-off events that really appealed to me, and so I became an intern to get more involved with them.
+—
+	Looking back on the time I had with Teach LA,  I remember all of the fun times, the chats, the hangouts, the camaraderie of being a team, the friends I made who I know have my back, the kickback, the late nights, the last minute grinds, the offering food when I wasn’t eating much, the real “let me know if there’s anything I can do to help”, and the follow throughs. Going from being really anxious and shy, and “everything is my job and problem” from Playnet all the way to where I am right now is honestly because of Teach LA and the opportunities I’ve had here. Being here has been an essential part of my college experience, and I definitely would not be who I am without it. I know I’m theoretically “helping others” by teaching React or reviewing resumes, or giving tips, or this and that, but to be quite honest, the community helped me even more. Thank you to the friends I made, to the people that I trust, and to everyone who I have ever worked with, truly. If there’s ever anything I can do to help, my door is always open :)
+—
 
-This was when the cybersecurity-themed collaboration with science educational outreach organization CityLab was just starting, and Regina, Kaitlyn, and I were invited to observe one of their event days to see how they operated. I really liked seeing how another organization approached teaching, how they incorporated a fun storyline into the day’s activities and pop culture themes into their workshops, all of which we could potentially take inspiration from for our own activities and events. After we became Special Events Directors, we planned to move forward with the collaboration, but then the pandemic hit and everyone had to transition to working remotely. Although the CityLab collaboration transitioned to a virtual platform, it still managed to go on in the end, which was in no small part due to the enthusiasm and dedication of everyone involved in the project. Major props to Alyssa, Leo, and the rest of the dev team for creating the amazing technical modules while we researched and designed the nontechnical module, and to our president Matt for providing the overall guidance for working together with CityLab. Getting to see the collaboration through to the end was very rewarding, especially since it was the first event I’d coordinated as Special Events Director.
+**Year Rundown!**
 
-It’s honestly been inspiring and humbling to see Teach LA making it through the transition to virtual learning and working remotely through the year so smoothly. The collaboration with BEAM and working with ACM-W on the upcoming Day of Code have all taken place in the middle of the pandemic. This year has not been easy, and I commend everyone for their dedication and passion. I have no doubt that Teach LA will accomplish even greater things moving forward, and I look forward to seeing it happen.
+In spring, we started with a new structure on Zoom, where we had three training directors, each leading a training track individually. Ellie led a HTML/CSS track, introducing members to some basic information about web dev and HTML/CSS. I led a React track, which introduced slightly more experienced members to React, a well known frontend development library, and other web dev topics such as design, backend, and CI/CD (huge shoutout to Archie and Leo for helping out with those!). Matt led advanced React and related workshops, introducing advanced hooks and routing websites to experienced members who were working on learning labs (projects). Jiin also led a project management workshop, which introduced terms and good practices in leading projects. 
+ 
+Ellie, Matt, and I put in a lot of effort as we each created a curriculum for our hourly weekly meetings, with some help from a [previous training repository](https://github.com/uclaacm/learning-lab-crash-course-su20). To help engage with our peers’ learning, we held weekly office hours, created content videos for those who missed sessions, set up projects for them to do if they wanted, were readily available whenever members had questions, checked in on them regularly, and gave them important work to do (shoutout to Vivian and Tim for providing us with HTML/CSS and React tickets from [the static site](https://teachla.uclaacm.com/) and [the editor](https://editor.uclaacm.com/) respectively!). Besides this, with the increased board capacity, we also had the capacity to do individual one on ones with each of the new members to best place them on a training track. 
 
-## Regina
+Besides the training, Divya led the weekly dev team meetings and Vivian regularly communicated with the curriculum board regarding necessary updates to the static site. Near the end of the quarter, Matt and I had the idea to have a [new react starter template](https://github.com/uclaacm/teach-la-ts-react-starter) that new projects could jump off from with typescript and yarn, based off of the newly finished and successful learning lab, [Playnet](https://github.com/uclaacm/Playnet), a collab between Creative Labs and Teach LA (shoutout to Bryan, Karen, Darren, Getty, and Trevor for working on that with me). We created the barebones template with typescript, React, yarn, effective linting, other CI/CD, and documentation with a lot of help from [the Playnet repository](https://github.com/uclaacm/Playnet) (initialized by Bryan), and some help from the [past javascript react template](https://github.com/uclaacm/teach-la-react-starter-barebones) plus Jiin, Archie, and Tim. 
+Nathan started working on a new learning lab as well, and with Jiin’s project management help, Robert’s curriculum side insight, Archie’s design help, and some technical help from me, Nathan led a successful project, [BoolBots](https://boolbots.uclaacm.com/), regarding teaching booleans in python since students sometimes struggle grasping the concept. The learning lab went great – the code was clean and members working on it gained a lot of experience, and the game taught boolean concepts in an easily digestible way, and was used in our middle school classes as we taught Python. As Playnet winded down, and we taught over 90+ students about introduction concepts of how the internet works, Getty, along with Trevor and Darren, also kickstarted a LSTM Learning Lab project aimed towards making LSTMs easier to understand for the ACM AI Advanced Machine Learning Track students. A collaboration with ACM AI, Ava connected us to the right people, and Nikhil has been helping out consistently throughout to crank out that learning lab. Again with both of these, shoutout to Jiin for consistently providing PM support, and Archie for all her design support!
 
-*Position: Internal Dev President.*
+Finally, we also prepared for summer by creating a project allocation form and tried allocating members to learning labs. Unfortunately there weren’t enough learning labs for members to work on over summer, and some members who were on learning labs for the summer had nothing to work on since they weren’t ready to be worked on. This was an issue that we saw and worked to fix in the fall quarter. 
+Over summer, we toned down what we worked on–Matt and I continued to host training sessions, and cleaning up videos and such for preparation for fall quarter, but that was about it.
 
-When I applied to be a special events director, I just wanted to expose underprivileged students to computer science and give them the opportunity to find their interest in it. As for roles, I didn’t know much of what to expect, and looking back it’s been a very rewarding experience. It was also a lot of fun collabing with other clubs and making curriculum with Kaitlyn and Nina, my special events co-directors.
+Fall quarter was the most hectic quarter–with going in person, combined with covid concerns, most of the board never having been to any Teach LA meetings in person before, more structure changes, defining individual roles better, and recruiting interns as a team for the first time. Divya kickstarted the quarter with Sophie, the Teach LA curriculum board president, and we had tons of members join the first info session. 
 
-Starting off, we collabed with CityLab to put together a curriculum for a Cyber Day. To be honest, this was the first time I’ve ever worked to set up something with another group, so I was quite lost on how to approach it and how to really get the collab going. S/o to Matt for providing guidance with that and being a great role model for how it should be done, in addition to Leo and the rest of the dev team for creating the super cute modules which we provided to CityLab. It was a great opportunity to teach the kids about cybersecurity and a great training ground for learning how to collab on a shared goal!
+The quarter was starting off great, but the dev team president was a huge role fit for three people. The split to eight board members made organization and a vision even more important, and it was getting quite chaotic with so many ideas swirling around. Divya and I, with support from Sophie, decided to split the dev team president into two roles – External Dev Team President (EDP) and Internal Dev Team President (IDP). The EDP would handle the general members and the dev team meetings while the IDP would handle the internal workings, such as dev and curriculum board support and running the dev board meetings. Divya handled the EDP role, and I handled the IDP role. To handle the plethora of ideas and improvements that we could make, I created a goals document to realign all of us to a vision and we worked together to form goals together – that we wanted to improve project lead support and give dev team members a better experience, that we wanted to have a stronger alignment with curriculum, that we wanted to better define each of our roles, and that we wanted to improve board infrastructure for next year. (Shoutout to Matt Wang, Bryan, Biao, and several other leads of other organizations for giving advice!) See [our doc](https://docs.google.com/document/d/1N3GIkuhAfvubtdkt8KkNLHttMsohORV8vEqqw3u-wAQ/edit?usp=sharing) for details.
 
-After that, in fall, Nina, Kaitlyn, and I coordinated a collab with BEAM for teaching the kids robotics. Though there were a lot of technical difficulties because it was online and it was robotics, it was a great experience. The kids were bound to have some sort of technical difficulties like how some of the kids’ cords didn’t work, or the code just wouldn’t upload to the robot, or just logistical difficulties with delivering robots. While there were a lot of issues involved and last minute changes in curriculum plans, I think at the end of the day, it went really well! The kids were really excited and happy, the collab went well, and even though the documents might’ve been a bit confusing, we laid a really great groundwork for a reusable curriculum for BEAM in the future. We also met Laurel and all the other BEAM people and are probably going to continue working with them, standardizing the curriculum for use in the future.
+To implement all of these took quite a bit of work and small changes, such as rebranding the React track to the React team and making a[ Learning Lab Project Proposal Template](https://docs.google.com/document/d/13H1hAqdWyx-Sz-MVN0QUs3s4cY7aRujKLznCJAVaULc/edit?usp=sharing) for potential Project Leads and [Learning Lab Request Form](https://docs.google.com/forms/d/e/1FAIpQLSfkb-KbCPacsVSMxX_ayzf1hNYY5tpr-XhQAeOCzu2Xl4A-TA/viewform?usp=sf_link) for people interested in having learning labs made for them, shoutout to Jiin for making these! Besides these structure changes, we worked together to define our own roles, sometimes stepping on each other’s toes while moving quickly to accommodate the time sensitive nature of the quarter system. It was only in fall that we finally all met each other in person, had a dev board social and one on ones, worked together to quickly solve problems, helped out board members who had too much on their plates–it was a great and collaborative environment where we all worked towards a common goal of giving dev team members a great first taste of practical software engineering and teaching them what they wanted to learn, along with creating useful products for curriculum and other organizations to teach with. 
 
-Continuing on, close to winter break, when ESUC reached out to our organization, I wanted to lead a booth for eWeek Kid’s Day by creating a learning lab website for it. It was rather last minute and Matt was able to help me quickly put together a solid team of 3 TLA dev members, s/o to Darren, Getty, and Trevor for doing some great work, and set up a collab with Creative Labs, in addition to pulling in Karen, our amazing designer who literally designed the whole website. In terms of Creative Labs, special s/o to Bryan and Arjun for being amazing and guiding the dev side of things, and Maggie for giving us great UI/UX feedback. We couldn’t have done it without Karen or Creative Labs, and I really appreciate all their help. Also in terms of brainstorming and curriculum, s/o to Nina and Kaitlyn for always being down to bounce ideas and having my back when I needed anything.
+We also had to figure out how to select members and interview for gathering interns. We had a tight deadline of around a week from finding out who our 40 candidates even were, to laying out [what intern roles we needed](https://docs.google.com/document/d/16YxgDZoSdYqwbhXmQQnEe2ww8ye_e_ngOu2buvusTn8/edit), to making [interview and application evaluations guidelines](https://docs.google.com/document/d/1dNI_e26F_4Kz44QrmOGEUJgTvRyYYWvPI-xuTnONOe4/edit?usp=sharing) (with huge inspiration from how the curriculum board does things and with a lot of help from Vivian), to interviewing around 8 candidates, to selecting 5 interns for winter quarter, to deciding on a timeline for internships. 
 
-Going into leading this learning lab as a PM, it was challenging and scary and, looking back, I definitely could’ve been better at communicating, among a lot of other things. I helped the new devs out, even though I wasn’t necessarily qualified, and learned about design and accessibility with Figma. It’s been a very rewarding experience, and even though it was quite stressful at times, with everything planned out finally—the beta test being next week, the event a day after, and the second event in a couple weeks after that—I’m really proud of us for making such a polished Learning Lab. Most of all, I’m excited for the kids to learn how the web works and be amazed by it!
+Altogether, in fall quarter, when what we did was quite time sensitive, the dev board really came together and we were able to establish precedence for future years in terms of things such as roles, internships, and dev team support. 
 
-Overall, it’s been a great year with TeachLA. Surprisingly, even with this remote setting, the kids were all super excited to learn more, and I also learned so much about tons of different things. Even though I joined TeachLA two years ago to just have an opportunity to expose students to computer science, TeachLA has really grown to be more than that. It’s definitely been a good time and I’m excited to see what TeachLA will become in the future!
+Between fall and winter quarter, Archie led a learning lab, Color Lab, which teaches students hex code as a standalone event or as a supplement to when we teach students Python Turtle so that they enjoy coding more as they choose their own colors.
+
+Our final quarter together, winter, was a lot more well balanced and relaxed after the busy fall quarter. We had our six interns, Getty, Evan, Nick, Angela, Darlene, and Prem, and each intern had a mentor (Jiin, Ellie, me, Archie, Vivian, and me respectively), and we had weekly one on ones with our interns to align them to intern goals. Each intern had goals that we proposed ideas for, which we came up with in fall, such as PMing a project, working on static site redesign, or leading training workshops. We also worked with the curriculum team to have more relevant projects and so that they could meet more people–shoutout to Robert, Milo, Nikhil, and Advaith for being part of that! During the last board meeting, we had interns present their deliverables and takeaways.
+
+Besides the internship developments, we started to passoff leadership and prepared for the next cycle of board by making slight improvements to the way the dev team was being run. Since in the quarter before, there were too many people on my React team for me to support each one well individually (around 20 members), this quarter we opted to prioritize quality of support over number of supports. To this end, we opened up a project application form which listed the different projects available and the time commitment and effort that the member was willing to put in. Throughout the quarter, we had 38 applications, 4 learning lab teams (s/o to Prem for leading [Pen Pals](https://github.com/uclaacm/pen-pals), Nathan for leading [ifBots](https://github.com/uclaacm/ifbots), Nick for leading [Selector Safari](https://github.com/uclaacm/selector-safari), Getty for leading [LSTMs](https://www.figma.com/file/h1IaRmqb7YK3AW78pQL7mz/tLA-LSTM-Learning-Lab?node-id=444%3A20)), 3 React teams (s/o to Jiin for leading the experienced React team, Matt for leading the React team for those new to it, and I led the remaining React team, which also included 2 people from other schools), and 2 other teams (s/o to Vivian for leading [the static site](https://github.com/uclaacm/teach-la-website) team and Tim for leading [the editor](https://editor.uclaacm.com/) team!). It was a successful quarter in that every member on a team was well supported since each team was capped at maximum 7-8 members, and they were given the proper attention and support that they deserved from board members to have a great experience. 
+
+The quarter culminated in a Demo Day, which we kickstarted this quarter to give teams an opportunity to showcase to what they worked on this quarter, to show those interested in collaborating with us what we could make and what we had available, and to give teams a goal to come together to meet. We teamed up with the curriculum special events team to market and publicize the event, make a design request, create slides and come up with an event structure, and get food to provide at the event. The [event](https://docs.google.com/presentation/d/1dMHeOzI3S4PczOJIPkky4LKt_m-CRdRp4VFfZVH-5Zs/edit?usp=sharing) went great and it was definitely a nice end to the quarter and our term. 
+
+Altogether, this year was great for the Teach LA Dev team. We worked on over 15 learning labs, including ongoing ones from previous years like [Bias by Us](https://github.com/uclaacm/bias-by-us) and [No Filter](https://github.com/uclaacm/no-filter), see [our website](https://teachla.uclaacm.com/dev#projects) for our full list, and affected around over 90 members. We supported the curriculum team in their work to bring computer science to the underserved K-12 communities and came together to form an inclusive and welcoming community. We overcame the growing pains of splitting from a single board member to 8 and were able to provide support to members in training them from the ground up. It’s really been a pleasure serving as Internal Dev President for Teach LA this hectic year, and I know that Jiin and future presidents will continue to improve Teach LA Dev even more!
+
+# Pictures
+![Picture of a board kickback]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic1.JPG){:class=’post-img’}
+_Board Kickback!_
+
+![Picture of Archie, Matt, and Jiin]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic2.JPG){:class=’post-img’}
+_Archie, Matt, and Jiin_
+
+![Picture of a dev board picnic social]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic3.JPG){:class=’post-img’}
+_Dev bord picnic social_
+
+![Picture of Teach LA Board and interns at ACM Banquet!]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic4.JPG){:class=’post-img’}
+_ACM Banquet with Teach LA Board_
+
+![Picture of dev board going rooftop exploring!]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic5.JPG){:class=’post-img’}
+_Rooftop exploring!_
+
+![Picture of Teach LA board at ACM All Hands!]({{site.baseurl}}/img/posts/21-22-reflections/sliderPic6.png){:class=’post-img’}
+_ACM All Hands_
