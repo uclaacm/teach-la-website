@@ -17,7 +17,16 @@ image: img/posts/21-22-reflections/cover.JPG
 alt: A picture with Teach La Dev Team
 ---
 
-It’s been a hectic board cycle this year, going from a singular dev team president to eight different board members and restructuring midway through the term. These major changes, compounded with our growing number of members, made for a challenge as we navigated defining each of our individual roles as board members. With that, let’s take a look at what our board members have to say about their year!
+**Top Links for the Year!**
+
+- [Our Website!](https://www.google.com/url?q=https://teachla.uclaacm.com/&sa=D&source=editors&ust=1663828915566951&usg=AOvVaw0jRSQI_D1nkGGLcoQviawJ)
+- [Our Github](https://www.google.com/url?q=https://github.com/uclaacm&sa=D&source=editors&ust=1663828915567813&usg=AOvVaw3uDcClkhhWrHyNs74Js81r)!
+- [Our Training Repository!](https://www.google.com/url?q=https://github.com/uclaacm/teach-la-dev-training&sa=D&source=editors&ust=1663828915568264&usg=AOvVaw39dImIeIn9EQvto3Uo-LGT)
+- [Our Goals for the year!](https://www.google.com/url?q=https://docs.google.com/document/d/1N3GIkuhAfvubtdkt8KkNLHttMsohORV8vEqqw3u-wAQ/edit%23&sa=D&source=editors&ust=1663828915568636&usg=AOvVaw0j20HUdLMfZGBbz1qz7OJC)
+
+**Intro**
+
+It’s been a hectic board cycle this year, going from a singular dev team president to eight different board members and restructuring midway through the term. These major changes, compounded with our growing number of members, made for a challenge as we navigated defining our individual roles together. With that, let’s take a look at what our board members have to say about their year!
 
 * [Archie](#archie) - Design Director
 * [Jiin](#jiin) - Learning Labs Director
