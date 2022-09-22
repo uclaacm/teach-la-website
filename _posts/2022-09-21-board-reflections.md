@@ -35,11 +35,19 @@ As you can predict, dear reader, I did not do so great in that part of the inter
 
 The first project I worked on was BoolBots. I came into this project via a Slack message from a stranger and a very questionable set of robot illustrations. I came out of it with one of my best friends and a much less questionable set of robot illustrations. People always say that CSS is their least favorite part of web dev, but there was something so satisfying about seeing my vision come together on the screen from a pile of HTML tags.
 
+![Picture of BoolBots website]({{site.baseurl}}/img/posts/21-22-reflections/archieImg1.png){:class=’post-img’}
+
 When the school year started, I was asked to work on a redesign for No Filter. I’ll be honest, this was the design I’m least proud of this year. It’s also the one I learned the most from. I spent so much time trying to come up with a creative design, that I didn’t think as much about how the design would fit the content and making sure it met accessibility standards. After this project, I learned to design for the content of the site instead of fighting it.
+
+![Picture of no filter website]({{site.baseurl}}/img/posts/21-22-reflections/archieImg2.png){:class=’post-img’}
 
 The next project I worked on is my favorite. Many years ago, TeachLA had tabled a potential learning lab about hex codes because we didn’t have the people to work on it. When I heard about that, I was disappointed. It sounded like such a cool project and I wanted to work on it! Eventually, I realized that nothing was stopping me from just doing it. So I did. During winter break, I sat down and coded for days on end. As previously mentioned, I am very bad at React so this was quite a process. But after a lot of hard work, Color Lab was born. Color Lab was the first TeachLA learning lab made by one person (with some help from Matt and Nathan ty guys <3). It was also probably the last to be made in this way. Nevertheless, I’m proud of creating this small piece of TeachLA history.
 
+![Picture of Color Lab website]({{site.baseurl}}/img/posts/21-22-reflections/archieImg3.png){:class=’post-img’}
+
 Winter quarter rolled around, and I continued with the BoolBots team to work on IfBots. We were all adjusting to being back in school, so the progress was pretty slow at first. However, after a *fun* night (let’s just say that I truly lived the college experience), I decided I needed to prove that I could still code. Don’t ask about the logic behind that because there is none. Nevertheless, I ended up accidentally doing half the project, so I consider my point proven.
+
+![Picture of IfBots website]({{site.baseurl}}/img/posts/21-22-reflections/archieImg4.png){:class=’post-img’}
 
 Finally, it was spring quarter. The dev board was buzzing with excitement during the process of finding new interns. We weren’t planning on getting a design intern, but I was still excited to see the TeachLA family grow. Then, one day I got a Slack message from Matt asking if I would be down to take on an intern. At first, I thought he had the wrong person. But no, there was a candidate who was interested in design! So, this quarter, I’ve been teaching my wonderful intern Angela all about Figma, CSS, and all things design. We’ve also been working on a new design for the TeachLA static site. Keep an eye out for it launching soon :)
 Overall, I would like to thank everyone in TeachLA for being such talented developers and wonderful friends. I’m so excited to keep working with you next year as Outreach Director!
