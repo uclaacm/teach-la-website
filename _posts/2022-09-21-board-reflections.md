@@ -2,7 +2,7 @@
 layout: post
 title: "'21-'22 Dev Board Reflections"
 date: 2022-09-21 05:00:00 UTC
-author: Chase, Helia, Kaitlyn, Leo, Nina, Regina, Robert, Sophie, and Matt
+author: Archie, Jiin, Matt, Tim, and Regina
 authors:
     - Archie Datta
     - Jiin Kim
@@ -22,7 +22,7 @@ It’s been a hectic board cycle this year, going from a singular dev team presi
 * [Archie](#archie) - Design Director
 * [Jiin](#jiin) - Learning Labs Director
 * [Matt](#matt) - Dev Team Training Director
-* [Timothy](#timothy) - Editor Director
+* [Tim](#tim) - Editor Director
 * [Regina](#regina) - Internal Dev President, Dev Team Training Director
 
 ## Archie
@@ -30,7 +30,9 @@ It’s been a hectic board cycle this year, going from a singular dev team presi
 *Position: Design Director.*
 
 Allow me to set the scene of how my TeachLA journey began. It's my freshman year and I had just gotten an interview for the dev intern position. It’s going great until I hear Matt say, “So I see that you’re experienced in HTML/CSS/JavaScript?” Crap. I forgot I had that on my resume. Well sure, I am. Only if you call scraping together a few header tags and changing the background color of an html file made in Notepad “experienced”. 
+
 As you can predict, dear reader, I did not do so great in that part of the interview. Nevertheless, I got the position! From there, I worked on Buffer Buffet and actually did learn about HTML and CSS. However, as I quickly found out I was very bad at what I was supposed to be doing (React) and very good at what I was not (design). And that’s how this position came to be! TeachLA has a lot of amazing developers (not me) but a severe lack of design infrastructure. As design director, my job was to be the point of contact for all things aesthetically pleasing. 
+
 The first project I worked on was BoolBots. I came into this project via a Slack message from a stranger and a very questionable set of robot illustrations. I came out of it with one of my best friends and a much less questionable set of robot illustrations. People always say that CSS is their least favorite part of web dev, but there was something so satisfying about seeing my vision come together on the screen from a pile of HTML tags.
 
 When the school year started, I was asked to work on a redesign for No Filter. I’ll be honest, this was the design I’m least proud of this year. It’s also the one I learned the most from. I spent so much time trying to come up with a creative design, that I didn’t think as much about how the design would fit the content and making sure it met accessibility standards. After this project, I learned to design for the content of the site instead of fighting it.
@@ -88,6 +90,7 @@ As a training director, working together with the other lovely training director
 2. Introduction to React and Dynamic Websites
 3. Introduction to Backend Principles
 4. (A bunch of miscellaneous topics like advanced React, deployment, etc)
+5. 
 I’d like to say that this was a great tool that helped us standardize our training curriculum from year to year and that it’ll help lighten the burden for next year’s training directors as well. Something that we’ve been discussing ACM-wide is a way for us to push one of our many training resources as one to push as the de-facto ACM-backed guide to web development. I take great pride in the fact that we’re going to keep pushing the TeachLA dev-training repository and that I was able to be a part of the great team that helped make it a reality!
 
 However, creating the training tools like the repository and actually teaching them to peeps in-person were two completely different beasts. So many things to keep in mind like:
@@ -95,6 +98,7 @@ However, creating the training tools like the repository and actually teaching t
 1. How do you keep people engaged in-person?
 2. How do you handle hybrid situations?
 3. How does partner-coding or lecture-style presentations work in large classroom settings?
+
 The largest thing I learned was that it’s so much easier to connect with people in-person as opposed to teaching on Zoom! Being able to see people face-to-face is truly a blessing after COVID and for the next training directors: something that I wish I could do better is to take advantage of the in-person medium! Whether that be through engaging more with people during lessons or doing more bonding activities like socials, I feel like I could’ve done so much more in the social aspect of TLA!
 
 As I move on to other aspects of ACM like working with the dev team, I still use a lot of tools that we’ve built up through TLA like our web-dev training curriculum in order to help make our centralized web dev training that’s used by all of the interns, and we based our Dev Team Project Outline based off of the TLA Project Outline doc that TLA made this yr! I love the great symbiotic relationship that the ACM committees have with each other and will def use things from TLA moving forward!
