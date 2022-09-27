@@ -31,10 +31,10 @@ It’s been a hectic board cycle this year, going from a singular dev team presi
 
 # Top Links for the Year!
 
-- [Our Website!](https://www.google.com/url?q=https://teachla.uclaacm.com/&sa=D&source=editors&ust=1663828915566951&usg=AOvVaw0jRSQI_D1nkGGLcoQviawJ)
-- [Our Github](https://www.google.com/url?q=https://github.com/uclaacm&sa=D&source=editors&ust=1663828915567813&usg=AOvVaw3uDcClkhhWrHyNs74Js81r)!
-- [Our Training Repository!](https://www.google.com/url?q=https://github.com/uclaacm/teach-la-dev-training&sa=D&source=editors&ust=1663828915568264&usg=AOvVaw39dImIeIn9EQvto3Uo-LGT)
-- [Our Goals for the year!](https://www.google.com/url?q=https://docs.google.com/document/d/1N3GIkuhAfvubtdkt8KkNLHttMsohORV8vEqqw3u-wAQ/edit%23&sa=D&source=editors&ust=1663828915568636&usg=AOvVaw0j20HUdLMfZGBbz1qz7OJC)
+- [Our Website!](https://teachla.uclaacm.com/)
+- [Our Github](https://github.com/uclaacm)!
+- [Our Training Repository!](https://github.com/uclaacm/teach-la-dev-training)
+- [Our Goals for the year!](https://docs.google.com/document/d/1N3GIkuhAfvubtdkt8KkNLHttMsohORV8vEqqw3u-wAQ/edit)
 
 ## Archie
 
