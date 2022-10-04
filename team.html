@@ -20,9 +20,9 @@ permalink: "/team"
 {% assign genLeadership = president | concat: vpres | concat: genBoard %}
 
 <!-- For dev board -->
-{% assign devDirector = site.team | where_exp:"person", "person.group contains 'dev board' and person.title == 'Dev Team Director'" | group_by:"title" %}
-{% assign devBoard = site.team | where_exp:"item", "item.group contains 'dev board' and item.title != 'Dev Team Director'" | sort:"name" | group_by:"title" | sort:"name" %}
-{% assign devLeadership = devDirector | concat: devBoard %}
+{% assign devPresident = site.team | where_exp:"person", "person.group contains 'dev board' and person.title == 'Dev Team President'" | group_by:"title" %}
+{% assign devBoard = site.team | where_exp:"item", "item.group contains 'dev board' and item.title != 'Dev Team President'" | sort:"name" | group_by:"title" | sort:"name" %}
+{% assign devLeadership = devPresident | concat: devBoard %}
 
 {% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
 

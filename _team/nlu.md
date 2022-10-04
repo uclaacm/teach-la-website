@@ -1,7 +1,5 @@
 ---
 name: "Nina Lu"
-title: "Special Events Director"
-group: "general board"
 img: nlu.jpg
 pronouns: "she/her"
 email: "lnina1638@gmail.com"

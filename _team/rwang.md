@@ -1,7 +1,5 @@
 ---
 name: "Regina Wang"
-title: "Dev Team Training Director"
-group: "dev board"
 github: reginawang99
 img: rwang.png
 graduating_year: 2022

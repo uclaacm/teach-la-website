@@ -1,7 +1,5 @@
 ---
 name: "Leo Krashanoff"
-title: "Advisor"
-group: "dev board"
 img: "krash.jpg"
 email: "leo@krashanoff.com"
 github: "krashanoff"

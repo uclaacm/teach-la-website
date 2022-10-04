@@ -1,8 +1,6 @@
 ---
 name: "Chase Kapler"
-title: "React Native School Lead"
 email: "chasekap@gmail.com"
-group: "general board"
 img: "ckapler.png"
 pronouns: "he/him"
 graduating_year: 2023

@@ -1,12 +1,12 @@
 ---
 name: "Eden Yu"
 group: "general board"
-title: Special Events Director
-secondary: "Scratch School Lead"
+title: "Vice President"
 pronouns: "she/her"
 img: "eyu.jpg"
 graduating_year: 2024
 github: "edenhyu"
+email: "edenyu@ucla.edu"
 
 positions:
   - year: 2021-2022
