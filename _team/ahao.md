@@ -3,6 +3,6 @@ name: "Angela Hao"
 group: "member"
 title: "Developer"
 graduating_year: 2026
-img: "Angela_Pic.jpg"
+img: "Angela Hao.jpg"
 pronouns: "she/her"
 ---
