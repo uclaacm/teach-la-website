@@ -1,13 +1,13 @@
 #navbar {
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 	top: 0;
 	left: 0;
 	height: 70px;
 	width: 100%;
 	background: white;
-	box-shadow: 0px 0px 4px #E2E2E2;
-	border-bottom: 1px solid $teachla-green;
+	box-shadow: 0px 1px 4px #E2E2E2;
+	//border-bottom: 1px solid $teachla-green;
 	font-family: $font-display;
 	color: $font-primary-color;
 
@@ -43,7 +43,7 @@
 
 	ul.nav-items li {
 		display: inline-block;
-		text-transform: lowercase;
+		text-transform: capitalize;
 		font-size: 0.95em;
 		padding: 0px 20px;
 		line-height: 40px;
@@ -53,7 +53,7 @@
 
 		&.nav-button {
 			background: white;
-			border-radius: 4px;
+			border-radius: 10px;
 			margin-left: 15px;
 			color: $teachla-green;
 			border: 2px solid $teachla-green;
@@ -183,7 +183,7 @@
 	}
 
 	a.active li,
-	a.active ul.nav-items li:hover {
+	a.active ul.nav-items li:hover { 
 		color: $teachla-green !important;
 	}
 
