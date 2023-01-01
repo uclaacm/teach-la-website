@@ -31,6 +31,7 @@
 		height: 50px;
 		width: auto;
 		margin-top: 10px;
+		background-color: white; 
 	}
 
 	ul.nav-items {
@@ -43,7 +44,7 @@
 
 	ul.nav-items li {
 		display: inline-block;
-		text-transform: capitalize;
+		text-transform: lowercase;
 		font-size: 0.95em;
 		padding: 0px 20px;
 		line-height: 40px;
