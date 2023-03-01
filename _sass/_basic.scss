@@ -22,6 +22,7 @@
     min-width: 100%;
     font-family: $font-body;
     color: $font-primary-color;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     @media (max-width: $desktop-width) {
@@ -57,7 +58,7 @@ ul > li {
 
 .container-restricted {
     margin: auto;
-    width: 1000px;
+    width: 1213px;
     // enforces a not-too-wide text viewport
     max-width: 100vw;
     @media (min-width: $desktop-width) {
@@ -99,6 +100,8 @@ ul > li {
 .title{
     font-family: $font-display;
     margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .text-1x {
@@ -210,29 +213,77 @@ ul > li {
 
 .my-3 {
     margin: 3em 0;
+} 
+
+.schedule-table-header {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+
+    border-bottom: 2px solid transparent;
+    background-image: linear-gradient(90deg,#5EDA12,#BCF223);
+    background-origin: border-box;
+    background-size: 100% 4px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+
+    td {
+        text-align: left;
+        padding: 3vw;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (min-width: $desktop-width) {
+            padding: 60px 0 17px 65px;
+        }
+    }
 }
 
 // refactor this into a common table component
 .schedule-table {
     border-collapse: collapse;
     width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 38px 0;
+    table-layout: fixed;
+
+
+    // removes last border line in table
+    tr:last-child {
+        border-bottom: 2px solid transparent;
+    }
 
     tr {
-        th, td {
-            border-bottom: 2px solid black;
-            text-align: center;
+        .middle-column {
+            color: $teachla-green;
+            font-weight: 600;
+            // not sure if we want every link to be changed this way, but I'll change the link on this table specifically
+            a {
+                color: $teachla-green;
+                text-decoration: none;
+            }
+        }
+
+        td {
+            border-bottom: 1px solid $teachla-green;
+            text-align: left;
+            
             padding: 3vw;
             padding-top: 15px;
             padding-bottom: 15px;
 
             @media (min-width: $desktop-width) {
-                padding: 15px;
+                padding: 28px 0 28px 65px;
             }
         }
 
-        &:nth-child(even) {
-            border-style: solid black;
-        }
+        // &:nth-child(even) {
+        //     border-style: solid black;
+        // }
     }
 }
 
