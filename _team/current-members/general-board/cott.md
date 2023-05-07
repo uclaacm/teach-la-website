@@ -5,7 +5,6 @@ title: "JEDI Director"
 pronouns: "she/her"
 img: "cott.jpg"
 graduating_year: 2025
-github: "applesunn"
 email: "carissaott@g.ucla.edu"
 
 positions:
