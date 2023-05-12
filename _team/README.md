@@ -102,3 +102,5 @@ I have been with Teach LA for every year of my college experience, and it's been
 ## My Favorite Classes at UCLA
 * ...
 ```
+inactive: true
+---
