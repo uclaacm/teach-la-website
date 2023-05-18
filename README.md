@@ -1,4 +1,4 @@
-# Teach LA Website
+# Teach LA Website - DELETE ME!!!
 
 ![Test Jekyll Build](https://github.com/uclaacm/teach-la-website/workflows/Test%20Jekyll%20Build/badge.svg)
 [![Site Up Status](https://img.shields.io/website?url=https%3A%2F%2Fteachla.uclaacm.com)](https://teachla.uclaacm.com)
