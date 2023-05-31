@@ -2,12 +2,8 @@
     <div class="container container-restricted">
         <div class="footer-content">
             <div class="footer-aside">
-                <!-- <h2 class="footer-title">change</h2> -->
-                <!-- <div id="nav-title" class="nav-section left"> -->
-                    <!-- <img src="{{site.baseurl}}/img/teachLA_wordmark_gradient.svg"  id="acm-tla-wordmark" alt="ACM Teach LA Wordmark" /> -->
-                <!-- </div> -->
                 <p class="logo">
-                    <img src="{{site.baseurl}}/img/teachLA_wordmark_gradient.svg"  id="acm-tla-wordmark" alt="ACM Teach LA Wordmark" />
+                    <img src="{{site.baseurl}}/img/teachLA_logo_light copy.svg"  id="acm-tla-wordmark" alt="ACM Teach LA Wordmark" />
                 </p>
                 <ul class="footer-links">
                     <li class="footer-link">
@@ -25,23 +21,16 @@
                             <span class="fab fa-linkedin" aria-label="LinkedIn Logo & Link"></span>
                         </a>
                     </li>
-                <!-- <p class="footer-link email"> -->
                     <li class = "footer-link">
                         <a class="icon" href="mailto: acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
                             <span class="fas fa-envelope" aria-label="Email Logo & Link"></span>
                         </a>
                         <a href="mailto:acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <!-- acmteachla@gmail.com -->
                         </a>
 
                     </li>
                 </ul>
 
-                <!-- </p> -->
-                <!-- <p class="footer-copyright">
-                    &copy; ACM @ UCLA 2019 
-                    <br/>made with <span class="fa fa-heart animated-heartbeat" style="color:tomato" aria-label="animated heartbeat"></span>
-                </p> -->
             </div>
             <div class="footer-main">
                 <div class="footer-col">
@@ -54,7 +43,7 @@
                             <a href="{{site.baseurl}}/about/#teacher-join">join us</a>
                         </li>
                         <li>
-                            <a href="{{site.editor_link}}" target="_blank" rel="noopener noreferrer">Link 3</a>
+                            <a href="{{site.baseurl}}/about/#schedule">schedule</a>
                         </li>
                     </ul>
                 </div>
@@ -68,44 +57,10 @@
                             <a href="{{site.baseurl}}/reports">reports</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/reports">Link 3</a>
+                            <a href="{{site.baseurl}}/blog/teach-la-website/reflection/2022/09/21/board-reflections/">board reflections</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/team">Team</a>
-                        </li>
-                        <li>
-                            <a href="{{site.baseurl}}/partners">Partners</a>
-                        </li> -->
                     </ul>
                 </div>
-
-                <!-- {% for class in site.data.classes %}
-                    {% assign loopindex = forloop.index | modulo: 5 %}
-                    {% if forloop.first %}
-                    <div class="footer-col">
-                        <h3 class="footer-subtitle">classes</h3>
-                            <ul class="footer-nav">
-                                <li>
-                                    <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
-                                </li>
-                    {% elsif loopindex == 1 %}
-                    <div class="footer-col no-title">
-                        <ul class="footer-nav">
-                            <li>
-                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
-                            </li>
-                    {% elsif loopindex == 0 or forloop.last %}
-                            <li>
-                                <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    {% else %}
-                        <li>
-                            <a href="{{site.baseurl}}/classes/{{class.path}}">{{ class.short-title }}</a>
-                        </li>
-                    {% endif %}
-                {% endfor %} -->
 
                 <div class="footer-col">
                     <h3 class="footer-subtitle">dev</h3>
@@ -117,11 +72,8 @@
                             <a href="{{site.baseurl}}/dev/#projects">dev projects</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/citylab-cyber">Link 3</a>
+                            <a href="{{site.baseurl}}/dev/#WIP">in the works</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/beam-robotics">Robotics x BEAM</a>
-                        </li> -->
                     </ul>
                 </div>
 
@@ -137,32 +89,8 @@
                         <li>
                             <a href="{{site.baseurl}}/team/#instructors-developers">instructors and developers</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/beam-robotics">Robotics x BEAM</a>
-                        </li> -->
                     </ul>
                 </div>
-
-                <!-- <div class="footer-col">
-                    <h3 class="footer-subtitle">curriculum</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="{{site.baseurl}}/classes">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="{{site.baseurl}}/docs/dev-setup">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="{{site.baseurl}}/docs/static-setup">Link 3</a>
-                        </li>
-                         <li>
-                            <a href="{{site.baseurl}}/dev/resources">Dev Resources</a>
-                        </li>
-                        <li>
-                            <a href="{{site.baseurl}}/team/interns">Intern Program</a>
-                        </li> -->
-                    <!-- </ul>
-                </div> --> 
 
                 {% for class in site.data.classes %}
                 {% assign loopindex = forloop.index | modulo: 5 %}
@@ -210,9 +138,6 @@
                         <li>
                             <a>Short Avenue Elementary School</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/beam-robotics">Robotics x BEAM</a>
-                        </li> -->
                     </ul>
                 </div>
 
@@ -220,50 +145,45 @@
                     <h3 class="footer-subtitle">Sponsers</h3>
                     <ul class="footer-nav">
                         <li>
-                            <a href="{{site.baseurl}}/ai-ethics">Blizzard Entertainment</a>
+                            <a>Blizzard Entertainment</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/careers-cs">Citadel</a>
+                            <a>Citadel</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/citylab-cyber">Deloittle</a>
+                            <a>Deloittle</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/ai-ethics">Facebook</a>
+                            <a>Facebook</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/ai-ethics">Google</a>
+                            <a>Google</a>
                         </li>
+                    </div>
 
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/beam-robotics">Robotics x BEAM</a>
-                        </li> -->
-                    </ul>
-                </div>
-
-                <div id = "row2third" class="footer-col">
-                    <h3 class="footer-subtitle"> &#160</h3>
+                <div id = "row2third" class="footer-col">  
+                    <h3 class="footer-subtitle"><br></h3>
+                        
                     <ul class="footer-nav">
                         <li>
-                            <a href="{{site.baseurl}}/careers-cs">Human Capital</a>
+                            <a> Human Capital</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/citylab-cyber">Northrop Grumman</a>
+                            <a>Northrop Grumman</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/ai-ethics">Samsung</a>
+                            <a>Samsung</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/careers-cs">Sandia National Laboratories</a>
+                            <a>Sandia National Laboratories</a>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/citylab-cyber">Viasat</a>
+                            <a>Viasat</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{site.baseurl}}/beam-robotics">Robotics x BEAM</a>
-                        </li> -->
                     </ul>
-                </div>
+                    </div>       
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
