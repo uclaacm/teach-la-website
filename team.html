@@ -179,8 +179,6 @@ permalink: "/team"
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">
-                    {% comment %}
-                    {% endcomment %}
                     {% assign content = member.content | strip %}
                     {% if member.github and member.links == nil and content == "" %}
                         <li>
