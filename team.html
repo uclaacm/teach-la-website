@@ -64,11 +64,6 @@ permalink: "/team"
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">
-                    {% if member.email %}
-                    <li>
-                        <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
-                    </li>
-                    {% endif %}
                     {% assign content = member.content | strip %}
                     {% if member.github and member.links == nil and content == "" %}
                         <li>
@@ -126,11 +121,6 @@ permalink: "/team"
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">
-                    {% if member.email %}
-                    <li>
-                        <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
-                    </li>
-                    {% endif %}
                     {% assign content = member.content | strip %}
                     {% if member.github and member.links == nil and content == "" %}
                         <li>
@@ -189,13 +179,6 @@ permalink: "/team"
                     {% endif %}
                 </p>
                 <ul class="list-unstyled">
-                    {% comment %}
-                    {% if member.email %}
-                    <li>
-                        <a class="tla-link" href="mailto:{{member.email}}"><span class="fa fa-envelope"></span> {{ member.email }}</a>
-                    </li>
-                    {% endif %}
-                    {% endcomment %}
                     {% assign content = member.content | strip %}
                     {% if member.github and member.links == nil and content == "" %}
                         <li>
