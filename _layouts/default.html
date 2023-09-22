@@ -18,6 +18,40 @@
       logTopSecretMessage("Don't worry, our site isn't collecting any data about you, or anything, really. Pinky promise.");
       logTopSecretMessage("You look like somebody who likes web programming and hacking. Why not join our dev team? Check out https://teachla.uclaacm.com/dev");
     </script>
+    <div>
+      <!-- check if content is from home page -->
+      {% if page.url == "/" %}
+      <!-- fix this later! -->
+        <div class = "landing-top">
+          <!-- <img class = "img-responsive img-push-down img-curved img-push-up" src="{{site.baseurl}}/img/landing-illustration.svg" alt="illustration" /> -->
+          <div class="container container-fill {% if layout.fw or page.fw %}{% else %}container-restricted{% endif %}">
+          
+          <div class="row-desktop row-desktop-ratio-1-1">
+              <div class="col-padded v-center-children">
+                  <h1 class="title page-title">ACM <span class="text-teachla">Teach LA</span></h1>
+                  <h2 class="title tla-descrip">making coding
+                      <span class="vertical-slide">
+                          <span>accessible.</span>
+                          <span>fun.</span>
+                          <span>empowering.</span>
+                          <span>approachable.</span>
+                          <span>easy.</span>
+                      </span>
+                  </h2>
+                  <p>
+                      ACM Teach LA pairs UCLA students with schools in Los Angeles to provide free computer science classes. Our goal is to empower all students with the ability to code, and use it to make a difference.
+                  </p>
+                  <div class="button-container">
+                      <a class="button" href="{{site.baseurl}}/join"><span class="fa fa-fw fa-school"></span> Let's Work Together!</a>
+                      <a class="button button-dark" href="{{site.baseurl}}/about"><span class="fa fa-book"></span> Learn More</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        </div>
+      {% endif %}
+    </div>
     <div class="container container-fill {% if layout.fw or page.fw %}{% else %}container-restricted{% endif %}">
       {{ content }}
     </div>
