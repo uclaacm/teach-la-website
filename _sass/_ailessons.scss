@@ -1,5 +1,5 @@
 label {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 200;
 }
 
@@ -13,24 +13,35 @@ label {
   div {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
     height: 100%;
     h1 {
       margin: 0;
     }
   }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .lesson-contact {
   display: grid;
   grid-gap: 1rem;
-  width: 100%; 
+  width: 100%;
 
   h3 {
+    font-size: 24px;
+    font-weight: 600px;
+    margin-bottom: 0;
     text-decoration: $teachla-green underline;
     text-decoration-thickness: 0.3rem;
     text-underline-offset: 7px;
+  }
+
+  p {
+    margin-top: 10px;
   }
 
   @media (min-width: 768px) {
@@ -54,7 +65,7 @@ label {
 
 .spacedlist {
   li {
-    margin: 10px 0; 
+    margin: 10px 0;
   }
 }
 
@@ -71,7 +82,7 @@ label {
 
   div {
     h3 {
-      color: $teachla-green
+      color: $teachla-green;
     }
   }
 }
@@ -103,7 +114,7 @@ label {
     display: flex;
     gap: 0.5rem;
     div {
-      background-color: #016D3A;
+      background-color: #016d3a;
       color: white;
       border-radius: 25px;
       padding: 5px 15px 5px 15px;
@@ -137,16 +148,27 @@ label {
 }
 
 .center {
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .page {
-    margin-top: 5rem; 
-    margin: 3rem; 
-    
-    display: flex; 
-    flex-direction: column;
-    gap: 3rem; 
+  margin-top: 5rem;
+  margin: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media (max-width: 767px) {
+    margin: 1rem;
+    margin-top: 3rem; 
+    gap: 1rem; 
+  }
+}
+
+.reset {
+  padding: 0;
+  margin: 0;
 }
