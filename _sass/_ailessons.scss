@@ -158,14 +158,20 @@ label {
   margin: 3rem;
 
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  justify-content: center;
 
   @media (max-width: 767px) {
     margin: 1rem;
     margin-top: 3rem; 
     gap: 1rem; 
   }
+}
+
+.content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; 
 }
 
 .reset {
