@@ -91,83 +91,25 @@ permalink: "/classes/ml"
   <h2>Lessons</h2>
   <div class="center">
     <div class="lesson-triple-col">
+      {% for lesson in site.aiml %}
       <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
+        <h3>{{lesson.title}}</h3>
+        {% if lesson.excerpt %}
+          {{lesson.excerpt}}
+        {% endif %}
+        <div class="green-chips">
+          {% if lesson.slides_link %}
+          <div href="{{lesson.slides_link}}">slides</div>
+          {% endif %}
+          {% if lesson.homework_link %}
+          <div href="{{lesson.homework_link}}">worksheet</div>
+          {% endif %}
+          {% if lesson.colab_link %}
+          <div href="{{lesson.colab_link}}">colab</div>
+          {% endif %}
         </div>
       </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
-      <div class="lesson-w-chip">
-        <h3>What is AI</h3>
-        <p>
-          You’ve probably heard of Artificial Intelligence in the news. But what
-          exactly is AI?
-        </p>
-        <div div class="green-chips">
-          <div>slides</div>
-          <div>worksheet</div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -178,40 +120,16 @@ permalink: "/classes/ml"
     <p>These are our favorite AI/ML resources - they're all awesome!</p>
   </div>
   <div class="two-by-two">
+    {% for subcategory in site.data.curriculum_resources.aiml %}
     <div>
-      <h3>ACM AI Resources</h3>
+      <h3>{{subcategory.title}}</h3>
       <ul>
-        <li>You Belong in AI! Podcast</li>
-        <li>ACM AI Blog</li>
-        <li>Plotting Data Notebook</li>
-        <li>MNIST Dataset with Keras Notebook (Archer School Event)</li>
-        <li>Intro to Deep Learning</li>
+        {% for item in subcategory.items %}
+        <li>{{item.name}}</li>
+        {% endfor %}
       </ul>
     </div>
-    <div>
-      <h3>Intro to Deep Learning</h3>
-      <ul>
-        <li>Coursera: Deep Learning Specialization</li>
-        <li>The Deep Learning Textbook</li>
-        <li>3Blue1Brown: Neural Networks</li>
-        <li>Udacity: Intro to Deep Learning with TensorFlow</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Tensorflow and Pytorch</h3>
-      <ul>
-        <li>UC Berkeley: CS294 Tensorflow Tutorial</li>
-        <li>UC Berkeley: CS285 (Deep Reinforcement Learning) Resources</li>
-        <li>Pytorch: Getting Started with Pytorch</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Intro to Machine Learning</h3>
-      <ul>
-        <li>Coursera: Introduction to Machine Learning</li>
-        <li>Hal Daumé III: A Course in Machine Learning</li>
-        <li>Google: Machine Learning Crash Course</li>
-      </ul>
+      {% endfor %}
     </div>
   </div>
 </div>
