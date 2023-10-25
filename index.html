@@ -3,18 +3,130 @@ layout: default
 title: "Home"
 ---
 
+<!-- <div style="width: 100px; height: 100px; background-color: pink;">
+
+</div> -->
         <!-- <img class="img-responsive img-push-down img-curved img-push-up" src="{{site.baseurl}}/img/brockton-resized.jpg" alt="Teach LA members at Brockton" /> -->
+        
 <div class="row-desktop row-desktop-ratio-1-1 row-desktop-reverse">
-    <div class="col-padded">
-        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" alt="clip art showing diverse group of profile images on webpage" />
-    </div>
-    <div class="col-padded v-center-children">
-        <h2 class="title">Virtual Learning</h2>
+    <div class="col-padded v-center-children" style="padding-right: 130px;">
+        <h2 class="text-teachla" style="margin: 0">What we do</h2>
         <p>
-            Due to updates with the COVID-19 pandemic, as of now, the majority of UCLA courses will be taught in person. As a result, Teach LA has shifted most of its classes back to in person instruction. However, our Python courses will utilize virtual spaces and will continue to operate remotely until further notice. As many of our partner schools continue to make the transition to in-person learning, we will work with teachers and our instructors to determine the best way to continue serving our students.
-        </p>
+            ttr incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <br><br>
+            Duis aute irure dolor ittn reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.        </p>
+    </div>
+
+    <div class="col-padded" style="padding: 100px;">
+        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/undraw_teamwork_hpdk 1.svg" alt="clip art showing diverse group of profile images on webpage" />
     </div>
 </div>
+
+<style>
+
+    .card {
+        width: 375px;
+        height: 417px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(207, 207, 207, 0.5);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-text{
+    padding: 5px 40px; 
+    height: 80%; 
+    text-align: center;
+    font-size: smaller;
+    align-items: center; 
+    display: flex;
+    word-wrap: break-word;
+    }
+
+    .small-card {
+        width: 368px;
+        height: 358px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(207, 207, 207, 0.5);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small-card-text{
+    padding: 0px 40px; 
+    /* height: 80%;  */
+    text-align: center;
+    font-size: smaller;
+    align-items: center; 
+    display: flex;
+    word-wrap: break-word;
+    justify-content: space-between;
+    background-color: pink;
+    }
+    
+</style>
+
+<div style = "display: flex; justify-content: center" >
+    <div class="card">
+        <h1 class="text-teachla-gradient">Create</h1>
+        <img src="{{site.baseurl}}/img/undraw/undraw_proud_coder_re_exuy 1.svg">
+        <div class="card-text">From a fun and engaging curriculum to stellar online learning modules we do it all</div>
+    </div>
+
+    <div class="card">
+        <h1 class="text-teachla-gradient">Teach</h1>
+        <img src="{{site.baseurl}}/img/undraw/undraw_teamwork_hpdk 2.svg">
+        <div class="card-text">We teach programming fundamentals, intro to web development, and more</div>
+    </div>
+
+    <div class="card">
+        <h1 class="text-teachla-gradient">Repeat</h1>
+        <img src="{{site.baseurl}}/img/undraw/undraw_team_spirit_re_yl1v 1.svg">
+        <div class="card-text">Classes are taught weekly and we are always continuing to expand our curriculum and learning labs</div>
+    </div>
+</div>
+
+<!-- I don't know why the text seems to default only being on the left half of the screen unless I explicitly state width 100% -->
+<div style = "width: 100%; padding: 30px 80px;">
+    <h2 class="text-teachla" style="margin: 0">What we make</h2>
+    <p>Our dev team develops online modules called Learning Labs that each focus on a specific topic in computer science, such as CNNs, cryptography, and password security. Through interactive activities and visuals, our Learning Labs aim to make complicated concepts easy to digest! </p>
+</div>
+<!-- </div> -->
+
+<div style = "display: flex; justify-content: center" >
+    <div class="small-card">
+        <div style="background-color: green; height:50%">
+            <b style="display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        text-align: center; background-color: red;">Bool bots</b>
+
+        <img style="bottom: 0"src="{{site.baseurl}}/img/undraw/image 23.svg">
+
+        </div>
+        
+        <img  style="align-self: flex-start; margin: 15px 0px 15px 35px; background-color: blue;" src="{{site.baseurl}}/img/undraw/github-button-img.svg">
+        
+        <div class="small-card-text">A game used to help supplement Teach LA's python courses and help students learn more about booleans!</div>
+
+    </div>
+
+    <div class="small-card"></div>
+    
+    <div class="small-card"></div>
+</div>
+
+
+
 <div class="row-desktop row-desktop-ratio-1-1">
     <div class="col-padded">
             <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/day-of-code-original.jpg" alt="Tutors working with students at our Day of Code event" />
@@ -30,6 +142,7 @@ title: "Home"
         </div>
     </div>
 </div>
+
 <div class="row-desktop row-desktop-ratio-1-1 row-desktop-reverse">
     <div class="col-padded">
         <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/editor-screenshot.png" alt="Preview of our editor" />

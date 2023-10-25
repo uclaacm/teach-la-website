@@ -79,6 +79,12 @@ ul > li {
     color: $teachla-green;
 }
 
+.text-teachla-gradient{
+    background: linear-gradient(90deg, #50C509,#BCF223);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .text-center{
     text-align: center;
 }
