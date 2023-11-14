@@ -1,0 +1,182 @@
+label {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.image-title {
+  display: flex;
+  align-items: end;
+  gap: 1.5rem;
+  img {
+    height: 10rem;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    h1 {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.lesson-contact {
+  display: grid;
+  grid-gap: 1rem;
+  width: 100%;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600px;
+    margin-bottom: 0;
+    text-decoration: $teachla-green underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 7px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    /* For tablets and above */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: 767px) {
+    /* For tablets and below */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.rounded-green-border {
+  border: 1px solid $teachla-green;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.spacedlist {
+  li {
+    margin: 10px 0;
+  }
+}
+
+.two-by-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-gap: 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  div {
+    h3 {
+      color: $teachla-green;
+    }
+  }
+}
+
+.lesson-w-chip {
+  width: 100%;
+  padding: 1.5rem;
+  height: 100%; 
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(158, 158, 158, 0.3);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(158, 158, 158, 0.3);
+  box-shadow: 0px 0px 10px 5px rgba(158, 158, 158, 0.3);
+  border-radius: 0.5rem;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.green-chips {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    div {
+      background-color: #016d3a;
+      color: white;
+      border-radius: 25px;
+      padding: 5px 15px 5px 15px;
+      width: fit-content;
+
+      font-size: 14px;
+    }
+}
+
+.lesson-triple-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+  grid-gap: 40px; /* Adjust the gap as needed */
+  max-width: fit-content;
+
+  @media (min-width: 1000px) {
+    /* For tablets and above */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1000px) {
+    /* For tablets and below */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    /* For mobile and below */
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  margin-top: 5rem;
+  margin: 3rem;
+
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    margin: 1rem;
+    margin-top: 3rem; 
+    gap: 1rem; 
+  }
+}
+
+.content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; 
+}
+
+.reset {
+  padding: 0;
+  margin: 0;
+}
