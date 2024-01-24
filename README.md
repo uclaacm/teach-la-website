@@ -8,6 +8,14 @@ Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more
 
 This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [Netlify](https://www.netlify.com/).
 
+## Resources for Setup on Windows 
+
+Ensure you have windows subsystem for linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) installed through the **powershell**.
+Download Ubuntu from the windows store (latest working distribution).
+Ensure you have virtualization enabled in your BIOS.
+Create Linux account and Git account using Ubuntu Terminal.
+...
+
 ## Development Setup
 
 To get a copy of this website running locally on your machine, you'll need [Ruby](https://www.ruby-lang.org/en/), a copy of this repo, and access to your system's shell/terminal.
