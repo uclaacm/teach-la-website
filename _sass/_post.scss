@@ -1,3 +1,110 @@
+:root {
+  --primary: #5eda12;
+  --neutral: #585858;
+  --black: #313235;
+}
+
+.top-padding {
+  padding-top: 3.5rem;
+}
+
+.blogs {
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 4rem; 
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem; 
+    }
+}
+
+.post-card {
+  display: flex;
+  gap: 2rem;
+
+  width: 100%;
+  padding: 3rem;
+  padding-right: 6rem;
+
+  border-radius: 15px;
+  border: 1px solid var(--primary);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+  }
+}
+
+.post-card.small-post-card {
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border: 0px; 
+  height: 100%; 
+}
+
+.post-card .small-post-card--image {
+  max-height: 200px;
+  max-width: 100%; 
+  border-radius: 15px;
+}
+
+.post-card--description {
+  flex: 1 1 0px;
+  color: var(--black);
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  span {
+    color: var(--primary);
+
+    font-size: 18px;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+
+  hr {
+    border: 1px solid var(--primary);
+    margin: 10px 0;
+  }
+
+  * {
+    margin: 0.3rem;
+    padding: 0;
+  }
+}
+
+.post-card--image {
+  flex: 1 1 0px;
+  object-fit: cover;
+
+  max-width: 40%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    max-height: 200px;
+
+    border-radius: 15px;
+  }
+}
+
+
 @media (min-width: $desktop-width) {
     .post-preview{
         display: grid;
@@ -5,13 +112,6 @@
         grid-template-rows: 1fr;
         grid-template-columns: 5fr 8fr;
     }
-}
-
-.post-card{
-    border: solid black 2px;
-    margin-top: 3em;
-    padding: 1em;
-    padding-top: 0em;
 }
 
 .post-preview-img{
@@ -166,4 +266,8 @@
 
 .social-RSS-icon {
     font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
 }
