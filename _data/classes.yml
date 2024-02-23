@@ -41,7 +41,7 @@
     hash: mkearney
  
 - name: "Intro to Artificial Intelligence and Machine Learning"
-  short-title: "AL & ML"
+  short-title: "AI & ML"
   blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
   img: "undraw/ai.svg"
   tags:
