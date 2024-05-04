@@ -8,6 +8,8 @@
     margin-top: -70px;
 }
 
+
+
  html{
     box-sizing: border-box;
     padding: 0;
@@ -98,6 +100,12 @@ ul > li {
 // likely move all text-* to text utilities
 .text-teachla{
     color: $teachla-green;
+}
+
+.text-teachla-gradient{
+    background: linear-gradient(90deg, #50C509,#BCF223);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .text-center{
