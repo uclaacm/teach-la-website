@@ -49,6 +49,10 @@ Configuration file: /Users/matt/code/tla/static/_config.yml
 
 ```
 
+
+If these steps do not work for you, you may also try doing this:
+
+
 Visit whatever follows the server address line in your browser, which is usually [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
 
 If you run into any issues, please let us know on our [issues tracker](https://github.com/uclaacm/teach-la-website)!

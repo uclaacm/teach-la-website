@@ -126,6 +126,14 @@ ul > li {
     font-weight: 600;
 }
 
+.subtitle{
+    font-family: $font-display;
+    color: $teachla-green;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
 .text-1x {
     font-size: 1rem !important;
 }
@@ -342,6 +350,8 @@ ul > li {
     font-size: $pronouns-font-size;
 }
 
+
+
 .img-sponsor {
     max-width: 80%;
 }
@@ -399,4 +409,23 @@ ul > li {
     margin: 0;
     padding: 20vh 0;
     // background-size: 100vw 100%;
+}
+
+.why-teach-la-column-left{
+    float: left;
+    width: 30%;
+}
+.why-teach-la-column-right{
+    float: right;
+    width: 70%;
+}
+
+.why-teach-la-row{
+    content: "";
+  display: table;
+  clear: both;
+}
+
+.about-table{
+    color: $teachla-green;
 }
