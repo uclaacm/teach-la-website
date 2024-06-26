@@ -9,7 +9,7 @@ gem 'jekyll-seo-tag' # check out this https://jekyll.github.io/jekyll-seo-tag/us
 
 group :test do
   gem 'rake'
-  gem 'html-proofer'
+  gem 'html-proofer', '>= 4.4.1'
 end
 
 group :jekyll_plugins do

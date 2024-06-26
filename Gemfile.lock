@@ -1,21 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.6)
+      public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    ethon (0.15.0)
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
-    ffi (1.15.5)
-    ffi (1.15.5-x64-mingw32)
+    ffi (1.16.3)
+    ffi (1.16.3-x64-mingw32)
     forwardable-extended (2.6.0)
-    html-proofer (4.4.0)
+    html-proofer (4.4.3)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogiri (~> 1.13)
@@ -63,17 +63,17 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    mini_portile2 (2.8.0)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
+    mini_portile2 (2.8.6)
+    nokogiri (1.15.6)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.13.8-x64-mingw32)
+    nokogiri (1.15.6-x64-mingw32)
       racc (~> 1.4)
-    parallel (1.22.1)
+    parallel (1.24.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.7)
-    racc (1.6.0)
+    public_suffix (5.0.5)
+    racc (1.8.0)
     rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.1)
@@ -88,7 +88,7 @@ GEM
       ffi (~> 1.9)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    typhoeus (1.4.0)
+    typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.2)
       concurrent-ruby (~> 1.0)
@@ -97,14 +97,14 @@ GEM
     unicode-display_width (1.8.0)
     webrick (1.7.0)
     yell (2.2.2)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.15)
 
 PLATFORMS
   ruby
   x64-mingw32
 
 DEPENDENCIES
-  html-proofer
+  html-proofer (>= 4.4.1)
   jekyll (~> 4.2.2)
   jekyll-category-pages
   jekyll-feed
@@ -115,4 +115,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.2.5
+   2.1.4
