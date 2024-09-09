@@ -1,0 +1,17 @@
+<a href={{post.url}}>
+  <div class="post-card small-post-card">
+    <img
+      class="post-card--image small-post-card--image"
+      src="{{site.baseurl}}/{{post.image}}"
+      alt="{{post.alt}}"
+    />
+    <div class="post-card--description" type="small">
+      <hr />
+      <h4>
+        <span>{{post.category}}</span> | {{post.date | date: "%b %-d, %Y"}}
+      </h4>
+      <h1>{{post.title}}</h1>
+      <h2>by {{post.author}}</h2>
+    </div>
+  </div>
+</a>

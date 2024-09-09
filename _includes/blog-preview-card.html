@@ -1,16 +1,12 @@
-<div class="post-preview">
-    <a href={{post.url}}>
-      <img  class="post-preview-img" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
-    </a>
-    <div class="post-info">
-      <h2 class="title">
-        <a class="tla-link" href="{{post.url}}">{{post.title}}</a>
-      </h2>
-      <p class="title">
-        by {{post.author}} <span class="text-normal">on {{ post.date | date: "%b %-d, %Y" }}</span> | category: <a class="tla-link" href="{{site.baseurl}}/blog/category/{{post.category}}/">{{post.category}}</a>
-      </p>
-      <hr class="divider"/>
-      <p class="generated-content">{{post.excerpt}}</p>
-    </div>
+<a href={{post.url}}>
+  <div class="post-card">
+    <img class="post-card--image" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
+      <div class="post-card--description" >
+         <h4><span>{{post.category}}</span> |   {{post.date | date: "%b %-d, %Y"}}</h4>
+        <h1>{{post.title}}</h1>
+        <h2>by {{post.author}}</h2>
+        <hr/>
+        <p>{{post.excerpt}}</p>
+      </div>
   </div>
-</section>
+</a>

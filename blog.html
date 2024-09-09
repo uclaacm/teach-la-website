@@ -8,32 +8,35 @@ permalink: /blog/
 <p>
   We love what we do, and we want to share it with you! Here are some insights from our members on how our club operates: how we teach, write code, and create a community!
 </p>
-<p>
-  Interested in more formal reflections on the inner workings of our club? Check out <a class="tla-link" href="{{site.baseurl}}/reports">reports section</a>. Curious in how we handle teaching an artificial intelligence and machine learning class at a high school, or our joint efforts to provide AI education? Peep the <a class="ai-link" href="https://uclaacmai.github.io/blog/" target="_blank" rel="noopener noreferrer">ACM AI blog!</a>
-</p>
-<p>
-  Read posts via RSS - 
-<a href="https://teachla.uclaacm.com/feed.xml" aria-labelledby="post-icon"> 
-  <span id="post-icon" hidden>Subscribe to RSS feed for blogs</span>
-  <span class="fas fa-rss-square" aria-hidden="true""></span> 
-</a>
-</p>
 
+<h2 class="top-padding">Most Recent</h2>
+{% assign post_count = 0 %}
 
 {% for post in site.posts %}
-<section class="post-card">
+    {% assign post_count = post_count | plus: 1 %}
 
-    <!-- TODO: IMPLEMENT TAGS! -->
+    {% if post_count == 2 %}
+    <h2 class="top-padding">Past blogs</h2>
+<div class="blogs">
+    {% endif %}
+    
+    {% if post_count == 1 %}
+        {% include blog-preview-card.html %}
+    {% endif %}
+    {% if post_count >= 2 %}
+        {% include blog-preview-card-small.html %}
+    {% endif %}
 
-    {% comment %}
+{% endfor %}
+</div>
+
+ <!-- TODO: IMPLEMENT TAGS! -->
+
+    <!-- {% comment %}
     {% if post.tags %}
         tags:
         {% for tag in post.tags %}
             {{tag}}{% if forloop.last == false %}, {% endif %}
         {% endfor %}
     {% endif %}
-    {% endcomment %}
-{% include blog-preview-card.html %}
-{% endfor %}
-
-{% include contact-cta.html %}
+    {% endcomment %} -->
