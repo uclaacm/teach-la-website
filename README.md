@@ -6,7 +6,7 @@
 
 Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
 
-This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [Netlify](https://www.netlify.com/).
+This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [Netlify](https://www.netlify.com/). We will be running on ruby 3.2.5 and jekyll 4.3.3
 
 ## Development Setup
 
@@ -72,3 +72,27 @@ Want to make a change to the website? Great! Here are the steps:
 ## Adding Yourself to the Teams Page
 
 [Moved to here](https://github.com/uclaacm/teach-la-website/blob/master/_team/README.md).
+
+## Troubleshooting tips:
+1. run gem install bundler
+  - if doesnt work try to sudo
+2. install homebrew. This way we can manage ruby version conflicts
+3. run ruby -v. You want to be on version 3.2.5 (REALLY IMPORTANT)
+4. run 
+
+```bash
+
+brew install rbenv
+brew install ruby-build
+rbenv init
+rbenv install 3.2.5
+rbenv global 3.2.4
+gem update jekyll
+gem update bundler
+bundle install 
+bundle update
+
+```
+
+** note: may need to sudo if you do not have permission
+I hope this helps
