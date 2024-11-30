@@ -15,6 +15,7 @@ To get a copy of this website running locally on your machine, you'll need [Ruby
 *Note:* we recommend using [rvm](https://rvm.io/) instead of your system ruby; it makes life easier :smile:!
 
 First, let's install [Bundler](https://bundler.io/), a gem environment manager for ruby. Type this anywhere in your shell:
+You can also install ruby if you have homebrew by running brew install ruby
 
 ```bash
 $ gem install bundler
