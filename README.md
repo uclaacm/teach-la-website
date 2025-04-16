@@ -84,7 +84,7 @@ If you're on **Windows**, follow these instructions instead of the macOS setup a
 ### 1. Install Ruby (with DevKit)
 
 - Visit: [https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
-- Download and install **Ruby+Devkit 3.2.X** 
+- Download and install **Ruby+Devkit 3.2.5** (may have to go in Archives)
 - During install, select the option to run `ridk install`, and enable MSYS2 base + development toolchain.
 
 ### 2. Install Bundler
