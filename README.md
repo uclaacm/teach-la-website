@@ -1,3 +1,4 @@
+
 # Teach LA Website
 
 ![Test Jekyll Build](https://github.com/uclaacm/teach-la-website/workflows/Test%20Jekyll%20Build/badge.svg)
@@ -6,37 +7,53 @@
 
 Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
 
-This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [Netlify](https://www.netlify.com/). We will be running on ruby 3.2.5 and jekyll 4.3.3
+This website is built with [Jekyll](https://jekyllrb.com), with some component implementations taken from [ACM's main website](https://github.com/uclaacm/website) (conforming to [ACM Design's Style Guide](https://github.com/uclaacm/Styleguide)). We build and test this website with [GitHub Actions](https://github.com/features/actions), and deploy it on [Netlify](https://www.netlify.com/). We will be running on ruby 3.2.5 and jekyll 4.3.3. You will find detailed installation and setup instructions below for both macOS and Windows.
 
-## Development Setup
+## 🍎 macOS Setup Instructions
 
 To get a copy of this website running locally on your machine, you'll need [Ruby](https://www.ruby-lang.org/en/), a copy of this repo, and access to your system's shell/terminal.
 
-*Note:* we recommend using [rvm](https://rvm.io/) instead of your system ruby; it makes life easier :smile:!
+**We recommend using [`rbenv`](https://github.com/rbenv/rbenv) to manage Ruby versions.**
 
-First, let's install [Bundler](https://bundler.io/), a gem environment manager for ruby. Type this anywhere in your shell:
+### Ruby & Bundler Installation (If Ruby 3.2.5 is not yet installed)
 
 ```bash
-$ gem install bundler
-...
+# Install Homebrew if not already installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install rbenv and ruby-build
+brew install rbenv ruby-build
+
+# Set up rbenv in your shell
+rbenv init
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+
+# Install Ruby 3.2.5 and set it globally
+rbenv install 3.2.5
+rbenv global 3.2.5
+
+# Check that Ruby and gem are set up correctly
+ruby -v  # should show 3.2.5
+gem install bundler
 ```
 
 Then, let's clone our project with git, and install our dependencies!
 
 ```bash
-$ git clone https://github.com/uclaacm/teach-la-website.git
-$ cd teach-la-website
-$ bundle
-...
+git clone https://github.com/uclaacm/teach-la-website.git
+cd teach-la-website
+bundle install
 ```
 
 This should install all of our RubyGems dependencies! Note that we've committed a `Gemfile.lock`, so you should get a working set of gems.
 
-Finally, run:
+### Run the Site Locally
+
+Run:
 
 ```bash
-
-$ bundle exec jekyll serve
+bundle exec jekyll serve
 Configuration file: /Users/matt/code/tla/static/_config.yml
             Source: /Users/matt/code/tla/static
        Destination: /Users/matt/code/tla/static/_site
@@ -46,16 +63,69 @@ Configuration file: /Users/matt/code/tla/static/_config.yml
  Auto-regeneration: enabled for '/Users/matt/code/tla/static'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
+```
+
+Your site will be served locally at: [http://localhost:4000](http://localhost:4000). You may also visit the server address line in your browser, which is usually [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
+
+
+If you run into any issues, you may also try:
+
+```bash
+bundle exec jekyll clean
+bundle update
+bundle exec jekyll serve
 
 ```
 
+## 💻 Windows Setup Instructions (via RubyInstaller)
 
-If these steps do not work for you, you may also try doing this:
+If you're on **Windows**, follow these instructions instead of the macOS setup above:
 
+### 1. Install Ruby (with DevKit)
 
-Visit whatever follows the server address line in your browser, which is usually [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
+- Visit: [https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
+- Download and install **Ruby+Devkit 3.2.X** 
+- During install, select the option to run `ridk install`, and enable MSYS2 base + development toolchain.
 
-If you run into any issues, please let us know on our [issues tracker](https://github.com/uclaacm/teach-la-website)!
+### 2. Install Bundler
+
+Open **Command Prompt** or **PowerShell**, then run:
+
+```bash
+gem install bundler
+```
+
+### 3. Clone the Project and Install Dependencies
+
+```bash
+git clone https://github.com/uclaacm/teach-la-website.git
+cd teach-la-website
+bundle install
+```
+
+### 4. Run the Site Locally
+
+```bash
+bundle exec jekyll serve
+Configuration file: /Users/matt/code/tla/static/_config.yml
+            Source: /Users/matt/code/tla/static
+       Destination: /Users/matt/code/tla/static/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.17 seconds.
+ Auto-regeneration: enabled for '/Users/matt/code/tla/static'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+```
+
+Your site will be served locally at: [http://localhost:4000](http://localhost:4000). You may also visit the server address line in your browser, which is usually [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
+
+### ✅ Notes for Windows users
+
+- You may see build errors if native extensions fail to compile — make sure the DevKit is properly installed.
+- Consider using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/) for a smoother Unix-like development experience.
+- Use `chcp 65001` to set terminal to UTF-8 encoding if you run into encoding issues.
+---
 
 ## Contribution Workflow
 
@@ -69,30 +139,39 @@ Want to make a change to the website? Great! Here are the steps:
 6. Make a [pull request](https://github.com/uclaacm/teach-la-website/pulls) with your changes, and let someone on the dev team know.
 7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
+---
+
 ## Adding Yourself to the Teams Page
 
-[Moved to here](https://github.com/uclaacm/teach-la-website/blob/master/_team/README.md).
+[Moved to here](https://github.com/uclaacm/teach-la-website/blob/master/_team/README.md)
 
-## Troubleshooting tips:
-1. run gem install bundler
-  - if doesnt work try to sudo
-2. install homebrew. This way we can manage ruby version conflicts
-3. run ruby -v. You want to be on version 3.2.5 (REALLY IMPORTANT)
-4. run 
+## Troubleshooting Tips
 
-```bash
+1. Make sure you're using **Ruby 3.2.5**. Run:
 
-brew install rbenv
-brew install ruby-build
-rbenv init
-rbenv install 3.2.5
-rbenv global 3.2.4
-gem update jekyll
-gem update bundler
-bundle install 
-bundle update
+   ```bash
+   ruby -v
+   ```
 
-```
+   If not, follow the Ruby installation instructions above.
 
-** note: may need to sudo if you do not have permission
-I hope this helps
+2. If `bundle install` fails, try updating your gems:
+
+   ```bash
+   gem update --system
+   gem update bundler
+   ```
+
+3. If `jekyll serve` crashes, clean and retry:
+
+   ```bash
+   bundle exec jekyll clean
+   bundle exec jekyll serve
+   ```
+
+4. If you get file write errors like `Errno::EINTR`, try moving the repo to a non-synced folder (e.g. not inside iCloud Drive or Desktop).
+
+
+If you run into any issues, please let us know on our [issues tracker](https://github.com/uclaacm/teach-la-website)!
+
+---
