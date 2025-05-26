@@ -10,9 +10,11 @@
 
 .profile-img {
     display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #eee;
 }
 
 .team-member-content{
@@ -58,4 +60,36 @@
     @media (max-width: $desktop-width) {
         flex-flow: column nowrap;
     }
+}
+
+.previous-boards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .previous-boards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .board-year {
+    min-width: 250px;
+    flex: 1 1 250px;
+  }
+}
+
+.board-year ul {
+  padding-left: 1.2em;
+}
+
+.board-intro {
+  min-width: 250px;
+  max-width: 350px;
+  flex: 1 1 300px;
+  margin-bottom: 2em;
 }
