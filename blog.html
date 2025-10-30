@@ -11,7 +11,7 @@ permalink: /blog/
 
 <h2 class="top-padding">Most Recent</h2>
 {% assign post_count = 0 %}
-
+{% include blog-author-card.html%}
 {% for post in site.posts %}
     {% assign post_count = post_count | plus: 1 %}
 
