@@ -70,6 +70,18 @@
     font-size: 12px;
     font-weight: 400;
   }
+  
+  .post-card--tags {
+  margin: 0px;
+  display: flex;
+  }
+
+  .tag {
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  }
 
   span {
     color: var(--primary);
