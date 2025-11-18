@@ -1,0 +1,21 @@
+<a href={{event.url}}>
+  <div class="event-card">
+    <img
+      class="event-card--image"
+      src="{{site.baseurl}}/{{event.image}}"
+      alt="{{event.alt}}"
+    />
+    <div class="event-card--description" type="small">
+      <h4>
+        <span>{{event.category}}</span>
+      </h4>
+      <h1>{{event.title}}</h1>
+      <h2>{{event.description}}</h2>
+      <div class="event-card--tags">
+        {% for tag in event.tags %}
+        <p class="tag">{{tag}}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</a>
