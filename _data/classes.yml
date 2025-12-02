@@ -3,7 +3,7 @@
   blurb: "Perfect for students with no previous coding experience, this class emphasizes an understanding of basic programming principles that students will use throughout their journey in computer science, while also teaching one of the most popular, powerful, and easy-to-learn languages."
   img: "undraw/dev-focus.svg"
   tags:
-    - 8 one-hour classes
+    - 25+ weekly classes
     - no experience required
   goals:
     - understand how to solve problems with computers
@@ -16,88 +16,26 @@
     - write and use functions to modularize their code
   path: py1
   outline: "https://docs.google.com/document/d/1QwrN7aPDcMhD0MakJxIo3K877_i77NR1xSgEzkv3b6U/"
-  lead:
-    name: "Nikhil"
-    hash: nkumar
 
-- name: "Computing Principles with Scratch"
-  short-title: "Scratch"
-  blurb: "Perfect for young students with minimal computing or coding experience, this curriculum uses Scratch to expose our students to basic computer science principles in a way that is engaging and allows them to exercise maximum creativity."
-  img: "undraw/dev-activity.svg"
-  tags:
-    - 10+ one-hour classes
-    - no experience required
-    - friendly for young children
-  goals:
-    - "understand the basics of a Scratch project"
-    - "control sprites with commands in an event loop"
-    - "use conditional statements to listen for user input"
-    - "create complicated patterns with sensor blocks"
-    - "design and develop their own Scratch story"
-  leads:
-  - name: "Eden"
-    hash: eyu
-  - name: "Milo"
-    hash: mkearney
- 
-- name: "Intro to Artificial Intelligence and Machine Learning"
-  short-title: "AL & ML"
-  blurb: "This course aims to delve deep into one of the most popular topics of computer science, starting by giving students a strong foundation in mathematical concepts, and then applying them to train their own neural networks."
-  img: "undraw/ai.svg"
-  tags:
-    - 20+ one-hour classes
-    - precalculus and some coding experience recommended
-  goals:
-    - "understand what AI and ML are, and their differences"
-    - "learn about deep learning and its applications"
-    - "differentiate between classification and regression"
-    - "use Python and related libraries in Google Colab to manipulate data"
-    - "learn and apply linear regression to real-world datasets"
-    - "understand the intuition behind gradient descent"
-    - "learn and apply logistic regression to real-world datasets"
-    - "understand probability, Bayes' Theorem, and binary cross-entropy loss at a conceptual level"
-    - "walk through the building blocks of a neural network"
-    - "understand the challenges behind optimization and the applications of regularization"
-    - "conceptually grasp and implement convolutional neural networks"
-    - "explore the ethics behind applications of AI and ML"
-  path: ml
-  lead:
-    name: "Ava"
-    hash: aasmani
+
 
 - name: "App Development with React Native"
   short-title: "React Native"
   blurb: "A year-long course that aims to give students a wide set of practical skills and project experience: students learn how to build websites with HTML, CSS, and Javascript, and then use those tools to build cross-platform mobile apps with React Native."
   img: "undraw/girl-phone.svg"
   tags:
-    - 25+ classes
+    - 10+ one-hour online Zoom classes
     - no experience required
+    - billions will learn! 
   goals:
-    - "coming soon!"
+    - understand the technology involved behind websites and apps
+    - learn how to use ReactJS to build and manipulate websites
+    - learn basic CSS to style elements on a page
+    - learn to use CSS Grid to create different layouts
+    - finish personal projects to develop their web dev skills
+    - use git and GitHub to keep track of their code
+    - deploy their projects using GitHub Pages
   path: rnative
   github: "https://github.com/uclaacm/react-native-course-20-21/tree/master"
   raw_github: "https://raw.githubusercontent.com/uclaacm/react-native-course-20-21/master"
-  lead:
-    name: "Matt"
-    hash: mnieva
 
-- name: "Intro to Web Development"
-  short-title: "Web Dev"
-  blurb: "Great for students with no previous coding experience, this class teaches students the basic building blocks of the web (HTML, CSS, JS), and gives them hands-on experience in building their own websites. "
-  img: "undraw/dev-activity.svg"
-  tags:
-    - 10+ one-hour classes
-    - no experience required
-  goals:
-    - "understand the technology involved behind a website"
-    - "learn how to use HTML to outline the structure of a website"
-    - "learn basic CSS to style elements on a page"
-    - "learn to use CSS Grid to create different layouts"
-    - "learn basic programming fundamentals in Javascript: variables, loops, and functions"
-    - "understand how to use JS to manipulate web pages"
-    - "finish two practical projects: a personal website and a quiz"
-    - "use git and GitHub to keep track of their code"
-    - "deploy their projects using GitHub Pages"
-  lead:
-    name: "Matt"
-    hash: mattwang
