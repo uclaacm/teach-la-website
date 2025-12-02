@@ -1,0 +1,17 @@
+---
+layout: default
+title: The Teach LA Event
+permalink: /event/
+---
+
+<h1 class="title page-title">The Teach LA Event</h1>
+<p>
+We love creating, learning, and connecting, and we'd like to share it with you!
+Here are some of the events we've hosted and joined to teach, grow, and support our community.
+</p>
+<div class="events top-padding">
+  {% assign event_count = 0 %}
+  {% for event in site.events %}
+    {% include event-preview-card.html %}
+  {% endfor %}
+</div>

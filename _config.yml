@@ -39,8 +39,7 @@ defaults:
       type: "py1"
     values:
       layout: "py1-lesson"
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
@@ -72,6 +71,8 @@ collections:
   team:
     output: true
     permalink: /team/:name
+  events:
+    output: true
 
 # Configure category pages plugin here
 permalink: /:year/:month/:day/:title:output_ext #gets rid of index.html from category page links (probably)
