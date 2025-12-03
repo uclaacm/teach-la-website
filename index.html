@@ -4,23 +4,12 @@ title: "Home"
 ---
 
         <!-- <img class="img-responsive img-push-down img-curved img-push-up" src="{{site.baseurl}}/img/brockton-resized.jpg" alt="Teach LA members at Brockton" /> -->
-<div class="row-desktop row-desktop-ratio-1-1 row-desktop-reverse">
-    <div class="col-padded">
-        <img class="img-responsive" src="{{site.baseurl}}/img/undraw/team-page.svg" alt="clip art showing diverse group of profile images on webpage" />
-    </div>
-    <div class="col-padded v-center-children">
-        <h2 class="title">Virtual Learning</h2>
-        <p>
-            Due to updates with the COVID-19 pandemic, as of now, the majority of UCLA courses will be taught in person. As a result, Teach LA has shifted most of its classes back to in person instruction. However, our Python courses will utilize virtual spaces and will continue to operate remotely until further notice. As many of our partner schools continue to make the transition to in-person learning, we will work with teachers and our instructors to determine the best way to continue serving our students.
-        </p>
-    </div>
-</div>
 <div class="row-desktop row-desktop-ratio-1-1">
     <div class="col-padded">
             <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/day-of-code-original.jpg" alt="Tutors working with students at our Day of Code event" />
     </div>
     <div class="col-padded v-center-children">
-        <h2 class="title">How does it work?</h2>
+        <h2 class="title text-teachla">How does it work?</h2>
         <p>
             Teach LA's flagship program is teaching classes, which typically meet once or twice a week for a quarter. Classes have a wide variety of objectives, ranging from an introduction to python or web development to advanced topics such as machine learning and data science. Each class balances instruction and time for hands-on experimentation, with trained teachers helping students learn and use the material.
         </p>
@@ -35,7 +24,7 @@ title: "Home"
         <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/editor-screenshot.png" alt="Preview of our editor" />
     </div>
     <div class="col-padded v-center-children">
-        <h2 class="title">&lt;editor project&gt;</h2>
+        <h2 class="title text-teachla">editor project</h2>
         <p>
             We've developed an open-source online code editor specifically targeted towards students learning how to code. Students can sign up easily, and our service stores and runs their code - which removes issues about using a specific computer, and allows students to access their code anywhere! We currently support Python, HTML, and Processing, and plan on adding more features soon!
         </p>
@@ -50,7 +39,7 @@ title: "Home"
             <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/cipher-salad-learning-lab.png" alt="Cipher Salad home screen" />
     </div>
     <div class="col-padded v-center-children">
-        <h2 class="title">&lt;learning labs&gt;</h2>
+        <h2 class="title text-teachla">learning labs</h2>
         <p>
             Our dev team develops online modules called Learning Labs that each focus on a specific topic in computer science, such as CNNs, cryptography, and password secruity.
             Through interactive activities and visuals, our Learning Labs aim to make complicated concepts easy to digest!
@@ -60,4 +49,44 @@ title: "Home"
         </div>
     </div>
 </div>
+<div class="row-desktop row-desktop-ratio-1-1 row-desktop-reverse">
+    <div class="col-padded">
+            <img class="img-responsive img-push-down img-curved" src="{{site.baseurl}}/img/coder_teachla.png" alt="teacher" />
+    </div>
+    <div class="col-padded v-center-children">
+        <h2 class="title text-teachla">what we teach</h2>
+        <p>
+            Depending on the group of students and their coding backgrounds, we shape the class to maximize their learning. Topics that students have learned in the past include programming fundamentals (in Python or Scratch) and intro to web development (in HTML/CSS), as well as complex topics like machine learning and mobile app development.
+            <br />
+            <br />
+            We're looking to expand our set of topics: data science, game development, digital art, you name it - if you're interested, get in touch!
+        </p>
+    </div>
+</div>
+<div class="row-desktop-ratio-1-1">
+{% for class in site.data.classes %}
+    <div class="col-padded">
+        <div class="class-card-compact">
+            <img class="img-responsive" alt="decorative image for {{class.name}}" 
+                src="{{site.baseurl}}/img/{{class.img}}" />
+            <h3 class="title">{{class.name}}</h3>
+            <p class="no-margin">
+                {% for tag in class.tags %}{{tag}} • {% endfor %}
+            </p>
+            <div class="button-container">
+                {% if class.path %}
+                <a class="button button-dark" href="{{site.baseurl}}/classes/{{class.path}}">
+                    <span class="fa fa-map-signs"></span> Class Page
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<h2 class="title text-teachla">most recent blog</h2>
+{% for post in site.posts limit:1 %}
+    {% include blog-preview-card.html %}
+{% endfor %}
+
 {% include contact-cta.html %}
