@@ -5,6 +5,34 @@
     border-radius: 10px;
 }
 
+.class-card-compact {
+    padding: 1em;
+    margin-top: 0;
+    border: 2px solid $teachla-green;
+    border-radius: 10px;
+    
+    img {
+        max-height: 120px;
+        width: auto;
+        margin: 0 auto 1em;
+        display: block;
+    }
+    
+    h3.title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5em;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5em;
+    }
+    
+    .button-container {
+        margin-top: 0.5em;
+    }
+}
+
 .class-content{
     padding-left: 2em;
     padding-right: 2em;
@@ -52,6 +80,17 @@
 
 .lesson-card-content {
     flex: 1 0 auto;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    
+    @media (max-width: $desktop-width) {
+        grid-template-columns: 1fr;  // Stack on mobile
+    }
 }
 
 // .lessons-grid {

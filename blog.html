@@ -11,7 +11,6 @@ permalink: /blog/
 
 <h1 class="top-padding">Most Recent</h2>
 {% assign post_count = 0 %}
-
 {% for post in site.posts %}
     {% assign post_count = post_count | plus: 1 %}
 
@@ -29,14 +28,3 @@ permalink: /blog/
 
 {% endfor %}
 </div>
-
- <!-- TODO: IMPLEMENT TAGS! -->
-
-    <!-- {% comment %}
-    {% if post.tags %}
-        tags:
-        {% for tag in post.tags %}
-            {{tag}}{% if forloop.last == false %}, {% endif %}
-        {% endfor %}
-    {% endif %}
-    {% endcomment %} -->
