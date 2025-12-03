@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Team"
+permalink: /team
+---
 
 
 <!DOCTYPE html>
@@ -92,811 +97,145 @@
 <p>
     Here are all of the awesome people that make Teach LA happen! We're UCLA students who have dedicated themselves to empowering students through computer science.
 </p>
-<h2 class="title" id="general-board">General Board</h2>
 
+<!-- GENERAL BOARD -->
+
+<h2 class="title" id="general-board">General Board</h2>
 <p>
     Our directors, school leads, and curriculum leads. Feel free to reach out to any of our board for more information about what we do!
 </p>
 
+{% assign genLeadership = site.team
+  | where_exp:"person", "person.group contains 'general board'"
+  | sort:"board_order" %}
+
 <div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
-    
-    
-    <div class="grid-row" id="emmatu">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/etu.jpeg" alt="picture of Emma Tu"/>
-                
+  {% for member in genLeadership %}
+    <div class="grid-row" id="{{ member.slug }}">
+      <div class="grid-col">
+        <div class="profile-img-container">
+          {% if member.img %}
+            <img class="profile-img"
+                 src="{{ site.baseurl }}/img/team/{{ member.img }}"
+                 alt="picture of {{ member.name }}" />
+          {% else %}
+            <img class="profile-img"
+                 src="{{ site.baseurl }}/img/team/blank.jpg"
+                 alt="blank profile for {{ member.name }}" />
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="grid-col">
+        <div class="team-member-content">
+          <h3 class="no-margin title">
+            {{ member.name }}
+            {% if member.pronouns %}
+              <span class="pronouns"> ({{ member.pronouns }})</span>
+            {% endif %}
+          </h3>
+          <p class="team-member-position">
+            {{ member.title }}
+            {% if member.secondary %}
+              &amp; {{ member.secondary }}
+            {% endif %}
+            {% if member.third %}
+              &amp; {{ member.third }}
+            {% endif %}
+          </p>
+          <ul class="list-unstyled">
+            {% assign content = member.content | strip %}
+            {% if member.github and member.links == nil and content == "" %}
+              <li>
+                <a class="tla-link" href="https://github.com/{{ member.github }}">
+                  <span class="fab fa-github"></span> {{ member.github }}
                 </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Emma Tu
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Curriculum President
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/emma2tu"><span class="fab fa-github"></span> emma2tu</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="grid-row" id="verapeker">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/vpeker.jpg" alt="picture of Vera Peker"/>
-                
+              </li>
+            {% endif %}
+            {% if member.links or content != "" %}
+              <li>
+                <a class="tla-link" href="{{ site.baseurl }}/team/{{ member.slug }}">
+                  <span class="fas fa-arrow-circle-right"></span> More Info
                 </a>
-            </div>
+              </li>
+            {% endif %}
+          </ul>
         </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Vera Peker
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    General Advisor
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/verapeker"><span class="fab fa-github"></span> verapeker</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-    
-    
-    
-    
-    <div class="grid-row" id="fariseltaki">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                        <img class="profile-img" src="/img/team/feltaki.jpg" alt="picture of Faris Eltaki"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Faris Eltaki
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Social & Finance Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/qkuriboh"><span class="fab fa-github"></span> qkuriboh</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <div class="grid-row" id="skylartanartkit">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/stanartkit.jpg" alt="picture of Skylar Tanartkit"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Skylar Tanartkit
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Special Events Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    <li>
-                        <a class="tla-link" href="https://github.com/sltanartkit"><span class="fab fa-github"></span> sltanartkit</a>
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row" id="asinghai">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/asinghai.jpg" alt="picture of Anusha Singhai"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Anusha Singhai
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Curriculum Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/anusha-singhai"><span class="fab fa-github"></span> anusha-singhai</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="grid-row" id="bhaveshpathak">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Bhavesh Pathak
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Curriculum Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/Beehavesh"><span class="fab fa-github"></span>Beehavesh</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row" id="tiffanyorian">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/torian.jpg" alt="picture of Tiffany Orian"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Tiffany Orian
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Curriculum Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    <li>
-                        <a class="tla-link" href="https://github.com/tiffanyorian"><span class="fab fa-github"></span>tiffanyorian</a>
-                    </li>
-                
- 
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="grid-row" id="skumaresan">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Shayla Kumaresan
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Curriculum Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
- 
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="grid-row" id="njohnson">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/njohnson.jpg" alt="picture of Neil Johnson"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Neil Johnson
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    School Lead
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    <li>
-                        <a class="tla-link" href="https://github.com/neilwj7"><span class="fab fa-github"></span>neilwj7</a>
-                    </li>
-                
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="grid-row" id="michaelchen">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/mchen.jpg" alt="picture of Michael Chen"/>
-                
-                </a>
-            </div>
-        </div>
-        
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Michael Chen
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    School Lead
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    <li>
-                        <a class="tla-link" href="https://github.com/justarandom-1"><span class="fab fa-github"></span> justarandom-1</a>
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <div class="grid-row" id="javiercastaneda">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/jcastaneda.jpg" alt="picture of Javier Castaneda"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Javier Castaneda
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    School Lead
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    <li>
-                        <a class="tla-link" href="https://github.com/javiercastaneda95"><span class="fab fa-github"></span> javiercastaneda95</a>
-                    </li>
-                
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="grid-row" id="clarazhang">
-        <div class="grid-col">
-            <div class="profile-img-container">
-
-                <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile"/>
-                
-                </a>
-            </div>
-        </div>
-
-
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Clara Zhang
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    School Lead
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/Clara-Zhang-5"><span class="fab fa-github"></span> Clara-Zhang-5</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="grid-row" id="shanevandevelde">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/svandevelde.jpg" alt="picture of Shane Vandevelde"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Shane Vandevelde
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    School Lead
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    <li>
-                        <a class="tla-link" href="https://github.com/shanevandevelde"><span class="fab fa-github"></span> shanevandevelde</a>
-                    </li>
-                    
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-
-    
-    
-    
-
-
-
-
- 
-  
-    
+  {% endfor %}
 </div>
 
-<h2 class="title" id="general-board">Dev Board</h2>
-<!-- <h2 id="dev-board">Dev Board</h2> ** -->
+<!-- DEV BOARD -->
+
+<h2 class="title" id="dev-board">Dev Board</h2>
 <p>
     Our dev consists of our team, training, learning lab, editor, design, and static site directors. Feel free to reach out to any of our board for more information about what we do!
 </p>
 
+{% assign devLeadership = site.team
+  | where_exp:"person", "person.group contains 'dev board'"
+  | sort:"board_order" %}
+
 <div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
-    
-    
-    <div class="grid-row" id="jenniferlee">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/jlee.jpg" alt="picture of Jennifer Lee"/>
-                
+  {% for member in devLeadership %}
+    <div class="grid-row" id="{{ member.slug }}">
+      <div class="grid-col">
+        <div class="profile-img-container">
+          {% if member.img %}
+            <img class="profile-img"
+                 src="{{ site.baseurl }}/img/team/{{ member.img }}"
+                 alt="picture of {{ member.name }}" />
+          {% else %}
+            <img class="profile-img"
+                 src="{{ site.baseurl }}/img/team/blank.jpg"
+                 alt="blank profile for {{ member.name }}" />
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="grid-col">
+        <div class="team-member-content">
+          <h3 class="no-margin title">
+            {{ member.name }}
+            {% if member.pronouns %}
+              <span class="pronouns"> ({{ member.pronouns }})</span>
+            {% endif %}
+          </h3>
+          <p class="team-member-position">
+            {{ member.title }}
+            {% if member.secondary %}
+              &amp; {{ member.secondary }}
+            {% endif %}
+            {% if member.third %}
+              &amp; {{ member.third }}
+            {% endif %}
+          </p>
+          <ul class="list-unstyled">
+            {% assign content = member.content | strip %}
+            {% if member.github and member.links == nil and content == "" %}
+              <li>
+                <a class="tla-link" href="https://github.com/{{ member.github }}">
+                  <span class="fab fa-github"></span> {{ member.github }}
                 </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Jennifer Lee
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Dev Co-President
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/jenniferylee"><span class="fab fa-github"></span> jenniferylee</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="grid-row" id="schen">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/schen.jpg" alt="picture of Shenran Chen"/>
-                
+              </li>
+            {% endif %}
+            {% if member.links or content != "" %}
+              <li>
+                <a class="tla-link" href="{{ site.baseurl }}/team/{{ member.slug }}">
+                  <span class="fas fa-arrow-circle-right"></span> More Info
                 </a>
-            </div>
+              </li>
+            {% endif %}
+          </ul>
         </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Shenran Chen
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Dev Co-President
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/shenranchen"><span class="fab fa-github"></span> shenranchen</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-    
-    
-    
-    <div class="grid-row" id="tiffanywang">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile picture"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Tiffany Wang
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Design Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/tiffwang27"><span class="fab fa-github"></span> tiffwang27</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <div class="grid-row" id="jkharbanda">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/jkharbanda.jpg" alt="picture of Jishan Kharbanda"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Jishan Kharbanda
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Static Site Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/jishk11"><span class="fab fa-github"></span> jishk11</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row" id="megganluu">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/mluu.jpg" alt="picture of Megan Luu"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Megan Luu
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Dev Training Director
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/megganluu"><span class="fab fa-github"></span> megganluu</a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <div class="grid-row" id="rahulkhanna">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile picture"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Rahul Khanna
-                    
-                        <span class = "pronouns"> (he/him)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Dev Project Manager
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/RahulKhanna14"><span class="fab fa-github"></span> RahulKhanna14</a>
-
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <div class="grid-row" id="mirabelvuong">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                        <img class="profile-img" src="/img/team/mvuong.jpg" alt="picture of Mirabel Vuong"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Mirabel Vuong
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                    </h3>
-                <p class="team-member-position">
-                    Dev Project Manager
-                    
-                    
-                </p>
-                <ul class="list-unstyled">
-                    
-                    
-                        <li>
-                            <a class="tla-link" href="https://github.com/myhrra"><span class="fab fa-github"></span> myhrra</a>
-
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row" id="charlenehuang">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                
-                <img class="profile-img" src="/img/team/blank.jpg" alt="blank profile picture"/>
-                
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    Charlene Huang
-                    
-                        <span class = "pronouns"> (she/her)</span>
-                    
-                
-                </h3>
-            <p class="team-member-position">
-                Dev Project Manager
-                
-                
-            </p>
-            <ul class="list-unstyled">
-                
-                
-                    <li>
-                        <a class="tla-link" href="https://github.com/charlenehuang1"><span class="fab fa-github"></span> charlenehuang1</a>
-                    </li>
-                
-                
-            </ul>
-        </div>
-    </div>
+  {% endfor %}
 </div>
 
-        
-</div>
 
+<!-- PREVIOUS BOARDS -->
 
 <h2 class="title">Previous Boards</h2>
 <p>
@@ -905,769 +244,147 @@
 
 <h3 class="title">2023-2024</h3>
 
-    <li><b>Aarushi Verma: </b>School Lead</li>
-
-    <li><b>April Sun: </b>School Lead</li>
-
-    <li><b>Carissa Ott: </b> (2025) Jedi Director</li>
-
-    <li><b>Eden Yu: </b>Advisor</li>
-
-    <li><b>Janie Kuang: </b>School Lead</li>
-
-    <li><b>Joseph Ramirez: </b> (2024) President</li>
-
-    <li><b>Mihir Srivastva: </b>School Lead</li>
-
-    <li><b>Nicholas Wang: </b>Curriculum Director</li>
-
-    <li><b>Sruthi Rangarajan: </b>(2025) President</li>
-
-    <li><b>Vera Parke: </b> Special Events Director</li>
+<li><b>Aarushi Verma: </b>School Lead</li>
+<li><b>April Sun: </b>School Lead</li>
+<li><b>Carissa Ott: </b> (2025) Jedi Director</li>
+<li><b>Eden Yu: </b>Advisor</li>
+<li><b>Janie Kuang: </b>School Lead</li>
+<li><b>Joseph Ramirez: </b> (2024) President</li>
+<li><b>Mihir Srivastva: </b>School Lead</li>
+<li><b>Nicholas Wang: </b>Curriculum Director</li>
+<li><b>Sruthi Rangarajan: </b>(2025) President</li>
+<li><b>Vera Parke: </b> Special Events Director</li>
 
 <h3 class="title">2022-2023</h3>
 
-    <li><b>Advaith Gowrishetty</b> : Special Events Director</li>
-
-    <li><b>Angela Ling</b> (2024): Design Director</li>
-
-    <li><b>Archie Datta</b> (2024): Dev Outreach Director</li>
-
-    <li><b>Ashley Lu</b> (2024): Special Events Director</li>
-
-    <li><b>Ava Asmani</b> (2024): Advisor</li>
-
-    <li><b>Carissa Ott</b> (2025): JEDI Director</li>
-    
-
-    <li><b>Dane Payba</b> (2024): Special Events Director</li>
-
-    <li><b>Divya Ponniah</b> (2023): Dev Advisor</li>
-
-    <li><b>Evan He</b> (2024): Training Director</li>
-
-    <li><b>Ishani Sarkar</b> (): Outreach Director</li>
-
-    <li><b>Jenny Wang</b> (2025): Curriculum Director</li>
-
-    <li><b>Jiin Kim</b> (2024): Dev Team President</li>
-
-    <li><b>Joseph Ramirez</b> (2024): Curriculum Director</li>
-
-    <li><b>Kaitlyn Wang</b> (2022): Advisor</li>
-
-    <li><b>Kaylee Harris</b> (2024): School Lead</li>
-
-    <li><b>Matthew Nieva</b> (): Dev Advisor</li>
-
-    <li><b>Nathan Endow</b> (2024): Training Director</li>
-
-    <li><b>Nicholas Hamakami</b> (2024): Static Site Director</li>
-
-    <li><b>Nikhil Kumar</b> (2022): Advisor</li>
-
-    <li><b>Premkumar Gridhar</b> (2024): Training Director</li>
-    
-    <li><b>Robert Tran</b> (2023): School Lead</li>
-    
-    <li><b>Sruthi Rangarajan</b> (2025): Teaching Director</li>
-    
-    
-    <li><b>Vivian Ha</b> (2023): Dev Advisor</li>
-
-    <h3 class="title">2021-2022</h3>
-
-
-    <li><b>Advaith Gowrishetty</b> (): Special Events Director</li>
-
-    <li><b>Archie Datta</b> (2024): Design Director</li>
-
-    <li><b>Ava Asmani</b> (2024): AI/ML School Lead</li>
-
-    <li><b>Chase Kapler</b> (2023): React Native School Lead</li>
-
-    <li><b>Chloe Uy</b> (2022): Vice President</li>
-
-    <li><b>Christine Kim</b> (2024): JEDI Director</li>
-
-    <li><b>Divya Ponniah</b> (2023): Dev Team Director</li>
-
-    <li><b>Eden Yu</b> (2024): Special Events Director, Scratch School Lead</li>
-
-    <li><b>Ellie Cheng</b> (2022): Dev Team Training Director</li>
-
-    <li><b>Helia Woo</b> (2023): Python Video Lead</li>
-
-    
-    <li><b>Ishani Sarkar</b> (): Outreach Director</li>
-
-    <li><b>Jiin Kim</b> (2024): Learning Labs Director</li>
-    
-
-    <li><b>Kaitlyn Wang</b> (2022): Special Events Director</li>
-
-    <li><b>Matthew Nieva</b> (): Dev Team Training Director</li>
-
-    <li><b>Matthew Wang</b> (2022): Advisor</li>
-
-    <li><b>Milo Kearney</b> (2023): President</li>
-
-    <li><b>Nikhil Kumar</b> (2022): Curriculum Director, Social Chair, Emerson Friday School Lead</li>
-
-    <li><b>Nina Lu</b> (2022): Special Events Director</li>
-    
-
-    <li><b>Regina Wang</b> (2022): Dev Team Training Director</li>
-    
-
- 
-    
-    <li><b>Robert Tran</b> (2023): School Lead</li>
-
-    <li><b>Sophie Schoenmeyer</b> (2023): President</li>
-
-
-    
-    <li><b>Timothy Poon</b> (): Editor Director</li>
-    
-
-    
-    <li><b>Vivian Ha</b> (2023): Static Site Director</li>
-    <h3 class="title">2020-2021</h3>
-
-    <li><b>Arjun Subramonian</b> (2021): Advisor,  AI/ML Lead</li>
-
-    <li><b>Ashley Ghodsian</b> (2022): JEDI, Python Instructor, Translator</li>
-    
-
-    
-    <li><b>Bonnie Lee</b> (2021): Advisor</li>
-    
-
-    
-    <li><b>Chase Kapler</b> (2023): React Native School Lead</li>
-
-    
-    <li><b>Chloe Uy</b> (2022): Outreach Director, Interim Emerson Lead</li>
-    
-
-
-    <li><b>Helia Woo</b> (2023): JEDI, Python Video Lead</li>
-
-    <li><b>Kaitlyn Wang</b> (2022): Special Events Director</li>
-
-    <li><b>Keertana Namuduri</b> (2022): Advisor</li>
-
-    <li><b>Leo Krashanoff</b> (2022): Dev Team Director</li>
-    
-
-
-
-    
-    <li><b>Malak Hmimy</b> (2021): Sepulveda Lead, Advisor</li>
-
-    <li><b>Matthew Wang</b> (2022): President, Interim Dev Team Director</li>
-
-    <li><b>Nikhil Kumar</b> (2022): Curriculum Director, Python Lead</li>
-    
-
-    <li><b>Nina Lu</b> (2022): Special Events Director</li>
-
-    <li><b>Regina Wang</b> (2022): Special Events Director, Dev Project Lead</li>
-
-    
-    <li><b>Sharvani Jha</b> (2021): Moonshots Advisor</li>
-
-    <li><b>Sophie Schoenmeyer</b> (2023): Logistics Director</li>
-
-    <h3 class="title">2019-2020</h3>
-
-        
-    <li><b>Arjun Subramonian</b> (2021): Logistics Director, NHHS Lead</li>
-
-    <li><b>Bonnie Lee</b> (2021): Outreach Director</li>
-
-    
-    <li><b>Christina Indudhara</b> (2020): President</li>
-
-    
-    <li><b>Malak Hmimy</b> (2021): Activities Director, Sepulveda Lead</li>
-
-    <li><b>Matthew Wang</b> (2022): Dev Team Director</li>
-
-
-    <li><b>Pragathi Venkatesh</b> (2022): Brockton Lead</li>
-    
-
-    <li><b>Shane Cho</b> (2021): Activities Director, Emerson Lead</li>
-
-    <li><b>Sharvani Jha</b> (2021): NHHS Lead</li>
-
-
-    <h3 class="title">2018-2019</h3>
-
-        <li><b>Bonnie Lee</b> (2021): Expansion Director</li>
-
-        <li><b>Christina Indudhara</b> (2020): Curriculum Director</li>
-        
-    
-
-    
-        
-    
-
-    
-        
-        <li><b>Connor Borden</b> (2019): Dev Team Director</li>
-
-        <li><b>Furn Techalertumpai</b> (2020): Logistics Director</li>
- 
-        <li><b>John Stucky</b> (2019): President</li>
- 
-  
-        
-        <li><b>Michael Grieve</b> (2019): Curriculum Director, Lead Instructor</li>
-
-        <li><b>Richard Wen</b> (2019): President and Outreach Director</li>
-
- <h3 class="title">2017-2018</h3>
-
-
-        <li><b>Apurva Panse</b> (2018): President and Outreach Director</li>
-        
-
-        
-        <li><b>John Stucky</b> (2019): Head Instructor</li>
-        
-    
-
-        <li><b>Krishna Babu</b> (2018): Logistics Director</li>
-
-        
-        <li><b>Richard Wen</b> (2019): Curriculum Director</li>
-
+<li><b>Advaith Gowrishetty</b> : Special Events Director</li>
+<li><b>Angela Ling</b> (2024): Design Director</li>
+<li><b>Archie Datta</b> (2024): Dev Outreach Director</li>
+<li><b>Ashley Lu</b> (2024): Special Events Director</li>
+<li><b>Ava Asmani</b> (2024): Advisor</li>
+<li><b>Carissa Ott</b> (2025): JEDI Director</li>
+<li><b>Dane Payba</b> (2024): Special Events Director</li>
+<li><b>Divya Ponniah</b> (2023): Dev Advisor</li>
+<li><b>Evan He</b> (2024): Training Director</li>
+<li><b>Ishani Sarkar</b> (): Outreach Director</li>
+<li><b>Jenny Wang</b> (2025): Curriculum Director</li>
+<li><b>Jiin Kim</b> (2024): Dev Team President</li>
+<li><b>Joseph Ramirez</b> (2024): Curriculum Director</li>
+<li><b>Kaitlyn Wang</b> (2022): Advisor</li>
+<li><b>Kaylee Harris</b> (2024): School Lead</li>
+<li><b>Matthew Nieva</b> (): Dev Advisor</li>
+<li><b>Nathan Endow</b> (2024): Training Director</li>
+<li><b>Nicholas Hamakami</b> (2024): Static Site Director</li>
+<li><b>Nikhil Kumar</b> (2022): Advisor</li>
+<li><b>Premkumar Gridhar</b> (2024): Training Director</li>
+<li><b>Robert Tran</b> (2023): School Lead</li>
+<li><b>Sruthi Rangarajan</b> (2025): Teaching Director</li>
+<li><b>Vivian Ha</b> (2023): Dev Advisor</li>
+
+<h3 class="title">2021-2022</h3>
+
+<li><b>Advaith Gowrishetty</b> (): Special Events Director</li>
+<li><b>Archie Datta</b> (2024): Design Director</li>
+<li><b>Ava Asmani</b> (2024): AI/ML School Lead</li>
+<li><b>Chase Kapler</b> (2023): React Native School Lead</li>
+<li><b>Chloe Uy</b> (2022): Vice President</li>
+<li><b>Christine Kim</b> (2024): JEDI Director</li>
+<li><b>Divya Ponniah</b> (2023): Dev Team Director</li>
+<li><b>Eden Yu</b> (2024): Special Events Director, Scratch School Lead</li>
+<li><b>Ellie Cheng</b> (2022): Dev Team Training Director</li>
+<li><b>Helia Woo</b> (2023): Python Video Lead</li>
+<li><b>Ishani Sarkar</b> (): Outreach Director</li>
+<li><b>Jiin Kim</b> (2024): Learning Labs Director</li>
+<li><b>Kaitlyn Wang</b> (2022): Special Events Director</li>
+<li><b>Matthew Nieva</b> (): Dev Team Training Director</li>
+<li><b>Matthew Wang</b> (2022): Advisor</li>
+<li><b>Milo Kearney</b> (2023): President</li>
+<li><b>Nikhil Kumar</b> (2022): Curriculum Director, Social Chair, Emerson Friday School Lead</li>
+<li><b>Nina Lu</b> (2022): Special Events Director</li>
+<li><b>Regina Wang</b> (2022): Dev Team Training Director</li>
+<li><b>Robert Tran</b> (2023): School Lead</li>
+<li><b>Sophie Schoenmeyer</b> (2023): President</li>
+<li><b>Timothy Poon</b> (): Editor Director</li>
+<li><b>Vivian Ha</b> (2023): Static Site Director</li>
+
+<h3 class="title">2020-2021</h3>
+
+<li><b>Arjun Subramonian</b> (2021): Advisor,  AI/ML Lead</li>
+<li><b>Ashley Ghodsian</b> (2022): JEDI, Python Instructor, Translator</li>
+<li><b>Bonnie Lee</b> (2021): Advisor</li>
+<li><b>Chase Kapler</b> (2023): React Native School Lead</li>
+<li><b>Chloe Uy</b> (2022): Outreach Director, Interim Emerson Lead</li>
+<li><b>Helia Woo</b> (2023): JEDI, Python Video Lead</li>
+<li><b>Kaitlyn Wang</b> (2022): Special Events Director</li>
+<li><b>Keertana Namuduri</b> (2022): Advisor</li>
+<li><b>Leo Krashanoff</b> (2022): Dev Team Director</li>
+<li><b>Malak Hmimy</b> (2021): Sepulveda Lead, Advisor</li>
+<li><b>Matthew Wang</b> (2022): President, Interim Dev Team Director</li>
+<li><b>Nikhil Kumar</b> (2022): Curriculum Director, Python Lead</li>
+<li><b>Nina Lu</b> (2022): Special Events Director</li>
+<li><b>Regina Wang</b> (2022): Special Events Director, Dev Project Lead</li>
+<li><b>Sharvani Jha</b> (2021): Moonshots Advisor</li>
+<li><b>Sophie Schoenmeyer</b> (2023): Logistics Director</li>
+
+<h3 class="title">2019-2020</h3>
+
+<li><b>Arjun Subramonian</b> (2021): Logistics Director, NHHS Lead</li>
+<li><b>Bonnie Lee</b> (2021): Outreach Director</li>
+<li><b>Christina Indudhara</b> (2020): President</li>
+<li><b>Malak Hmimy</b> (2021): Activities Director, Sepulveda Lead</li>
+<li><b>Matthew Wang</b> (2022): Dev Team Director</li>
+<li><b>Pragathi Venkatesh</b> (2022): Brockton Lead</li>
+<li><b>Shane Cho</b> (2021): Activities Director, Emerson Lead</li>
+<li><b>Sharvani Jha</b> (2021): NHHS Lead</li>
+
+<h3 class="title">2018-2019</h3>
+
+<li><b>Bonnie Lee</b> (2021): Expansion Director</li>
+<li><b>Christina Indudhara</b> (2020): Curriculum Director</li>
+<li><b>Connor Borden</b> (2019): Dev Team Director</li>
+<li><b>Furn Techalertumpai</b> (2020): Logistics Director</li>
+<li><b>John Stucky</b> (2019): President</li>
+<li><b>Michael Grieve</b> (2019): Curriculum Director, Lead Instructor</li>
+<li><b>Richard Wen</b> (2019): President and Outreach Director</li>
+
+<h3 class="title">2017-2018</h3>
+
+<li><b>Apurva Panse</b> (2018): President and Outreach Director</li>
+<li><b>John Stucky</b> (2019): Head Instructor</li>
+<li><b>Krishna Babu</b> (2018): Logistics Director</li>
+<li><b>Richard Wen</b> (2019): Curriculum Director</li>
 
 <h3 class="title">2016-2017</h3>
 
-        <li><b>Alejandra Cervantes</b> (2019): Director of Pedagogy</li>
+<li><b>Alejandra Cervantes</b> (2019): Director of Pedagogy</li>
+<li><b>Apurva Panse</b> (2018): Director of Outreach</li>
+<li><b>Enrique Segura</b> (2017): Instructor</li>
+<li><b>John Stucky</b> (2019): Instructor</li>
+<li><b>Michael Wang</b> (2018): Instructor</li>
 
-        <li><b>Apurva Panse</b> (2018): Director of Outreach</li>
-
-        
-        <li><b>Enrique Segura</b> (2017): Instructor</li>
-        
-
-        <li><b>John Stucky</b> (2019): Instructor</li>
-        
-
-    
-        
-        <li><b>Michael Wang</b> (2018): Instructor</li>
-
-
-
+<!-- ====================== GRADUATING GREATS (STATIC) ====================== -->
 
 <h2 class="title">Graduating Greats!</h2>
 <p>
     Teach LA honors its alumni who have stayed with the organization through graduation.
 </p>
 <ul>
-
-
     <li><b>Enrique Segura</b> (2017)</li>
-
-
-
     <li><b>Apurva Panse</b> (2018)</li>
-
     <li><b>Krishna Babu</b> (2018)</li>
-
-
-
     <li><b>Connor Borden</b> (2019)</li>
-
     <li><b>John Stucky</b> (2019)</li>
-
     <li><b>Michael Grieve</b> (2019)</li>
-
     <li><b>Richard Wen</b> (2019)</li>
-
-
-
     <li><b>Christina Indudhara</b> (2020)</li>
-
     <li><b>Lawrence Lee</b> (2020)</li>
-
     <li><b>Arjun Subramonian</b> (2021)</li>
-
     <li><b>Aseem Sane</b> (2021)</li>
-
     <li><b>Bonnie Lee</b> (2021)</li>
-
     <li><b>Ethan To</b> (2021)</li>
-
     <li><b>Farrah Au-Yeung</b> (2021)</li>
-
     <li><b>Jamie Liu</b> (2021)</li>
-
     <li><b>Malak Hmimy</b> (2021)</li>
-
     <li><b>Sharvani Jha</b> (2021)</li>
-
     <li><b>Will O'Brien</b> (2021)</li>
-
-
 </ul>
-
-    </div><footer class="footer">
-    <div class="container container-restricted">
-        <div class="footer-content">
-            <div class="footer-aside">
-                <p class="logo">
-                    <img src="/img/teachLA_logo_light copy.svg"  id="acm-tla-wordmark" alt="ACM Teach LA Wordmark" />
-                </p>
-                <ul class="footer-links">
-                    <li class="footer-link">
-                        <a class="icon" href="https://github.com/uclaacm/teach-la-website" target="_blank" rel="noopener noreferrer">
-                            <span class="fab fa-github" aria-label="GitHub Logo & Repository"></span>
-                        </a>
-                    </li>
-                    <li class="footer-link">
-                        <a class="icon" href="https://www.facebook.com/acmteachla" target="_blank" rel="noopener noreferrer">
-                            <span class="fab fa-facebook" aria-label="Facebook Logo & Link"></span>
-                        </a>
-                    </li>
-                    <li class="footer-link">
-                        <a class="icon" href="https://www.linkedin.com/company/acm-teach-la-acm-ucla" target="_blank" rel="noopener noreferrer">
-                            <span class="fab fa-linkedin" aria-label="LinkedIn Logo & Link"></span>
-                        </a>
-                    </li>
-                    <li class = "footer-link">
-                        <a class="icon" href="mailto: acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <span class="fas fa-envelope" aria-label="Email Logo & Link"></span>
-                        </a>
-                        <a href="mailto:acmteachla@gmail.com" target="_blank" rel="noopener noreferrer">
-                        </a>
-
-                    </li>
-                </ul>
-
-            </div>
-            <div class="footer-main">
-                <div class="footer-col">
-                    <h3 class="footer-subtitle">about</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="/about">our mission</a>
-                        </li>
-                        <li>
-                            <a href="/about/#teacher-join">join us</a>
-                        </li>
-                        <li>
-                            <a href="/about/#schedule">schedule</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3 class="footer-subtitle">blog</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="/blog">teach la blog</a>
-                        </li>
-                        <li>
-                            <a href="/reports">reports</a>
-                        </li>
-                        <li>
-                            <a href="/blog/teach-la-website/reflection/2022/09/21/board-reflections/">board reflections</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3 class="footer-subtitle">dev</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="/dev">about dev</a>
-                        </li>
-                        <li>
-                            <a href="/dev/#projects">dev projects</a>
-                        </li>
-                        <li>
-                            <a href="/dev/#WIP">in the works</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3 class="footer-subtitle">team</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="/team/#general-board">general board</a>
-                        </li>
-                        <li>
-                            <a href="/team/#dev-board">dev board</a>
-                        </li>
-                        <li>
-                            <a href="/team/#instructors-developers">instructors and developers</a>
-                        </li>
-                    </ul>
-                </div>
-
-                
-                
-                
-                <div class="footer-col">
-                    <h3 class="footer-subtitle">curriculum</h3>
-                        <ul class="footer-nav">
-                            <li>
-                                <a href="/classes/py1">Python</a>
-                            </li>
-                
-            
-                
-                
-                    <li>
-                        <a href="/classes/">Scratch</a>
-                    </li>
-                
-            
-                
-                
-                    <li>
-                        <a href="/classes/ml">AL & ML</a>
-                    </li>
-                
-            
-                
-                
-                    <li>
-                        <a href="/classes/rnative">React Native</a>
-                    </li>
-                
-            
-                
-                
-                        <li>
-                            <a href="/classes/">Web Dev</a>
-                        </li>
-                    </ul>
-                </div>
-                
-            
-
-                <div id = "row2first" class="footer-col">
-                    <h3 class="footer-subtitle">Partnered Schools</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a>Brockton Avenue Elementary School</a>
-                        </li>
-                        <li>
-                            <a>Ralph Waldo Emerson Elementary School</a>
-                        </li>
-                        <li>
-                            <a>North Hollywood High School</a>
-                        </li>
-                        <li>
-                            <a>Sepulveda Middle School</a>
-                        </li>
-                        <li>
-                            <a>Short Avenue Elementary School</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div id = "row2second" class="footer-col">
-                    <h3 class="footer-subtitle">Sponsors</h3>
-                    <ul class="footer-nav">
-                        <li>
-                            <a>Blizzard Entertainment</a>
-                        </li>
-                        <li>
-                            <a>Citadel</a>
-                        </li>
-                        <li>
-                            <a>Deloittle</a>
-                        </li>
-                        <li>
-                            <a>Facebook</a>
-                        </li>
-                        <li>
-                            <a>Google</a>
-                        </li>
-                    </div>
-
-                <div id = "row2third" class="footer-col">  
-                    <h3 class="footer-subtitle"><br></h3>
-                        
-                    <ul class="footer-nav">
-                        <li>
-                            <a> Human Capital</a>
-                        </li>
-                        <li>
-                            <a>Northrop Grumman</a>
-                        </li>
-                        <li>
-                            <a>Samsung</a>
-                        </li>
-                        <li>
-                            <a>Sandia National Laboratories</a>
-                        </li>
-                        <li>
-                            <a>Viasat</a>
-                        </li>
-                    </ul>
-                    </div>       
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>
-
-
-
-
-
-
-
-<!--
----
-layout: default
-title: "Team"
-permalink: "/team"
----
-<h1 class="title page-title">Team</h1>
-<p>
-    Here are all of the awesome people that make Teach LA happen! We're UCLA students who have dedicated themselves to empowering students through computer science.
-</p>
-<h2 class="title" id="general-board">General Board</h2>
-
-<p>
-    Our directors, school leads, and curriculum leads. Feel free to reach out to any of our board for more information about what we do!
-</p>
-
-
-{% assign president = site.team | where_exp:"person", "person.group contains 'general board' and person.title == 'President'" | group_by:"title" %}
-{% assign vpres = site.team | where_exp: "person", "person.group contains 'general board' and person.title == 'Vice President'" | group_by:"title" %}
-{% assign genBoard = site.team | where_exp:"item", "item.group contains 'general board' and item.title != 'President' and item.title != 'Vice President'" | sort:"name" | group_by:"title" | sort:"name" %}
-{% assign genLeadership = president | concat: vpres | concat: genBoard %}
-
-
-{% assign devPresident = site.team | where_exp:"person", "person.group contains 'dev board' and person.title == 'Dev Team President'" | group_by:"title" %}
-{% assign devVicePresident = site.team | where_exp:"person", "person.group contains 'dev board' and person.title == 'Dev Team Vice President'" | group_by:"title" %}
-{% assign devBoard = site.team | where_exp:"person", "person.group contains 'dev board' and person.title != 'Dev Team President' and person.title != 'Dev Team Vice President'" | sort:"name" | group_by:"title" | sort:"name" %}
-{% assign devLeadership = devPresident | concat: devVicePresident | concat: devBoard %}
-
-
-{% assign members = site.team | where_exp:"item", "item.group == 'member'" | sort:"name" %}
-
-{% assign boards = site.team | where_exp:"item", "item.positions" | sort:"name" %}
-{% assign alumsplus = site.team | where_exp:"item", "item.group == 'alum+'" | sort:"name" | group_by:"graduating_year" | sort:"name" %}
-
-<div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
-    {% for group in genLeadership %}
-    {% for member in group.items %}
-    <div class="grid-row" id="{{ member.slug }}">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                {% if member.img %}
-                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
-                {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
-                {% endif %}
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    {{ member.name }}
-                    {% if member.pronouns %}
-                        <span class = "pronouns"> ({{member.pronouns}})</span>
-                    {% endif %}
-                    </h3>
-                <p class="team-member-position">
-                    {{ member.title }}
-                    {% if member.secondary %}
-                        &amp; {{ member.secondary }}
-                    {% endif %}
-                    {% if member.third %}
-                        &amp; {{ member.third }}
-                    {% endif %}
-                </p>
-                <ul class="list-unstyled">
-                    {% assign content = member.content | strip %}
-                    {% if member.github and member.links == nil and content == "" %}
-                        <li>
-                            <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
-                        </li>
-                    {% endif %}
-                    {% if member.links or content != "" %}
-                         <li>
-                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
-                         </li>
-                     {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-    {% endfor %}
-</div>
-
-
-
-<p>
-    Our dev consists of our team, training, learning lab, editor, design, and static site directors. Feel free to reach out to any of our board for more information about what we do!
-</p>
-
-<div class="row-desktop-ratio-1-1 text-12x TEAM-SPECIAL">
-    {% for group in devLeadership %}
-    {% for member in group.items %}
-    <div class="grid-row" id="{{ member.slug }}">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                {% if member.img %}
-                        <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
-                {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
-                {% endif %}
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    {{ member.name }}
-                    {% if member.pronouns %}
-                        <span class = "pronouns"> ({{member.pronouns}})</span>
-                    {% endif %}
-                    </h3>
-                <p class="team-member-position">
-                    {{ member.title }}
-                    {% if member.secondary %}
-                        &amp; {{ member.secondary }}
-                    {% endif %}
-                    {% if member.third %}
-                        &amp; {{ member.third }}
-                    {% endif %}
-                </p>
-                <ul class="list-unstyled">
-                    {% assign content = member.content | strip %}
-                    {% if member.github and member.links == nil and content == "" %}
-                        <li>
-                            <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
-                        </li>
-                    {% endif %}
-                    {% if member.links or content != "" %}
-                         <li>
-                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
-                         </li>
-                     {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-    {% endfor %}
-</div>
-
-<h2 class="title">Instructors and Developers</h2>
-<p>
-    Our team of instructors and developers teach in person at schools all throughout the Los Angeles Unified School District while developing new, interactive ways of making an education in computer science possible for everyone. 
-    Want to join our team? Find out more about how you can join us on our 
-    <a class="tla-link" href="{{site.baseurl}}/join">join us page</a>!
-
-<div class="row-desktop-ratio-1-1-1 TEAM-SPECIAL">
-    {% for member in members %}
-
-    {% if member.inactive %}
-        {% continue %}
-    {% endif %}
-    <div class="grid-row" id="{{ member.slug }}">
-        <div class="grid-col">
-            <div class="profile-img-container">
-                {% if member.img %}
-                    <img class="profile-img" src="{{ site.baseurl }}/img/team/{{ member.img }}" alt="picture of {{ member.name }}"/>
-                    {% else %}
-                    <img class="profile-img" src="{{site.baseurl}}/img/blank-profile.jpg" alt="temporary picture for {{ member.name }}"/>
-                {% endif %}
-                </a>
-            </div>
-        </div>
-
-        <div class="grid-col">
-            <div class="team-member-content">
-                <h3 class="no-margin title">
-                    {{ member.name }}
-                    {% if member.pronouns %}
-                        <span class = "pronouns"> ({{member.pronouns}})</span>
-                    {% endif %}
-                </h3>
-                <p class="team-member-position">
-                    {{ member.title }}
-                    {% if member.secondary %}
-                        &amp; {{ member.secondary }}
-                    {% endif %}
-                </p>
-                <ul class="list-unstyled">
-                    {% assign content = member.content | strip %}
-                    {% if member.github and member.links == nil and content == "" %}
-                        <li>
-                            <a class="tla-link" href="https://github.com/{{member.github}}"><span class="fab fa-github"></span> {{ member.github }}</a>
-                        </li>
-                    {% endif %}
-                    {% if member.links or content != "" %}
-                         <li>
-                            <a class = "tla-link" href='{{ site.baseurl }}/team/{{ member.slug }}'><span class = "fas fa-arrow-circle-right"></span> More Info</a>
-                         </li>
-                     {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-
-<h2 class="title">Previous Boards</h2>
-<p>
-    <a class="tla-link" href="https://en.wikipedia.org/wiki/Rome_wasn%27t_built_in_a_day" target="_blank" rel="noopener noreferrer">Rome wasn't built in a day</a>, and neither was Teach LA! Many thanks to our previous boards for steering our organization in the right direction.
-</p>
-
-{% assign foundingYear = "2016" %}
-{% assign currentYear = site.time | date: '%Y' | minus: 1 %}
-
-{% for year in (foundingYear..currentYear) %}
-
-{% assign nextYear = year | plus: 1 %}
-{% assign boardYear = year | append:'-' | append: nextYear %}
-
-<h3 class="title">{{ boardYear }}</h3>
-
-{% for member in boards %}
-    {% for position in member.positions %}
-        {% if position.year == boardYear %}
-        <li><b>{{ member.name }}</b> ({{ member.graduating_year }}): {{ position.title }}</li>
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-{% endfor %}
-
-<h2 class="title">Graduating Greats!</h2>
-<p>
-    Teach LA honors its alumni who have stayed with the organization through graduation.
-</p>
-<ul>
-{% for year in alumsplus %}
-{% for member in year.items %}
-    <li><b>{{ member.name }}</b> ({{ member.graduating_year }})</li>
-{% endfor %}
-{% endfor %}
-</ul>
--->
