@@ -1,0 +1,59 @@
+<div id="desktop-sidebar-rnative" class="top-left-grid-position">
+    {% for lesson in site.rnative %}
+    <div class="sidebar-item">
+        {% assign lessonUrl = lesson.url%}
+        {% if lesson.num == page.num %}
+        {% assign lessonUrl = "javascript:void(0)" %}
+        <span class="current-dot"></span>
+        {% endif %}
+
+        <a class="rnative-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="mobile-sidebar">
+    <div id="sidebar-btn-container">
+        <button id="open-mobile-icon" class="d-flex">Lessons</button>
+        <button id="close-mobile-icon" class="d-none">Close</button>
+    </div>
+    <div id="hamburger-content" class="d-none">
+        {% for lesson in site.rnative %}
+        {% assign lessonUrl = lesson.url%}
+        {% if lesson.num == page.num %}
+        {% assign lessonUrl = "javascript:void(0)" %}
+        {% endif %}
+
+        <div class="hamburger-item">
+            <a class="rnative-link" href="{{lessonUrl}}">#{{lesson.num}} {{lesson.title}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    function toggleHamburgerContent() {
+        let hamburger_content = document.getElementById("hamburger-content");
+        if (hamburger_content.classList.contains("d-none")) {
+            hide("open-mobile-icon");
+            show("hamburger-content");
+            show("close-mobile-icon");
+        } else {
+            hide("hamburger-content");
+            hide("close-mobile-icon");
+            show("open-mobile-icon");
+        }
+    }
+    function show(elementID) {
+        let lessons_btn = document.getElementById(elementID);
+        lessons_btn.classList.remove("d-none");
+        lessons_btn.classList.add("d-flex");
+    }
+    function hide(elementID) {
+        let lessons_btn = document.getElementById(elementID);
+        lessons_btn.classList.remove("d-flex");
+        lessons_btn.classList.add("d-none");
+    }
+    document.getElementById("open-mobile-icon").onclick = toggleHamburgerContent;
+    document.getElementById("close-mobile-icon").onclick = toggleHamburgerContent;
+</script>
