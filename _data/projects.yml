@@ -15,6 +15,7 @@
     - firebase
     - sass
     - jest & enzyme
+  image: img\projects\project_template.png
 
 - name: Editor Backend
   wip: false
@@ -30,6 +31,7 @@
   tech:
     - go
     - firebase
+  image: img\project_template.png
 
 - name: Passworks
   wip: false
@@ -101,93 +103,6 @@
     - css
     - bulma
 
-- name: Gradient Descent Visualiser
-  wip: false
-  lang:
-    full: javascript
-    abbrev: js
-  link: https://uclaacm.github.io/gradient-descent-visualiser/
-  repo: uclaacm/gradient-descent-visualiser
-  description: "This mini-app acts as an interactive supplement to our AI/ML course and curriculum on linear regression and gradient descent - visualising what can be a very complex mathematical concept."
-  lead:
-    - name: Matt
-      hash: mattwang
-  tech:
-    - function-plot/d3
-    - js
-    - bulma
-
-- name: Playnet
-  wip: false
-  lang:
-    full: typescript
-    abbrev: ts
-  link: https://playnet.uclaacm.com/
-  repo: uclaacm/Playnet
-  description: "Exploring how the web works, and different problems in computer science! 
-  <br/><br/>A collab with <a href='https://www.creativelabsucla.com/'>Creative Labs</a> :)"
-  lead:
-    - name: Regina
-      hash: rwang
-  tech:
-    - ts
-    - react
-    - animejs
-    - lottie
-    - sass
-
-- name: Bias By Us
-  wip: true
-  lang:
-    full: javascript
-    abbrev: js
-  repo: uclaacm/bias-by-us
-  description: "An interactive explanation of bias in machine learning."
-  lead:
-    - name: Jiin
-      hash: jiinkim
-  tech:
-    - js
-    - python
-    - react
-    - aws
-
-- name: Cookie Jar
-  wip: true
-  lang:
-    full: javascript
-    abbrev: js
-  repo: uclaacm/cookie-jar
-  description: "Exploring web cookies by playing with them!"
-  lead:
-    - name: Rachel
-      hash: rli
-    - name: Alyssa
-      hash: awang
-  tech:
-    - js
-    - react
-
-
-- name: No Filter
-  wip: false
-  lang:
-    full: javascript
-    abbrev: js
-  link: https://nofilter.uclaacm.com/
-  repo: uclaacm/no-filter
-  description: "Deconstructing a CNN, convolution by convolution."
-  lead:
-    - name: Maya
-      hash: mayaraman
-    - name: Aman
-      hash: amanoberoi
-    - name: Nisha
-      hash: nishamcnealis
-  tech:
-    - js
-    - react
-
 - name: Selector Safari
   wip: true
   lang:
@@ -215,21 +130,6 @@
       hash: ebalan
   tech:
     - js
-    - react
-
-- name: BoolBots
-  wip: false
-  lang:
-    full: typescript
-    abbrev: ts
-  link: https://boolbots.uclaacm.com/
-  repo: https://github.com/uclaacm/boolbots
-  description: "A game used to help supplement Teach LA's python courses and help students learn more about booleans!"
-  lead:
-    - name: Nathan
-      hash: nendow
-  tech:
-    - ts
     - react
 
 - name: Color Lab
