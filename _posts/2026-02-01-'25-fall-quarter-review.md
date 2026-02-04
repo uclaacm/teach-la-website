@@ -74,7 +74,7 @@ Due to scheduling conflicts with their partner high school, the React curriculum
 
 ## Emerson
 
-With many returning students from last year, School Lead Javier and Bhavesh reviews Python turtle concepts with a flash, the team creatively incorporated current internet humor and “brain-rot” references into lessons, making the material more relatable and enjoyable. Looking ahead, the team plans to transition into Minecraft Education Edition, giving students an exciting new way to continue learning code.
+With many returning students from last year, School Lead Javier and Bhavesh reviews Python turtle concepts with a flash, the team creatively incorporated current internet humor and “brain-rot” references into lessons, making the material more relatable and enjoyable. Looking ahead, the team plans to transition into HTML and CSS, giving students an exciting new way to continue learning code.
 
 ![brain rot knowledge from emerson team]({{site.baseurl}}/img/posts/25-fall-quarter-review/emerson.png)
 
