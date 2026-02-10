@@ -14,19 +14,17 @@ permalink: "/projects"
     {% for proj in finished %}
     <div class="dev-project-card">
         <div class="dev-project-card-content">
-            <h3 class="title dev-project-title">
-                <h3 class="title dev-project-title text-center">
-                  {{ proj.name }}
-                </h3>
+            <h3 class="title dev-project-title text-center">
+                {{ proj.name }}
             </h3>
-            <img src="{{proj.image}}" alt="{{proj.name}}" class="dev-project-image" style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
-            <div class="dev-project-info-row" style="background-color: rgb(207, 244, 184); padding: 10px; border-radius: 5px; display: inline-block;">
+            <img src="{{proj.image}}" alt="{{proj.name}}" class="dev-project-image">
+            <div class="dev-project-info-row">
                 <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
                  •
               <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
             </div>
-            <p>
-                <span style="display: block; text-align: center;">{{proj.description}}</span>
+            <p class="dev-project-desc text-center">
+                {{proj.description}}
             </p>
         </div>
     </div>
