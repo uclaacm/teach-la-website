@@ -9,22 +9,111 @@ permalink: /blog/
   We love what we do, and we want to share it with you! Here are some insights from our members on how our club operates: how we teach, write code, and create a community!
 </p>
 
-<h1 class="top-padding">Most Recent</h2>
-{% assign post_count = 0 %}
-{% for post in site.posts %}
-    {% assign post_count = post_count | plus: 1 %}
+<hr class="divider" />
 
-    {% if post_count == 2 %}
-    <h2 class="top-padding">Past blogs</h2>
-<div class="blogs">
-    {% endif %}
-    
-    {% if post_count == 1 %}
-        {% include blog-preview-card.html %}
-    {% endif %}
-    {% if post_count >= 2 %}
-        {% include blog-preview-card-small.html %}
-    {% endif %}
+<div class="post-card-tags blog-filter-navbar" id="blog-filter-navbar">
+  <a class="anim_tag" href="{{ site.baseurl }}/blog/" data-filter="__all" data-filter-type="all">All</a>
 
-{% endfor %}
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    {% assign cat_name = category[0] %}
+    <a class="anim_tag"    
+       href="{{ site.baseurl }}/blog/category/{{ cat_name | url_encode }}"
+       data-filter="{{ cat_name | esc }}"
+       data-filter-type="category">
+      {{ cat_name }}
+    </a>
+  {% endfor %}
+
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    <a class="anim_tag"
+       href="{{ site.baseurl }}/blog/category/{{ tag_name | url_encode }}"
+       data-filter="{{ tag_name | esc }}"
+       data-filter-type="tag">
+      {{ tag_name }}
+    </a>
+  {% endfor %}
 </div>
+
+<h1 class="top-padding">Most Recent</h1>
+<div id="most-recent-container">
+  {% for post in site.posts %}
+    {% include blog-preview-card.html post=post %}
+  {% endfor %}
+</div>
+
+<h2 class="top-padding">Past blogs</h2>
+<div class="blogs" id="past-blogs-container">
+  {% for post in site.posts %}
+    {% include blog-preview-card-small.html post=post %}
+  {% endfor %}
+</div>
+
+<script>
+  (function () {
+    const filterNavBar = document.getElementById("blog-filter-navbar");
+    if (!filterNavBar) return;
+
+    const BTNS = [...filterNavBar.querySelectorAll("a.anim_tag")];
+
+    const largePrev = [...document.querySelectorAll(
+      "#most-recent-container .blog-entry[data-size='large']"
+    )];
+    const smallPrev = [...document.querySelectorAll(
+      "#past-blogs-container .blog-entry[data-size='small']"
+    )];
+    function setActive(btn) {
+      BTNS.forEach(b => b.classList.remove("active-tag"));
+      if (btn) btn.classList.add("active-tag");
+    }
+    // check if filter category matches
+    function matches(entry, type, value) {
+      if (type === "all") 
+      return true;
+      if (type === "category") 
+        return entry.dataset.category === value;
+      if (type === "tag") 
+        return entry.dataset.tags.split("|").map(t => t.trim()).includes(value);
+      
+      return false;
+    }
+    function applyFilter(type, value) {
+      const matched = smallPrev.filter(e => matches(e, type, value));
+      // no matches
+      if (!matched.length) {
+        largePrev.forEach(e => e.style.display = "none");
+        smallPrev.forEach(e => e.style.display = "none");
+        return;
+      }
+      // if matched show previews, starting wiht large then small
+      const firstURL = matched[0].dataset.url;
+      largePrev.forEach(e => {  
+        e.style.display = e.dataset.url === firstURL ? "" : "none";
+      });
+      smallPrev.forEach(e => {
+        e.style.display =
+          e.dataset.url !== firstURL && matched.includes(e) ? "" : "none";
+      });
+    }
+    
+    BTNS.forEach(btn => {
+      btn.addEventListener("click", e => {
+        // filter self contained without following link
+        e.preventDefault();
+        let t = btn.dataset.filterType || "all";
+        let v = btn.dataset.filter || "__all";
+        if (t === "__all") t = "all";
+        setActive(btn);
+        applyFilter(t, v);
+      });
+    });
+    // inital state is on all blogs
+    const allBtn = filterNavBar.querySelector('a[data-filter="__all"]');
+    setActive(allBtn);
+    applyFilter("all", "__all");
+
+  })();
+</script>
+
