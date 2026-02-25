@@ -1,151 +1,223 @@
-- name: Editor Frontend
+- name: Pen Pals
   wip: false
   lang:
-    full: javascript
-    abbrev: js
-  link: https://editor.uclaacm.com
-  repo: uclaacm/TeachLAFrontend
+    full: 
+    abbrev: 
+  link: https://pen-pals.netlify.app/
+  repo: uclaacm/pen-pals
   lead:
-    - name: Timothy
-      hash: tpoon
-  description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
+    - name: 
+      hash: 
+  description: "Pen Pals is a React web application geared towards primary school students that teaches basic Python syntax through Python's Turtle library! Pen Pal introduces turning and moving through a level-based game."
   tech:
-    - react
-    - redux
-    - firebase
-    - sass
-    - jest & enzyme
-  image: img\projects\project_template.png
+  image:
 
-- name: Editor Backend
+- name: Bias by us
   wip: false
   lang:
-    full: go
-    abbrev: go
-  link: https://editor.uclaacm.com
-  repo: uclaacm/teach-la-go-backend
+    full: 
+    abbrev: 
+  link: https://bias-by-us.netlify.app/
+  repo: uclaacm/bias-by-us
   lead:
-    - name: Timothy
-      hash: tpoon
-  description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
+    - name: 
+      hash: 
+  description: "Bias by Us is focused on bias in machine learning: we teach students about different ways that machine learning models can become biased/discriminatory through 3 individual case studies, including feedback loops in personalized advertising."
   tech:
-    - go
-    - firebase
-  image: img\project_template.png
+  image:
 
-- name: Passworks
+- name: Cookie Jar
   wip: false
   lang:
-    full: javascript
-    abbrev: js
-  link: https://passworks.uclaacm.com
-  repo: uclaacm/passworks
+    full: 
+    abbrev: 
+  link: https://cookie-jar.netlify.app/
+  repo: uclaacm/cookie-jar
   lead:
-    - name: Jamie
-      hash: jliu
-    - name: Alyssa
-      hash: awang
-  description: "This interactive learning module teaches kids about different types of password security, and why they're important. It ends with some social engineering and hands-on hacking! A collaboration with ACM Cyber."
+    - name: 
+      hash: 
+  description: "A lesson to teach kids about web cookies! We're cooking up some ~recipes~ everything from sweet session cookies to zesty third party persistent cookies :0"
   tech:
-    - react
-    - css
-    - material
+  image:
 
-- name: Static Website
-  wip: false
-  lang:
-    full: HTML
-    abbrev: html
-  link: https://teachla.uclaacm.com
-  repo: uclaacm/teach-la-website
-  description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
-  lead:
-    - name: Vivian
-      hash: vha
-  tech:
-    - html
-    - sass
-    - jekyll
+#- name: Editor Frontend
+#  wip: false
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  link: https://editor.uclaacm.com
+#  repo: uclaacm/TeachLAFrontend
+#  lead:
+#    - name: Timothy
+#      hash: tpoon
+#  description: "The frontend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The frontend handles app state management and rendering views."
+#  tech:
+#    - react
+#    - redux
+#    - firebase
+#    - sass
+#    - jest & enzyme
+#  image: img\projects\project_template.png
 
-- name: Getting Mean About Error
-  wip: false
-  lang:
-    full: javascript
-    abbrev: js
-  link: https://uclaacm.github.io/getting-mean-about-error/
-  repo: uclaacm/getting-mean-about-error
-  description: "This narrative version of a critical portion of machine learning walks students through the intuition behind Mean-Squared Error, with interactive math and graphs."
-  lead:
-    - name: Miles
-      hash: mkang
-    - name: Michelle
-      hash: michellez
-  tech:
-    - function-plot/d3
-    - js
-    - bulma
+#- name: Editor Backend
+#  wip: false
+#  lang:
+#    full: go
+#    abbrev: go
+#  link: https://editor.uclaacm.com
+#  repo: uclaacm/teach-la-go-backend
+#  lead:
+#    - name: Timothy
+#      hash: tpoon
+#  description: "The backend for our flagship and most mature product, a kid-friendly online IDE that supports Python, Processing, and HTML/CSS/JS. The backend handles RESTful HTTP requests and complex DB operations."
+#  tech:
+#    - go
+#    - firebase
+#  image: img\project_template.png
 
-- name: Cipher Salad
-  wip: false
-  lang:
-    full: javascript
-    abbrev: js
-  link: https://ciphersalad.uclaacm.com/
-  repo: uclaacm/cipher-salad
-  description: "In a collaboration with ACM Cyber, we explain historical methods of how we've used math to create secret messages (e.g. ciphers), and how computers have changed the game!"
-  lead:
-    - name: Lisha
-      hash: lmohan
-    - name: Alyssa
-      hash: awang
-  tech:
-    - react
-    - css
-    - bulma
+#- name: Passworks
+#  wip: false
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  link: https://passworks.uclaacm.com
+#  repo: uclaacm/passworks
+#  lead:
+#    - name: Jamie
+#      hash: jliu
+#    - name: Alyssa
+#      hash: awang
+#  description: "This interactive learning module teaches kids about different types of password security, and why they're important. It ends with some social engineering and hands-on hacking! A collaboration with ACM Cyber."
+#  tech:
+#    - react
+#    - css
+#    - material
+#
+#- name: Static Website
+#  wip: false
+#  lang:
+#    full: HTML
+#    abbrev: html
+#  link: https://teachla.uclaacm.com
+#  repo: uclaacm/teach-la-website
+#  description: "This website! Built with love and HTML, CSS/SASS, and Jekyll (a static site generator)."
+#  lead:
+#    - name: Vivian
+#      hash: vha
+#  tech:
+#    - html
+#    - sass
+#    - jekyll
+#
+#- name: Getting Mean About Error
+#  wip: false
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  link: https://uclaacm.github.io/getting-mean-about-error/
+#  repo: uclaacm/getting-mean-about-error
+#  description: "This narrative version of a critical portion of machine learning walks students through the intuition behind Mean-Squared Error, with interactive math and graphs."
+#  lead:
+#    - name: Miles
+#      hash: mkang
+#    - name: Michelle
+#      hash: michellez
+#  tech:
+#    - function-plot/d3
+#    - js
+#    - bulma
+#
+#- name: Cipher Salad
+#  wip: false
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  link: https://ciphersalad.uclaacm.com/
+#  repo: uclaacm/cipher-salad
+#  description: "In a collaboration with ACM Cyber, we explain historical methods of how we've used math to create secret messages (e.g. ciphers), and how computers have changed the game!"
+#  lead:
+#    - name: Lisha
+#      hash: lmohan
+#    - name: Alyssa
+#      hash: awang
+#  tech:
+#    - react
+#    - css
+#    - bulma
 
-- name: Selector Safari
+- name: Bot Lab
   wip: true
   lang:
-    full: javascript
-    abbrev: js
-  repo: uclaacm/selector-safari
-  description: "A game that teaches you all about CSS selectors, with animal friends!"
+    full: 
+    abbrev: 
+  repo: 
+  description: ""
   lead:
-    - name: Lisha
-      hash: lmohan
+    - name: 
+      hash: 
   tech:
-    - js
-    - react
+    - 
+    - 
+  image:
 
-- name: DevPathways
+- name: Algorithm Lab
   wip: true
   lang:
-    full: javascript
-    abbrev: js
-  link: https://dev-pathways.netlify.app/
-  repo: uclaacm/dev-pathways
-  description: "A centralized source of ACM dev team learning resources for new devs to learn more about popular technologies!"
+    full: 
+    abbrev: 
+  repo: 
+  description: ""
   lead:
-    - name: Einar
-      hash: ebalan
+    - name: 
+      hash: 
   tech:
-    - js
-    - react
+    - 
+    - 
+  image:
 
-- name: Color Lab
-  wip: true
-  lang:
-    full: typescript
-    abbrev: ts
-  repo: https://github.com/uclaacm/color-lab
-  description: "Color Lab is an interactive color-by-number page that teaches students about how colors are represented 
-                with hex codes. For each question they answer, another piece of the picture is colored in!"
-  lead:
-    - name: Archie
-      hash: adatta
-  tech:
-    - ts
-    - react
+#- name: Selector Safari
+#  wip: true
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  repo: uclaacm/selector-safari
+#  description: "A game that teaches you all about CSS selectors, with animal friends!"
+#  lead:
+#    - name: Lisha
+#      hash: lmohan
+#  tech:
+#    - js
+#    - react
+#
+#- name: DevPathways
+#  wip: true
+#  lang:
+#    full: javascript
+#    abbrev: js
+#  link: https://dev-pathways.netlify.app/
+#  repo: uclaacm/dev-pathways
+#  description: "A centralized source of ACM dev team learning resources for new devs to learn more about popular technologies!"
+#  lead:
+#    - name: Einar
+#      hash: ebalan
+#  tech:
+#    - js
+#    - react
+#
+#- name: Color Lab
+#  wip: true
+#  lang:
+#    full: typescript
+#    abbrev: ts
+#  repo: https://github.com/uclaacm/color-lab
+#  description: "Color Lab is an interactive color-by-number page that teaches students about how colors are represented 
+#                with hex codes. For each question they answer, another piece of the picture is colored in!"
+#  lead:
+#    - name: Archie
+#      hash: adatta
+#  tech:
+#    - ts
+#    - react
 
 # - name: Network Tarines
 #   lang:
