@@ -16,6 +16,10 @@
     - sass
     - jest & enzyme
   image: img\projects\project_template.png
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Editor Backend
   wip: false
@@ -31,7 +35,9 @@
   tech:
     - go
     - firebase
-  image: img\project_template.png
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Passworks
   wip: false
@@ -50,6 +56,9 @@
     - react
     - css
     - material
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Static Website
   wip: false
@@ -66,6 +75,9 @@
     - html
     - sass
     - jekyll
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Getting Mean About Error
   wip: false
@@ -84,6 +96,9 @@
     - function-plot/d3
     - js
     - bulma
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Cipher Salad
   wip: false
@@ -102,6 +117,9 @@
     - react
     - css
     - bulma
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Selector Safari
   wip: true

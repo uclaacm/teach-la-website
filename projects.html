@@ -6,8 +6,6 @@ permalink: "/projects"
 
 <h1 class="title page-title">Learning Labs</h1>
 
-
-
 <h2 class="title page-title text-center" id="projects"></h2>
 <div class="row-desktop-ratio-1-1-1">
     {% assign finished = site.data.projects | where:"wip", "false" %}
@@ -17,11 +15,20 @@ permalink: "/projects"
             <h3 class="title dev-project-title text-center">
                 {{ proj.name }}
             </h3>
-            <img src="{{proj.image}}" alt="{{proj.name}}" class="dev-project-image">
+            <div id="slideshow{{forloop.index}}" class="dev-project-slideshow">
+                {% for image in proj.images %}
+                    <div class="dev-project-slide fade">
+                        <div class="dev-project-image-num">{{forloop.index}} / {{forloop.length}}</div>
+                        <img src="{{image}}" alt="{{proj.name}}" class="dev-project-image">
+                    </div>
+                {% endfor %}
+                <a class="dev-project-slideshow-prev" onclick="changeSlide('slideshow{{forloop.index}}', -1)">&#10094;</a>
+                <a class="dev-project-slideshow-next" onclick="changeSlide('slideshow{{forloop.index}}', 1)">&#10095;</a>
+            </div>
             <div class="dev-project-info-row">
                 <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
                  •
-              <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
+                <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
             </div>
             <p class="dev-project-desc text-center">
                 {{proj.description}}
@@ -30,6 +37,49 @@ permalink: "/projects"
     </div>
     {% endfor %}
 </div>
+
+<!-- Add functionality to the slideshow mechanic -->
+<script>
+    const slideshows = [];
+
+    function changeSlide(slideshowId, direction) {
+        const index = slideshows.findIndex(slideshow => slideshow.id === slideshowId);
+        if (index === -1) return;
+
+        showSlides(slideshowId, slideshows[index].currentSlide += direction);
+    }
+
+    function showSlides(slideshowId, slideNum) {
+        const index = slideshows.findIndex(slideshow => slideshow.id === slideshowId);
+        if (index === -1) return;
+        
+        const slideshow = document.getElementById(slideshowId);
+        const slides = slideshow.getElementsByClassName("dev-project-slide");
+
+        if (slideshows[index].currentSlide > slides.length) {
+            slideshows[index].currentSlide = 1;
+        }
+
+        if (slideshows[index].currentSlide < 1) {
+            slideshows[index].currentSlide = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideshows[index].currentSlide - 1].style.display = "block";
+    }
+
+    // Initialize all slideshows on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        const sShows = document.getElementsByClassName("dev-project-slideshow");
+        for (let i = 0; i < sShows.length; i++) {
+            slideshows.push({ id: sShows[i].id, currentSlide: 1 });
+            showSlides(sShows[i].id, 1);
+        }
+    });
+</script>
 
 <h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
 <div class="row-desktop-ratio-1-1-1">
