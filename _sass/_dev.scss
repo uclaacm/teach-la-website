@@ -4,10 +4,10 @@
 }
 
 .dev-project-card {
-    padding: 0.5em;
+    padding: 2em;
     margin-top: 2em;
-    border: 2px solid $teachla-green;
     border-radius: 10px;
+    box-shadow: 0 0.5em 1em 0.2em #ccc;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -21,7 +21,72 @@
 
 .dev-project-title {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.2em;
+}
+
+.dev-project-desc {
+    font-size: 0.9em;
+}
+
+.dev-project-slideshow {
+    position: relative;
+}
+
+.dev-project-slide {
+    display: none;
+}
+
+.dev-project-slideshow-prev, .dev-project-slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 12px;
+    color: #eee;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+.dev-project-slideshow-next {
+    right: 0;
+}
+
+.dev-project-slideshow-prev:hover, .dev-project-slideshow-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dev-project-image-num {
+    width: 60px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 100vw;
+}
+
+.dev-project-image {
+    padding: 1em 0 1em 0;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 .dev-project-badge {
@@ -52,7 +117,11 @@
 
 .dev-project-info-row {
     margin-top: 0.25em;
-    font-size: 1em;
+    font-size: 0.9em;
+    background-color: rgb(207, 244, 184);
+    padding: 5px 30px;
+    border-radius: 50px;
+    display: inline-block;
 }
 
 .dev-project-tag-container {
