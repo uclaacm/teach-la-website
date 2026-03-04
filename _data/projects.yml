@@ -10,7 +10,11 @@
       hash: 
   description: "Pen Pals is a React web application geared towards primary school students that teaches basic Python syntax through Python's Turtle library! Pen Pal introduces turning and moving through a level-based game."
   tech:
-  image:
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Bias by us
   wip: false
@@ -24,7 +28,11 @@
       hash: 
   description: "Bias by Us is focused on bias in machine learning: we teach students about different ways that machine learning models can become biased/discriminatory through 3 individual case studies, including feedback loops in personalized advertising."
   tech:
-  image:
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Cookie Jar
   wip: false
@@ -38,7 +46,11 @@
       hash: 
   description: "A lesson to teach kids about web cookies! We're cooking up some ~recipes~ everything from sweet session cookies to zesty third party persistent cookies :0"
   tech:
-  image:
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 #- name: Editor Frontend
 #  wip: false
@@ -158,7 +170,11 @@
   tech:
     - 
     - 
-  image:
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 - name: Algorithm Lab
   wip: true
@@ -173,7 +189,11 @@
   tech:
     - 
     - 
-  image:
+  images:
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
+    - img\projects\project_template.png
 
 #- name: Selector Safari
 #  wip: true
