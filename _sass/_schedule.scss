@@ -1,0 +1,75 @@
+.calendar-container {
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+    max-width: 1000px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.calendar-header {
+    text-align: center;
+    border-color: $teachla-green;
+    border-style: solid;
+    border-width: 5px;
+    padding: 15px;
+    font-size: 1.5em;
+    background-color: #f4f4f4;
+}
+
+.weekdays, .days-grid {
+    border-color: $teachla-green;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Creates 7 equal columns*/
+    gap: 1px;
+}
+
+.weekdays div {
+
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+.days-grid {
+    border-top: 1px solid #ccc;
+}
+
+.calendar-day {
+    border-color: $teachla-green;
+    border-style: solid;
+    border-width: 1px;
+    position: relative; 
+    min-height: 100px;
+    background-color: #fff;
+    padding: 5px; /* Add padding for content */
+    font-size: 16px;
+    color: #3e4e63;
+}
+
+.calendar-day.empty {
+    background-color: #f4f4f4;
+}
+
+.calendar-day span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position the date relative to the parent .calendar-day */
+    top: 5px; /* Moves it to the top */
+    right: 5px; /* Moves it to the right corner */
+    width: 25px;
+    height: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #666;
+}
+
+.calendar-day .event {
+    margin-top: 30px; /* Adjust margin to not overlap with the date */
+    font-size: 0.8em;
+    color: #1abc9c;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
