@@ -33,6 +33,49 @@ permalink: "/projects"
     {% endfor %}
 </div>
 
+<!-- Add functionality to the slideshow mechanic -->
+<script>
+    const slideshows = [];
+
+    function changeSlide(slideshowId, direction) {
+        const index = slideshows.findIndex(slideshow => slideshow.id === slideshowId);
+        if (index === -1) return;
+
+        showSlides(slideshowId, slideshows[index].currentSlide += direction);
+    }
+
+    function showSlides(slideshowId, slideNum) {
+        const index = slideshows.findIndex(slideshow => slideshow.id === slideshowId);
+        if (index === -1) return;
+        
+        const slideshow = document.getElementById(slideshowId);
+        const slides = slideshow.getElementsByClassName("dev-project-slide");
+
+        if (slideshows[index].currentSlide > slides.length) {
+            slideshows[index].currentSlide = 1;
+        }
+
+        if (slideshows[index].currentSlide < 1) {
+            slideshows[index].currentSlide = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideshows[index].currentSlide - 1].style.display = "block";
+    }
+
+    // Initialize all slideshows on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        const sShows = document.getElementsByClassName("dev-project-slideshow");
+        for (let i = 0; i < sShows.length; i++) {
+            slideshows.push({ id: sShows[i].id, currentSlide: 1 });
+            showSlides(sShows[i].id, 1);
+        }
+    });
+</script>
+
 <h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
 <div class="row-desktop-ratio-1-1-1">
     {% assign inProgress = site.data.projects | where:"wip", "true"%}

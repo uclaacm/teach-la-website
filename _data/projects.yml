@@ -10,6 +10,12 @@
       hash: 
   description: "Pen Pals is a React web application geared towards primary school students that teaches basic Python syntax through Python's Turtle library! Pen Pal introduces turning and moving through a level-based game."
   tech:
+    - react
+    - redux
+    - firebase
+    - sass
+    - jest & enzyme
+  image: img\projects\project_template.png
   images:
     - img\projects\project_template.png
     - img\projects\project_template.png
