@@ -6,32 +6,27 @@ permalink: "/projects"
 
 <h1 class="title page-title">Learning Labs</h1>
 
+
+
 <h2 class="title page-title text-center" id="projects"></h2>
 <div class="row-desktop-ratio-1-1-1">
     {% assign finished = site.data.projects | where:"wip", "false" %}
     {% for proj in finished %}
     <div class="dev-project-card">
         <div class="dev-project-card-content">
-            <h3 class="title dev-project-title text-center">
-                {{ proj.name }}
+            <h3 class="title dev-project-title">
+                <h3 class="title dev-project-title text-center">
+                  {{ proj.name }}
+                </h3>
             </h3>
-            <div id="slideshow{{forloop.index}}" class="dev-project-slideshow">
-                {% for image in proj.images %}
-                    <div class="dev-project-slide fade">
-                        <div class="dev-project-image-num">{{forloop.index}} / {{forloop.length}}</div>
-                        <img src="{{image}}" alt="{{proj.name}}" class="dev-project-image">
-                    </div>
-                {% endfor %}
-                <a class="dev-project-slideshow-prev" onclick="changeSlide('slideshow{{forloop.index}}', -1)">&#10094;</a>
-                <a class="dev-project-slideshow-next" onclick="changeSlide('slideshow{{forloop.index}}', 1)">&#10095;</a>
-            </div>
-            <div class="dev-project-info-row">
+            <img src="{{proj.image}}" alt="{{proj.name}}" class="dev-project-image" style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+            <div class="dev-project-info-row" style="background-color: rgb(207, 244, 184); padding: 10px; border-radius: 5px; display: inline-block;">
                 <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
                  •
-                <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
+              <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
             </div>
-            <p class="dev-project-desc text-center">
-                {{proj.description}}
+            <p>
+                <span style="display: block; text-align: center;">{{proj.description}}</span>
             </p>
         </div>
     </div>
