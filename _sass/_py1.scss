@@ -369,3 +369,50 @@
     margin-top: 50px;
     margin-bottom: 0px;
 }
+
+.python-link {
+	@include class-link($py-blue);
+}
+
+.py-lesson-card {
+	@include lesson-card($py-blue);
+}
+
+.button.button-py {
+	@include button-classes($py-blue);
+}
+
+.divider-py {
+	@include divider-class($py-blue);
+}
+
+#desktop-sidebar-py1{
+    top: 80px;
+    width: $ai-desktop-sidebar-total-width - 20px;
+    margin:48px 10px;
+    padding:10px 10px;
+    padding-bottom: 0px;
+    margin-left: 200px;
+    height: calc(100vh - 176px);    //176px is the top position(80px) + the total margin on the top and bottom (48px *2)
+    max-height: 300px;
+    border: solid;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    flex-shrink: 0;
+    border-color: $py-blue;
+    z-index: 1;
+    display:inline-block;
+    @media (max-width: $desktop-width-xl) and (min-width: $desktop-width) {
+        grid-row: 1 / span 2;
+    }
+    @media (max-width: $desktop-width) {
+        display: none;
+    }
+}
+
+#desktop-sidebar-py1 .sidebar-item{
+    padding-bottom: 15px;
+}
