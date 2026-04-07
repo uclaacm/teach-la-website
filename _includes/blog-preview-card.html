@@ -1,17 +1,27 @@
-<a href={{post.url}}>
-  <div class="post-card">
-    <img class="post-card--image" src="{{site.baseurl}}/{{post.image}}" alt="{{post.alt}}" />
-      <div class="post-card--description" >
-         <h4><span>{{post.category}}</span> |   {{post.date | date: "%b %-d, %Y"}}</h4>
-        <h1>{{post.title}}</h1>
-        <h2>by {{post.author}}</h2>
+<div class="blog-entry"
+     data-size="large"
+     data-url="{{ post.url }}"
+     data-category="{{ post.category }}"
+     data-tags="{{ post.tags | join: '|' }}">
+  <a href="{{ post.url }}">
+    <div class="post-card">
+      <img class="post-card--image" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.alt }}" />
+      <div class="post-card--description">
+        <h4>
+          <span>{{ post.category }}</span> | {{ post.date | date: "%b %-d, %Y" }}
+        </h4>
+
+        <h1>{{ post.title }}</h1>
+        <h2>by {{ post.author }}</h2>
         <hr/>
-        <p>{{post.excerpt}}</p>
+        <p>{{ post.excerpt }}</p>
+
         <div class="post-card--tags">
-        {% for tag in post.tags %}
-        <p class="tag">{{tag}}</p>
-        {% endfor %}
+          {% for tag in post.tags %}
+          <p class="tag">{{tag}}</p>
+          {% endfor %}
+        </div>
       </div>
-      </div>
-  </div>
-</a>
+    </div>
+  </a>
+</div>
