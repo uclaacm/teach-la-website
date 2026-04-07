@@ -1,0 +1,31 @@
+$hover: rgba(46, 204, 113, 0.10);
+
+.blog-filter-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 26px 0;
+
+  a.anim_tag {
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    color: black;
+    background: transparent;
+    padding: 0.1em 0.2em;
+    text-align: center;
+
+    &:hover {
+      background: $hover;
+    }
+
+    &.active-tag {
+      background: $teachla-green;
+      color:white;
+      &:hover {
+        background: $teachla-green;
+        border-color: $teachla-green;
+      }
+    }
+  }
+}
