@@ -64,7 +64,7 @@ When our editor went down (it ultimately was revealed as an issue of unpaid subs
 
 Clara, Anusha, and their team moved on from Python turtle to Python data structures! Their quarter was filled with arrays, lists, tuples, dictionaries, stacks, and queues! Their team also had some significant bonding by being involved in an Uber court case???
 
-![Beethoven Memory]({{site.baseurl}}/img/posts/26-winter-quarter-review/beethoven.png)
+![Beethoven Memory]({{site.baseurl}}/img/posts/26-winter-quarter-review/beethoven.jpg)
 
 ## React
 
@@ -74,7 +74,7 @@ Michael and Shayla tried finding a new school...AND THEY DID IT! Now, they're go
 
 When the editor went down, Javier and Bhavesh were very concerned. They had switched from teaching Python Turtle to teaching Web Dev (specifically HTML and CSS). Yet, they found a workaround: using W3Schools to let the kids make their own website using HTML. Their plans were thrown a bit off course, but adaptation was possible. Oh, and the brainrot continued, duh. 
 
-![brain rot knowledge from emerson team]({{site.baseurl}}/img/posts/26-winter-quarter-review/emerson.png)
+![brain rot knowledge from emerson team]({{site.baseurl}}/img/posts/26-winter-quarter-review/emerson.jpg)
 
 ## Conclusion
 
