@@ -1,85 +1,81 @@
 ---
 layout: post
-title: "'25 Fall Quarter Review"
-date: 2026-02-01 05:00:00 UTC
-author: Thomas
+title: "'26 Winter Quarter Review"
+date: 2026-04-15 05:00:00 UTC
+author: Javier
 authors:
-  - Thomas Ye
+  - Javier Castañeda
 category: quarter-review
 tags:
   - blog
   - reflection
   - quarter-review
-image: img/posts/25-fall-quarter-review/cover.png
-alt: Series of pictures full of memory!
+image: img/posts/26-winter-quarter-review/cover.jpg
+alt: Picture from banquet!
 ---
 
-As the final autumn leaf drifted to the ground, the Fall Quarter of 2025 came to a close. Over these months, our teams created countless memories and meaningful accomplishments that we are excited to share with you, and that leads to our new quarter review blog!!! Every effort, challenge, and success played an important role in shaping our journey. So let's begin!
+This Winter Quarter of 2026, Teach LA entered its WINTER ARC. Dev Team continued producing their superb educational programs, reaching new area topics designed for the needs of the contemporary youth, while Curriculum also chartered new courses. This quarter was not of complacency, but rather of reaching towards the STARS. The winter nights can get lonely, but with Teach LA by our sides, I think our members would agree the ostensibly difficult winter was a whole lot more fun. 
 
-- [Cookie Jar](#cookie-jar) - Dev Team
+- [Bot Lab](#bot-lab) - Dev Team
 - [Static Site](#static-site) - Dev Team
-- [Bias By Us](#bias-by-us) - Dev Team
-- [Training Team](#training-team) - Dev Team
+- [Algorithm Team](#algorithm-team) - Dev Team
+- [Interns](#training-team) - Dev Team
 - [Fairburn](#fairburn) - Curriculum Team
 - [Beethoven](#beethoven) - Curriculum Team
 - [React](#react) - Curriculum Team
 - [Emerson](#emerson) - curriculum Team
 - [Conclusion](#conclusion)
 
-## Cookie Jar
+## Bot Lab
 
-Get ready! Our delicious cookies are fresh out of the oven! Cookie Jar is a playful yet educational project designed to teach students about the cookies they encounter every day while browsing the web. From helpful cookies such as session cookies—which improve efficiency and security—to harmful ones like zombie cookies that track and harvest user data, Cookie Jar helps students understand both sides of this digital technology.
+We all know that feeling. You're doomscrolling Reels (becuase we ALL do that), and suddenly you get a notification: someone has requested to follow you! You're excited (who's this new person interested in my life???) until you check the username and it's juliaxxx29867. BOT ALERT! 
 
-![Cookie Jar Stage Preview]({{site.baseurl}}/img/posts/25-fall-quarter-review/cookie.png)
+That's disappointing, but at least you can identify who the bot is. Young kids nowadays, though, may not have developed that crucial online literacy. To help with that, the Bot Lab Team has cooked up a NEW project, crafting a lot of new components from scratch. Part of this lab is two games: a maze game called the SLAM Gam, and an educational "Is This a Robot?" game. It's all very cute, may I add.
 
-Throughout development, Mirabel and her team faced the challenge of building a full-stack website with user login and signup functionality all within a single quarter, but they have mastered the art of baking. The team successfully crafted 6–7 distinct game stages, implemented a reward system that allows players to purchase in-game cookies, and designed a charming, approachable interface. With winter approaching, now is the perfect time to visit Cookie Jar and explore some digital flavors you may have never encountered before.
+![Bot Lab Stage Preview]({{site.baseurl}}/img/posts/26-winter-quarter-review/bot lab.jpg)
 
 ## Static Site
 
-As our most important online platform, the Teach-LA Static Site continues to evolve and improve. This quarter, Static Site Director Jishan and his development team focused on refining the user experience and modernizing the website to reflect our current curriculum and organization.
+This quarter, it was all about healing for Static Site. We redesigned our project page, added a schedule page, and even brought back our blogs! There was some obstacles, such as lower attendance, but nevertheless, we stuck the landing.
 
-![Event Page]({{site.baseurl}}/img/posts/25-fall-quarter-review/site.png)
+![Static Site Page]({{site.baseurl}}/img/posts/26-winter-quarter-review/inception.png)
 
-Their work included fixing minor bugs, redesigning the Classes and About Us pages, revamping the Blog and Team pages to resolve formatting issues, and creating a brand-new Events page to showcase our past activities. Despite being a team of mostly new members, strong communication and an agile workflow allowed them to achieve their goals successfully. As Jishan proudly put it, “Agile to save the day.”
+## Algorithm Team
 
-## Bias By Us
+Do you want to be unemployed? 
 
-Our identities, shaped by background, family, religion, ethnicity, and experiences, make each of us unique. At the same time, they also influence our behavior, decisions, and perspectives, often without us realizing it. This is the central idea behind Bias By Us, a project developed by Manager Charlene and her team.
+Everyone will answer "No," but everyday you don't do your LeetCode, you're basically saying "Yes." However, LeetCode and DSAs are kind of difficult to master. So why not start them young? This lab is meant to help young people learn DSA in a fun and creative way! SOme of the algorithms we cover (through games and fun activities) include BFS, merge sort, and binary search!
 
-![Bias Example]({{site.baseurl}}/img/posts/25-fall-quarter-review/bias.png)
+![Algo Page]({{site.baseurl}}/img/posts/26-winter-quarter-review/linear search.png)
 
-Through interactive sessions such as case studies, research analysis, and a survey-based game, students learn how bias can affect everyday choices, including something as simple as food preferences. By the end of the experience, students gain a deeper understanding of how bias shapes our viewpoints and why people may arrive at different decisions. Ultimately, the project encourages reflection, empathy, and self-awareness.
+## Interns
 
-## Training Team
+Our Dev Team Interns had some fascinating projects. From AI-powered college recommendations, to awesome Figma Designs (what the Figma?), to backend visualizations. Our interns were cooking like 5 star Michellin chefs. We were eating good. 
 
-Stories will be passed down, and so is knowledge! This quarter, Training Director Megan guided 14 students as they took their first steps into frontend development. Despite a shorter schedule due to breaks, the team covered the fundamentals of HTML, CSS, JavaScript, React, and Git.
-
-Every one of them demonstrated strong progress, earning an impressive average score of 11 out of 12 on the knowledge assessment and completing a final mini-project. We are excited to see these students continue building their skills and look forward to welcoming even more learners in future quarters.
+![Intern Page]({{site.baseurl}}/img/posts/26-winter-quarter-review/figma.png)
 
 ## Fairburn
 
-In their very first quarter working with students, Lead Neil, Tiffanny, and their team focused on building strong connections—both with their students and within the team itself. Lessons were filled with fun and creativity, including activities like a candy cane drawing competition that helped foster engagement and creativity.
+When our editor went down (it ultimately was revealed as an issue of unpaid subscriptions), our Fairbun team (Tiff and Neil) faced an interesting challenge. How would they continue teaching kids about Python loops and variables without an active IDE? However, being the intelligent teachers they are, they settled on using fun worksheets to continue educating their students. Hats off to them, may they have luck in the post-grad world!
+
+![Intern Page]({{site.baseurl}}/img/posts/26-winter-quarter-review/fairburn.jpg)
 
 ## Beethoven
 
-Led by Clara and Anusha, the Beethoven team introduced students to Python Turtle fundamentals. Throughout the quarter, students learned basic turtle commands, loops, variables, and conditional statements. According to the team, the most meaningful moments came from getting to know each student’s personality and learning style.
+Clara, Anusha, and their team moved on from Python turtle to Python data structures! Their quarter was filled with arrays, lists, tuples, dictionaries, stacks, and queues! Their team also had some significant bonding by being involved in an Uber court case???
 
-![Beethoven Memory]({{site.baseurl}}/img/posts/25-fall-quarter-review/beethoven.png)
+![Beethoven Memory]({{site.baseurl}}/img/posts/26-winter-quarter-review/beethoven.png)
 
 ## React
 
-Due to scheduling conflicts with their partner high school, the React curriculum team temporarily paused instruction this quarter. However, School Lead Michael and Curriculum Lead Shayla are already working on finding a new school partner and look forward to resuming classes soon.
-
-![School Search]({{site.baseurl}}/img/posts/25-fall-quarter-review/react.png)
+Michael and Shayla tried finding a new school...AND THEY DID IT! Now, they're going to be teaching at Whitman High School. That's not all, folks, as they'll be moving on from React to the Unity Game Engine! Only thing more awesome than this is Chainsaw Man! 
 
 ## Emerson
 
-With many returning students from last year, School Lead Javier and Bhavesh reviews Python turtle concepts with a flash, the team creatively incorporated current internet humor and “brain-rot” references into lessons, making the material more relatable and enjoyable. Looking ahead, the team plans to transition into HTML and CSS, giving students an exciting new way to continue learning code.
+When the editor went down, Javier and Bhavesh were very concerned. They had switched from teaching Python Turtle to teaching Web Dev (specifically HTML and CSS). Yet, they found a workaround: using W3Schools to let the kids make their own website using HTML. Their plans were thrown a bit off course, but adaptation was possible. Oh, and the brainrot continued, duh. 
 
-![brain rot knowledge from emerson team]({{site.baseurl}}/img/posts/25-fall-quarter-review/emerson.png)
+![brain rot knowledge from emerson team]({{site.baseurl}}/img/posts/26-winter-quarter-review/emerson.png)
 
 ## Conclusion
 
-As the blog comes to an end, we are incredibly proud of the dedication, creativity, and growth demonstrated across all teams. From innovative web projects to meaningful student interactions, this quarter was filled with fun, progress and purpose. With these experiences behind us, we will move into the next quarter with hope, ready to build even more impactful learning opportunities together!
-
-![group picture]({{site.baseurl}}/img/posts/25-fall-quarter-review/group.jpg)
+All roads lead to Rome...and Teach LA! This quarter has had its ups and downs, from attendance to editor outages, but our teams have continued to strive in the midst of it all. Give a round of applause to our Teach LA teams! See y'all for the Spring recap! 
