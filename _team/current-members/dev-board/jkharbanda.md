@@ -1,7 +1,7 @@
 ---
 name: "Jishan Kharbanda"
 group: "dev board"
-title: "Static Site Director"
+title: "Dev President"
 pronouns: "he/him"
 img: "jkharbanda.jpg"
 graduating_year: 2027
