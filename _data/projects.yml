@@ -15,12 +15,10 @@
     - firebase
     - sass
     - jest & enzyme
-  image: img\projects\project_template.png
   images:
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
+    - img\projects\Pen_Pals1.png
+    - img\projects\Pen_Pals2.png
+    - img\projects\Pen_Pals3.png
 
 - name: Bias by us
   wip: false
@@ -35,10 +33,9 @@
   description: "Bias by Us is focused on bias in machine learning: we teach students about different ways that machine learning models can become biased/discriminatory through 3 individual case studies, including feedback loops in personalized advertising."
   tech:
   images:
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
+    - img\projects\bias1.png
+    - img\projects\bias2.png
+    - img\projects\bias3.png
 
 - name: Cookie Jar
   wip: false
@@ -48,15 +45,13 @@
   link: https://cookie-jar.netlify.app/
   repo: uclaacm/cookie-jar
   lead:
-    - name: 
+    - name: Mirabel Vuong
       hash: 
   description: "A lesson to teach kids about web cookies! We're cooking up some ~recipes~ everything from sweet session cookies to zesty third party persistent cookies :0"
   tech:
   images:
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
+    - img\projects\cookie1.png
+    - img\projects\cookie2.png
 
 #- name: Editor Frontend
 #  wip: false
@@ -171,17 +166,16 @@
   repo: 
   description: ""
   lead:
-    - name: 
+    - name: Karen
       hash: 
   tech:
     - 
     - 
   images:
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-
+    - 
+    - 
+    - 
+    - 
 - name: Algorithm Lab
   wip: true
   lang:
@@ -190,16 +184,18 @@
   repo: 
   description: ""
   lead:
-    - name: 
+    - name: Kevin
+      hash: 
+    - name: Rohan
       hash: 
   tech:
     - 
     - 
   images:
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
-    - img\projects\project_template.png
+    -
+    - 
+    - 
+    - 
 
 #- name: Selector Safari
 #  wip: true
