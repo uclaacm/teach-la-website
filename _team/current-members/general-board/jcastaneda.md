@@ -1,7 +1,7 @@
 ---
 name: "Javier Castaneda"
 group: "general board"
-title: "School Lead"
+title: "Curriculum Co-President"
 pronouns: "he/him"
 img: "jcastaneda.jpg"
 graduating_year: 2027
