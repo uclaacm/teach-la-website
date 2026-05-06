@@ -164,7 +164,7 @@
     full: 
     abbrev: 
   repo: 
-  description: ""
+  description: "An intro interactive lab to teach kids about robots! From sensing from the environment to planning and acting, we’ve got colorful games and lessons to introduce wide concepts!"
   lead:
     - name: Karen
       hash: 
