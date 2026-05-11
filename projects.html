@@ -6,8 +6,6 @@ permalink: "/projects"
 
 <h1 class="title page-title">Learning Labs</h1>
 
-
-
 <h2 class="title page-title text-center" id="projects"></h2>
 <div class="row-desktop-ratio-1-1-1">
     {% assign finished = site.data.projects | where:"wip", "false" %}
@@ -19,12 +17,30 @@ permalink: "/projects"
                   {{ proj.name }}
                 </h3>
             </h3>
-            <img src="{{proj.image}}" alt="{{proj.name}}" class="dev-project-image" style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+            <div class="dev-project-slideshow" id="slideshow-{{forloop.index}}">
+                {% for image in proj.images %}
+                <div class="dev-project-slide">
+                    <img src="{{image}}" alt="{{proj.name}}" class="dev-project-image" style="width: 100%; height: auto; max-height: 200px; object-fit: contain;">
+                </div>
+                {% endfor %}
+                <a class="dev-project-slideshow-prev" onclick="changeSlide('slideshow-{{forloop.index}}', -1)">&#10094;</a>
+                <a class="dev-project-slideshow-next" onclick="changeSlide('slideshow-{{forloop.index}}', 1)">&#10095;</a>
+            </div>
             <div class="dev-project-info-row" style="background-color: rgb(207, 244, 184); padding: 10px; border-radius: 5px; display: inline-block;">
                 <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
                  •
               <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
             </div>
+            {% if proj.lead %}
+            <p>
+                Lead(s):
+                {% for lead in proj.lead %}
+                    <a class="tla-link" href="{{site.baseurl}}/team/{{lead.hash}}">
+                        {{lead.name}}
+                    </a>{% if forloop.last != true %},{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
             <p>
                 <span style="display: block; text-align: center;">{{proj.description}}</span>
             </p>
@@ -76,26 +92,22 @@ permalink: "/projects"
     });
 </script>
 
-<h2 class="title page-title text-center"id="WIP">Stuff that's in the works</h2>
+<h2 class="title page-title text-center" id="WIP">Stuff that's in the works</h2>
 <div class="row-desktop-ratio-1-1-1">
-    {% assign inProgress = site.data.projects | where:"wip", "true"%}
-    {% for proj in inProgress %}
+    {% assign finished = site.data.projects | where:"wip", "true" %}
+    {% for proj in finished %}
     <div class="dev-project-card">
         <div class="dev-project-card-content">
             <h3 class="title dev-project-title">
-                {{ proj.name }}
+                <h3 class="title dev-project-title text-center">
+                  {{ proj.name }}
+                </h3>
             </h3>
-            <div class="dev-project-info-row">
-                <span class="dev-project-badge lang-{{proj.lang.abbrev}}"></span> {{proj.lang.full}} •
-                {% if proj.link %}
-                    <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
-                    •
-                {% endif %}
-                <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
+            <div class="dev-project-info-row" style="background-color: rgb(207, 244, 184); padding: 10px; border-radius: 5px; display: inline-block;">
+                <a class="tla-link" href="{{proj.link}}"><span class="fa fa-link"></span> project</a>
+                 •
+              <a class="tla-link" href="https://github.com/{{proj.repo}}"><span class="fab fa-github"></span> repo</a>
             </div>
-            <p>
-                {{proj.description}}
-            </p>
             {% if proj.lead %}
             <p>
                 Lead(s):
@@ -106,18 +118,12 @@ permalink: "/projects"
                 {% endfor %}
             </p>
             {% endif %}
-        </div>
-
-        <div class="dev-project-tech-container">
-            {% for tech in proj.tech %}
-            <span class="dev-project-tech-tag">
-                {{tech}}
-            </span>
-            {% endfor %}
+            <p>
+                <span style="display: block; text-align: center;">{{proj.description}}</span>
+            </p>
         </div>
     </div>
     {% endfor %}
 </div>
-
 
 {% include contact-cta.html %}
