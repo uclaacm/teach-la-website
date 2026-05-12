@@ -9,9 +9,54 @@ permalink: /event/
 We love creating, learning, and connecting, and we'd like to share it with you!
 Here are some of the events we've hosted and joined to teach, grow, and support our community.
 </p>
-<div class="events top-padding">
-  {% assign event_count = 0 %}
-  {% for event in site.events %}
-    {% include event-preview-card.html %}
-  {% endfor %}
-</div>
+
+
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign events_by_date = site.events | sort: "event_date" %}
+
+<section class="event-section top-padding">
+  <h2 class="event-section-title">Upcoming Events</h2>
+
+  <div class="events">
+    {% assign upcoming_count = 0 %}
+
+    {% for event in events_by_date %}
+      {% if event.event_date %}
+        {% assign event_day = event.event_date | date: "%Y-%m-%d" %}
+
+        {% if event_day >= today %}
+          {% assign upcoming_count = upcoming_count | plus: 1 %}
+          {% include event-preview-card.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if upcoming_count == 0 %}
+      <p class="event-empty">No upcoming events :'( Check back soon!</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="event-section">
+  <h2 class="event-section-title">Past Events</h2>
+
+  <div class="events">
+    {% assign past_count = 0 %}
+    {% assign reverse_events_by_date = events_by_date | reverse %}
+
+    {% for event in reverse_events_by_date %}
+      {% if event.event_date %}
+        {% assign event_day = event.event_date | date: "%Y-%m-%d" %}
+
+        {% if event_day < today %}
+          {% assign past_count = past_count | plus: 1 %}
+          {% include event-preview-card.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if past_count == 0 %}
+      <p class="event-empty">No past events???</p>
+    {% endif %}
+  </div>
+</section>
