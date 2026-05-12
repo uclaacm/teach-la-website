@@ -1,0 +1,61 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: local_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: local_backend
+    environment:
+      - DATABASE_URL=postgresql://myuser:mypassword@db:5432/mydb?schema=public
+    depends_on:
+      - db
+    volumes:
+      # Local volume mounts for hot-reloading code on your Mac!
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+
+  next_frontend:
+    build: 
+      context: ./next-frontend
+      dockerfile: Dockerfile
+    container_name: local_nextjs
+    environment:
+      - API_URL=http://backend:4000/api
+      # Notice this uses the proxy path now, not localhost:4000!
+      - NEXT_PUBLIC_API_URL=/api 
+    depends_on:
+      - backend
+    volumes:
+      - ./next-frontend:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    container_name: local_proxy
+    ports:
+      # Binds your Mac's port 80 directly to Nginx
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - next_frontend
+      - backend
+
+volumes:
+  pgdata:

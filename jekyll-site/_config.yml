@@ -54,28 +54,28 @@ collections:
   posts:
     permalink: /blog/:categories/:year/:month/:day/:title/
   aiml:
-    permalink: /classes/ml/:name
+    permalink: /classes/ml/:name/
     output: true
   rnative:
-    permalink: /classes/rnative/:name
+    permalink: /classes/rnative/:name/
     output: true
   docs:
     output: true
-    permalink: /docs/:name
+    permalink: /docs/:name/
   py1:
-    permalink: /classes/py1/:name
+    permalink: /classes/py1/:name/
     output: true
   reports:
     output: true
-    permalink: /reports/:name
+    permalink: /reports/:name/
   team:
     output: true
-    permalink: /team/:name
+    permalink: /team/:name/
   events:
     output: true
 
 # Configure category pages plugin here
-permalink: /:year/:month/:day/:title:output_ext #gets rid of index.html from category page links (probably)
+permalink: pretty
 category_path: "/blog/category" # sets folder for category pages to be located
 # category_layout: "category_index.html" # <- default value
 paginate: 3 # <- turn on pagination with 3 posts per page

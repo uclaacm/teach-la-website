@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+    id          String  @id @default(uuid())
+    email       String  @unique
+    username    String  @unique
+    // salted and hashed
+    password    String
+    role        Role    @default(USER)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    blogPosts   Blog[]
+    classes     Class[]
+    projects    Project[]
+
+}
+
+model Blog {
+    id          String      @id @default(uuid())  
+    slug        String      @unique
+    category    String
+    tags        String[]
+    content     String      @db.Text
+    // store image path
+    image       String
+    // description of the cover image for accessibility
+    altText     String
+
+    createdAt   DateTime    @default(now())
+    updatedAt   DateTime    @updatedAt
+
+    
+    // If the author of the blog post is not someone with a registered account
+    // i.e, if they have graduated and wrote the blog post before our migration
+    // We would like to include their names still as authors
+    // authorNames serves as a fallback when authors is empty
+    authors     User[]    
+    authorNames String[]
+
+    @@index([slug])
+}
+
+model Class {
+    id          String      @id @default(uuid())
+    name        String
+    shortTitle String
+    blurb       String
+    image       String
+    tags        String[]
+    goals       String[]
+
+    // /classes/path gives us the class page
+    path        String?
+
+    // optional link to a document describing the class
+    outline     String?
+
+    // optional github repo link
+    github      String?
+
+    teachers    User[]
+    schools     School[]
+}
+
+model School {
+    id          String      @id @default(uuid())
+
+    name        String
+
+    // link to school website
+    link        String
+
+    classes     Class[]
+}
+
+model Project {
+    id          String      @id @default(uuid())
+    wip         Boolean
+    // url to project
+    link        String?
+    // url to github repo
+    github      String
+    description String      @db.Text
+
+
+    // Same pattern as above, leadNames is used if there are project leads that do not have an account
+    leads       User[]
+    leadNames   String[]
+
+    // possibly multiple paths to images that display as a slideshow
+    images      String[]
+}
+
+model Event {
+    id          String      @id @default(uuid())
+    title       String      
+    category    String
+    description String
+    tags        String[]
+
+    // image link in site
+    image       String
+
+    // description of image for accessibility
+    altText     String
+
+    // link to full event page
+    link        String
+}
+
+enum Role {
+    USER
+    ADMIN
+}

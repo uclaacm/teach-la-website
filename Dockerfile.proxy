@@ -1,0 +1,27 @@
+# Dockerfile.proxy
+
+# --- Stage 1: Build the Jekyll Site ---
+FROM ruby:3.2-slim as jekyll-builder
+
+RUN apt-get update && apt-get install -y build-essential git
+
+WORKDIR /srv/jekyll
+# Copies your raw Jekyll files and compiles the static HTML
+COPY ./jekyll-site .
+
+# Rebuild the lockfile to avoid operating system issues
+RUN rm -f Gemfile.lock
+RUN bundle install
+
+
+RUN bundle exec jekyll build
+
+# --- Stage 2: Setup Nginx ---
+FROM nginx:alpine
+# Copies the compiled HTML into the Nginx serving directory
+COPY --from=jekyll-builder /srv/jekyll/_site /usr/share/nginx/html
+# Copies the traffic rules
+COPY ./nginx.local.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+EXPOSE 443
