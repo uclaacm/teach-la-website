@@ -1,6 +1,7 @@
 import express from 'express';
 // CRITICAL: Remember the .js extension for local file imports in NodeNext!
 import userRoutes from './routes/user.js'; 
+import eventRoutes from './routes/event.js';
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 // --- Route Mounting ---
 // When a request comes in starting with /users, hand it off to userRoutes
 app.use('/users', userRoutes);
+app.use('/events', eventRoutes);
 
 // You can easily mount future routes here:
 // import postRoutes from './routes/postRoutes.js';
