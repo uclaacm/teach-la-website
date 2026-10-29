@@ -1,0 +1,23 @@
+# the schedule page builds the current month from this file, so you only touch it when
+# the classes themselves change (not when the month does).
+#
+# weekly classes show up on that weekday every week. time, link, start and end are all
+# optional. start/end are "YYYY-MM-DD" and keep a class off the calendar outside its
+# quarter, otherwise it'd keep showing up all summer.
+weekly:
+  - name: Python at Beethoven
+    day: Thursday
+    time: "3:30-5:30PM"
+
+  - name: Python at Emerson
+    day: Friday
+    time: "8:05-8:50AM"
+
+  - name: Palisades COMING SOON
+    day: Monday
+
+# one-off events only show up on their exact date, e.g.
+#  - name: Project Bruin
+#    date: "2026-11-13"
+#    link: /events
+one_off: []
