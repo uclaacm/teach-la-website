@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function UsersPage() {
-  // State to hold the data from PostgreSQL
+    // fix the typing on this later
   const [users, setUsers] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +34,7 @@ export default function UsersPage() {
   }, []);
 
   // 2. Submit the data (POST)
-  const handleCreateUser = async (e: React.FormEvent) => {
+  const handleCreateUser = async (e: React.SubmitEvent) => {
     console.log("BUTTON WAS CLICKED");
     e.preventDefault(); // Prevents the browser from refreshing the page
     setLoading(true);
@@ -145,7 +145,7 @@ export default function UsersPage() {
           }}>
             <pre style={{ margin: 0, whiteSpace: 'pre-wrap' }}>
               {users.length === 0 
-                ? "No users found in PostgreSQL." 
+                ? "No users found in DB." 
                 : JSON.stringify(users, null, 2)}
             </pre>
           </div>

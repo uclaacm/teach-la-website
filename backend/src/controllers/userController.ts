@@ -1,33 +1,25 @@
 import { Request, Response } from "express";
-import prisma from '../prisma.client.js'
+import mongoose from 'mongoose';
+import { User } from "../models/User";
 
 
 export async function getUsers(request: Request, response: Response) 
 {
-    const allUsers = await prisma.user.findMany({});
-    response.json(allUsers);
+    try {
+        const users = await User.find({});
+        response.json(users);
+    } catch (error) {
+        response.status(500).json({error: "Failed to fetch users" });
+    }
 }
 
 export async function createUser(request: Request, response: Response)
 {
-    const req_data = request.body;
-
     try {
-        const user = await prisma.user.create({
-            data: {
-                email: req_data.email,
-                username: req_data.username,
-                password: req_data.password,
-            },
-        });
-        response.status(201).json({
-            message: "user created",
-            email: user.email,
-            username: user.username,
-            password: user.password, 
-        })
+        const { email, username, password } = request.body;
+        const newUser = await User.create({ email, username, password });
+        response.status(201).json(newUser);
     } catch (error) {
-        console.log("Failed to create user: ", error);
-        response.status(500).json({ error: "failed to create user"});
-    }
+        response.status(500).json({ error: "Failed to create user" });
+  }
 }
