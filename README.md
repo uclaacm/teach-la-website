@@ -1,6 +1,33 @@
 
 # Teach LA Website
 
+Heya there, this is ACM Teach LA's website! It's goal is to give Teach LA a more formal online presence, and to create a one-stop shop for prospective tutors and schools to get more information about us!
+
+The website is built using a MERN stack, and hosted on ACM UCLA's servers!
+
+# Setup Instructions
+
+### Prerequisites
+
+You must have Docker installed and running on your device, usually as Docker Desktop for macOS or Windows, and `docker-engine` and `docker-compose-plugin` for Linux users.
+
+### For Windows users
+Ensure you have Docker Desktop installed with the WSL2 backend enabled in the settings.
+
+Also ensure you have run `git config --global core.autocrlf false` before cloning
+
+### Build instructions
+
+Navigate to the root of this directory, where the `docker-compose.yml` file is stored.
+
+Navigate to `\backend` and create a `.env` file, and set `MONGODB_URI=mongodb://mongo:27017/teachla` (used for development)
+
+Now run `docker-compose up -d --build`, and navigate to `http://localhost` in your web browser to see the website.
+
+
+# Old README
+
+
 ![Test Jekyll Build](https://github.com/uclaacm/teach-la-website/workflows/Test%20Jekyll%20Build/badge.svg)
 [![Site Up Status](https://img.shields.io/website?url=https%3A%2F%2Fteachla.uclaacm.com)](https://teachla.uclaacm.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d79c1e55-71c6-45c5-8938-f0ffe477e8a3/deploy-status)](https://app.netlify.com/sites/unruffled-perlman-fe51d2/deploys)
