@@ -1,5 +1,3 @@
-import mongoose from "mongoose";
-
 export interface IClass {
     _id?: string,
     name: string;
@@ -9,9 +7,9 @@ export interface IClass {
     tags?: string[];
     classPagePath?: string;
     githubRepoLink?: string;
-    teachers: mongoose.Types.ObjectId[];
+    teachers: string[];
     dates: string[];
-    schools?: mongoose.Types.ObjectId[];
+    schools?: string[];
     isPublic: boolean;
 }
 
@@ -23,10 +21,10 @@ export interface IUser {
 }
 
 export interface IEvent {
-    _id?: string,
+    _id: string,
     name: string,
     category: string,
-    descripton: string,
+    description: string,
     tags: string[],
     imagePath: string,
     altText: string,
@@ -34,6 +32,10 @@ export interface IEvent {
     isPublic: boolean
     eventPagePath?: string
 }
+
+export type EventInput = Omit<IEvent, "_id" | "eventPagePath"> & {
+    eventPagePath?: string | null;
+};
 
 export interface ICalendarDayData {
     day: number,

@@ -1,181 +1,113 @@
 'use client';
 
-import { fetchEvents } from '@/services/api';
-import { useCallback, useEffect, useState} from 'react';
+import { useEffect, useState } from "react";
+import { fetchEvents } from "@/services/api";
+import type { IEvent } from "@/types";
+import EventEditor from "./eventEditor";
+import styles from "./events.module.css";
 
-export default function CalendarPage() {
-    const [events, setEvents] = useState<any[]>([]);
+const eventDateFormat = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "medium",
+    timeZone: "UTC",
+});
 
-    const [name, setName] = useState<string>();
-    const [category, setCategory] = useState<string>();
-    const [description, setDescription] = useState<string>();
-    const [tags, setTags] = useState<string[]>();
-    const [imagePath, setImagePath] = useState<string>();
-    const [altText, setAltText] = useState<string>();
-    const [date, setDate] = useState<string>();
-    const [isPublic, setIsPublic] = useState<boolean>(false);
-
-    const clearForm = useCallback(() => {
-        setName('');
-        setCategory('');
-        setDescription('');
-        setTags([]);
-        setImagePath('');
-        setAltText('');
-        setDate('');
-        setIsPublic(false);
-    }, []);
-
-
-    
+export default function EventsPage() {
+    const [events, setEvents] = useState<IEvent[] | null>(null);
+    const [loadError, setLoadError] = useState("");
+    const [loadAttempt, setLoadAttempt] = useState(0);
+    const [editor, setEditor] = useState<{ event?: IEvent } | null>(null);
+    const [status, setStatus] = useState("");
 
     useEffect(() => {
-        const loadEvents = async () => {
-            const data = await fetchEvents();
-            if(data) setEvents(data);
-        }
-        loadEvents();
-    }, [])
+        const controller = new AbortController();
+        fetchEvents(controller.signal).then(setEvents).catch((error) => {
+            if (!controller.signal.aborted) setLoadError(error.message);
+        });
+        return () => controller.abort();
+    }, [loadAttempt]);
 
-    const handleCreateEvent = async (e: React.SubmitEvent) => {
-        console.log("BUTTON WAS CLICKED");
-        e.preventDefault();
+    function openEditor(event?: IEvent) {
+        setStatus("");
+        setEditor({ event });
+    }
 
-        try {
-            const response = await fetch('/api/events', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    name, 
-                    category, 
-                    description, 
-                    tags, 
-                    imagePath, 
-                    altText, 
-                    date: (date ? new Date(date): null), 
-                    isPublic
-                }),
-            });
-            if (response.ok) {
-                clearForm();
-                await fetchEvents();
-            } else {
-                console.error("Failed to create event");
+    function handleSaved(event: IEvent) {
+        setEvents((current) => {
+            const events = current ?? [];
+            if (events.some(({ _id }) => _id === event._id)) {
+                return events.map((item) => item._id === event._id ? event : item);
             }
-        } catch (error) {
-            console.error("Error:  ", error);
-        }
+            return [...events, event];
+        });
+        setStatus(editor?.event ? "Event updated." : "Event created.");
     }
 
     return (
-    <div className="events-page-container">
-      {/* --- EVENT LIST SECTION --- */}
-      <section className="events-list-section">
-        <h2>All Events</h2>
-        {events.length === 0 ? (
-          <p>No events found.</p>
-        ) : (
-          <ul>
-            {events.map((event, index) => (
-              // Use event._id if you have it from Mongoose, otherwise fallback to index
-              <li key={event._id || index}>
-                <h3>{event.name} {event.isPublic && "🌍"}</h3>
-                <p><strong>Category:</strong> {event.category}</p>
-                <p><strong>Date:</strong> {event.date ? new Date(event.date).toLocaleDateString() : 'TBD'}</p>
-                <p>{event.description}</p>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+        <main className={styles.page}>
+            <div className={styles.content}>
+                <header className={styles.pageHeader}>
+                    <h1>Events</h1>
+                    <button
+                        className={styles.primaryButton}
+                        type="button"
+                        disabled={events === null}
+                        onClick={() => openEditor()}
+                    >
+                        Create Event
+                    </button>
+                </header>
 
-      <hr />
-
-      {/* --- CREATE EVENT FORM SECTION --- */}
-      <section className="create-event-section">
-        <h2>Create New Event</h2>
-        
-        {}
-        <form onSubmit={handleCreateEvent} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px'}}>
-          
-          <label>
-            Event Name:
-            <input 
-              type="text" 
-              value={name || ""} 
-              onChange={(e) => setName(e.target.value)} 
-              required 
-            />
-          </label>
-
-          <label>
-            Category:
-            <input 
-              type="text" 
-              value={category || ""} 
-              onChange={(e) => setCategory(e.target.value)} 
-            />
-          </label>
-
-          <label>
-            Description:
-            <textarea 
-              value={description || ""} 
-              onChange={(e) => setDescription(e.target.value)} 
-              rows={4}
-            />
-          </label>
-
-          <label>
-            Tags (comma separated):
-            <input 
-              type="text" 
-              // Join the array for display, split into array on change
-              value={tags ? tags.join(", ") : ""} 
-              onChange={(e) => setTags(e.target.value.split(",").map(tag => tag.trim()))} 
-              placeholder="music, outdoor, free"
-            />
-          </label>
-
-          <label>
-            Image Path / URL:
-            <input 
-              type="text" 
-              value={imagePath || ""} 
-              onChange={(e) => setImagePath(e.target.value)} 
-            />
-          </label>
-
-          <label>
-            Image Alt Text:
-            <input 
-              type="text" 
-              value={altText || ""} 
-              onChange={(e) => setAltText(e.target.value)} 
-            />
-          </label>
-
-          <label>
-            Date:
-            <input 
-              type="date" 
-              value={date || ""} 
-              onChange={(e) => setDate(e.target.value)} 
-            />
-          </label>
-
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <input 
-              type="checkbox" 
-              checked={isPublic} 
-              onChange={(e) => setIsPublic(e.target.checked)} 
-            />
-            Make this event public
-          </label>
-
-          <button type="submit">Submit Event</button>
-        </form>
-      </section>
-    </div>
-  );
+                <p className={styles.status} role="status">{status}</p>
+                {events === null && !loadError && <p role="status">Loading events…</p>}
+                {loadError && (
+                    <div className={styles.loadError}>
+                        <p role="alert">{loadError}</p>
+                        <button className={styles.button} type="button" onClick={() => {
+                            setLoadError("");
+                            setLoadAttempt((attempt) => attempt + 1);
+                        }}>
+                            Retry
+                        </button>
+                    </div>
+                )}
+                {events?.length === 0 && <p className={styles.empty}>No events yet.</p>}
+                {events && events.length > 0 && (
+                    <ul className={styles.eventList}>
+                        {events.map((event) => (
+                            <li key={event._id} className={styles.event}>
+                                <div className={styles.eventDetails}>
+                                    <h2>{event.name}</h2>
+                                    <div className={styles.metadata}>
+                                        <time dateTime={event.date.slice(0, 10)}>
+                                            {eventDateFormat.format(new Date(event.date))}
+                                        </time>
+                                        <span>{event.category}</span>
+                                        <span className={event.isPublic ? styles.public : styles.private}>
+                                            {event.isPublic ? "Public" : "Private"}
+                                        </span>
+                                    </div>
+                                    <p className={styles.description}>{event.description}</p>
+                                </div>
+                                <button
+                                    className={styles.button}
+                                    type="button"
+                                    aria-label={`Edit ${event.name}`}
+                                    onClick={() => openEditor(event)}
+                                >
+                                    <span className={styles.pencil} aria-hidden="true">✎</span> Edit
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                {editor && (
+                    <EventEditor
+                        event={editor.event}
+                        onClose={() => setEditor(null)}
+                        onSaved={handleSaved}
+                    />
+                )}
+            </div>
+        </main>
+    );
 }

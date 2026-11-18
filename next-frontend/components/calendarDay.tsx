@@ -15,9 +15,11 @@ export default function CalendarDay({ day, month, year, classes, events }: ICale
     c.dates?.some((dateStr) => isSameDay(dateStr))
   );
 
-  const todaysEvents = events.filter((e) => {
-    if (e.date) return isSameDay(e.date);
-    return false;
+  const todaysEvents = events.filter(({ date }) => {
+    // Event dates are calendar days stored at midnight UTC by the event editor.
+    const eventDate = new Date(date);
+    return eventDate.getUTCDate() === day && eventDate.getUTCMonth() === month
+      && eventDate.getUTCFullYear() === year;
   });
 
 
