@@ -3,7 +3,7 @@
 import CalendarDay from "@/components/calendarDay";
 import { fetchClasses, fetchEvents } from "@/services/api";
 import { IClass, IEvent } from "@/types";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function CalendarPage() {
     const [classes, setClasses] = useState<IClass[]>([]);
@@ -28,12 +28,12 @@ export default function CalendarPage() {
     }, []);
 
     useEffect(() => {
-        const loadEvents = async () => {
-            const data = await fetchEvents();
-            if(data) setEvents(data);
-        }
-        loadEvents();
-    }, [])
+        const controller = new AbortController();
+        fetchEvents(controller.signal).then(setEvents).catch((error) => {
+            if (!controller.signal.aborted) console.error(error);
+        });
+        return () => controller.abort();
+    }, []);
 
 
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();

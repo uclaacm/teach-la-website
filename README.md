@@ -20,7 +20,7 @@ Also ensure you have run `git config --global core.autocrlf false` before clonin
 
 Navigate to the root of this directory, where the `docker-compose.yml` file is stored.
 
-Navigate to `\backend` and create a `.env` file, and set `MONGODB_URI=mongodb://mongo:27017/teachla` (used for development)
+Navigate to `\backend` and create a `.env` file, and set `MONGO_URI=mongodb://mongo:27017/teachla` (used for development)
 
 Now run `docker-compose up -d --build`, and navigate to `http://localhost` in your web browser to see the website.
 
