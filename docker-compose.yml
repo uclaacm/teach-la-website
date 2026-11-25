@@ -36,6 +36,15 @@ services:
       - /usr/src/app/node_modules
       - /usr/src/app/.next
 
+  auth_client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: local_auth_client
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+
   proxy:
     build:
       context: .
@@ -48,6 +57,7 @@ services:
     depends_on:
       - next_frontend
       - backend
+      - auth_client
 
 volumes:
   mongo_data:

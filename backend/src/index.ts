@@ -3,6 +3,7 @@ import express from 'express';
 import userRoutes from './routes/user.js'; 
 import eventRoutes from './routes/event.js';
 import classRoutes from './routes/class.js';
+import authRoutes from './routes/auth.js';
 import { connectDB } from './db.js';
 
 const app = express();
@@ -12,7 +13,8 @@ app.use(express.json());
 connectDB()
 
 // --- Route Mounting ---
-// When a request comes in starting with /users, hand it off to userRoutes
+// Login/register are served at /api/login and /api/register via nginx
+app.use('/', authRoutes);
 app.use('/users', userRoutes);
 app.use('/events', eventRoutes);
 app.use('/classes', classRoutes);
