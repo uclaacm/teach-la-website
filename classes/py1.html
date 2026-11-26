@@ -1,39 +1,92 @@
 ---
 layout: default
-title: "Intro to Programming with Python 1"
+title: "Introduction to Programming with Python"
 permalink: /classes/py1
+fw: true
 ---
+<div class="page-container">
+    {% include py1-sidebar.html %}
+	<div class="main-content container-restricted top-left-grid-position">
+		<h1 class="title page-title">Introduction to Python</h1>
+		<p class="title text-2x no-margin">Class & Curriculum Outline</p>
+		<hr class="divider-py" />
+		<p>How to get started in <b>Python</b>!</p>
+		<h2 class="title">
+			Brief Overview
+		</h2>
 
-<div class="py1-wrapper">
-    <div class="py1-sidebar">
-       <p class="no-margin">how to get started in</p>
-       <h1 class="no-margin">python</h1>
-        <img src="{{site.baseurl}}/img/undraw/proud_coder.svg" alt="female coder with open window of code">
-        <p>
-        confused about how to get started with
-        python? here's a <strong>step-by-step learning plan</strong>
-        that walks you through how to learn to make
-        awesome programs, with no prior experience!
-        </p>
-        <div class="py1-learned-skills-wrapper">
-            <p>
-            learned skills:
-            </p>
-            <!-- this part could be automated with markdown + loop -->
-            <ul class="py1-list py1-learned-skills-list">
-                <li><span>data types and operators</span></li>
-                <li><span>booleans and conditional statements</span></li>
-                <span><em>(coming soon!)</em></span>
-                <li><span><em>while loops and for loops</em></span></li>
-                <li><span><em>lists</em></span></li>
-                <li><span><em>creating functions</em></span></li>
+		<p>
+			Confused about how to get started with python? Here's a <b>step-by-step learning plan</b>
+            that walks you through how to learn to make awesome programs, with no prior experience!
+		</p>
+        
+        <div> 
+            Learned Skills:
+            <ul>
+                <li>Data Types and operators</li>
+                <li>Booleans and Conditional Statements</li>
+            </ul>
+            Coming Soon!:
+            <ul>
+                <li>While Loops & For Loops</li>
+                <li>Lists</li>
+                <li>Creating Functions</li>
             </ul>
         </div>
-    </div>
-    <div class="py1-divider">
-    </div>
-    <div class="py1-curriculum">
-        {% include py1-lesson-card.html group="fundamentals"%}
-        {% include py1-lesson-card.html group="flow"%}
-    </div>
+
+
+		<h2 class="title" id="lessons">
+			Lessons
+		</h2>
+
+		<div class="row-desktop-ratio-1-1-1">
+			{% for lesson in site.py1 %}
+			<div class="py-lesson-card">
+				<div class="lesson-card-content">
+					<h3 class="title no-margin"><span class="text-normal">#{{lesson.num}}</span>
+						<a class="python-link" href="{{lesson.url}}">{{lesson.title}}</a>
+					</h3>
+                    <ul>
+                        {% for brief in lesson.agenda %}
+                        <li class='py1-lesson-goal'><span>{{ brief.text }}</span></li>
+                        {% endfor %}
+                    </ul>
+				</div>
+				<div class="button-container">
+					{% if lesson.slides_link %}
+					<a class="button button-sm button-py" href="{{lesson.slides_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-chalkboard-teacher"></span> slides
+					</a>
+					{% endif %}
+					{% if lesson.video_link %}
+					<a class="button button-sm button-py" href="{{lesson.video_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-code"></span> video
+					</a>
+					{% endif %}
+					{% if lesson.worksheet_link %}
+					<a class="button button-sm button-py" href="{{lesson.worksheet_link}}" target="_blank" rel="noopener noreferrer">
+						<span class="fa fa-pencil-alt"></span> worksheet
+					</a>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		<h2 class="title">More Resources</h2>
+		<p>
+            We provided some additional Python resources - they're all helpful!
+        </p>
+        <ul>
+            <li>
+                <a class="python-link" href="https://boolbots.uclaacm.com/" target="_blank" rel="noopener noreferrrer">Boolbots</a>
+            </li>
+            <li>
+                <a class="python-link" href="https://www.codecademy.com/catalog/language/python" target="_blank" rel="noopener noreferrrer">Codecademy: Learn Python</a>
+            </li>
+            <li>
+                <a class="python-link" href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrrer">w3schools: Python Tutorial</a>
+            </li>
+        </ul>
+	</div>
 </div>
